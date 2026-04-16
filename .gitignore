@@ -1,0 +1,45 @@
+# ── Secrets / credentials ─────────────────────────────────────────
+.env
+.env.*
+config/youtube_token*.json
+config/youtube_client_secrets.json
+config/substack_session.json
+
+# ── Generated output (too large for git) ──────────────────────────
+output/videos/
+output/thumbnails/
+output/scripts/
+output/articles/
+output/error_logs/
+output/audio/
+output/locks/
+
+# ── Logs ──────────────────────────────────────────────────────────
+logs/
+*.log
+
+# ── Python ────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# ── OS / editor ───────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# ── Temp / debug ──────────────────────────────────────────────────
+*.tmp
+errorlog.txt
+script_output.txt
+test_output.log
+obscura_gen.log
+obscura_run.log
+video_generation.log
+upload_progress.txt

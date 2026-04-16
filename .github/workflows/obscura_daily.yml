@@ -1,0 +1,64 @@
+name: Obscura Files — Daily Auto-Post
+
+on:
+  schedule:
+    - cron: "0 16 * * *"   # 01:00 JST — long-form + short, runs once/day
+  workflow_dispatch:
+
+concurrency:
+  group: obscura-post
+  cancel-in-progress: false
+
+jobs:
+  post-obscura:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90      # long-form video generation takes up to 60 min
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install system deps
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+
+      - name: Install Python deps
+        run: pip install -r requirements.txt pytrends
+
+      - name: Restore credentials
+        env:
+          YT_TOKEN_OBSCURA:  ${{ secrets.YT_TOKEN_OBSCURA }}
+          YT_CLIENT_SECRETS: ${{ secrets.YT_CLIENT_SECRETS }}
+          DOTENV_CONTENTS:   ${{ secrets.DOTENV_CONTENTS }}
+        run: |
+          mkdir -p config
+          printf '%s' "$YT_TOKEN_OBSCURA"  > config/youtube_token_obscura.json
+          printf '%s' "$YT_CLIENT_SECRETS" > config/youtube_client_secrets.json
+          printf '%s' "$DOTENV_CONTENTS"   > .env
+
+      - name: Run Obscura pipeline (long-form + short)
+        run: python main.py obscura-run
+        env:
+          PYTHONIOENCODING: utf-8
+          PYTHONUNBUFFERED: "1"
+
+      - name: Rotate Obscura token secret
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          NEW=$(cat config/youtube_token_obscura.json)
+          echo "$NEW" | gh secret set YT_TOKEN_OBSCURA --repo "$GITHUB_REPOSITORY"
+
+      - name: Upload logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: obscura-error-${{ github.run_id }}
+          path: logs/
+          retention-days: 5
