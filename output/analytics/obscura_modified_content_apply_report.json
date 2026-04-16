@@ -1,0 +1,154 @@
+{
+  "total": 15,
+  "success": 9,
+  "failed": 6,
+  "results": [
+    {
+      "video_id": "YfwRY7YGKCg",
+      "ok": true,
+      "applied_status": {
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "selfDeclaredMadeForKids": false,
+        "containsSyntheticMedia": true,
+        "selfDeclaredAsModifiedContent": true
+      }
+    },
+    {
+      "video_id": "TdGSnFLQmGQ",
+      "ok": false,
+      "error": "Video not found or inaccessible"
+    },
+    {
+      "video_id": "FrKrzumYfNw",
+      "ok": true,
+      "applied_status": {
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "selfDeclaredMadeForKids": false,
+        "containsSyntheticMedia": true,
+        "selfDeclaredAsModifiedContent": true
+      }
+    },
+    {
+      "video_id": "6cf7UofzJ-s",
+      "ok": true,
+      "applied_status": {
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": false,
+        "publicStatsViewable": false,
+        "selfDeclaredMadeForKids": false,
+        "containsSyntheticMedia": true,
+        "selfDeclaredAsModifiedContent": true
+      }
+    },
+    {
+      "video_id": "K18bfV-vO8s",
+      "ok": false,
+      "error": "Video not found or inaccessible"
+    },
+    {
+      "video_id": "M-xQWuh10Fo",
+      "ok": false,
+      "error": "Video not found or inaccessible"
+    },
+    {
+      "video_id": "5kPIymhPNys",
+      "ok": false,
+      "error": "Video not found or inaccessible"
+    },
+    {
+      "video_id": "VRBUcAOPHGE",
+      "ok": false,
+      "error": "Video not found or inaccessible"
+    },
+    {
+      "video_id": "Bmt2hlmqLrg",
+      "ok": false,
+      "error": "Video not found or inaccessible"
+    },
+    {
+      "video_id": "tVudEfaH7f4",
+      "ok": true,
+      "applied_status": {
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "selfDeclaredMadeForKids": false,
+        "containsSyntheticMedia": true,
+        "selfDeclaredAsModifiedContent": true
+      }
+    },
+    {
+      "video_id": "LPeEbRvj9Ts",
+      "ok": true,
+      "applied_status": {
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "selfDeclaredMadeForKids": false,
+        "containsSyntheticMedia": true,
+        "selfDeclaredAsModifiedContent": true
+      }
+    },
+    {
+      "video_id": "ao7Bfgj_3sM",
+      "ok": true,
+      "applied_status": {
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "selfDeclaredMadeForKids": false,
+        "containsSyntheticMedia": true,
+        "selfDeclaredAsModifiedContent": true
+      }
+    },
+    {
+      "video_id": "5lZvlzd7vx0",
+      "ok": true,
+      "applied_status": {
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "selfDeclaredMadeForKids": false,
+        "containsSyntheticMedia": true,
+        "selfDeclaredAsModifiedContent": true
+      }
+    },
+    {
+      "video_id": "PufgrqiTOKg",
+      "ok": true,
+      "applied_status": {
+        "privacyStatus": "private",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "selfDeclaredMadeForKids": false,
+        "containsSyntheticMedia": true,
+        "selfDeclaredAsModifiedContent": true
+      }
+    },
+    {
+      "video_id": "1v5qf0aKxhg",
+      "ok": true,
+      "applied_status": {
+        "privacyStatus": "private",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "selfDeclaredMadeForKids": false,
+        "containsSyntheticMedia": true,
+        "selfDeclaredAsModifiedContent": true
+      }
+    }
+  ]
+}

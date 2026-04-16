@@ -1,38 +1,28 @@
-name: Facts & Wonders — Daily Auto-Post
+name: Facts & Wonders — Daily Analysis
 
 on:
   schedule:
-    # 5 triggers/day (JST): 03:00, 07:00, 11:00, 15:00, 19:00
-    - cron: "0 18 * * *"   # 03:00 JST
-    - cron: "0 22 * * *"   # 07:00 JST
-    - cron: "0  2 * * *"   # 11:00 JST
-    - cron: "0  6 * * *"   # 15:00 JST
-    - cron: "0 10 * * *"   # 19:00 JST
+    - cron: "30 15 * * *"  # 00:30 JST — runs before first daily upload (03:00 JST)
   workflow_dispatch:        # manual trigger from GitHub UI
 
 concurrency:
-  group: facts-post
-  cancel-in-progress: false  # never cancel — always finish the upload
+  group: facts-analyze
+  cancel-in-progress: false
 
 jobs:
-  post-facts-short:
+  analyze:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 15
 
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_PAT }}
+          token: ${{ secrets.GH_PAT }}  # needs write access to commit results
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-
-      - name: Install system deps
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y ffmpeg
 
       - name: Install Python deps
         run: pip install -r requirements.txt pytrends
@@ -48,35 +38,34 @@ jobs:
           printf '%s' "$YT_CLIENT_SECRETS" > config/youtube_client_secrets.json
           printf '%s' "$DOTENV_CONTENTS"   > .env
 
-      - name: Post one Facts short
-        run: python main.py facts-run-single
+      - name: Run daily analysis
+        run: python main.py facts-analyze
         env:
           PYTHONIOENCODING: utf-8
           PYTHONUNBUFFERED: "1"
 
-      # Commit the registry entry created during this run so facts-analyze can read it
-      - name: Commit registry update
-        if: success()
+      - name: Commit analysis results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/analytics/ analysis/ || true
-          git diff --cached --quiet || git commit -m "ci: facts registry update [skip ci]"
+          git add config_facts.py output/analytics/ analysis/ || true
+          git diff --cached --quiet || git commit -m "ci: facts daily analysis [skip ci]"
           git push || true
 
-      # After successful upload, save the (possibly-refreshed) token back as a Secret
-      - name: Rotate token secret if refreshed
-        if: success()
+      - name: Rotate token if refreshed
+        if: always()
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          NEW=$(cat config/youtube_token_facts.json)
-          echo "$NEW" | gh secret set YT_TOKEN_FACTS --repo "$GITHUB_REPOSITORY"
+          if [ -f config/youtube_token_facts.json ]; then
+            NEW=$(cat config/youtube_token_facts.json)
+            echo "$NEW" | gh secret set YT_TOKEN_FACTS --repo "$GITHUB_REPOSITORY"
+          fi
 
       - name: Upload logs on failure
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: facts-error-${{ github.run_id }}
+          name: analyze-error-${{ github.run_id }}
           path: logs/
           retention-days: 5

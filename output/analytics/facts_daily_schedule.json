@@ -1,0 +1,15 @@
+{
+  "date": "2026-04-17",
+  "times": [
+    "03:43",
+    "07:00",
+    "11:38",
+    "15:41",
+    "19:58"
+  ],
+  "rules": {
+    "min_interval_minutes": 120,
+    "window": "03:00-19:59",
+    "no_consecutive_posts": true
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "started_at": "2026-03-31T02:31:38",
+  "analysis": {
+    "ok": true,
+    "summary": {
+      "timestamp": "2026-03-31T02:31:44",
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Collect more data to identify weak patterns"
+        ],
+        "retention_script_pattern": "Hook with 'Did you know that', 3-5 short numbered facts, CTA at the end"
+      },
+      "competitor": {
+        "status": "ok",
+        "raw": {
+          "amazing facts shorts": [
+            {
+              "title": "कैसे बचाया व्हले शार्क को #shorts",
+              "channel": "Akash Parihar",
+              "publishedAt": "2022-08-05T02:30:17Z"
+            },
+            {
+              "title": "Steel Coil 😨",
+              "channel": "Facts Dastan",
+              "publishedAt": "2024-09-23T16:30:01Z"
+            },
+            {
+              "title": "Aeroplane के बारे में 5 Amazing Facts     #shorts",
+              "channel": "CURIO",
+              "publishedAt": "2021-07-13T14:11:50Z"
+            },
+            {
+              "title": "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
+              "channel": "Facts' Mine",
+              "publishedAt": "2022-08-04T12:31:26Z"
+            },
+            {
+              "title": "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
+              "channel": "Facts' Mine",
+              "publishedAt": "2022-04-16T17:41:47Z"
+            },
+            {
+              "title": "China&#39;s Futuristic School 😱",
+              "channel": "FactoHolic",
+              "publishedAt": "2025-10-19T06:54:20Z"
+            },
+            {
+              "title": "Slicing A Bullet In Half?  #3danimationfact #facts #science",
+              "channel": "Master Mind",
+              "publishedAt": "2024-06-11T14:56:54Z"
+            },
+            {
+              "title": "Inside A Camel Hump 😱",
+              "channel": "FactoHolic",
+              "publishedAt": "2024-09-03T16:14:43Z"
+            },
+            {
+              "title": "Strongest Glass in The World",
+              "channel": "Facts' Mine",
+              "publishedAt": "2023-05-23T17:01:16Z"
+            },
+            {
+              "title": "This Video Can Save Your Life 😱",
+              "channel": "FactoHolic",
+              "publishedAt": "2024-11-20T15:09:00Z"
+            }
+          ],
+          "did you know facts": [
+            {
+              "title": "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
+              "channel": "Luke Davidson Facts",
+              "publishedAt": "2021-06-20T17:00:21Z"
+            },
+            {
+              "title": "5 Facts That Could SAVE Your Life",
+              "channel": "Dan Ondrey",
+              "publishedAt": "2022-02-09T23:45:00Z"
+            },
+            {
+              "title": "Candy Facts That Will BLOW Your Mind 🤔",
+              "channel": "Zack D. Films",
+              "publishedAt": "2023-03-17T14:30:18Z"
+            },
+            {
+              "title": "3 Facts You Didn&#39;t Want To Know 😬",
+              "channel": "Zack D. Films",
+              "publishedAt": "2023-04-03T14:30:16Z"
+            },
+            {
+              "title": "19 Simple Psychological Tricks That Actually Work",
+              "channel": "BRIGHT SIDE",
+              "publishedAt": "2018-11-01T17:00:08Z"
+            },
+            {
+              "title": "3 Facts You Could&#39;ve Lived Without Knowing 😬",
+              "channel": "Zack D. Films",
+              "publishedAt": "2023-04-21T14:30:16Z"
+            },
+            {
+              "title": "Fun Facts",
+              "channel": "Jay & Sharon",
+              "publishedAt": "2023-05-01T17:46:46Z"
+            },
+            {
+              "title": "INSANE CRAZY FACTS YOU DIDN&#39;T KNOW!",
+              "channel": "camman18",
+              "publishedAt": "2023-06-01T15:00:22Z"
+            },
+            {
+              "title": "Facts that can save your life! #6",
+              "channel": "cardogjones",
+              "publishedAt": "2023-02-09T03:05:51Z"
+            },
+            {
+              "title": "Facts That Could Save Your Life 😳 #30 #shorts #facts",
+              "channel": "Feliz",
+              "publishedAt": "2023-09-01T02:20:01Z"
+            }
+          ],
+          "science facts shorts": [
+            {
+              "title": "Bromine is scary",
+              "channel": "NileRed",
+              "publishedAt": "2021-03-21T17:21:20Z"
+            },
+            {
+              "title": "😲What if Whale Swallowed You (ALIVE)? - By Kishor Singh #shorts",
+              "channel": "Professor Of How",
+              "publishedAt": "2022-10-21T07:30:02Z"
+            },
+            {
+              "title": "Touching mercury",
+              "channel": "NileRed",
+              "publishedAt": "2021-04-19T17:52:22Z"
+            },
+            {
+              "title": "4 Cool Gifts for Science Lovers! - May Edition #shorts #Science #gifts",
+              "channel": "JaDropping Science",
+              "publishedAt": "2024-05-31T20:07:10Z"
+            },
+            {
+              "title": "#physics #physicsconcept #physicsfacts #shorts #physicsfun #shorts #viral #trending #viralshorts",
+              "channel": "VYAS EDIFICATION",
+              "publishedAt": "2023-10-13T14:25:00Z"
+            },
+            {
+              "title": "So how many pins can you fit in?............#theoryofphysics #physics #anubhavsir",
+              "channel": "Theory_Of_Physics X Unacademy",
+              "publishedAt": "2023-12-31T15:27:34Z"
+            },
+            {
+              "title": "Ocean Depth #ocean #science #sciencefacts",
+              "channel": "Thanos World",
+              "publishedAt": "2024-01-31T23:07:37Z"
+            },
+            {
+              "title": "🤯 ये 3 जानवर अमर है 😱 कभी मर नही सकते😳 immortal animals on earth #shorts",
+              "channel": "FactShip {Mohit jabalpuri}",
+              "publishedAt": "2021-08-21T03:55:01Z"
+            },
+            {
+              "title": "3 Science के मजेदार Magic Tricks 😀 | #shorts",
+              "channel": "Raman Talks",
+              "publishedAt": "2022-07-22T04:00:15Z"
+            },
+            {
+              "title": "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
+              "channel": "Facts' Mine",
+              "publishedAt": "2022-08-04T12:31:26Z"
+            }
+          ],
+          "nature facts shorts": [
+            {
+              "title": "Natural Habitat Shorts-Opossums have pouches and can have up to 20 Joeys per litter!",
+              "channel": "Natural Habitat Shorts",
+              "publishedAt": "2022-06-10T17:23:52Z"
+            },
+            {
+              "title": "Porcupines have around 30K quills, with barbs at the tips that make them difficult to remove. 🌵🐖💺",
+              "channel": "Natural Habitat Shorts",
+              "publishedAt": "2022-11-17T17:05:41Z"
+            },
+            {
+              "title": "25 Greatest Natural Wonders of the World - Travel Video",
+              "channel": "touropia",
+              "publishedAt": "2021-07-14T13:11:57Z"
+            },
+            {
+              "title": "Chemical Vs Natural Fruits#shorts #outofmindexperiment",
+              "channel": "Out Of Mind Experiments",
+              "publishedAt": "2024-06-04T13:10:16Z"
+            },
+            {
+              "title": "Natural Habitat Shorts- Rats have a highly developed hippocampus that uses memory to map locations",
+              "channel": "Natural Habitat Shorts",
+              "publishedAt": "2022-05-26T16:04:57Z"
+            },
+            {
+              "title": "Shocking Discovery In Antarctica #shorts",
+              "channel": "Scary John",
+              "publishedAt": "2024-01-29T21:19:48Z"
+            },
+            {
+              "title": "Top 3 Amazing Nature Facts 🤣🤣😮 @MRINDIANHACKER  @CrazyXYZ  || #shorts || #FactBeast",
+              "channel": "Fact Beast",
+              "publishedAt": "2023-03-15T08:44:13Z"
+            },
+            {
+              "title": "Never Touch This Plant",
+              "channel": "Facts' Mine",
+              "publishedAt": "2023-08-25T18:29:24Z"
+            },
+            {
+              "title": "Flying Snakes: Carnivorous Hunters of the Treetops #snake #animals",
+              "channel": "Secrets of Nature",
+              "publishedAt": "2024-03-31T16:20:16Z"
+            },
+            {
+              "title": "Why Is The Color Blue So Rare In Nature? 🤔 #shorts #viral",
+              "channel": "Mindspark",
+              "publishedAt": "2023-10-04T19:00:28Z"
+            }
+          ]
+        },
+        "title_patterns": {
+          "statement": 21,
+          "numeric": 19
+        },
+        "popular_topics": [
+          "science",
+          "nature",
+          "earth"
+        ],
+        "hashtags": [
+          "#Facts",
+          "#DidYouKnow",
+          "#AmazingFacts",
+          "#Science",
+          "#Nature",
+          "#Shorts"
+        ],
+        "optimal_length_seconds": [
+          55,
+          59
+        ],
+        "thumbnail_style": "Bright colorful b-roll with large center captions"
+      },
+      "trends": {
+        "google_trends": {
+          "status": "ok",
+          "topics": [
+            "lindsey graham",
+            "mohammad bagher ghalibaf",
+            "arc raiders",
+            "carlie irsay-gordon",
+            "cook county treasurer",
+            "ms now",
+            "john groce",
+            "finley bizjack",
+            "rajasthan royals vs chennai super kings match scorecard",
+            "topps"
+          ]
+        },
+        "youtube_trending": {
+          "status": "ok",
+          "topics": [
+            "Steel Coil 😨",
+            "How Much Is Too Much 😱",
+            "China&#39;s Futuristic School 😱",
+            "Slicing A Bullet In Half?  #3danimationfact #facts #science",
+            "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
+            "Inside A Camel Hump 😱",
+            "Strongest Glass in The World",
+            "This Video Can Save Your Life 😱",
+            "Candy Facts That Will BLOW Your Mind 🤔",
+            "Amazon Rainforest 🤯 #sciencefacts #facts #shorts",
+            "3 Facts You Didn&#39;t Want To Know 😬",
+            "How Many Hours Do You Sleep 😱",
+            "Walking On Water Trick Revealed! #facts #shorts",
+            "World&#39;s Most Expensive Food 😱😱",
+            "The Richest Dog 😱"
+          ]
+        },
+        "seasonal": [
+          "space exploration",
+          "human body mysteries",
+          "extreme nature facts"
+        ]
+      },
+      "ab_test": {
+        "total_tests": 14,
+        "latest_status": "pending"
+      }
+    },
+    "config_changes": {
+      "LEARNED_TOPIC_STYLE": "science, nature, earth, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        3,
+        7,
+        11,
+        15,
+        19
+      ]
+    },
+    "reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis"
+  },
+  "schedule": {
+    "date": "2026-03-31",
+    "times": [
+      "03:34",
+      "07:06",
+      "11:45",
+      "15:43",
+      "19:01"
+    ],
+    "rules": {
+      "min_interval_minutes": 120,
+      "window": "03:00-19:59",
+      "no_consecutive_posts": true
+    }
+  },
+  "errors": [
+    {
+      "phase": "scheduled",
+      "time": "07:06",
+      "error": "Command '['C:\\\\ffmpeg\\\\ffmpeg.EXE', '-y', '-f', 'concat', '-safe', '0', '-i', 'C:\\\\Users\\\\delio\\\\AppData\\\\Local\\\\Temp\\\\tmpd3uh8j95.txt', '-vf', 'fps=30,scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920', '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22', 'C:\\\\Users\\\\delio\\\\ai-japan-youtube\\\\output\\\\facts\\\\20260402_030200_The_Shocking_Power_of_Mantis_Shrimp_Punch_3_Facts_Shorts_base.mp4']' timed out after 600 seconds"
+    },
+    {
+      "phase": "scheduled-retry",
+      "time": "07:06",
+      "error": "Command '['C:\\\\ffmpeg\\\\ffmpeg.EXE', '-y', '-stream_loop', '-1', '-i', 'C:\\\\Users\\\\delio\\\\ai-japan-youtube\\\\output\\\\facts\\\\20260402_032229_The_Immortal_Seed_That_Waited_2000_Years_Shorts_base.mp4', '-t', '57.98', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22', '-an', 'C:\\\\Users\\\\delio\\\\ai-japan-youtube\\\\output\\\\facts\\\\20260402_032229_The_Immortal_Seed_That_Waited_2000_Years_Shorts_trim.mp4']' timed out after 600 seconds"
+    }
+  ],
+  "catchup": {
+    "due_now": 0,
+    "already_posted_today": 0,
+    "missed_count": 0,
+    "executed_now": 0
+  },
+  "posted": [
+    {
+      "created_at": "2026-03-31T03:40:30",
+      "video_id": "4lCt6cipJtY",
+      "title": "Your Fingerprints Have a TWIN! 🤯 (3 Facts) #Shorts",
+      "topic": "fingerprint uniqueness and formation biology",
+      "duration": 55.01,
+      "video_path": "C:\\Users\\delio\\ai-japan-youtube\\output\\facts\\20260331_034510_Your_Fingerprints_Have_a_TWIN_3_Facts_Shorts_final.mp4",
+      "scheduled_time": "03:53",
+      "scheduled_publish_at": "",
+      "view_count": 0,
+      "containsSyntheticMedia": true,
+      "selfDeclaredMadeForKids": false
+    },
+    {
+      "ok": false,
+      "time": "07:06",
+      "error": "Command '['C:\\\\ffmpeg\\\\ffmpeg.EXE', '-y', '-stream_loop', '-1', '-i', 'C:\\\\Users\\\\delio\\\\ai-japan-youtube\\\\output\\\\facts\\\\20260402_032229_The_Immortal_Seed_That_Waited_2000_Years_Shorts_base.mp4', '-t', '57.98', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22', '-an', 'C:\\\\Users\\\\delio\\\\ai-japan-youtube\\\\output\\\\facts\\\\20260402_032229_The_Immortal_Seed_That_Waited_2000_Years_Shorts_trim.mp4']' timed out after 600 seconds"
+    }
+  ],
+  "finished_at": "2026-04-02T03:39:22"
+}

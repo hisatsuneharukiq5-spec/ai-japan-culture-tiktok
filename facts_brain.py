@@ -399,6 +399,62 @@ def _compute_top_post_hours(rows: list[dict[str, Any]]) -> list[int]:
     return sorted(top) if len(top) >= 3 else default
 
 
+def _analyze_video_quality(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    """Examine clip-quality metrics from recent registry entries.
+
+    Returns a summary and, when quality is poor, suggestions for the next run.
+    """
+    recent = rows[-30:] if len(rows) > 30 else rows
+    if not recent:
+        return {"status": "no_data", "suggestions": []}
+
+    real_clips_counts: list[int] = []
+    lavfi_counts: list[int] = []
+    static_skipped_counts: list[int] = []
+
+    for row in recent:
+        cq = row.get("clip_quality")
+        if not isinstance(cq, dict):
+            continue
+        real_clips_counts.append(int(cq.get("real_clips", 0)))
+        lavfi_counts.append(int(cq.get("lavfi_clips", 0)))
+        static_skipped_counts.append(int(cq.get("static_skipped", 0)))
+
+    if not real_clips_counts:
+        return {"status": "legacy_entries_only", "suggestions": []}
+
+    avg_real = mean(real_clips_counts) if real_clips_counts else 0
+    avg_lavfi = mean(lavfi_counts) if lavfi_counts else 0
+    avg_static_skip = mean(static_skipped_counts) if static_skipped_counts else 0
+    lavfi_rate = avg_lavfi / max(1, avg_real + avg_lavfi)
+
+    suggestions: list[str] = []
+    if lavfi_rate > 0.3:
+        suggestions.append(
+            "High lavfi-fallback rate (%.0f%%) — expand search keywords or add "
+            "more varied topics to improve real footage coverage." % (lavfi_rate * 100)
+        )
+    if avg_static_skip > 2:
+        suggestions.append(
+            "Avg %.1f static clips skipped per video — consider lowering "
+            "MIN_SOURCE_HEIGHT or broadening keywords." % avg_static_skip
+        )
+    if avg_real < 10:
+        suggestions.append(
+            "Avg real clip count is low (%.1f) — consider adding PIXABAY_API_KEY "
+            "or increasing MAX_SEARCH_URLS." % avg_real
+        )
+
+    return {
+        "status": "ok",
+        "avg_real_clips": round(avg_real, 1),
+        "avg_lavfi_clips": round(avg_lavfi, 1),
+        "avg_static_skipped": round(avg_static_skip, 1),
+        "lavfi_rate_pct": round(lavfi_rate * 100, 1),
+        "suggestions": suggestions,
+    }
+
+
 def _compose_changes(summary: dict[str, Any]) -> dict[str, Any]:
     competitor = summary.get("competitor", {})
     trends = summary.get("trends", {})
@@ -453,7 +509,7 @@ def _update_config_file(updates: dict[str, Any]) -> None:
     config_path.write_text(updated, encoding="utf-8")
 
 
-def _update_ab_tests(summary: dict[str, Any]) -> dict[str, Any]:
+def _update_ab_tests() -> dict[str, Any]:
     now = _now_iso()
     tests = _load_json(AB_TEST_PATH, default=[])
     if not isinstance(tests, list):
@@ -530,10 +586,12 @@ def run_daily_analysis() -> AnalysisResult:
         "_rows": rows,  # passed to _compose_changes for hour optimization; stripped before saving
     }
 
+    video_quality = _analyze_video_quality(rows)
     changes = _compose_changes(summary)
     summary.pop("_rows", None)  # don't persist raw rows in report
+    summary["video_quality"] = video_quality
     _update_config_file(changes)
-    ab_result = _update_ab_tests(summary)
+    ab_result = _update_ab_tests()
     summary["ab_test"] = ab_result
 
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)

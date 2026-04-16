@@ -72,7 +72,7 @@ MAX_DOWNLOAD_BYTES = 30 * 1024 * 1024  # 30MB
 MAX_SOURCE_DURATION_SEC = 45.0
 SEARCH_TIMEOUT_SEC = 15
 MAX_SEARCH_KEYWORDS = 6
-MAX_SEARCH_URLS = 24
+MAX_SEARCH_URLS = 40
 FACTS_SUBTITLE_MAX_WORDS = 4
 POST_JITTER_MIN_SEC = 120    # 2 min minimum — more human-like
 POST_JITTER_MAX_SEC = 900   # up to 15 min — harder for YouTube to fingerprint
@@ -523,6 +523,88 @@ def _download(url: str, path: Path) -> None:
             wait = 2 ** attempt
             logger.warning("Download attempt %d/%d failed (%s); retrying in %ds", attempt, max_retries, exc, wait)
             time.sleep(wait)
+
+
+def _has_motion(path: Path, min_bitrate_kbps: int = 80) -> bool:
+    """Return True if clip has actual motion (not a static or near-static frame).
+
+    Uses the video-stream bitrate as proxy: real footage encodes at ≥ 80 kbps
+    even at low quality, while static-frame loops typically compress to < 20 kbps.
+    Falls back to True (permissive) if ffprobe cannot be queried.
+    """
+    ffprobe = shutil.which("ffprobe") or "ffprobe"
+    try:
+        # Prefer stream-level bitrate
+        r = subprocess.run(
+            [ffprobe, "-v", "quiet",
+             "-select_streams", "v:0",
+             "-show_entries", "stream=bit_rate",
+             "-of", "default=noprint_wrappers=1:nokey=1",
+             str(path)],
+            capture_output=True, text=True, timeout=10,
+        )
+        val = r.stdout.strip()
+        if val and val != "N/A":
+            return int(val) // 1000 >= min_bitrate_kbps
+        # Fall back to format-level bitrate
+        r2 = subprocess.run(
+            [ffprobe, "-v", "quiet",
+             "-show_entries", "format=bit_rate",
+             "-of", "default=noprint_wrappers=1:nokey=1",
+             str(path)],
+            capture_output=True, text=True, timeout=10,
+        )
+        val2 = r2.stdout.strip()
+        if val2 and val2 != "N/A":
+            return int(val2) // 1000 >= min_bitrate_kbps
+    except Exception:
+        pass
+    return True  # Assume motion if check cannot run
+
+
+def _generate_lavfi_clip(out_path: Path, duration: float = 4.0, index: int = 0) -> None:
+    """Generate a visually animated clip via ffmpeg built-in sources.
+
+    Used when real stock-footage sources return too few usable clips.
+    Tries successively simpler sources so at least one always succeeds.
+    """
+    # testsrc2 with hue-rotation: colorful motion, always available
+    hue_speed = 15 + (index % 5) * 8  # vary rotation speed per clip
+    attempts = [
+        [
+            _ffmpeg(), "-y", "-f", "lavfi",
+            "-i", f"testsrc2=s=1080x1920:r=30",
+            "-vf", f"hue=H='t*{hue_speed}',eq=contrast=0.25:brightness=-0.15:saturation=0.6",
+            "-t", f"{duration:.2f}",
+            "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-an",
+            str(out_path),
+        ],
+        # Fallback: life (Conway's Game of Life) scaled up
+        [
+            _ffmpeg(), "-y", "-f", "lavfi",
+            "-i", f"life=s=270x480:r=30",
+            "-vf", "scale=1080:1920:flags=neighbor,negate",
+            "-t", f"{duration:.2f}",
+            "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-an",
+            str(out_path),
+        ],
+        # Absolute fallback: solid dark color (no motion but always works)
+        [
+            _ffmpeg(), "-y", "-f", "lavfi",
+            "-i", "color=navy:s=1080x1920:r=30",
+            "-t", f"{duration:.2f}",
+            "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-an",
+            str(out_path),
+        ],
+    ]
+    for cmd in attempts:
+        try:
+            _run(cmd, timeout=30)
+            return
+        except Exception:
+            if out_path.exists():
+                out_path.unlink(missing_ok=True)
+    raise RuntimeError(f"All lavfi fallback attempts failed for {out_path}")
 
 
 def _generate_bgm(duration: float, out_path: Path) -> None:
@@ -1212,6 +1294,7 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
     random.shuffle(candidate_urls)
 
     downloaded: list[Path] = []
+    static_skipped = 0
     while candidate_urls and len(downloaded) < clip_count:
         url = candidate_urls.pop()
         path = FACTS_DIR / f"{timestamp}_{safe}_clip_{len(downloaded) + 1:02d}.mp4"
@@ -1232,7 +1315,34 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
             path.unlink(missing_ok=True)
             continue
 
+        # Skip static/frozen clips (no real motion)
+        if not _has_motion(path):
+            logger.info("Skipping static/frozen clip (low bitrate): %s", path.name)
+            path.unlink(missing_ok=True)
+            static_skipped += 1
+            continue
+
         downloaded.append(path)
+
+    if static_skipped > 0:
+        logger.info("Discarded %d static clips without motion", static_skipped)
+
+    # If still not enough real clips, pad with lavfi-generated animated clips
+    if len(downloaded) < config_facts.CLIP_COUNT_MIN:
+        needed = config_facts.CLIP_COUNT_MIN - len(downloaded)
+        logger.warning(
+            "Only %d real clips downloaded (%d needed); generating %d lavfi animated clips as padding",
+            len(downloaded), config_facts.CLIP_COUNT_MIN, needed,
+        )
+        for lavfi_idx in range(needed):
+            lavfi_path = FACTS_DIR / f"{timestamp}_{safe}_lavfi_{lavfi_idx + 1:02d}.mp4"
+            try:
+                clip_seconds = random.uniform(config_facts.CLIP_DURATION_MIN, config_facts.CLIP_DURATION_MAX)
+                _generate_lavfi_clip(lavfi_path, duration=clip_seconds, index=lavfi_idx)
+                downloaded.append(lavfi_path)
+                logger.info("Generated lavfi clip %d/%d: %s", lavfi_idx + 1, needed, lavfi_path.name)
+            except Exception as exc:
+                logger.warning("lavfi clip generation failed (idx=%d): %s", lavfi_idx, exc)
 
     if len(downloaded) < config_facts.CLIP_COUNT_MIN:
         error_logger.error(
@@ -1290,6 +1400,8 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
         publish_at=publish_at,
     )
 
+    real_clip_count = sum(1 for p in downloaded if "_lavfi_" not in p.name)
+    lavfi_clip_count = len(downloaded) - real_clip_count
     entry = {
         "created_at": started.isoformat(timespec="seconds"),
         "video_id": video_id,
@@ -1300,6 +1412,12 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
         "scheduled_time": datetime.now().strftime("%H:%M"),
         "scheduled_publish_at": publish_at.astimezone(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z") if publish_at else "",
         "view_count": 0,
+        "clip_quality": {
+            "real_clips": real_clip_count,
+            "lavfi_clips": lavfi_clip_count,
+            "static_skipped": static_skipped,
+            "total_used": len(downloaded),
+        },
         "containsSyntheticMedia": True,
         "selfDeclaredMadeForKids": False,
     }

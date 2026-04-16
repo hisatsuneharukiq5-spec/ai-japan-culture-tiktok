@@ -174,6 +174,93 @@ def _search_pixabay(query: str, per_page: int = 5):
     return results
 
 
+def _has_motion(path: Path, min_bitrate_kbps: int = 80) -> bool:
+    """Return True if the clip has actual motion (not a static frame).
+
+    Video stream bitrate is used as proxy: real footage ≥ 80 kbps,
+    static-frame loops typically < 20 kbps.
+    """
+    try:
+        r = subprocess.run(
+            ["ffprobe", "-v", "quiet",
+             "-select_streams", "v:0",
+             "-show_entries", "stream=bit_rate",
+             "-of", "default=noprint_wrappers=1:nokey=1",
+             str(path)],
+            capture_output=True, text=True, timeout=10,
+        )
+        val = r.stdout.strip()
+        if val and val != "N/A":
+            return int(val) // 1000 >= min_bitrate_kbps
+        r2 = subprocess.run(
+            ["ffprobe", "-v", "quiet",
+             "-show_entries", "format=bit_rate",
+             "-of", "default=noprint_wrappers=1:nokey=1",
+             str(path)],
+            capture_output=True, text=True, timeout=10,
+        )
+        val2 = r2.stdout.strip()
+        if val2 and val2 != "N/A":
+            return int(val2) // 1000 >= min_bitrate_kbps
+    except Exception:
+        pass
+    return True
+
+
+def _speed_clip(in_path: Path, out_path: Path, speed: float = 0.85) -> None:
+    """Re-encode a clip at a different playback speed for loop visual variety.
+
+    speed < 1.0 = slow-motion; speed > 1.0 = fast-forward.
+    This avoids identical-frame repetition when we must loop clips.
+    """
+    setpts = f"{1.0 / speed:.4f}*PTS"
+    cmd = [
+        "ffmpeg", "-y", "-i", str(in_path),
+        "-vf", f"setpts={setpts}",
+        "-c:v", "libx264", "-preset", "fast", "-crf", "23", "-an",
+        str(out_path),
+    ]
+    subprocess.run(cmd, check=True, capture_output=True)
+
+
+def _generate_lavfi_clip(out_path: Path, duration: float = 5.0, index: int = 0) -> None:
+    """Generate an animated clip via ffmpeg built-in sources as guaranteed fallback."""
+    hue_speed = 12 + (index % 6) * 7
+    attempts = [
+        [
+            "ffmpeg", "-y", "-f", "lavfi",
+            "-i", f"testsrc2=s=1920x1080:r=30",
+            "-vf", f"hue=H='t*{hue_speed}',eq=contrast=0.25:brightness=-0.1:saturation=0.6",
+            "-t", f"{duration:.2f}",
+            "-c:v", "libx264", "-preset", "fast", "-crf", "23", "-an",
+            str(out_path),
+        ],
+        [
+            "ffmpeg", "-y", "-f", "lavfi",
+            "-i", f"life=s=480x270:r=30",
+            "-vf", "scale=1920:1080:flags=neighbor,negate",
+            "-t", f"{duration:.2f}",
+            "-c:v", "libx264", "-preset", "fast", "-crf", "23", "-an",
+            str(out_path),
+        ],
+        [
+            "ffmpeg", "-y", "-f", "lavfi",
+            "-i", "color=navy:s=1920x1080:r=30",
+            "-t", f"{duration:.2f}",
+            "-c:v", "libx264", "-preset", "fast", "-crf", "23", "-an",
+            str(out_path),
+        ],
+    ]
+    for cmd in attempts:
+        try:
+            subprocess.run(cmd, check=True, capture_output=True)
+            return
+        except Exception:
+            if out_path.exists():
+                out_path.unlink(missing_ok=True)
+    raise RuntimeError(f"All lavfi attempts failed for {out_path}")
+
+
 def _prepare_clip(in_path: Path, out_path: Path):
     # Transcode and pad to 1920x1080, remove original audio
     cmd = [
@@ -333,6 +420,7 @@ def generate_from_latest(output_name: str | None = None, voice: str = "en-US-Ari
     total = 0.0
     target_clips = min(len(clip_urls), 40)  # Use up to 40 clips for 8min videos
     
+    static_skipped = 0
     for i, url in enumerate(clip_urls[:target_clips]):
         try:
             out_clip = tmpdir / f"clip_{i}.mp4"
@@ -343,38 +431,74 @@ def generate_from_latest(output_name: str | None = None, voice: str = "en-US-Ari
             if not dims or not _is_landscape_dims(dims[0], dims[1]):
                 logger.info(f"  ⏭️ Skipping non-landscape clip: {dims}")
                 continue
-            
+
+            if not _has_motion(out_clip):
+                logger.info(f"  ⏭️ Skipping static/frozen clip (low bitrate)")
+                static_skipped += 1
+                continue
+
             proc_clip = tmpdir / f"clip_{i}_proc.mp4"
             _prepare_clip(out_clip, proc_clip)
-            
+
             clip_dur = _audio_duration(proc_clip)
             clips.append(proc_clip)
             total += clip_dur
-            
+
             logger.info(f"  ✅ Processed: {clip_dur:.1f}s (total: {total:.1f}s / {duration:.1f}s)")
-            
+
             if total >= duration:
                 break
         except Exception as e:
             logger.warning(f"  ⚠️ Failed to download/process clip {i}: {e}")
             continue
 
-    if not clips:
-        raise RuntimeError("❌ FATAL: Failed to download any video clips")
+    if static_skipped > 0:
+        logger.info(f"  ⚠️ Discarded {static_skipped} static/frozen clips")
 
-    # If total duration is less than audio, loop clips
+    if not clips:
+        # No real clips at all — generate lavfi clips to cover the audio
+        logger.warning("⚠️ No real video clips; generating animated lavfi clips as fallback")
+        needed = max(8, math.ceil(duration / 5.0))
+        for lavfi_i in range(needed):
+            lavfi_path = tmpdir / f"lavfi_{lavfi_i}.mp4"
+            try:
+                _generate_lavfi_clip(lavfi_path, duration=5.0, index=lavfi_i)
+                lavfi_dur = _audio_duration(lavfi_path)
+                clips.append(lavfi_path)
+                total += lavfi_dur
+            except Exception as e:
+                logger.warning(f"lavfi clip {lavfi_i} failed: {e}")
+        if not clips:
+            raise RuntimeError("❌ FATAL: Failed to download any video clips and lavfi fallback also failed")
+
+    # If total duration is still less than audio, pad with speed-varied clips
+    # (NOT file copies — identical frames cause visible stuttering/looping)
     if total < duration:
-        logger.info(f"⚠️ Total clip duration ({total:.1f}s) < audio ({duration:.1f}s), looping clips...")
+        logger.info(
+            f"⚠️ Clip coverage ({total:.1f}s) < audio ({duration:.1f}s); "
+            "padding with speed-varied copies to avoid frame repetition"
+        )
         original_clips = clips.copy()
-        idx = 0
+        speed_cycle = [0.75, 0.82, 0.88, 0.93, 1.08, 1.15]  # alternate slow/fast
+        loop_idx = 0
         while total < duration:
-            dup = tmpdir / f"clip_loop_{len(clips)}.mp4"
-            import shutil
-            shutil.copy(str(original_clips[idx % len(original_clips)]), str(dup))
-            dup_dur = _audio_duration(original_clips[idx % len(original_clips)])
-            clips.append(dup)
-            total += dup_dur
-            idx += 1
+            src = original_clips[loop_idx % len(original_clips)]
+            speed = speed_cycle[loop_idx % len(speed_cycle)]
+            pad_path = tmpdir / f"clip_pad_{len(clips)}.mp4"
+            try:
+                _speed_clip(src, pad_path, speed=speed)
+                pad_dur = _audio_duration(pad_path)
+                clips.append(pad_path)
+                total += pad_dur
+            except Exception as e:
+                logger.warning(f"Speed-clip padding failed (idx={loop_idx}): {e}")
+                # Absolute last resort: copy
+                import shutil
+                shutil.copy(str(src), str(pad_path))
+                pad_dur = _audio_duration(src)
+                clips.append(pad_path)
+                total += pad_dur
+            loop_idx += 1
 
     logger.info(f"🎞️ Using {len(clips)} video clips (total: {total:.1f}s)")
 
