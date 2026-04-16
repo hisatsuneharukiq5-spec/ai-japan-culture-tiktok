@@ -1,0 +1,1105 @@
+[
+  {
+    "date": "2026-03-13",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 39.8,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 3
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Titles miss concrete numbers"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "space"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, space, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        8,
+        11,
+        14,
+        17,
+        21
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  },
+  {
+    "date": "2026-03-15",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Titles miss concrete numbers"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "earth"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, earth, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        8,
+        11,
+        14,
+        17,
+        21
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  },
+  {
+    "date": "2026-03-20",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Titles miss concrete numbers"
+        ]
+      },
+      "competitor_topics": [
+        "earth",
+        "nature"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "earth, nature, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        8,
+        11,
+        14,
+        17,
+        21
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  },
+  {
+    "date": "2026-03-21",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Titles miss concrete numbers"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "earth",
+        "nature"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, earth, nature, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        8,
+        11,
+        14,
+        17,
+        21
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  },
+  {
+    "date": "2026-03-21",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Titles miss concrete numbers"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "earth",
+        "nature"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, earth, nature, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        8,
+        11,
+        14,
+        17,
+        21
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  },
+  {
+    "date": "2026-03-21",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Titles miss concrete numbers"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "earth",
+        "nature",
+        "animal",
+        "human"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, earth, nature, animal, human, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        8,
+        11,
+        14,
+        17,
+        21
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  },
+  {
+    "date": "2026-03-23",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Titles miss concrete numbers"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "earth",
+        "nature"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, earth, nature, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        3,
+        7,
+        11,
+        15,
+        19
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  },
+  {
+    "date": "2026-03-23",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Collect more data to identify weak patterns"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "earth",
+        "nature"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, earth, nature, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        3,
+        7,
+        11,
+        15,
+        19
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  },
+  {
+    "date": "2026-03-24",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Collect more data to identify weak patterns"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "human",
+        "earth",
+        "nature"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, human, earth, nature, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        3,
+        7,
+        11,
+        15,
+        19
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  },
+  {
+    "date": "2026-03-25",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Collect more data to identify weak patterns"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "space"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, space, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        3,
+        7,
+        11,
+        15,
+        19
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  },
+  {
+    "date": "2026-03-26",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Collect more data to identify weak patterns"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "human",
+        "space"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, human, space, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        3,
+        7,
+        11,
+        15,
+        19
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  },
+  {
+    "date": "2026-03-27",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Collect more data to identify weak patterns"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "human",
+        "space",
+        "earth",
+        "nature"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, human, space, earth, nature, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        3,
+        7,
+        11,
+        15,
+        19
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  },
+  {
+    "date": "2026-03-28",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Collect more data to identify weak patterns"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "human",
+        "space",
+        "earth",
+        "nature"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, human, space, earth, nature, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        3,
+        7,
+        11,
+        15,
+        19
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  },
+  {
+    "date": "2026-03-31",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Collect more data to identify weak patterns"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "nature",
+        "earth"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, nature, earth, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        3,
+        7,
+        11,
+        15,
+        19
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  },
+  {
+    "date": "2026-04-15",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Collect more data to identify weak patterns"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "space"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, space, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        3,
+        7,
+        11,
+        15,
+        19
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  },
+  {
+    "date": "2026-04-17",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Collect more data to identify weak patterns"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "earth"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, earth, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        3,
+        7,
+        11,
+        15,
+        19
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
+  }
+]

@@ -1,0 +1,42 @@
+You are a professional YouTube scriptwriter for the channel "AI Japan".
+Your task is to write a full, high-quality English narration script about Japanese
+culture or the specified topic. This script will be used for a long-form (≈10 minute)
+AI-narrated video and must be suitable for natural spoken delivery.
+
+TOPIC: {topic}
+
+REQUIREMENTS:
+- Target duration: {duration} minutes of spoken narration
+- Keep the final spoken pace around 9-11 minutes (target ≈10 minutes)
+- Target word count: between {min_words} and {max_words} words (aim for natural
+  spoken pacing; the target range is intentionally wide to allow richness and detail)
+- Tone: {style}
+- This script will be read aloud by an AI voiceover — write natural, flowing sentences
+  suitable for spoken delivery. Use full sentences; avoid lists in the main narration.
+- IMPORTANT: Do NOT output narration section labels such as "HOOK", "INTRO",
+  "MAIN CONTENT", "SUMMARY", "OUTRO", "CTA", "CHAPTER", or "SECTION" in the
+  script text. The narration must be plain spoken prose only.
+- Structure the narration exactly as follows (include time guidance in each section):
+  * Hook — first 0:00–0:15: one powerful question/fact that grabs attention immediately.
+  * Intro — 0:15–0:45 (30s): brief context, why the topic matters, set expectations.
+  * Main Content — 0:45–8:15 (≈7–7.5 minutes): five numbered key points, each developed
+    with explanation, example, and a short anecdote where appropriate. Use visual cues
+    in [brackets] to indicate suggested footage for each point.
+  * Summary — 8:15–9:30 (≈1–1.25 minutes): recap the five key takeaways clearly.
+  * Outro & CTA — 9:30–10:00 (≈30s): closing, subscribe CTA, tease the next video.
+- Add short visual cues in [brackets] after relevant sentences (e.g., [Show cityscape],
+  [Cut to B-roll of convenience store], [Close-up of hands preparing food]).
+- Use interesting facts, statistics, and concrete examples throughout.
+
+FORMAT (output these sections in order):
+
+[TITLE]: A concise, engaging YouTube title (≤60 characters, not clickbait)
+[DESCRIPTION]: SEO-optimized description (150–220 words) ending with relevant hashtags
+[TAGS]: 12–20 comma-separated tags (no # symbol)
+[THUMBNAIL_CONCEPT]: 2–3 sentences describing a thumbnail idea optimized for
+  international viewers (main image, text overlay, color scheme)
+[SCRIPT]:
+(Full narration text only. No headings, no labels, no bullet markers. It must
+ respect the structural timing and fall within the {min_words}–{max_words} word range.)
+
+Now write the complete script:
