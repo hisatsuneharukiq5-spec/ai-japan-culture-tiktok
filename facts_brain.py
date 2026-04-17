@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import json
 import logging
-import os
 import re
 from collections import Counter
 from dataclasses import dataclass
@@ -359,6 +358,94 @@ def _compute_top_post_hours(rows: list[dict[str, Any]]) -> list[int]:
     return sorted(top) if len(top) >= 3 else default
 
 
+_COMPLAINT_KEYWORDS = [
+    "loop", "loops", "looping", "repeat", "repeating", "repeated",
+    "stuck", "freeze", "frozen", "glitch", "broken", "same clip",
+    "same video", "same footage", "over and over", "keeps repeating",
+    "keeps looping", "subtitle", "subtitles", "caption", "text",
+    "can't read", "cannot read", "unreadable", "gibberish", "weird text",
+]
+
+
+def _check_youtube_comments_for_issues(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    """Fetch recent video comments and detect quality complaint patterns.
+
+    Uses OAuth token (no separate API key needed) so it works without
+    YOUTUBE_API_KEY_FACTS being configured.
+    """
+    recent_ids = [r["video_id"] for r in rows[-15:] if r.get("video_id")]
+    if not recent_ids:
+        return {"status": "no_videos", "complaints": []}
+
+    try:
+        from google.oauth2.credentials import Credentials
+        from google.auth.transport.requests import Request
+        from googleapiclient.discovery import build
+
+        token_file = ROOT / "config" / "youtube_token_facts.json"
+        if not token_file.exists():
+            return {"status": "no_token", "complaints": []}
+        token_data = json.loads(token_file.read_text(encoding="utf-8"))
+        creds = Credentials(
+            token=token_data.get("token"),
+            refresh_token=token_data.get("refresh_token"),
+            token_uri=token_data.get("token_uri"),
+            client_id=token_data.get("client_id"),
+            client_secret=token_data.get("client_secret"),
+            scopes=token_data.get("scopes", []),
+        )
+        if creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        svc = build("youtube", "v3", credentials=creds)
+    except Exception as exc:
+        logger.warning("Comment monitor: auth failed: %s", exc)
+        return {"status": "auth_error", "complaints": []}
+
+    complaints: list[dict[str, Any]] = []
+    for vid_id in recent_ids[-8:]:  # Check last 8 videos
+        try:
+            resp = svc.commentThreads().list(
+                part="snippet",
+                videoId=vid_id,
+                maxResults=30,
+                order="relevance",
+                textFormat="plainText",
+            ).execute()
+            for item in resp.get("items", []):
+                text = (
+                    item.get("snippet", {})
+                    .get("topLevelComment", {})
+                    .get("snippet", {})
+                    .get("textDisplay", "")
+                    .lower()
+                )
+                matched = [kw for kw in _COMPLAINT_KEYWORDS if kw in text]
+                if matched:
+                    complaints.append({
+                        "video_id": vid_id,
+                        "keywords": matched,
+                        "comment": text[:300],
+                    })
+        except Exception as exc:
+            logger.warning("Comment fetch failed for %s: %s", vid_id, exc)
+
+    quality_alert = len(complaints) >= 2
+    if quality_alert:
+        logger.warning(
+            "Quality complaints detected in %d comments across recent videos: %s",
+            len(complaints),
+            [c["keywords"] for c in complaints],
+        )
+
+    return {
+        "status": "ok",
+        "videos_checked": min(8, len(recent_ids)),
+        "complaints_found": len(complaints),
+        "quality_alert": quality_alert,
+        "complaints": complaints,
+    }
+
+
 def _analyze_video_quality(rows: list[dict[str, Any]]) -> dict[str, Any]:
     """Examine clip-quality metrics from recent registry entries.
 
@@ -565,9 +652,11 @@ def run_daily_analysis() -> AnalysisResult:
     }
 
     video_quality = _analyze_video_quality(rows)
+    comment_monitor = _check_youtube_comments_for_issues(rows)
     changes = _compose_changes(summary)
     summary.pop("_rows", None)  # don't persist raw rows in report
     summary["video_quality"] = video_quality
+    summary["comment_monitor"] = comment_monitor
     _update_config_file(changes)
     ab_result = _update_ab_tests()
     summary["ab_test"] = ab_result

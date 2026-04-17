@@ -153,10 +153,16 @@ def _wrap_caption_words(sentence: str, max_words: int = 4) -> str:
 
 
 def _apply_highlight_markup(text: str) -> str:
+    # Use a lambda so the matched word (m.group(1)) is inserted correctly.
+    # The raw-string replacement r"\\1" does NOT reference the regex group —
+    # it produces a literal \1 which corrupts ASS tags and causes "/" artefacts.
     out = text
     for word in config_facts.HIGHLIGHT_WORDS:
         pattern = re.compile(rf"\b({re.escape(word)})\b", re.IGNORECASE)
-        out = pattern.sub(r"{\\c&H00FFFF&\\fs90}\\1{\\r}", out)
+        out = pattern.sub(
+            lambda m: "{\\c&H00FFFF&\\fs90}" + m.group(1) + "{\\r}",
+            out,
+        )
     return out
 
 
@@ -607,6 +613,61 @@ def _generate_lavfi_clip(out_path: Path, duration: float = 4.0, index: int = 0) 
     raise RuntimeError(f"All lavfi fallback attempts failed for {out_path}")
 
 
+def _count_scene_changes(video_path: Path, threshold: float = 0.08) -> int:
+    """Count scene changes using ffmpeg scdet filter. Used for loop detection."""
+    try:
+        result = subprocess.run(
+            [_ffmpeg(), "-i", str(video_path),
+             "-vf", f"scdet=threshold={threshold}", "-f", "null", "-"],
+            capture_output=True, text=True, timeout=90,
+        )
+        return result.stderr.count("scene_score")
+    except Exception:
+        return 999  # Assume OK if check cannot run
+
+
+def _validate_video_quality(video_path: Path, expected_duration: float) -> tuple[bool, list[str]]:
+    """Check video quality before upload. Returns (ok, issues).
+
+    Detects: missing file, wrong duration, missing audio, repeated footage (looping).
+    """
+    issues: list[str] = []
+
+    if not video_path.exists():
+        return False, ["Video file not found"]
+
+    size_mb = video_path.stat().st_size / (1024 * 1024)
+    if size_mb < 0.5:
+        issues.append(f"Video too small ({size_mb:.1f} MB — likely corrupt)")
+
+    actual_dur = _ffprobe_duration(video_path)
+    if abs(actual_dur - expected_duration) > 3.0:
+        issues.append(
+            f"Duration mismatch: expected {expected_duration:.1f}s, got {actual_dur:.1f}s"
+        )
+
+    ffprobe = shutil.which("ffprobe") or "ffprobe"
+    r = subprocess.run(
+        [ffprobe, "-v", "quiet", "-select_streams", "a:0",
+         "-show_entries", "stream=codec_name",
+         "-of", "default=noprint_wrappers=1:nokey=1", str(video_path)],
+        capture_output=True, text=True, timeout=15,
+    )
+    if not r.stdout.strip():
+        issues.append("No audio stream found")
+
+    # A healthy ~57s short should have at least 8 scene changes (one per ~7s)
+    scene_count = _count_scene_changes(video_path)
+    min_scenes = max(6, int(expected_duration / 7))
+    if scene_count < min_scenes:
+        issues.append(
+            f"Possible looping/repeated footage: only {scene_count} scene changes "
+            f"detected (minimum {min_scenes} expected for {expected_duration:.0f}s video)"
+        )
+
+    return len(issues) == 0, issues
+
+
 def _generate_bgm(duration: float, out_path: Path) -> None:
     # Generated tone-based track is copyright-free and always available.
     cmd = [
@@ -684,22 +745,19 @@ def _slice_clip(input_path: Path, out_path: Path, seconds: float) -> None:
 
 
 def _trim_to_duration(input_video: Path, out_path: Path, duration: float) -> None:
-    cmd = [
-        _ffmpeg(),
-        "-y",
-        "-stream_loop",
-        "-1",
-        "-i",
-        str(input_video),
-        "-t",
-        f"{duration:.2f}",
-        "-c:v",
-        "libx264",
-        "-preset",
-        "veryfast",
-        "-crf",
-        "22",
-        "-an",
+    src_dur = _ffprobe_duration(input_video)
+    cmd = [_ffmpeg(), "-y"]
+    if src_dur < duration - 0.5:
+        # Source is genuinely shorter — only then enable looping
+        logger.warning(
+            "Base track (%.1fs) shorter than target (%.1fs); stream_loop enabled",
+            src_dur, duration,
+        )
+        cmd += ["-stream_loop", "-1"]
+    cmd += [
+        "-i", str(input_video),
+        "-t", f"{duration:.2f}",
+        "-c:v", "libx264", "-preset", "veryfast", "-crf", "22", "-an",
         str(out_path),
     ]
     _run(cmd)
@@ -1302,7 +1360,8 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
             f"Not enough clips found from Pexels or Pixabay ({len(clip_urls)} < {config_facts.CLIP_COUNT_MIN})"
         )
 
-    clip_count = min(config_facts.CLIP_COUNT_MAX, max(config_facts.CLIP_COUNT_MIN, math.ceil(target_duration / 3.5)))
+    # Use /2.0 so the base track is ~2× the target duration — avoids any loop
+    clip_count = min(config_facts.CLIP_COUNT_MAX, max(config_facts.CLIP_COUNT_MIN, math.ceil(target_duration / 2.0)))
     candidate_urls = clip_urls[:]
     random.shuffle(candidate_urls)
 
@@ -1395,6 +1454,56 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
 
     final_video = FACTS_DIR / f"{timestamp}_{safe}_final.mp4"
     _mix_audio(captioned, audio_path, bgm_path, final_video, duration=target_duration)
+
+    # ── Pre-upload quality check ───────────────────────────────────────
+    video_ok, quality_issues = _validate_video_quality(final_video, target_duration)
+    if not video_ok:
+        error_logger.error("Quality check FAILED before upload: %s", quality_issues)
+        logger.warning("Quality issues detected — rebuilding video with fresh clips: %s", quality_issues)
+        # Force a fresh clip search and rebuild
+        try:
+            fresh_urls = _search_pexels_videos(keywords, max_urls=MAX_SEARCH_URLS)
+            if len(fresh_urls) < config_facts.CLIP_COUNT_MIN:
+                fresh_urls += _search_pixabay_videos(keywords, max_urls=MAX_SEARCH_URLS)
+            random.shuffle(fresh_urls)
+            fresh_downloaded: list[Path] = []
+            for fi, furl in enumerate(fresh_urls[:clip_count]):
+                fpath = FACTS_DIR / f"{timestamp}_{safe}_fresh_{fi:02d}.mp4"
+                try:
+                    _download(furl, fpath)
+                    if _ffprobe_duration(fpath) <= 0 or not _has_motion(fpath):
+                        fpath.unlink(missing_ok=True)
+                        continue
+                    fresh_downloaded.append(fpath)
+                except Exception:
+                    fpath.unlink(missing_ok=True)
+            if len(fresh_downloaded) >= config_facts.CLIP_COUNT_MIN:
+                fresh_sliced = []
+                for fi2, fsrc in enumerate(fresh_downloaded, start=1):
+                    fseg = FACTS_DIR / f"{timestamp}_{safe}_fseg_{fi2:02d}.mp4"
+                    _slice_clip(fsrc, fseg, random.uniform(config_facts.CLIP_DURATION_MIN, config_facts.CLIP_DURATION_MAX))
+                    fresh_sliced.append(fseg)
+                fresh_base = FACTS_DIR / f"{timestamp}_{safe}_fbase.mp4"
+                _compose_vertical_track(fresh_sliced, clip_duration=4, out_path=fresh_base)
+                fresh_trim = FACTS_DIR / f"{timestamp}_{safe}_ftrim.mp4"
+                _trim_to_duration(fresh_base, fresh_trim, duration=target_duration)
+                fresh_captioned = FACTS_DIR / f"{timestamp}_{safe}_fcap.mp4"
+                _apply_subtitles(fresh_trim, ass_path, fresh_captioned)
+                fresh_final = FACTS_DIR / f"{timestamp}_{safe}_ffinal.mp4"
+                _mix_audio(fresh_captioned, audio_path, bgm_path, fresh_final, duration=target_duration)
+                recheck_ok, recheck_issues = _validate_video_quality(fresh_final, target_duration)
+                if recheck_ok:
+                    final_video = fresh_final
+                    logger.info("Rebuilt video passed quality check")
+                else:
+                    error_logger.error("Rebuilt video still has issues: %s — uploading anyway", recheck_issues)
+                    final_video = fresh_final
+            else:
+                logger.warning("Not enough fresh clips for rebuild (%d) — uploading original", len(fresh_downloaded))
+        except Exception as rebuild_exc:
+            logger.warning("Video rebuild failed: %s — uploading original", rebuild_exc)
+    else:
+        logger.info("Quality check passed (%d scene changes detected)", _count_scene_changes(final_video))
 
     description = _build_description()
     ok_final, reason_final = _ensure_not_duplicate_title(youtube, title)
