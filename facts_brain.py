@@ -661,14 +661,53 @@ def run_daily_analysis() -> AnalysisResult:
     ab_result = _update_ab_tests()
     summary["ab_test"] = ab_result
 
-    # Daily growth: update channel description with trending keywords
+    # Proactive daily growth sweep — runs autonomously every cycle
     try:
         from facts_scheduler import _authenticate_youtube
-        from src.growth_engine import update_channel_description
+        from src.growth_engine import (
+            update_channel_description,
+            sync_all_playlists,
+            _fetch_trending_keywords,
+            _update_video_description,
+        )
         _yt = _authenticate_youtube()
+
+        # 1. Update channel description with today's trending keywords
         summary["channel_desc_updated"] = update_channel_description(_yt)
-    except Exception as _gdesc_exc:
-        logger.warning("Channel description update skipped: %s", _gdesc_exc)
+
+        # 2. Retroactive playlist sync — add any registry videos not yet in a playlist
+        #    Runs weekly (checks last-sync date to avoid daily quota burn)
+        last_sync_path = OUTPUT_ANALYTICS_DIR / "facts_playlist_sync_date.txt"
+        today_str = datetime.now().strftime("%Y-%m-%d")
+        last_sync = last_sync_path.read_text().strip() if last_sync_path.exists() else ""
+        days_since = 999
+        if last_sync:
+            try:
+                days_since = (datetime.now() - datetime.strptime(last_sync, "%Y-%m-%d")).days
+            except Exception:
+                pass
+        if days_since >= 7:
+            counts = sync_all_playlists(_yt, REGISTRY_PATH)
+            summary["playlist_sync"] = counts
+            last_sync_path.write_text(today_str)
+            logger.info("Weekly playlist sync: %s", counts)
+
+        # 3. Retroactive description refresh for the 3 most recent videos
+        #    Injects fresh trending keywords so older videos stay discoverable
+        trending = _fetch_trending_keywords()
+        refreshed = 0
+        for row in rows[-3:]:
+            vid = row.get("video_id", "")
+            if not vid:
+                continue
+            base_desc = row.get("description", "Amazing facts you can learn in under 60 seconds. Subscribe for daily science, space, and nature surprises.")
+            if _update_video_description(_yt, vid, base_desc, trending):
+                refreshed += 1
+        summary["description_refreshed"] = refreshed
+        logger.info("Proactive description refresh: %d videos updated", refreshed)
+
+    except Exception as _growth_exc:
+        logger.warning("Proactive growth sweep skipped: %s", _growth_exc)
         summary["channel_desc_updated"] = False
 
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
