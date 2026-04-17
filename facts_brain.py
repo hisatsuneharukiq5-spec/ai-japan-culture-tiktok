@@ -215,72 +215,31 @@ def _enrich_registry_with_real_stats(rows: list[dict[str, Any]]) -> list[dict[st
     return rows
 
 
-def _youtube_search(api_key: str, query: str, max_results: int = 10) -> list[dict[str, Any]]:
-    url = "https://www.googleapis.com/youtube/v3/search"
-    params = {
-        "part": "snippet",
-        "q": query,
-        "type": "video",
-        "maxResults": max_results,
-        "order": "viewCount",
-        "key": api_key,
-    }
-    resp = requests.get(url, params=params, timeout=20)
-    resp.raise_for_status()
-    items = resp.json().get("items", [])
-    return [
-        {
-            "title": item.get("snippet", {}).get("title", ""),
-            "channel": item.get("snippet", {}).get("channelTitle", ""),
-            "publishedAt": item.get("snippet", {}).get("publishedAt", ""),
-        }
-        for item in items
-    ]
-
-
 def _analyze_competitors() -> dict[str, Any]:
-    api_key = config_facts.YOUTUBE_API_KEY or ""
-    queries = [
-        "amazing facts shorts",
-        "did you know facts",
-        "science facts shorts",
-        "nature facts shorts",
-    ]
+    """Run full competitor analysis via competitor_analyzer module.
 
-    if not api_key:
-        return {
-            "status": "skipped",
-            "reason": "YOUTUBE_API_KEY_FACTS is not set",
-            "title_patterns": ["Did you know", "Number-led headline"],
-            "popular_topics": ["space", "human body", "animals"],
-            "hashtags": ["#Facts", "#DidYouKnow", "#Shorts"],
-            "optimal_length_seconds": [55, 59],
-            "thumbnail_style": "Bold center text with bright contrast",
-        }
-
-    all_titles: list[str] = []
-    raw: dict[str, Any] = {}
-    for q in queries:
-        try:
-            items = _youtube_search(api_key, q)
-            raw[q] = items
-            all_titles.extend(i["title"] for i in items)
-        except Exception as exc:
-            logger.warning("Competitor query failed for %s: %s", q, exc)
-            raw[q] = []
-
-    title_patterns = Counter(_title_pattern(t) for t in all_titles)
-    words = re.findall(r"[A-Za-z][A-Za-z0-9-]{2,}", " ".join(all_titles).lower())
-    topic_counts = Counter(w for w in words if w in {"space", "science", "animal", "nature", "human", "brain", "earth"})
+    Returns a unified dict with popular_topics, hashtags, hook_phrases,
+    title_templates, and power_words extracted from top-performing Shorts.
+    """
+    try:
+        from src.competitor_analyzer import analyze as _ca_analyze
+        insights = _ca_analyze()
+    except Exception as exc:
+        logger.warning("competitor_analyzer failed: %s — using baseline", exc)
+        from src.competitor_analyzer import BASELINE_PATTERNS
+        insights = dict(BASELINE_PATTERNS)
+        insights["source"] = "baseline_error"
 
     return {
-        "status": "ok",
-        "raw": raw,
-        "title_patterns": dict(title_patterns),
-        "popular_topics": [k for k, _ in topic_counts.most_common(5)] or ["science", "space"],
-        "hashtags": ["#Facts", "#DidYouKnow", "#AmazingFacts", "#Science", "#Nature", "#Shorts"],
+        "status": insights.get("source", "unknown"),
+        "videos_analyzed": insights.get("videos_analyzed", 0),
+        "popular_topics": insights.get("top_topics", ["space", "human body", "animals"])[:8],
+        "hashtags": insights.get("top_hashtags", ["#Facts", "#DidYouKnow", "#Shorts"]),
+        "hook_phrases": insights.get("hook_phrases", insights.get("top_hooks", [])),
+        "title_templates": insights.get("title_templates", []),
+        "power_words": insights.get("power_words", []),
+        "pattern_counts": insights.get("pattern_counts", {}),
         "optimal_length_seconds": [55, 59],
-        "thumbnail_style": "Bright colorful b-roll with large center captions",
     }
 
 
@@ -354,8 +313,9 @@ def _analyze_trends() -> dict[str, Any]:
     try:
         api_key = config_facts.YOUTUBE_API_KEY or ""
         if api_key:
-            yt_items = _youtube_search(api_key, "facts shorts", max_results=15)
-            yt_trending = [i.get("title", "") for i in yt_items if i.get("title")]
+            from src.competitor_analyzer import _search_top_shorts
+            hits = _search_top_shorts(api_key, "facts shorts", max_results=15)
+            yt_trending = [h.get("title", "") for h in hits if h.get("title")]
     except Exception as exc:
         logger.warning("YouTube trend fetch failed: %s", exc)
 
@@ -464,23 +424,40 @@ def _compose_changes(summary: dict[str, Any]) -> dict[str, Any]:
     seasonal = trends.get("seasonal", [])
     pytrends_topics = trends.get("pytrends", {}).get("topics", [])
 
-    # Merge topic sources: pytrends (real-time) > internal top performers > competitor > seasonal
+    # Topics: pytrends (real-time) > competitor > seasonal
     all_topics = list(dict.fromkeys([*pytrends_topics, *popular, *seasonal]))
     merged_topics = ", ".join(all_topics[:8]) or config_facts.TOPIC_STYLE
 
-    title_patterns = [
-        "Did you know that {fact}?",
-        "Only {number}% of people know this",
-    ]
+    # Title templates: use competitor-learned templates, fall back to defaults
+    title_templates = competitor.get("title_templates", [])
+    if not title_templates:
+        title_templates = [
+            "Did you know that {fact}? #Shorts",
+            "Only {number}% of people know this about {topic} #Shorts",
+            "{number} {topic} facts that will blow your mind #Shorts",
+        ]
     if internal.get("top5_patterns"):
-        title_patterns.append("{number} facts in {seconds} seconds")
+        title_templates = list(dict.fromkeys(
+            title_templates + ["{number} facts in {seconds} seconds #Shorts"]
+        ))
+
+    # Hook phrases: competitor-learned, fall back to hardcoded
+    hook_phrases = competitor.get("hook_phrases", [])
+    if not hook_phrases:
+        hook_phrases = [
+            "Did you know that",
+            "Scientists just discovered",
+            "Here's why most people don't know",
+            "The shocking truth about",
+        ]
 
     rows = summary.get("_rows", [])
     best_hours = _compute_top_post_hours(rows)
 
     return {
         "LEARNED_TOPIC_STYLE": merged_topics,
-        "LEARNED_TITLE_PATTERNS": title_patterns,
+        "LEARNED_TITLE_TEMPLATES": title_templates[:8],
+        "LEARNED_HOOK_PHRASES": hook_phrases[:8],
         "LEARNED_HASHTAGS": competitor.get("hashtags", config_facts.SHORTS_HASHTAGS),
         "PREFERRED_POST_HOURS": best_hours,
     }
@@ -490,7 +467,8 @@ def _replace_managed_block(content: str, updates: dict[str, Any]) -> str:
     lines = [
         "# FACTS_BRAIN_MANAGED_START",
         f"LEARNED_TOPIC_STYLE = {json.dumps(updates['LEARNED_TOPIC_STYLE'])}",
-        f"LEARNED_TITLE_PATTERNS = {json.dumps(updates['LEARNED_TITLE_PATTERNS'], ensure_ascii=False, indent=2)}",
+        f"LEARNED_TITLE_TEMPLATES = {json.dumps(updates['LEARNED_TITLE_TEMPLATES'], ensure_ascii=False, indent=2)}",
+        f"LEARNED_HOOK_PHRASES = {json.dumps(updates['LEARNED_HOOK_PHRASES'], ensure_ascii=False, indent=2)}",
         f"LEARNED_HASHTAGS = {json.dumps(updates['LEARNED_HASHTAGS'], ensure_ascii=False, indent=2)}",
         f"PREFERRED_POST_HOURS = {json.dumps(updates['PREFERRED_POST_HOURS'])}",
         "# FACTS_BRAIN_MANAGED_END",

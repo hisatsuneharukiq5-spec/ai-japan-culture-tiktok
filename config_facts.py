@@ -60,10 +60,24 @@ ANTHROPIC_MODELS = [
 
 # FACTS_BRAIN_MANAGED_START
 LEARNED_TOPIC_STYLE = "science, earth, nature, animal, space exploration, human body mysteries, extreme nature facts"
-LEARNED_TITLE_PATTERNS = [
-  "Did you know that {fact}?",
-  "Only {number}% of people know this",
-  "{number} facts in {seconds} seconds"
+LEARNED_TITLE_TEMPLATES = [
+  "Did you know that {fact}? #Shorts",
+  "{number} {topic} facts that will blow your mind #Shorts",
+  "Scientists just discovered {topic} and it changes everything #Shorts",
+  "Only {number}% of people know this about {topic} #Shorts",
+  "Why {topic} is more {adjective} than you think #Shorts",
+  "The real reason {topic} does this will shock you #Shorts",
+  "What happens to your body when {scenario}? #Shorts"
+]
+LEARNED_HOOK_PHRASES = [
+  "Did you know that",
+  "Scientists just discovered",
+  "Here's why most people don't know",
+  "The shocking truth about",
+  "What if I told you that",
+  "Most people don't realize",
+  "This will change how you see",
+  "You won't believe what"
 ]
 LEARNED_HASHTAGS = [
   "#Facts",

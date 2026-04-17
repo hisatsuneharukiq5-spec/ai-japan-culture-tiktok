@@ -782,19 +782,31 @@ def _build_script(topic: str | None = None, excluded_topics: set[str] | None = N
             raise ValueError("ANTHROPIC_API_KEY is not set")
         client = anthropic.Anthropic(api_key=key)
         avoided_topics = ", ".join(sorted(excluded_topics)) if excluded_topics else "N/A"
+
+        # Pull competitor-learned hook phrases and title templates from config
+        learned_hooks = getattr(config_facts, "LEARNED_HOOK_PHRASES", [])
+        learned_templates = getattr(config_facts, "LEARNED_TITLE_TEMPLATES", [])
+        hook_examples = "\n".join(f"  - {h}" for h in learned_hooks[:5]) if learned_hooks else "  - Did you know that"
+        template_examples = "\n".join(f"  - {t}" for t in learned_templates[:4]) if learned_templates else "  - Did you know that {fact}? #Shorts"
+
         prompt = f"""Write a YouTube Shorts narration for channel '{config_facts.CHANNEL_NAME}'.
 
 Rules:
-- 100 to 130 words
-- Start with: Did you know that...
-- 3 to 50 sec: include 3 to 5 related facts
+- 100 to 130 words total
+- Open with one of these proven viral hook phrases (pick the most fitting):
+{hook_examples}
+- Include 3 to 5 related facts with concrete numbers/statistics
 - End with exactly: {FACTS_CTA}
-- Keep sentences short and fast paced
-- Include concrete numbers/statistics
+- Keep sentences short and punchy (max 15 words each)
+- Use emotion/power words: shocking, incredible, never, secret, discovered
 - Topic focus: {selected_topic}
 - Avoid repeating any recent topic phrased like: {avoided_topics}
 - Tone: {config_facts.TONE}
-- Return strict JSON keys: title, script, topic
+
+For the title, use one of these high-performing templates (fill in the blanks):
+{template_examples}
+
+Return strict JSON with keys: title, script, topic
 """
         model_candidates = list(dict.fromkeys(getattr(config_facts, "ANTHROPIC_MODELS", [])))
         if not model_candidates:
@@ -823,8 +835,9 @@ Rules:
             text = text.split("```json", 1)[1].split("```", 1)[0].strip()
         data = json.loads(text)
         script = data.get("script", "")
-        if not script.lower().startswith("did you know that"):
-            script = "Did you know that " + script[0].lower() + script[1:]
+        # Accept any learned hook; only enforce fallback if script is bare/empty
+        if not script or len(script.split()) < 5:
+            script = "Did you know that " + script[0].lower() + script[1:] if script else "Did you know that"
         if FACTS_CTA not in script:
             script = script.rstrip() + f" {FACTS_CTA}"
         words = script.split()

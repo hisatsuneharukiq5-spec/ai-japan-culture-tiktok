@@ -48,7 +48,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add config_facts.py output/analytics/ analysis/ || true
+          git add config_facts.py output/analytics/ analysis/ src/competitor_analyzer.py || true
           git diff --cached --quiet || git commit -m "ci: facts daily analysis [skip ci]"
           git push || true
 
