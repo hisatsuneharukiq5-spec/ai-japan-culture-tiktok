@@ -661,6 +661,16 @@ def run_daily_analysis() -> AnalysisResult:
     ab_result = _update_ab_tests()
     summary["ab_test"] = ab_result
 
+    # Daily growth: update channel description with trending keywords
+    try:
+        from facts_scheduler import _authenticate_youtube
+        from src.growth_engine import update_channel_description
+        _yt = _authenticate_youtube()
+        summary["channel_desc_updated"] = update_channel_description(_yt)
+    except Exception as _gdesc_exc:
+        logger.warning("Channel description update skipped: %s", _gdesc_exc)
+        summary["channel_desc_updated"] = False
+
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
     REPORT_PATH.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
 

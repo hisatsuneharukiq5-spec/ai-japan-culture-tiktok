@@ -1073,8 +1073,10 @@ def _upload_to_youtube(
     description: str,
     tags: list[str],
     publish_at: datetime | None = None,
+    youtube: Any = None,
 ) -> str:
-    youtube = _authenticate_youtube()
+    if youtube is None:
+        youtube = _authenticate_youtube()
     status_payload: dict[str, Any] = {
         "privacyStatus": config_facts.DEFAULT_PRIVACY,
         "selfDeclaredMadeForKids": False,
@@ -1520,6 +1522,7 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
         description=description,
         tags=_active_facts_hashtags(),
         publish_at=publish_at,
+        youtube=youtube,
     )
 
     real_clip_count = sum(1 for p in downloaded if "_lavfi_" not in p.name)
@@ -1544,6 +1547,26 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
         "selfDeclaredMadeForKids": False,
     }
     _append_registry(entry)
+
+    # Post-upload growth actions: comment, playlist, description trending keywords
+    try:
+        from src.growth_engine import post_upload_actions
+        growth_result = post_upload_actions(
+            youtube=youtube,
+            video_id=video_id,
+            title=title,
+            topic=topic_used,
+            base_description=description,
+        )
+        entry["growth"] = growth_result
+        logger.info(
+            "Growth actions: comment=%s playlist=%s desc=%s",
+            growth_result.get("comment_posted"),
+            growth_result.get("playlist_added"),
+            growth_result.get("description_updated"),
+        )
+    except Exception as growth_exc:
+        logger.warning("Growth actions failed (non-fatal): %s", growth_exc)
 
     logger.info("Facts short upload complete: %s", video_id)
     return entry
