@@ -59,7 +59,7 @@ ANTHROPIC_MODELS = [
 ]
 
 # FACTS_BRAIN_MANAGED_START
-LEARNED_TOPIC_STYLE = "science, earth, space exploration, human body mysteries, extreme nature facts"
+LEARNED_TOPIC_STYLE = "science, earth, nature, animal, space exploration, human body mysteries, extreme nature facts"
 LEARNED_TITLE_PATTERNS = [
   "Did you know that {fact}?",
   "Only {number}% of people know this",
@@ -73,5 +73,5 @@ LEARNED_HASHTAGS = [
   "#Nature",
   "#Shorts"
 ]
-PREFERRED_POST_HOURS = [3, 7, 11, 15, 19]
+PREFERRED_POST_HOURS = [10, 15, 16, 18, 22]
 # FACTS_BRAIN_MANAGED_END

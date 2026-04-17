@@ -1101,5 +1101,76 @@
       "status": "pending",
       "note": "Will be updated after next publish cycle"
     }
+  },
+  {
+    "date": "2026-04-17",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 44.8,
+            "title_pattern_counts": {
+              "numeric": 2,
+              "statement": 3
+            },
+            "topic_counts": {
+              "your stomach grows": 1,
+              "giant sequoias are": 1,
+              "earth shocking lightning": 1,
+              "your brain eats": 1,
+              "your stomach acid": 1
+            },
+            "post_hour_counts": {
+              "22": 1,
+              "18": 1,
+              "00": 2,
+              "16": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Titles miss concrete numbers"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "earth",
+        "nature",
+        "animal"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, earth, nature, animal, space exploration, human body mysteries, extreme nature facts",
+      "LEARNED_TITLE_PATTERNS": [
+        "Did you know that {fact}?",
+        "Only {number}% of people know this",
+        "{number} facts in {seconds} seconds"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#Facts",
+        "#DidYouKnow",
+        "#AmazingFacts",
+        "#Science",
+        "#Nature",
+        "#Shorts"
+      ],
+      "PREFERRED_POST_HOURS": [
+        10,
+        15,
+        16,
+        18,
+        22
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
   }
 ]
