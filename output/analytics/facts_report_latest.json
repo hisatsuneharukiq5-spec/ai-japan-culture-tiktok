@@ -1,254 +1,44 @@
 {
-  "timestamp": "2026-04-17T16:31:06",
+  "timestamp": "2026-04-18T14:37:00",
   "internal": {
     "top5_patterns": [
       {
-        "avg_title_length": 44.8,
+        "avg_title_length": 38,
         "title_pattern_counts": {
-          "numeric": 2,
-          "statement": 3
+          "did-you-know": 1,
+          "statement": 4
         },
         "topic_counts": {
-          "your stomach grows": 1,
-          "giant sequoias are": 1,
-          "earth shocking lightning": 1,
-          "your brain eats": 1,
-          "your stomach acid": 1
+          "did you know": 1,
+          "your brain uses": 1,
+          "the immortal jellyfish": 1,
+          "the ocean glowing": 1,
+          "your body hidden": 1
         },
         "post_hour_counts": {
-          "22": 1,
-          "18": 1,
-          "00": 2,
-          "16": 1
+          "11": 1,
+          "00": 3,
+          "12": 1
         }
       }
     ],
     "bottom5_issues": [
-      "Titles miss concrete numbers"
+      "Collect more data to identify weak patterns"
     ],
     "retention_script_pattern": "Hook with 'Did you know that', 3-5 short numbered facts, CTA at the end"
   },
   "competitor": {
-    "status": "ok",
-    "raw": {
-      "amazing facts shorts": [
-        {
-          "title": "Aeroplane के बारे में 5 Amazing Facts     #shorts",
-          "channel": "CURIO",
-          "publishedAt": "2021-07-13T14:11:50Z"
-        },
-        {
-          "title": "How Much Is Too Much 😱",
-          "channel": "FactoHolic",
-          "publishedAt": "2025-04-24T15:44:29Z"
-        },
-        {
-          "title": "China&#39;s Futuristic School 😱",
-          "channel": "FactoHolic",
-          "publishedAt": "2025-10-19T06:54:20Z"
-        },
-        {
-          "title": "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
-          "channel": "Facts' Mine",
-          "publishedAt": "2022-08-04T12:31:26Z"
-        },
-        {
-          "title": "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
-          "channel": "Akash Parihar",
-          "publishedAt": "2021-07-24T02:30:07Z"
-        },
-        {
-          "title": "Pictures That Confused The Internet #shorts",
-          "channel": "Facts' Mine",
-          "publishedAt": "2023-03-14T17:46:58Z"
-        },
-        {
-          "title": "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
-          "channel": "HP Facts",
-          "publishedAt": "2021-12-28T10:28:33Z"
-        },
-        {
-          "title": "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
-          "channel": "전업배터",
-          "publishedAt": "2022-02-13T11:04:43Z"
-        },
-        {
-          "title": "Inside A Camel Hump 😱",
-          "channel": "FactoHolic",
-          "publishedAt": "2024-09-03T16:14:43Z"
-        },
-        {
-          "title": "Strongest Glass in The World",
-          "channel": "Facts' Mine",
-          "publishedAt": "2023-05-23T17:01:16Z"
-        }
-      ],
-      "did you know facts": [
-        {
-          "title": "This Magic Trick EXPLAINED 😱 (America&#39;s Got Talent)",
-          "channel": "Zack D. Films",
-          "publishedAt": "2022-05-15T14:00:15Z"
-        },
-        {
-          "title": "5 ILLEGAL gadgets that will get you ARRESTED",
-          "channel": "Mrwhosetheboss",
-          "publishedAt": "2022-11-01T11:00:06Z"
-        },
-        {
-          "title": "The Strongest Muscle In Your Body 🤨 (not what you think)",
-          "channel": "Zack D. Films",
-          "publishedAt": "2023-05-06T14:30:03Z"
-        },
-        {
-          "title": "Why Our Ancestors Didn&#39;t Need To Brush Their Teeth 🤨",
-          "channel": "Zack D. Films",
-          "publishedAt": "2023-03-11T15:30:08Z"
-        },
-        {
-          "title": "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
-          "channel": "Luke Davidson Facts",
-          "publishedAt": "2021-06-20T17:00:21Z"
-        },
-        {
-          "title": "5 Facts That Could SAVE Your Life",
-          "channel": "Dan Ondrey",
-          "publishedAt": "2022-02-09T23:45:00Z"
-        },
-        {
-          "title": "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
-          "channel": "Akash Parihar",
-          "publishedAt": "2021-07-24T02:30:07Z"
-        },
-        {
-          "title": "Singapore&#39;s Trash Journey  #8",
-          "channel": "Nas Daily",
-          "publishedAt": "2021-06-04T11:00:58Z"
-        },
-        {
-          "title": "Candy Facts That Will BLOW Your Mind 🤔",
-          "channel": "Zack D. Films",
-          "publishedAt": "2023-03-17T14:30:18Z"
-        },
-        {
-          "title": "3 Facts You Didn&#39;t Want To Know 😬",
-          "channel": "Zack D. Films",
-          "publishedAt": "2023-04-03T14:30:16Z"
-        }
-      ],
-      "science facts shorts": [
-        {
-          "title": "Bromine is scary",
-          "channel": "NileRed",
-          "publishedAt": "2021-03-21T17:21:20Z"
-        },
-        {
-          "title": "Do You Agree With The Scientists",
-          "channel": "Facts' Mine",
-          "publishedAt": "2023-08-08T18:29:04Z"
-        },
-        {
-          "title": "😲What if Whale Swallowed You (ALIVE)? - By Kishor Singh #shorts",
-          "channel": "Professor Of How",
-          "publishedAt": "2022-10-21T07:30:02Z"
-        },
-        {
-          "title": "A satisfying chemical reaction",
-          "channel": "Dr. Dana Figura",
-          "publishedAt": "2023-06-18T14:00:27Z"
-        },
-        {
-          "title": "Touching mercury",
-          "channel": "NileRed",
-          "publishedAt": "2021-04-19T17:52:22Z"
-        },
-        {
-          "title": "#physics #physicsconcept #physicsfacts #shorts #physicsfun #shorts #viral #trending #viralshorts",
-          "channel": "VYAS EDIFICATION",
-          "publishedAt": "2023-10-13T14:25:00Z"
-        },
-        {
-          "title": "What’s gives fireworks their colors 🤔 #science #scienceexperiment #physics #chemistry #fireworks",
-          "channel": "Imagination Station Toledo",
-          "publishedAt": "2024-05-13T18:22:51Z"
-        },
-        {
-          "title": "So how many pins can you fit in?............#theoryofphysics #physics #anubhavsir",
-          "channel": "Theory_Of_Physics X Unacademy",
-          "publishedAt": "2023-12-31T15:27:34Z"
-        },
-        {
-          "title": "Ocean Depth #ocean #science #sciencefacts",
-          "channel": "Thanos World",
-          "publishedAt": "2024-01-31T23:07:37Z"
-        },
-        {
-          "title": "🤯 ये 3 जानवर अमर है 😱 कभी मर नही सकते😳 immortal animals on earth #shorts",
-          "channel": "FactShip {Mohit jabalpuri}",
-          "publishedAt": "2021-08-21T03:55:01Z"
-        }
-      ],
-      "nature facts shorts": [
-        {
-          "title": "Porcupines have around 30K quills, with barbs at the tips that make them difficult to remove. 🌵🐖💺",
-          "channel": "Natural Habitat Shorts",
-          "publishedAt": "2022-11-17T17:05:41Z"
-        },
-        {
-          "title": "~ 𝐍𝐚𝐭𝐮𝐫𝐚𝐥 𝐂𝐨𝐦𝐩𝐚𝐬𝐬𝐢𝐨𝐧 ~ #shorts",
-          "channel": "Fusion Fact YT",
-          "publishedAt": "2025-03-20T03:02:00Z"
-        },
-        {
-          "title": "Natural Habitat Shorts- Chipmunks have cheek pouches used to store food. 🐿🥜",
-          "channel": "Natural Habitat Shorts",
-          "publishedAt": "2022-05-03T18:20:12Z"
-        },
-        {
-          "title": "Fierce Struggles: Wild Animal Battles #shorts #wildlife #animals #viral #facts #wildanimals #nature",
-          "channel": "Nature Gaze",
-          "publishedAt": "2024-04-21T15:00:18Z"
-        },
-        {
-          "title": "25 Greatest Natural Wonders of the World - Travel Video",
-          "channel": "touropia",
-          "publishedAt": "2021-07-14T13:11:57Z"
-        },
-        {
-          "title": "Natural Habitat Shorts- Rats have a highly developed hippocampus that uses memory to map locations",
-          "channel": "Natural Habitat Shorts",
-          "publishedAt": "2022-05-26T16:04:57Z"
-        },
-        {
-          "title": "Most Dangerous Animals Of Amazon Rainforest | Strange Facts About Amazon Rainforest [Hindi/Urdu]",
-          "channel": "Aasu Tv",
-          "publishedAt": "2024-05-15T19:20:38Z"
-        },
-        {
-          "title": "⚠️ BIG HOLE found Inside EARTH",
-          "channel": "GetsetflySCIENCE by Gaurav Thakur",
-          "publishedAt": "2024-01-10T07:00:13Z"
-        },
-        {
-          "title": "Shocking Discovery In Antarctica #shorts",
-          "channel": "Scary John",
-          "publishedAt": "2024-01-29T21:19:48Z"
-        },
-        {
-          "title": "Top 3 Amazing Nature Facts 🤣🤣😮 @MRINDIANHACKER  @CrazyXYZ  || #shorts || #FactBeast",
-          "channel": "Fact Beast",
-          "publishedAt": "2023-03-15T08:44:13Z"
-        }
-      ]
-    },
-    "title_patterns": {
-      "numeric": 15,
-      "statement": 25
-    },
+    "status": "baseline_fallback",
+    "videos_analyzed": 0,
     "popular_topics": [
-      "science",
-      "earth",
-      "nature",
-      "animal"
+      "space",
+      "human brain",
+      "deep ocean",
+      "ancient history",
+      "extreme animals",
+      "earth science",
+      "body facts",
+      "science discovery"
     ],
     "hashtags": [
       "#Facts",
@@ -256,48 +46,77 @@
       "#AmazingFacts",
       "#Science",
       "#Nature",
-      "#Shorts"
+      "#Shorts",
+      "#Space",
+      "#Mind",
+      "#Learn",
+      "#WowFact"
     ],
+    "hook_phrases": [
+      "Did you know that",
+      "Scientists just discovered",
+      "Here's why most people don't know",
+      "The shocking truth about",
+      "What if I told you that",
+      "Most people don't realize",
+      "This will change how you see",
+      "You won't believe what"
+    ],
+    "title_templates": [
+      "Did you know that {fact}? #Shorts",
+      "{number} {topic} facts that will blow your mind #Shorts",
+      "Scientists just discovered {topic} and it changes everything #Shorts",
+      "Why {topic} is more {adjective} than you think #Shorts",
+      "Only {number}% of people know this about {topic} #Shorts",
+      "The real reason {topic} does this will shock you #Shorts",
+      "What happens to your body when {scenario}? #Shorts"
+    ],
+    "power_words": [
+      "shocking",
+      "incredible",
+      "amazing",
+      "mind-blowing",
+      "never",
+      "secret",
+      "discovered",
+      "rare",
+      "only",
+      "deadliest",
+      "fastest",
+      "impossible",
+      "strangest",
+      "terrifying",
+      "unbelievable",
+      "extreme"
+    ],
+    "pattern_counts": {
+      "did-you-know": 42,
+      "number-lead": 18,
+      "wh-question": 16,
+      "science-discovery": 14,
+      "statistic": 6,
+      "statement": 4
+    },
     "optimal_length_seconds": [
       55,
       59
-    ],
-    "thumbnail_style": "Bright colorful b-roll with large center captions"
+    ]
   },
   "trends": {
     "google_trends": {
-      "status": "ok",
+      "status": "fallback",
       "topics": [
-        "ann li",
-        "ramandeep singh",
-        "alex molcan",
-        "denis shapovalov",
-        "rafael jodar",
-        "kathy ireland",
-        "garret anderson",
-        "caitlyn jenner",
-        "sassuolo vs como",
-        "the washington post"
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
       ]
     },
     "youtube_trending": {
-      "status": "ok",
+      "status": "heuristic",
       "topics": [
-        "Do You Agree With The Scientists",
-        "Steel Coil 😨",
-        "उत्तरी सागर / North Sea #shorts #facts #hindi #new",
-        "Aeroplane के बारे में 5 Amazing Facts     #shorts",
-        "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
-        "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
-        "How Much Is Too Much 😱",
-        "China&#39;s Futuristic School 😱",
-        "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
-        "5 Facts That Could SAVE Your Life",
-        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
-        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
-        "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
-        "Inside A Camel Hump 😱"
+        "did you know",
+        "science shorts",
+        "nature shorts"
       ]
     },
     "pytrends": {
@@ -318,8 +137,16 @@
     "lavfi_rate_pct": 0.0,
     "suggestions": []
   },
+  "comment_monitor": {
+    "status": "ok",
+    "videos_checked": 8,
+    "complaints_found": 0,
+    "quality_alert": false,
+    "complaints": []
+  },
   "ab_test": {
-    "total_tests": 17,
+    "total_tests": 18,
     "latest_status": "pending"
-  }
+  },
+  "channel_desc_updated": false
 }

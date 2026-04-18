@@ -485,6 +485,18 @@ def cmd_facts_run_single():
         import sys; sys.exit(1)
 
 
+def cmd_facts_growth():
+    """Post delayed engagement comments on recently uploaded videos — called by facts_growth.yml."""
+    from facts_scheduler import _authenticate_youtube
+    from src.growth_engine import post_delayed_comments
+    from src.quota_guard import status_line
+
+    print(f"Quota status: {status_line()}")
+    youtube = _authenticate_youtube()
+    result = post_delayed_comments(youtube, lookback_minutes=75)
+    print(f"Delayed comment sweep: {result}")
+
+
 def cmd_facts_scheduler_setup():
     from facts_scheduler import setup_windows_scheduler
 
@@ -705,6 +717,7 @@ def main():
     subparsers.add_parser("facts-scheduler-remove", help="Remove autonomous Facts scheduler task")
     subparsers.add_parser("facts-scheduler-execute", help="Run one autonomous Facts daily cycle")
     subparsers.add_parser("facts-analyze", help="Run Facts AI analysis and auto-evolution")
+    subparsers.add_parser("facts-growth", help="Post delayed engagement comments on recent videos (GitHub Actions)")
     subparsers.add_parser("facts-report", help="Show latest Facts analysis report")
     subparsers.add_parser("facts-brain-log", help="Show Facts evolution log")
 
@@ -798,6 +811,8 @@ def main():
         cmd_facts_scheduler_execute()
     elif args.command == "facts-analyze":
         cmd_facts_analyze()
+    elif args.command == "facts-growth":
+        cmd_facts_growth()
     elif args.command == "facts-report":
         cmd_facts_report()
     elif args.command == "facts-brain-log":

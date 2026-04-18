@@ -353,6 +353,18 @@ def _validate_facts_channel(youtube: Any) -> None:
         )
 
 
+def _is_interactive() -> bool:
+    """True when a human can respond to a browser auth prompt."""
+    import sys
+    # GitHub Actions sets CI=true; Windows Task Scheduler has no tty
+    if os.getenv("CI") or os.getenv("GITHUB_ACTIONS"):
+        return False
+    try:
+        return sys.stdin.isatty()
+    except Exception:
+        return False
+
+
 def _authenticate_youtube() -> Any:
     from google.auth.exceptions import RefreshError
     creds = None
@@ -365,14 +377,24 @@ def _authenticate_youtube() -> Any:
             try:
                 creds.refresh(Request())
             except RefreshError as e:
-                logger.warning(f"Token refresh failed (revoked/expired): {e}. Deleting token file and re-authenticating...")
                 TOKEN_FILE.unlink(missing_ok=True)
-                # Retry authentication flow
+                if not _is_interactive():
+                    raise RuntimeError(
+                        "OAuth token expired and cannot be refreshed automatically. "
+                        "Run 'py main.py facts-run-single' on your PC once to re-authenticate, "
+                        "then update the YT_TOKEN_FACTS secret in GitHub."
+                    ) from e
+                logger.warning("Token revoked — re-authenticating interactively...")
                 if not CLIENT_SECRETS_FILE.exists():
-                    raise ValueError(f"Missing client secrets: {CLIENT_SECRETS_FILE}")
+                    raise ValueError(f"Missing client secrets: {CLIENT_SECRETS_FILE}") from e
                 flow = InstalledAppFlow.from_client_secrets_file(str(CLIENT_SECRETS_FILE), SCOPES)
                 creds = flow.run_local_server(port=8090)
         else:
+            if not _is_interactive():
+                raise RuntimeError(
+                    "No valid OAuth token found and cannot open browser in this environment. "
+                    "Run 'py main.py facts-run-single' on your PC to authenticate first."
+                )
             if not CLIENT_SECRETS_FILE.exists():
                 raise ValueError(f"Missing client secrets: {CLIENT_SECRETS_FILE}")
             flow = InstalledAppFlow.from_client_secrets_file(str(CLIENT_SECRETS_FILE), SCOPES)
@@ -746,21 +768,41 @@ def _slice_clip(input_path: Path, out_path: Path, seconds: float) -> None:
 
 def _trim_to_duration(input_video: Path, out_path: Path, duration: float) -> None:
     src_dur = _ffprobe_duration(input_video)
-    cmd = [_ffmpeg(), "-y"]
-    if src_dur < duration - 0.5:
-        # Source is genuinely shorter — only then enable looping
-        logger.warning(
-            "Base track (%.1fs) shorter than target (%.1fs); stream_loop enabled",
-            src_dur, duration,
+
+    if src_dur >= duration - 0.5:
+        # No looping needed — just trim/copy to exact length
+        cmd = [
+            _ffmpeg(), "-y", "-i", str(input_video),
+            "-t", f"{duration:.2f}",
+            "-c:v", "libx264", "-preset", "veryfast", "-crf", "22", "-an",
+            str(out_path),
+        ]
+        _run(cmd, timeout=180)
+        return
+
+    # Source is shorter than target — loop using concat demuxer (avoids stream_loop
+    # freeze bug on Windows where ffmpeg can stall indefinitely with -stream_loop -1)
+    loops = math.ceil(duration / max(src_dur, 0.1)) + 1
+    logger.warning(
+        "Base track (%.1fs) shorter than target (%.1fs); using concat ×%d",
+        src_dur, duration, loops,
+    )
+    concat_txt = out_path.with_suffix(".concat.txt")
+    try:
+        concat_txt.write_text(
+            "\n".join(f"file '{str(input_video).replace(chr(92), '/')}'" for _ in range(loops)),
+            encoding="utf-8",
         )
-        cmd += ["-stream_loop", "-1"]
-    cmd += [
-        "-i", str(input_video),
-        "-t", f"{duration:.2f}",
-        "-c:v", "libx264", "-preset", "veryfast", "-crf", "22", "-an",
-        str(out_path),
-    ]
-    _run(cmd)
+        cmd = [
+            _ffmpeg(), "-y",
+            "-f", "concat", "-safe", "0", "-i", str(concat_txt),
+            "-t", f"{duration:.2f}",
+            "-c:v", "libx264", "-preset", "veryfast", "-crf", "22", "-an",
+            str(out_path),
+        ]
+        _run(cmd, timeout=300)
+    finally:
+        concat_txt.unlink(missing_ok=True)
 
 
 def _apply_subtitles(video_path: Path, ass_path: Path, out_path: Path) -> None:
@@ -1111,6 +1153,13 @@ def _upload_to_youtube(
     while response is None:
         _, response = req.next_chunk()
 
+    # Track quota: upload costs 1600 units
+    try:
+        from src.quota_guard import charge
+        charge("videos.insert")
+    except Exception:
+        pass
+
     return response["id"]
 
 
@@ -1194,6 +1243,16 @@ def _find_youtube_duplicate_id(youtube: Any, title: str) -> str | None:
     normalized = _normalize_title(title)
     if not normalized:
         return None
+
+    # search.list costs 100 units — skip if quota is tight (registry check is sufficient)
+    try:
+        from src.quota_guard import can_afford, charge
+        if not can_afford("search.list"):
+            logger.warning("Quota low: skipping YouTube duplicate title search")
+            return None
+        charge("search.list")
+    except Exception:
+        pass
 
     request = youtube.search().list(
         part="snippet",

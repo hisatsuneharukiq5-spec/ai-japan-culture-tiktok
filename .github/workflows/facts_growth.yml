@@ -1,0 +1,72 @@
+name: Facts & Wonders — Delayed Growth Actions
+
+# Runs 35 min after each post slot to post engagement comments once videos are live.
+# Separated from facts_daily.yml so comments arrive with a human-like delay.
+
+on:
+  schedule:
+    - cron: "35 18 * * *"   # 03:35 JST  (35 min after 03:00 post)
+    - cron: "35 22 * * *"   # 07:35 JST
+    - cron: "35  2 * * *"   # 11:35 JST
+    - cron: "35  6 * * *"   # 15:35 JST
+    - cron: "35 10 * * *"   # 19:35 JST
+  workflow_dispatch:
+
+concurrency:
+  group: facts-growth
+  cancel-in-progress: false
+
+jobs:
+  growth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Python deps
+        run: pip install -r requirements.txt pytrends
+
+      - name: Restore credentials
+        env:
+          YT_TOKEN_FACTS:    ${{ secrets.YT_TOKEN_FACTS }}
+          YT_CLIENT_SECRETS: ${{ secrets.YT_CLIENT_SECRETS }}
+          DOTENV_CONTENTS:   ${{ secrets.DOTENV_CONTENTS }}
+        run: |
+          mkdir -p config
+          printf '%s' "$YT_TOKEN_FACTS"    > config/youtube_token_facts.json
+          printf '%s' "$YT_CLIENT_SECRETS" > config/youtube_client_secrets.json
+          printf '%s' "$DOTENV_CONTENTS"   > .env
+
+      - name: Post delayed engagement comments
+        run: python main.py facts-growth
+        env:
+          PYTHONIOENCODING: utf-8
+          PYTHONUNBUFFERED: "1"
+
+      - name: Commit comment log
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main || true
+          git add output/analytics/ || true
+          git diff --cached --quiet || git commit -m "ci: facts growth actions [skip ci]"
+          git push || true
+
+      - name: Rotate token if refreshed
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -f config/youtube_token_facts.json ]; then
+            NEW=$(cat config/youtube_token_facts.json)
+            echo "$NEW" | gh secret set YT_TOKEN_FACTS --repo "$GITHUB_REPOSITORY"
+          fi
