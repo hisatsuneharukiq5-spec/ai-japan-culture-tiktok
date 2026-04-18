@@ -1,121 +1,46 @@
 {
-  "date": "2026-04-17",
-  "used": 5954,
+  "date": "2026-04-18",
+  "used": 1952,
   "log": [
     {
       "op": "search.list",
       "units": 100,
-      "ts": "2026-04-18T02:26:56"
+      "ts": "2026-04-18T10:33:57"
     },
     {
       "op": "search.list",
       "units": 100,
-      "ts": "2026-04-18T14:59:46"
-    },
-    {
-      "op": "search.list",
-      "units": 100,
-      "ts": "2026-04-18T15:05:54"
-    },
-    {
-      "op": "search.list",
-      "units": 100,
-      "ts": "2026-04-18T15:22:49"
+      "ts": "2026-04-18T10:36:42"
     },
     {
       "op": "videos.insert",
       "units": 1600,
-      "ts": "2026-04-18T15:23:11"
+      "ts": "2026-04-18T10:36:45"
     },
     {
       "op": "playlists.list",
       "units": 1,
-      "ts": "2026-04-18T15:23:26"
-    },
-    {
-      "op": "playlistItems.insert",
-      "units": 50,
-      "ts": "2026-04-18T15:23:26"
-    },
-    {
-      "op": "videos.list",
-      "units": 1,
-      "ts": "2026-04-18T15:24:18"
-    },
-    {
-      "op": "videos.update",
-      "units": 50,
-      "ts": "2026-04-18T15:24:19"
-    },
-    {
-      "op": "search.list",
-      "units": 100,
-      "ts": "2026-04-18T15:28:20"
-    },
-    {
-      "op": "videos.insert",
-      "units": 1600,
-      "ts": "2026-04-18T15:28:41"
-    },
-    {
-      "op": "playlistItems.insert",
-      "units": 50,
-      "ts": "2026-04-18T15:28:54"
-    },
-    {
-      "op": "search.list",
-      "units": 100,
-      "ts": "2026-04-18T06:59:57"
-    },
-    {
-      "op": "search.list",
-      "units": 100,
-      "ts": "2026-04-18T07:02:01"
-    },
-    {
-      "op": "videos.insert",
-      "units": 1600,
-      "ts": "2026-04-18T07:02:04"
-    },
-    {
-      "op": "playlists.list",
-      "units": 1,
-      "ts": "2026-04-18T07:02:10"
+      "ts": "2026-04-18T10:36:51"
     },
     {
       "op": "playlists.insert",
       "units": 50,
-      "ts": "2026-04-18T07:02:10"
+      "ts": "2026-04-18T10:36:51"
     },
     {
       "op": "playlistItems.insert",
       "units": 50,
-      "ts": "2026-04-18T07:02:11"
+      "ts": "2026-04-18T10:36:52"
     },
     {
       "op": "videos.list",
       "units": 1,
-      "ts": "2026-04-18T07:02:26"
+      "ts": "2026-04-18T10:37:22"
     },
     {
       "op": "videos.update",
       "units": 50,
-      "ts": "2026-04-18T07:02:26"
-    },
-    {
-      "op": "commentThreads.insert",
-      "units": 50,
-      "ts": "2026-04-18T07:45:02"
-    },
-    {
-      "op": "commentThreads.insert",
-      "units": 50,
-      "ts": "2026-04-18T07:45:36"
-    },
-    {
-      "op": "commentThreads.insert",
-      "units": 50,
-      "ts": "2026-04-18T07:46:19"
+      "ts": "2026-04-18T10:37:23"
     }
   ]
 }
