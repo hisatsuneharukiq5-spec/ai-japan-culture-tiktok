@@ -1,101 +1,110 @@
 {
-  "timestamp": "2026-04-18T14:37:00",
+  "timestamp": "2026-04-18T16:04:21",
   "internal": {
     "top5_patterns": [
       {
-        "avg_title_length": 38,
+        "avg_title_length": 44.8,
         "title_pattern_counts": {
-          "did-you-know": 1,
-          "statement": 4
+          "numeric": 2,
+          "statement": 3
         },
         "topic_counts": {
-          "did you know": 1,
-          "your brain uses": 1,
-          "the immortal jellyfish": 1,
-          "the ocean glowing": 1,
-          "your body hidden": 1
+          "your stomach grows": 1,
+          "giant sequoias are": 1,
+          "earth shocking lightning": 1,
+          "your brain eats": 1,
+          "your stomach acid": 1
         },
         "post_hour_counts": {
-          "11": 1,
-          "00": 3,
-          "12": 1
+          "22": 1,
+          "18": 1,
+          "00": 2,
+          "16": 1
         }
       }
     ],
     "bottom5_issues": [
-      "Collect more data to identify weak patterns"
+      "Titles miss concrete numbers"
     ],
     "retention_script_pattern": "Hook with 'Did you know that', 3-5 short numbered facts, CTA at the end"
   },
   "competitor": {
-    "status": "baseline_fallback",
-    "videos_analyzed": 0,
+    "status": "youtube_api",
+    "videos_analyzed": 50,
     "popular_topics": [
-      "space",
-      "human brain",
-      "deep ocean",
-      "ancient history",
-      "extreme animals",
-      "earth science",
-      "body facts",
-      "science discovery"
+      "science",
+      "didn",
+      "physics",
+      "save",
+      "life",
+      "amazing",
+      "sciencefacts",
+      "viral"
     ],
     "hashtags": [
-      "#Facts",
-      "#DidYouKnow",
-      "#AmazingFacts",
-      "#Science",
-      "#Nature",
-      "#Shorts",
-      "#Space",
-      "#Mind",
-      "#Learn",
-      "#WowFact"
+      "#shorts",
+      "#facts",
+      "#science",
+      "#viral",
+      "#sciencefacts",
+      "#education",
+      "#fact",
+      "#knowledge",
+      "#youtubeshorts",
+      "#amazing facts",
+      "#ytshorts",
+      "#experiment",
+      "#top",
+      "#short",
+      "#amazing",
+      "#didyouknow"
     ],
     "hook_phrases": [
-      "Did you know that",
-      "Scientists just discovered",
-      "Here's why most people don't know",
-      "The shocking truth about",
-      "What if I told you that",
-      "Most people don't realize",
-      "This will change how you see",
-      "You won't believe what"
+      "4 Cool Gifts for",
+      "#physics #physicsconcept #physicsfacts #shorts",
+      "So how many pins",
+      "Top - 3 Amazing",
+      "Ocean Depth #ocean #science",
+      "Balloon Explodes with Orange",
+      "From Human to Black",
+      "ये Animals दोबारा ज़िंदा"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
-      "{number} {topic} facts that will blow your mind #Shorts",
-      "Scientists just discovered {topic} and it changes everything #Shorts",
-      "Why {topic} is more {adjective} than you think #Shorts",
       "Only {number}% of people know this about {topic} #Shorts",
+      "Scientists just discovered {topic} and it changes everything #Shorts",
       "The real reason {topic} does this will shock you #Shorts",
-      "What happens to your body when {scenario}? #Shorts"
+      "Top - {number} {topic} {topic} 😱 #Shorts",
+      "What happens to your body when {scenario}? #Shorts",
+      "Why {topic} is more {adjective} than you think #Shorts",
+      "{number} {topic} You {topic}'t Want To Know 😬 #Shorts",
+      "{number} {topic} You {topic}’t Know That Could Save Your Life #Shorts",
+      "{number} {topic} facts that will blow your mind #Shorts"
     ],
     "power_words": [
-      "shocking",
-      "incredible",
+      "science",
+      "physics",
+      "experiment",
       "amazing",
-      "mind-blowing",
-      "never",
-      "secret",
-      "discovered",
-      "rare",
-      "only",
-      "deadliest",
-      "fastest",
-      "impossible",
-      "strangest",
-      "terrifying",
+      "viral",
+      "sciencefacts",
+      "trick",
+      "human",
+      "animals",
+      "factsmine",
+      "tricks",
+      "could",
+      "ytshorts",
       "unbelievable",
-      "extreme"
+      "never"
     ],
     "pattern_counts": {
-      "did-you-know": 42,
-      "number-lead": 18,
-      "wh-question": 16,
-      "science-discovery": 14,
-      "statistic": 6,
-      "statement": 4
+      "number-lead": 10,
+      "statement": 30,
+      "science-discovery": 1,
+      "statistic": 4,
+      "wh-question": 2,
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -104,19 +113,38 @@
   },
   "trends": {
     "google_trends": {
-      "status": "fallback",
+      "status": "ok",
       "topics": [
-        "space exploration",
-        "human body mysteries",
-        "extreme nature facts"
+        "fotmob",
+        "tottenham vs brighton",
+        "cavs game",
+        "iceland vs england",
+        "chevrolet logo",
+        "napoli - lazio",
+        "valve",
+        "christina koch artemis ii recovery",
+        "john morgan",
+        "napoli vs lazio"
       ]
     },
     "youtube_trending": {
-      "status": "heuristic",
+      "status": "ok",
       "topics": [
-        "did you know",
-        "science shorts",
-        "nature shorts"
+        "Steel Coil 😨",
+        "उत्तरी सागर / North Sea #shorts #facts #hindi #new",
+        "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
+        "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
+        "How Much Is Too Much 😱",
+        "China&#39;s Futuristic School 😱",
+        "5 Facts That Could SAVE Your Life",
+        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
+        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
+        "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
+        "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
+        "Inside A Camel Hump 😱",
+        "Strongest Glass in The World",
+        "This Video Can Save Your Life 😱",
+        "Candy Facts That Will BLOW Your Mind 🤔"
       ]
     },
     "pytrends": {
@@ -131,7 +159,7 @@
   },
   "video_quality": {
     "status": "ok",
-    "avg_real_clips": 16.2,
+    "avg_real_clips": 24.1,
     "avg_lavfi_clips": 0,
     "avg_static_skipped": 0,
     "lavfi_rate_pct": 0.0,
@@ -145,8 +173,18 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 18,
+    "total_tests": 19,
     "latest_status": "pending"
   },
-  "channel_desc_updated": false
+  "channel_desc_updated": false,
+  "playlist_sync": {
+    "Amazing Facts #Shorts": 26,
+    "Animal Facts #Shorts": 5,
+    "Human Body Facts #Shorts": 21,
+    "Space Facts #Shorts": 8,
+    "Earth Science Facts #Shorts": 11,
+    "Ocean Facts #Shorts": 4,
+    "History Facts #Shorts": 3
+  },
+  "description_refreshed": 3
 }
