@@ -636,14 +636,29 @@ def _generate_lavfi_clip(out_path: Path, duration: float = 4.0, index: int = 0) 
 
 
 def _count_scene_changes(video_path: Path, threshold: float = 0.08) -> int:
-    """Count scene changes using ffmpeg scdet filter. Used for loop detection."""
+    """Count scene changes using ffmpeg scdet filter. Used for loop detection.
+
+    ffmpeg 6+ outputs 'lavfi.scd.score: N' for every frame where score > threshold.
+    Actual scene cuts (clip-to-clip transitions) have scores > 0.3; lower values
+    are frame-to-frame noise within the same scene.
+    """
     try:
         result = subprocess.run(
             [_ffmpeg(), "-i", str(video_path),
              "-vf", f"scdet=threshold={threshold}", "-f", "null", "-"],
             capture_output=True, text=True, timeout=90,
         )
-        return result.stderr.count("scene_score")
+        # Count frames whose scene-cut score exceeds 0.3 (strong clip transition)
+        count = 0
+        for line in result.stderr.splitlines():
+            m = re.search(r"scd\.score:\s*([0-9.]+)", line)
+            if m:
+                try:
+                    if float(m.group(1)) > 0.3:
+                        count += 1
+                except ValueError:
+                    pass
+        return count
     except Exception:
         return 999  # Assume OK if check cannot run
 
