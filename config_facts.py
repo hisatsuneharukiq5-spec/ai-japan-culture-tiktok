@@ -59,15 +59,16 @@ ANTHROPIC_MODELS = [
 ]
 
 # FACTS_BRAIN_MANAGED_START
-LEARNED_TOPIC_STYLE = "science, earth, nature, animal, space exploration, human body mysteries, extreme nature facts"
+LEARNED_TOPIC_STYLE = "space, human brain, deep ocean, ancient history, extreme animals, earth science, body facts, science discovery"
 LEARNED_TITLE_TEMPLATES = [
   "Did you know that {fact}? #Shorts",
   "{number} {topic} facts that will blow your mind #Shorts",
   "Scientists just discovered {topic} and it changes everything #Shorts",
-  "Only {number}% of people know this about {topic} #Shorts",
   "Why {topic} is more {adjective} than you think #Shorts",
+  "Only {number}% of people know this about {topic} #Shorts",
   "The real reason {topic} does this will shock you #Shorts",
-  "What happens to your body when {scenario}? #Shorts"
+  "What happens to your body when {scenario}? #Shorts",
+  "{number} facts in {seconds} seconds #Shorts"
 ]
 LEARNED_HOOK_PHRASES = [
   "Did you know that",
@@ -85,7 +86,11 @@ LEARNED_HASHTAGS = [
   "#AmazingFacts",
   "#Science",
   "#Nature",
-  "#Shorts"
+  "#Shorts",
+  "#Space",
+  "#Mind",
+  "#Learn",
+  "#WowFact"
 ]
-PREFERRED_POST_HOURS = [10, 15, 16, 18, 22]
+PREFERRED_POST_HOURS = [0, 11, 12, 19, 20]
 # FACTS_BRAIN_MANAGED_END
