@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-18T16:04:21",
+  "timestamp": "2026-04-19T16:05:17",
   "internal": {
     "top5_patterns": [
       {
@@ -35,11 +35,11 @@
       "science",
       "didn",
       "physics",
+      "sciencefacts",
       "save",
       "life",
       "amazing",
-      "sciencefacts",
-      "viral"
+      "human"
     ],
     "hashtags": [
       "#shorts",
@@ -49,14 +49,14 @@
       "#sciencefacts",
       "#education",
       "#fact",
+      "#ytshorts",
+      "#amazing facts",
       "#knowledge",
       "#youtubeshorts",
-      "#amazing facts",
-      "#ytshorts",
       "#experiment",
+      "#youtube shorts",
       "#top",
       "#short",
-      "#amazing",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -84,10 +84,9 @@
     "power_words": [
       "science",
       "physics",
+      "sciencefacts",
       "experiment",
       "amazing",
-      "viral",
-      "sciencefacts",
       "trick",
       "human",
       "animals",
@@ -96,14 +95,15 @@
       "could",
       "ytshorts",
       "unbelievable",
-      "never"
+      "never",
+      "only"
     ],
     "pattern_counts": {
       "number-lead": 10,
       "statement": 30,
       "science-discovery": 1,
-      "statistic": 4,
-      "wh-question": 2,
+      "statistic": 3,
+      "wh-question": 3,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -115,16 +115,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "fotmob",
-        "tottenham vs brighton",
-        "cavs game",
-        "iceland vs england",
-        "chevrolet logo",
-        "napoli - lazio",
-        "valve",
-        "christina koch artemis ii recovery",
-        "john morgan",
-        "napoli vs lazio"
+        "kai havertz",
+        "shreveport",
+        "freddie freeman",
+        "kirk moore principal",
+        "telemundo",
+        "cherki",
+        "bayern munich",
+        "rayan cherki",
+        "cherki man city",
+        "washington post trump ballroom analysis"
       ]
     },
     "youtube_trending": {
@@ -139,12 +139,12 @@
         "5 Facts That Could SAVE Your Life",
         "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
         "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "This Video Can Save Your Life 😱",
-        "Candy Facts That Will BLOW Your Mind 🤔"
+        "Candy Facts That Will BLOW Your Mind 🤔",
+        "3 Facts You Didn&#39;t Want To Know 😬"
       ]
     },
     "pytrends": {
@@ -159,7 +159,7 @@
   },
   "video_quality": {
     "status": "ok",
-    "avg_real_clips": 24.1,
+    "avg_real_clips": 25.4,
     "avg_lavfi_clips": 0,
     "avg_static_skipped": 0,
     "lavfi_rate_pct": 0.0,
@@ -173,18 +173,9 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 19,
+    "total_tests": 20,
     "latest_status": "pending"
   },
   "channel_desc_updated": false,
-  "playlist_sync": {
-    "Amazing Facts #Shorts": 26,
-    "Animal Facts #Shorts": 5,
-    "Human Body Facts #Shorts": 21,
-    "Space Facts #Shorts": 8,
-    "Earth Science Facts #Shorts": 11,
-    "Ocean Facts #Shorts": 4,
-    "History Facts #Shorts": 3
-  },
   "description_refreshed": 3
 }

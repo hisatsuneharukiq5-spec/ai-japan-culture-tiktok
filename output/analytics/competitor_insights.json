@@ -5,8 +5,8 @@
     "number-lead": 10,
     "statement": 30,
     "science-discovery": 1,
-    "statistic": 4,
-    "wh-question": 2,
+    "statistic": 3,
+    "wh-question": 3,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -19,15 +19,14 @@
     "From Human to Black",
     "ये Animals दोबारा ज़िंदा",
     "Slicing A Bullet In",
-    "Formation of mirage ;"
+    "3 Science के मजेदार"
   ],
   "power_words": [
     "science",
     "physics",
+    "sciencefacts",
     "experiment",
     "amazing",
-    "viral",
-    "sciencefacts",
     "trick",
     "human",
     "animals",
@@ -36,7 +35,8 @@
     "could",
     "ytshorts",
     "unbelievable",
-    "never"
+    "never",
+    "only"
   ],
   "top_hashtags": [
     "#shorts",
@@ -46,25 +46,24 @@
     "#sciencefacts",
     "#education",
     "#fact",
+    "#ytshorts",
+    "#amazing facts",
     "#knowledge",
     "#youtubeshorts",
-    "#amazing facts",
-    "#ytshorts",
     "#experiment",
+    "#youtube shorts",
     "#top",
     "#short",
-    "#amazing",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
     "physics",
+    "sciencefacts",
     "save",
     "life",
     "amazing",
-    "sciencefacts",
-    "viral",
     "human",
     "animals",
     "factsmine",
@@ -76,7 +75,8 @@
     "anubhavsir",
     "ocean",
     "unbelievable",
-    "youtubeshorts"
+    "youtubeshorts",
+    "experiment"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -90,7 +90,7 @@
     "{number} {topic} You {topic}’t Know That Could Save Your Life #Shorts",
     "{number} {topic} facts that will blow your mind #Shorts"
   ],
-  "avg_duration_secs": 43.4,
+  "avg_duration_secs": 44.2,
   "hook_phrases": [
     "4 Cool Gifts for",
     "#physics #physicsconcept #physicsfacts #shorts",
@@ -101,5 +101,5 @@
     "From Human to Black",
     "ये Animals दोबारा ज़िंदा"
   ],
-  "timestamp": "2026-04-18T16:04:21"
+  "timestamp": "2026-04-19T16:05:16"
 }
