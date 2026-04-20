@@ -1,201 +1,36 @@
 {
-  "date": "2026-04-19",
-  "used": 9808,
+  "date": "2026-04-20",
+  "used": 1901,
   "log": [
     {
       "op": "search.list",
       "units": 100,
-      "ts": "2026-04-19T10:33:31"
+      "ts": "2026-04-20T11:14:42"
     },
     {
       "op": "search.list",
       "units": 100,
-      "ts": "2026-04-19T10:37:53"
+      "ts": "2026-04-20T11:17:25"
     },
     {
       "op": "videos.insert",
       "units": 1600,
-      "ts": "2026-04-19T10:37:55"
+      "ts": "2026-04-20T11:17:28"
     },
     {
       "op": "playlistItems.insert",
       "units": 50,
-      "ts": "2026-04-19T10:38:07"
+      "ts": "2026-04-20T11:17:36"
     },
     {
       "op": "videos.list",
       "units": 1,
-      "ts": "2026-04-19T10:38:23"
+      "ts": "2026-04-20T11:18:05"
     },
     {
       "op": "videos.update",
       "units": 50,
-      "ts": "2026-04-19T10:38:23"
-    },
-    {
-      "op": "commentThreads.insert",
-      "units": 50,
-      "ts": "2026-04-19T11:10:16"
-    },
-    {
-      "op": "channels.list",
-      "units": 1,
-      "ts": "2026-04-19T16:05:18"
-    },
-    {
-      "op": "channels.update",
-      "units": 50,
-      "ts": "2026-04-19T16:05:26"
-    },
-    {
-      "op": "videos.list",
-      "units": 1,
-      "ts": "2026-04-19T16:05:33"
-    },
-    {
-      "op": "videos.update",
-      "units": 50,
-      "ts": "2026-04-19T16:05:33"
-    },
-    {
-      "op": "videos.list",
-      "units": 1,
-      "ts": "2026-04-19T16:05:34"
-    },
-    {
-      "op": "videos.update",
-      "units": 50,
-      "ts": "2026-04-19T16:05:34"
-    },
-    {
-      "op": "videos.list",
-      "units": 1,
-      "ts": "2026-04-19T16:05:34"
-    },
-    {
-      "op": "videos.update",
-      "units": 50,
-      "ts": "2026-04-19T16:05:34"
-    },
-    {
-      "op": "search.list",
-      "units": 100,
-      "ts": "2026-04-19T19:03:00"
-    },
-    {
-      "op": "search.list",
-      "units": 100,
-      "ts": "2026-04-19T19:05:52"
-    },
-    {
-      "op": "videos.insert",
-      "units": 1600,
-      "ts": "2026-04-19T19:05:54"
-    },
-    {
-      "op": "playlistItems.insert",
-      "units": 50,
-      "ts": "2026-04-19T19:06:08"
-    },
-    {
-      "op": "videos.list",
-      "units": 1,
-      "ts": "2026-04-19T19:06:34"
-    },
-    {
-      "op": "videos.update",
-      "units": 50,
-      "ts": "2026-04-19T19:06:34"
-    },
-    {
-      "op": "commentThreads.insert",
-      "units": 50,
-      "ts": "2026-04-19T19:27:42"
-    },
-    {
-      "op": "search.list",
-      "units": 100,
-      "ts": "2026-04-19T22:32:18"
-    },
-    {
-      "op": "search.list",
-      "units": 100,
-      "ts": "2026-04-19T22:36:17"
-    },
-    {
-      "op": "videos.insert",
-      "units": 1600,
-      "ts": "2026-04-19T22:36:26"
-    },
-    {
-      "op": "playlistItems.insert",
-      "units": 50,
-      "ts": "2026-04-19T22:36:31"
-    },
-    {
-      "op": "videos.list",
-      "units": 1,
-      "ts": "2026-04-19T22:37:00"
-    },
-    {
-      "op": "videos.update",
-      "units": 50,
-      "ts": "2026-04-19T22:37:00"
-    },
-    {
-      "op": "commentThreads.insert",
-      "units": 50,
-      "ts": "2026-04-19T23:06:08"
-    },
-    {
-      "op": "search.list",
-      "units": 100,
-      "ts": "2026-04-20T04:53:46"
-    },
-    {
-      "op": "search.list",
-      "units": 100,
-      "ts": "2026-04-20T04:55:58"
-    },
-    {
-      "op": "videos.insert",
-      "units": 1600,
-      "ts": "2026-04-20T04:56:00"
-    },
-    {
-      "op": "playlistItems.insert",
-      "units": 50,
-      "ts": "2026-04-20T04:56:11"
-    },
-    {
-      "op": "videos.list",
-      "units": 1,
-      "ts": "2026-04-20T04:56:31"
-    },
-    {
-      "op": "videos.update",
-      "units": 50,
-      "ts": "2026-04-20T04:56:31"
-    },
-    {
-      "op": "commentThreads.insert",
-      "units": 50,
-      "ts": "2026-04-20T05:28:01"
-    },
-    {
-      "op": "search.list",
-      "units": 100,
-      "ts": "2026-04-20T07:55:21"
-    },
-    {
-      "op": "search.list",
-      "units": 100,
-      "ts": "2026-04-20T07:57:40"
-    },
-    {
-      "op": "videos.insert",
-      "units": 1600,
-      "ts": "2026-04-20T07:57:44"
+      "ts": "2026-04-20T11:18:05"
     }
   ]
 }
