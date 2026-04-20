@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-19T16:05:17",
+  "timestamp": "2026-04-20T16:43:22",
   "internal": {
     "top5_patterns": [
       {
@@ -35,39 +35,39 @@
       "science",
       "didn",
       "physics",
-      "sciencefacts",
-      "save",
-      "life",
       "amazing",
-      "human"
+      "sciencefacts",
+      "unbelievable",
+      "human",
+      "animals"
     ],
     "hashtags": [
       "#shorts",
-      "#facts",
       "#science",
-      "#viral",
+      "#facts",
       "#sciencefacts",
       "#education",
+      "#viral",
+      "#new",
       "#fact",
-      "#ytshorts",
-      "#amazing facts",
-      "#knowledge",
       "#youtubeshorts",
-      "#experiment",
-      "#youtube shorts",
       "#top",
+      "#knowledge",
       "#short",
+      "#ytshorts",
+      "#experiment",
+      "#science experiments",
       "#didyouknow"
     ],
     "hook_phrases": [
+      "Square Bubble",
       "4 Cool Gifts for",
       "#physics #physicsconcept #physicsfacts #shorts",
       "So how many pins",
       "Top - 3 Amazing",
       "Ocean Depth #ocean #science",
-      "Balloon Explodes with Orange",
-      "From Human to Black",
-      "ये Animals दोबारा ज़िंदा"
+      "Fascinating Facts About Ladybugs",
+      "Balloon Explodes with Orange"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -84,25 +84,24 @@
     "power_words": [
       "science",
       "physics",
-      "sciencefacts",
-      "experiment",
       "amazing",
+      "sciencefacts",
       "trick",
+      "experiment",
+      "unbelievable",
       "human",
       "animals",
       "factsmine",
       "tricks",
       "could",
-      "ytshorts",
-      "unbelievable",
-      "never",
-      "only"
+      "only",
+      "fastest"
     ],
     "pattern_counts": {
+      "statement": 31,
       "number-lead": 10,
-      "statement": 30,
       "science-discovery": 1,
-      "statistic": 3,
+      "statistic": 2,
       "wh-question": 3,
       "did-you-know": 3
     },
@@ -115,23 +114,22 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "kai havertz",
-        "shreveport",
-        "freddie freeman",
-        "kirk moore principal",
-        "telemundo",
-        "cherki",
-        "bayern munich",
-        "rayan cherki",
-        "cherki man city",
-        "washington post trump ballroom analysis"
+        "brandon aubrey",
+        "student loan",
+        "krispy kreme milk bar collaboration",
+        "kyle busch",
+        "topps",
+        "uscis green card warning",
+        "jet fuel",
+        "supreme court",
+        "national guard washington deployment",
+        "vissel kobe vs al-ahli"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
         "Steel Coil 😨",
-        "उत्तरी सागर / North Sea #shorts #facts #hindi #new",
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
         "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
         "How Much Is Too Much 😱",
@@ -139,12 +137,13 @@
         "5 Facts That Could SAVE Your Life",
         "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
+        "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "This Video Can Save Your Life 😱",
         "Candy Facts That Will BLOW Your Mind 🤔",
-        "3 Facts You Didn&#39;t Want To Know 😬"
+        "3 Facts You Didn&#39;t Want To Know 😬",
+        "How Many Hours Do You Sleep 😱"
       ]
     },
     "pytrends": {
@@ -159,7 +158,7 @@
   },
   "video_quality": {
     "status": "ok",
-    "avg_real_clips": 25.4,
+    "avg_real_clips": 26.2,
     "avg_lavfi_clips": 0,
     "avg_static_skipped": 0,
     "lavfi_rate_pct": 0.0,
@@ -173,7 +172,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 20,
+    "total_tests": 21,
     "latest_status": "pending"
   },
   "channel_desc_updated": false,

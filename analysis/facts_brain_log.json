@@ -1465,5 +1465,105 @@
       "status": "pending",
       "note": "Will be updated after next publish cycle"
     }
+  },
+  {
+    "date": "2026-04-20",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 44.8,
+            "title_pattern_counts": {
+              "numeric": 2,
+              "statement": 3
+            },
+            "topic_counts": {
+              "your stomach grows": 1,
+              "giant sequoias are": 1,
+              "earth shocking lightning": 1,
+              "your brain eats": 1,
+              "your stomach acid": 1
+            },
+            "post_hour_counts": {
+              "22": 1,
+              "18": 1,
+              "00": 2,
+              "16": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Titles miss concrete numbers"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "didn",
+        "physics",
+        "amazing",
+        "sciencefacts",
+        "unbelievable",
+        "human",
+        "animals"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, didn, physics, amazing, sciencefacts, unbelievable, human, animals",
+      "LEARNED_TITLE_TEMPLATES": [
+        "Did you know that {fact}? #Shorts",
+        "Only {number}% of people know this about {topic} #Shorts",
+        "Scientists just discovered {topic} and it changes everything #Shorts",
+        "The real reason {topic} does this will shock you #Shorts",
+        "Top - {number} {topic} {topic} 😱 #Shorts",
+        "What happens to your body when {scenario}? #Shorts",
+        "Why {topic} is more {adjective} than you think #Shorts",
+        "{number} {topic} You {topic}'t Want To Know 😬 #Shorts"
+      ],
+      "LEARNED_HOOK_PHRASES": [
+        "Square Bubble",
+        "4 Cool Gifts for",
+        "#physics #physicsconcept #physicsfacts #shorts",
+        "So how many pins",
+        "Top - 3 Amazing",
+        "Ocean Depth #ocean #science",
+        "Fascinating Facts About Ladybugs",
+        "Balloon Explodes with Orange"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#shorts",
+        "#science",
+        "#facts",
+        "#sciencefacts",
+        "#education",
+        "#viral",
+        "#new",
+        "#fact",
+        "#youtubeshorts",
+        "#top",
+        "#knowledge",
+        "#short",
+        "#ytshorts",
+        "#experiment",
+        "#science experiments",
+        "#didyouknow"
+      ],
+      "PREFERRED_POST_HOURS": [
+        4,
+        10,
+        16,
+        18,
+        22
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
   }
 ]
