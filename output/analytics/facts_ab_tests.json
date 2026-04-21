@@ -232,10 +232,22 @@
     "title_a": "Did you know that your brain uses 20% of your oxygen?",
     "title_b": "Only 20% oxygen: the brain fact that surprises everyone",
     "compare_after_hours": 48,
-    "status": "pending"
+    "status": "learned",
+    "winner": "title_a",
+    "loser": "title_b",
+    "views_a": 0,
+    "views_b": 0,
+    "reason": "Compared 48h view counts from facts upload registry"
   },
   {
     "created_at": "2026-04-20T16:43:22",
+    "title_a": "Did you know that your brain uses 20% of your oxygen?",
+    "title_b": "Only 20% oxygen: the brain fact that surprises everyone",
+    "compare_after_hours": 48,
+    "status": "pending"
+  },
+  {
+    "created_at": "2026-04-21T16:38:33",
     "title_a": "Did you know that your brain uses 20% of your oxygen?",
     "title_b": "Only 20% oxygen: the brain fact that surprises everyone",
     "compare_after_hours": 48,
