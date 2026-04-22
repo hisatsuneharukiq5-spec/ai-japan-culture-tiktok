@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-21T16:38:32",
+  "timestamp": "2026-04-22T16:40:00",
   "internal": {
     "top5_patterns": [
       {
@@ -35,11 +35,11 @@
       "science",
       "didn",
       "physics",
-      "sciencefacts",
       "experiment",
       "amazing",
-      "unbelievable",
-      "human"
+      "sciencefacts",
+      "human",
+      "unbelievable"
     ],
     "hashtags": [
       "#shorts",
@@ -47,27 +47,27 @@
       "#facts",
       "#viral",
       "#sciencefacts",
-      "#education",
-      "#youtubeshorts",
       "#experiment",
+      "#education",
+      "#new",
+      "#youtubeshorts",
       "#short",
-      "#tiktok",
       "#ytshorts",
       "#knowledge",
       "#fact",
-      "#science experiments",
-      "#physics",
+      "#tiktok",
+      "#amazing facts",
       "#didyouknow"
     ],
     "hook_phrases": [
       "Squid Ink Science Experiment",
-      "Square Bubble",
       "4 Cool Gifts for",
       "#physics #physicsconcept #physicsfacts #shorts",
       "So how many pins",
       "Top - 3 Amazing",
       "Ocean Depth #ocean #science",
-      "Balloon Explodes with Orange"
+      "Balloon Explodes with Orange",
+      "From Human to Black"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -85,11 +85,11 @@
       "science",
       "physics",
       "experiment",
+      "amazing",
       "sciencefacts",
       "trick",
-      "amazing",
-      "unbelievable",
       "human",
+      "unbelievable",
       "tricks",
       "could",
       "only",
@@ -111,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "nato",
-        "citi credit card",
-        "athletic - osasuna",
-        "r.c.d. mallorca - valencia c. f.",
-        "mallorca vs valencia",
-        "terrence brown",
-        "brooks rosser rae boyd dating",
-        "citi card",
-        "thomas haugh",
-        "hoda kotb"
+        "elche c. f. - atlético madrid",
+        "espanyol vs barcelona",
+        "all stars 11 cast",
+        "liam rosenior",
+        "psg vs nantes",
+        "psg - nantes",
+        "clayface",
+        "hubert hurkacz",
+        "sa-w vs indw",
+        "army cft"
       ]
     },
     "youtube_trending": {
@@ -155,7 +155,7 @@
   },
   "video_quality": {
     "status": "ok",
-    "avg_real_clips": 26.6,
+    "avg_real_clips": 27,
     "avg_lavfi_clips": 0,
     "avg_static_skipped": 0,
     "lavfi_rate_pct": 0.0,
@@ -169,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 22,
+    "total_tests": 23,
     "latest_status": "pending"
   },
   "channel_desc_updated": false,

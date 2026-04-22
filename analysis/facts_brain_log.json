@@ -1665,5 +1665,105 @@
       "status": "pending",
       "note": "Will be updated after next publish cycle"
     }
+  },
+  {
+    "date": "2026-04-22",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 44.8,
+            "title_pattern_counts": {
+              "numeric": 2,
+              "statement": 3
+            },
+            "topic_counts": {
+              "your stomach grows": 1,
+              "giant sequoias are": 1,
+              "earth shocking lightning": 1,
+              "your brain eats": 1,
+              "your stomach acid": 1
+            },
+            "post_hour_counts": {
+              "22": 1,
+              "18": 1,
+              "00": 2,
+              "16": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Titles miss concrete numbers"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "didn",
+        "physics",
+        "experiment",
+        "amazing",
+        "sciencefacts",
+        "human",
+        "unbelievable"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, didn, physics, experiment, amazing, sciencefacts, human, unbelievable",
+      "LEARNED_TITLE_TEMPLATES": [
+        "Did you know that {fact}? #Shorts",
+        "Only {number}% of people know this about {topic} #Shorts",
+        "Scientists just discovered {topic} and it changes everything #Shorts",
+        "The real reason {topic} does this will shock you #Shorts",
+        "Top - {number} {topic} {topic} 😱 #Shorts",
+        "What happens to your body when {scenario}? #Shorts",
+        "Why {topic} is more {adjective} than you think #Shorts",
+        "{number} {topic} You {topic}'t Want To Know 😬 #Shorts"
+      ],
+      "LEARNED_HOOK_PHRASES": [
+        "Squid Ink Science Experiment",
+        "4 Cool Gifts for",
+        "#physics #physicsconcept #physicsfacts #shorts",
+        "So how many pins",
+        "Top - 3 Amazing",
+        "Ocean Depth #ocean #science",
+        "Balloon Explodes with Orange",
+        "From Human to Black"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#shorts",
+        "#science",
+        "#facts",
+        "#viral",
+        "#sciencefacts",
+        "#experiment",
+        "#education",
+        "#new",
+        "#youtubeshorts",
+        "#short",
+        "#ytshorts",
+        "#knowledge",
+        "#fact",
+        "#tiktok",
+        "#amazing facts",
+        "#didyouknow"
+      ],
+      "PREFERRED_POST_HOURS": [
+        4,
+        10,
+        16,
+        17,
+        18
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
   }
 ]
