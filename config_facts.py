@@ -59,7 +59,7 @@ ANTHROPIC_MODELS = [
 ]
 
 # FACTS_BRAIN_MANAGED_START
-LEARNED_TOPIC_STYLE = "science, didn, physics, experiment, amazing, sciencefacts, human, unbelievable"
+LEARNED_TOPIC_STYLE = "science, didn, experiment, physics, amazing, save, life, sciencefacts"
 LEARNED_TITLE_TEMPLATES = [
   "Did you know that {fact}? #Shorts",
   "Only {number}% of people know this about {topic} #Shorts",
@@ -71,31 +71,31 @@ LEARNED_TITLE_TEMPLATES = [
   "{number} {topic} You {topic}'t Want To Know 😬 #Shorts"
 ]
 LEARNED_HOOK_PHRASES = [
+  "This is SO cool",
   "Squid Ink Science Experiment",
+  "Water defies gravity. But",
   "4 Cool Gifts for",
+  "Kuchh science ke kamal",
   "#physics #physicsconcept #physicsfacts #shorts",
-  "So how many pins",
-  "Top - 3 Amazing",
-  "Ocean Depth #ocean #science",
-  "Balloon Explodes with Orange",
-  "From Human to Black"
+  "Aeroplane के बारे में",
+  "So how many pins"
 ]
 LEARNED_HASHTAGS = [
   "#shorts",
   "#science",
   "#facts",
   "#viral",
-  "#sciencefacts",
-  "#experiment",
   "#education",
+  "#sciencefacts",
   "#new",
   "#youtubeshorts",
+  "#experiment",
+  "#funny",
+  "#physics",
   "#short",
   "#ytshorts",
   "#knowledge",
   "#fact",
-  "#tiktok",
-  "#amazing facts",
   "#didyouknow"
 ]
 PREFERRED_POST_HOURS = [4, 10, 16, 17, 18]

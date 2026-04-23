@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-22T16:40:00",
+  "timestamp": "2026-04-23T17:02:59",
   "internal": {
     "top5_patterns": [
       {
@@ -34,40 +34,40 @@
     "popular_topics": [
       "science",
       "didn",
-      "physics",
       "experiment",
+      "physics",
       "amazing",
-      "sciencefacts",
-      "human",
-      "unbelievable"
+      "save",
+      "life",
+      "sciencefacts"
     ],
     "hashtags": [
       "#shorts",
       "#science",
       "#facts",
       "#viral",
-      "#sciencefacts",
-      "#experiment",
       "#education",
+      "#sciencefacts",
       "#new",
       "#youtubeshorts",
+      "#experiment",
+      "#funny",
+      "#physics",
       "#short",
       "#ytshorts",
       "#knowledge",
       "#fact",
-      "#tiktok",
-      "#amazing facts",
       "#didyouknow"
     ],
     "hook_phrases": [
+      "This is SO cool",
       "Squid Ink Science Experiment",
+      "Water defies gravity. But",
       "4 Cool Gifts for",
+      "Kuchh science ke kamal",
       "#physics #physicsconcept #physicsfacts #shorts",
-      "So how many pins",
-      "Top - 3 Amazing",
-      "Ocean Depth #ocean #science",
-      "Balloon Explodes with Orange",
-      "From Human to Black"
+      "Aeroplane के बारे में",
+      "So how many pins"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -86,20 +86,20 @@
       "physics",
       "experiment",
       "amazing",
-      "sciencefacts",
       "trick",
-      "human",
       "unbelievable",
+      "sciencefacts",
+      "human",
       "tricks",
       "could",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 31,
+      "statement": 33,
       "number-lead": 10,
-      "statistic": 3,
-      "wh-question": 3,
+      "statistic": 2,
+      "wh-question": 2,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -111,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "elche c. f. - atlético madrid",
-        "espanyol vs barcelona",
-        "all stars 11 cast",
-        "liam rosenior",
-        "psg vs nantes",
-        "psg - nantes",
-        "clayface",
-        "hubert hurkacz",
-        "sa-w vs indw",
-        "army cft"
+        "robert f. kennedy jr.",
+        "benjamin netanyahu",
+        "pat mcafee show",
+        "stubhub",
+        "mukesh choudhary",
+        "southwest flight attendant",
+        "jamie ding jeopardy streak",
+        "raymond james stadium",
+        "splc investigation",
+        "levante vs sevilla"
       ]
     },
     "youtube_trending": {
@@ -155,7 +155,7 @@
   },
   "video_quality": {
     "status": "ok",
-    "avg_real_clips": 27,
+    "avg_real_clips": 28.9,
     "avg_lavfi_clips": 0,
     "avg_static_skipped": 0,
     "lavfi_rate_pct": 0.0,
@@ -169,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 23,
+    "total_tests": 24,
     "latest_status": "pending"
   },
   "channel_desc_updated": false,
