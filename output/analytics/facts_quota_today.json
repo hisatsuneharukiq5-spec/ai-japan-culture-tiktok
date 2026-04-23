@@ -1,6 +1,6 @@
 {
   "date": "2026-04-22",
-  "used": 7958,
+  "used": 8008,
   "log": [
     {
       "op": "channels.list",
@@ -176,6 +176,11 @@
       "op": "videos.update",
       "units": 50,
       "ts": "2026-04-23T07:29:34"
+    },
+    {
+      "op": "commentThreads.insert",
+      "units": 50,
+      "ts": "2026-04-23T08:23:49"
     }
   ]
 }
