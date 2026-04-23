@@ -1,6 +1,6 @@
 {
   "date": "2026-04-22",
-  "used": 6057,
+  "used": 7958,
   "log": [
     {
       "op": "channels.list",
@@ -146,6 +146,36 @@
       "op": "commentThreads.insert",
       "units": 50,
       "ts": "2026-04-23T05:17:51"
+    },
+    {
+      "op": "search.list",
+      "units": 100,
+      "ts": "2026-04-23T07:26:35"
+    },
+    {
+      "op": "search.list",
+      "units": 100,
+      "ts": "2026-04-23T07:28:49"
+    },
+    {
+      "op": "videos.insert",
+      "units": 1600,
+      "ts": "2026-04-23T07:28:53"
+    },
+    {
+      "op": "playlistItems.insert",
+      "units": 50,
+      "ts": "2026-04-23T07:29:07"
+    },
+    {
+      "op": "videos.list",
+      "units": 1,
+      "ts": "2026-04-23T07:29:34"
+    },
+    {
+      "op": "videos.update",
+      "units": 50,
+      "ts": "2026-04-23T07:29:34"
     }
   ]
 }
