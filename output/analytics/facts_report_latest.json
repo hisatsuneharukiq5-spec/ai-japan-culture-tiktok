@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-23T17:02:59",
+  "timestamp": "2026-04-24T16:34:35",
   "internal": {
     "top5_patterns": [
       {
@@ -34,40 +34,40 @@
     "popular_topics": [
       "science",
       "didn",
-      "experiment",
       "physics",
-      "amazing",
+      "experiment",
+      "sciencefacts",
       "save",
       "life",
-      "sciencefacts"
+      "amazing"
     ],
     "hashtags": [
       "#shorts",
       "#science",
       "#facts",
-      "#viral",
       "#education",
+      "#viral",
       "#sciencefacts",
       "#new",
+      "#fact",
       "#youtubeshorts",
       "#experiment",
-      "#funny",
-      "#physics",
+      "#top",
+      "#knowledge",
       "#short",
       "#ytshorts",
-      "#knowledge",
-      "#fact",
+      "#tiktok",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "Squid Ink Science Experiment",
-      "Water defies gravity. But",
       "4 Cool Gifts for",
-      "Kuchh science ke kamal",
       "#physics #physicsconcept #physicsfacts #shorts",
-      "Aeroplane के बारे में",
-      "So how many pins"
+      "So how many pins",
+      "Top - 3 Amazing",
+      "Ocean Depth #ocean #science",
+      "Balloon Explodes with Orange"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -85,19 +85,21 @@
       "science",
       "physics",
       "experiment",
-      "amazing",
-      "trick",
-      "unbelievable",
       "sciencefacts",
-      "human",
+      "trick",
+      "amazing",
+      "unbelievable",
+      "factsmine",
       "tricks",
       "could",
+      "space",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 33,
+      "statement": 32,
       "number-lead": 10,
+      "science-discovery": 1,
       "statistic": 2,
       "wh-question": 2,
       "did-you-know": 3
@@ -111,16 +113,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "robert f. kennedy jr.",
-        "benjamin netanyahu",
-        "pat mcafee show",
-        "stubhub",
-        "mukesh choudhary",
-        "southwest flight attendant",
-        "jamie ding jeopardy streak",
-        "raymond james stadium",
-        "splc investigation",
-        "levante vs sevilla"
+        "good morning america paige shiver",
+        "henri veesaar",
+        "maldives",
+        "trump asleep",
+        "missing usf students",
+        "texas",
+        "nelly korda",
+        "jake reiner",
+        "ray hartmann st louis",
+        "nikki glaser wardrobe mishap"
       ]
     },
     "youtube_trending": {
@@ -131,7 +133,6 @@
         "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
         "How Much Is Too Much 😱",
         "China&#39;s Futuristic School 😱",
-        "5 Facts That Could SAVE Your Life",
         "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
@@ -140,7 +141,8 @@
         "Candy Facts That Will BLOW Your Mind 🤔",
         "3 Facts You Didn&#39;t Want To Know 😬",
         "How Many Hours Do You Sleep 😱",
-        "Walking On Water Trick Revealed! #facts #shorts"
+        "Walking On Water Trick Revealed! #facts #shorts",
+        "This man collected coins for 45 years 😮"
       ]
     },
     "pytrends": {
@@ -169,7 +171,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 24,
+    "total_tests": 25,
     "latest_status": "pending"
   },
   "channel_desc_updated": false,
