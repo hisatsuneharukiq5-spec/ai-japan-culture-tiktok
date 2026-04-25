@@ -2,10 +2,10 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 32,
+    "statement": 31,
     "number-lead": 10,
     "science-discovery": 1,
-    "statistic": 2,
+    "statistic": 3,
     "wh-question": 2,
     "did-you-know": 3
   },
@@ -25,56 +25,58 @@
     "science",
     "physics",
     "experiment",
+    "amazing",
     "sciencefacts",
     "trick",
-    "amazing",
     "unbelievable",
+    "human",
+    "animals",
     "factsmine",
     "tricks",
     "could",
     "space",
-    "only",
-    "fastest"
+    "never",
+    "only"
   ],
   "top_hashtags": [
     "#shorts",
-    "#science",
     "#facts",
+    "#science",
     "#education",
     "#viral",
     "#sciencefacts",
-    "#new",
     "#fact",
+    "#amazing facts",
     "#youtubeshorts",
-    "#experiment",
     "#top",
     "#knowledge",
     "#short",
-    "#ytshorts",
-    "#tiktok",
+    "#experiment",
+    "#science experiments",
+    "#youtube shorts",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
     "physics",
-    "experiment",
+    "amazing",
     "sciencefacts",
     "save",
     "life",
-    "amazing",
+    "experiment",
     "unbelievable",
+    "human",
+    "animals",
     "factsmine",
     "tricks",
     "could",
     "cool",
-    "kids",
     "gifts",
     "theoryofphysics",
     "anubhavsir",
     "ocean",
-    "youtubeshorts",
-    "human"
+    "youtubeshorts"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -88,7 +90,7 @@
     "{number} {topic} You {topic}’t Know That Could Save Your Life #Shorts",
     "{number} {topic} facts that will blow your mind #Shorts"
   ],
-  "avg_duration_secs": 42.3,
+  "avg_duration_secs": 43.3,
   "hook_phrases": [
     "This is SO cool",
     "Squid Ink Science Experiment",
@@ -99,5 +101,5 @@
     "Ocean Depth #ocean #science",
     "Balloon Explodes with Orange"
   ],
-  "timestamp": "2026-04-24T16:34:34"
+  "timestamp": "2026-04-25T16:07:31"
 }

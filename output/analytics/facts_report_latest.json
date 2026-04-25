@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-24T16:34:35",
+  "timestamp": "2026-04-25T16:07:35",
   "internal": {
     "top5_patterns": [
       {
@@ -35,28 +35,28 @@
       "science",
       "didn",
       "physics",
-      "experiment",
+      "amazing",
       "sciencefacts",
       "save",
       "life",
-      "amazing"
+      "experiment"
     ],
     "hashtags": [
       "#shorts",
-      "#science",
       "#facts",
+      "#science",
       "#education",
       "#viral",
       "#sciencefacts",
-      "#new",
       "#fact",
+      "#amazing facts",
       "#youtubeshorts",
-      "#experiment",
       "#top",
       "#knowledge",
       "#short",
-      "#ytshorts",
-      "#tiktok",
+      "#experiment",
+      "#science experiments",
+      "#youtube shorts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -85,22 +85,24 @@
       "science",
       "physics",
       "experiment",
+      "amazing",
       "sciencefacts",
       "trick",
-      "amazing",
       "unbelievable",
+      "human",
+      "animals",
       "factsmine",
       "tricks",
       "could",
       "space",
-      "only",
-      "fastest"
+      "never",
+      "only"
     ],
     "pattern_counts": {
-      "statement": 32,
+      "statement": 31,
       "number-lead": 10,
       "science-discovery": 1,
-      "statistic": 2,
+      "statistic": 3,
       "wh-question": 2,
       "did-you-know": 3
     },
@@ -113,16 +115,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "good morning america paige shiver",
-        "henri veesaar",
-        "maldives",
-        "trump asleep",
-        "missing usf students",
-        "texas",
-        "nelly korda",
-        "jake reiner",
-        "ray hartmann st louis",
-        "nikki glaser wardrobe mishap"
+        "premier league schedule",
+        "quinton aaron",
+        "alexander zverev",
+        "flavio cobolli",
+        "pl table",
+        "prem",
+        "weather los angeles",
+        "premier league standings",
+        "valencia c. f. - girona",
+        "valencia vs girona"
       ]
     },
     "youtube_trending": {
@@ -135,14 +137,14 @@
         "China&#39;s Futuristic School 😱",
         "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
+        "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "This Video Can Save Your Life 😱",
         "Candy Facts That Will BLOW Your Mind 🤔",
         "3 Facts You Didn&#39;t Want To Know 😬",
         "How Many Hours Do You Sleep 😱",
-        "Walking On Water Trick Revealed! #facts #shorts",
-        "This man collected coins for 45 years 😮"
+        "Walking On Water Trick Revealed! #facts #shorts"
       ]
     },
     "pytrends": {
@@ -157,7 +159,7 @@
   },
   "video_quality": {
     "status": "ok",
-    "avg_real_clips": 28.9,
+    "avg_real_clips": 28.8,
     "avg_lavfi_clips": 0,
     "avg_static_skipped": 0,
     "lavfi_rate_pct": 0.0,
@@ -171,9 +173,18 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 25,
+    "total_tests": 26,
     "latest_status": "pending"
   },
   "channel_desc_updated": false,
+  "playlist_sync": {
+    "Amazing Facts #Shorts": 48,
+    "Animal Facts #Shorts": 5,
+    "Human Body Facts #Shorts": 25,
+    "Space Facts #Shorts": 10,
+    "Earth Science Facts #Shorts": 11,
+    "Ocean Facts #Shorts": 4,
+    "History Facts #Shorts": 3
+  },
   "description_refreshed": 3
 }
