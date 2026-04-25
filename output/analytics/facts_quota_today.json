@@ -1,6 +1,6 @@
 {
   "date": "2026-04-24",
-  "used": 7958,
+  "used": 8008,
   "log": [
     {
       "op": "search.list",
@@ -176,6 +176,11 @@
       "op": "videos.update",
       "units": 50,
       "ts": "2026-04-25T07:08:23"
+    },
+    {
+      "op": "commentThreads.insert",
+      "units": 50,
+      "ts": "2026-04-25T07:54:55"
     }
   ]
 }
