@@ -2,39 +2,39 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 31,
+    "statement": 29,
     "number-lead": 10,
     "science-discovery": 1,
-    "statistic": 3,
-    "wh-question": 2,
+    "statistic": 4,
+    "wh-question": 3,
     "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
     "Squid Ink Science Experiment",
+    "Square Bubble",
     "4 Cool Gifts for",
     "#physics #physicsconcept #physicsfacts #shorts",
     "So how many pins",
     "Top - 3 Amazing",
     "Ocean Depth #ocean #science",
     "Balloon Explodes with Orange",
-    "From Human to Black",
-    "ये Animals दोबारा ज़िंदा"
+    "From Human to Black"
   ],
   "power_words": [
     "science",
     "physics",
     "experiment",
     "amazing",
-    "sciencefacts",
     "trick",
-    "unbelievable",
+    "sciencefacts",
     "human",
     "animals",
     "factsmine",
     "tricks",
     "could",
     "space",
+    "unbelievable",
     "never",
     "only"
   ],
@@ -43,16 +43,16 @@
     "#facts",
     "#science",
     "#education",
-    "#viral",
-    "#sciencefacts",
     "#fact",
     "#amazing facts",
+    "#viral",
+    "#sciencefacts",
     "#youtubeshorts",
+    "#science experiments",
     "#top",
     "#knowledge",
     "#short",
     "#experiment",
-    "#science experiments",
     "#youtube shorts",
     "#didyouknow"
   ],
@@ -61,11 +61,10 @@
     "didn",
     "physics",
     "amazing",
-    "sciencefacts",
     "save",
     "life",
     "experiment",
-    "unbelievable",
+    "sciencefacts",
     "human",
     "animals",
     "factsmine",
@@ -76,6 +75,7 @@
     "theoryofphysics",
     "anubhavsir",
     "ocean",
+    "unbelievable",
     "youtubeshorts"
   ],
   "title_templates": [
@@ -90,16 +90,16 @@
     "{number} {topic} You {topic}’t Know That Could Save Your Life #Shorts",
     "{number} {topic} facts that will blow your mind #Shorts"
   ],
-  "avg_duration_secs": 43.3,
+  "avg_duration_secs": 42.3,
   "hook_phrases": [
     "This is SO cool",
     "Squid Ink Science Experiment",
+    "Square Bubble",
     "4 Cool Gifts for",
     "#physics #physicsconcept #physicsfacts #shorts",
     "So how many pins",
     "Top - 3 Amazing",
-    "Ocean Depth #ocean #science",
-    "Balloon Explodes with Orange"
+    "Ocean Depth #ocean #science"
   ],
-  "timestamp": "2026-04-25T16:07:31"
+  "timestamp": "2026-04-26T16:08:44"
 }

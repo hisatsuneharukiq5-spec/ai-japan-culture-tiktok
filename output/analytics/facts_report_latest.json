@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-25T16:07:35",
+  "timestamp": "2026-04-26T16:08:45",
   "internal": {
     "top5_patterns": [
       {
@@ -36,38 +36,38 @@
       "didn",
       "physics",
       "amazing",
-      "sciencefacts",
       "save",
       "life",
-      "experiment"
+      "experiment",
+      "sciencefacts"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#education",
-      "#viral",
-      "#sciencefacts",
       "#fact",
       "#amazing facts",
+      "#viral",
+      "#sciencefacts",
       "#youtubeshorts",
+      "#science experiments",
       "#top",
       "#knowledge",
       "#short",
       "#experiment",
-      "#science experiments",
       "#youtube shorts",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "Squid Ink Science Experiment",
+      "Square Bubble",
       "4 Cool Gifts for",
       "#physics #physicsconcept #physicsfacts #shorts",
       "So how many pins",
       "Top - 3 Amazing",
-      "Ocean Depth #ocean #science",
-      "Balloon Explodes with Orange"
+      "Ocean Depth #ocean #science"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -86,24 +86,24 @@
       "physics",
       "experiment",
       "amazing",
-      "sciencefacts",
       "trick",
-      "unbelievable",
+      "sciencefacts",
       "human",
       "animals",
       "factsmine",
       "tricks",
       "could",
       "space",
+      "unbelievable",
       "never",
       "only"
     ],
     "pattern_counts": {
-      "statement": 31,
+      "statement": 29,
       "number-lead": 10,
       "science-discovery": 1,
-      "statistic": 3,
-      "wh-question": 2,
+      "statistic": 4,
+      "wh-question": 3,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -115,16 +115,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "premier league schedule",
-        "quinton aaron",
-        "alexander zverev",
-        "flavio cobolli",
-        "pl table",
-        "prem",
-        "weather los angeles",
-        "premier league standings",
-        "valencia c. f. - girona",
-        "valencia vs girona"
+        "osasuna - sevilla",
+        "osasuna vs sevilla",
+        "mcdonald's netflix happy meal",
+        "nava tennis",
+        "le havre vs metz",
+        "torino vs inter",
+        "fisa",
+        "arthur fils",
+        "rennes vs nantes",
+        "is wemby playing today"
       ]
     },
     "youtube_trending": {
@@ -173,18 +173,9 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 26,
+    "total_tests": 27,
     "latest_status": "pending"
   },
   "channel_desc_updated": false,
-  "playlist_sync": {
-    "Amazing Facts #Shorts": 48,
-    "Animal Facts #Shorts": 5,
-    "Human Body Facts #Shorts": 25,
-    "Space Facts #Shorts": 10,
-    "Earth Science Facts #Shorts": 11,
-    "Ocean Facts #Shorts": 4,
-    "History Facts #Shorts": 3
-  },
   "description_refreshed": 3
 }
