@@ -59,7 +59,7 @@ ANTHROPIC_MODELS = [
 ]
 
 # FACTS_BRAIN_MANAGED_START
-LEARNED_TOPIC_STYLE = "science, didn, physics, amazing, save, life, experiment, sciencefacts"
+LEARNED_TOPIC_STYLE = "science, didn, physics, amazing, sciencefacts, save, life, experiment"
 LEARNED_TITLE_TEMPLATES = [
   "Did you know that {fact}? #Shorts",
   "Only {number}% of people know this about {topic} #Shorts",
@@ -67,35 +67,35 @@ LEARNED_TITLE_TEMPLATES = [
   "The real reason {topic} does this will shock you #Shorts",
   "Top - {number} {topic} {topic} 😱 #Shorts",
   "What happens to your body when {scenario}? #Shorts",
-  "Why {topic} is more {adjective} than you think #Shorts",
-  "{number} {topic} You {topic}'t Want To Know 😬 #Shorts"
+  "Why Don't {topic} Get {topic} Shock 😱 #Shorts",
+  "Why {topic} is more {adjective} than you think #Shorts"
 ]
 LEARNED_HOOK_PHRASES = [
   "This is SO cool",
   "Squid Ink Science Experiment",
-  "Square Bubble",
   "4 Cool Gifts for",
   "#physics #physicsconcept #physicsfacts #shorts",
   "So how many pins",
   "Top - 3 Amazing",
-  "Ocean Depth #ocean #science"
+  "Ocean Depth #ocean #science",
+  "Balloon Explodes with Orange"
 ]
 LEARNED_HASHTAGS = [
   "#shorts",
   "#facts",
   "#science",
   "#education",
-  "#fact",
   "#amazing facts",
   "#viral",
   "#sciencefacts",
+  "#fact",
+  "#ytshorts",
   "#youtubeshorts",
-  "#science experiments",
+  "#youtube shorts",
   "#top",
   "#knowledge",
   "#short",
   "#experiment",
-  "#youtube shorts",
   "#didyouknow"
 ]
 PREFERRED_POST_HOURS = [4, 10, 16, 17, 18]

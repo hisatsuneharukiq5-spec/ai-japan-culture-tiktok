@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-26T16:08:45",
+  "timestamp": "2026-04-27T17:09:18",
   "internal": {
     "top5_patterns": [
       {
@@ -36,38 +36,38 @@
       "didn",
       "physics",
       "amazing",
+      "sciencefacts",
       "save",
       "life",
-      "experiment",
-      "sciencefacts"
+      "experiment"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#education",
-      "#fact",
       "#amazing facts",
       "#viral",
       "#sciencefacts",
+      "#fact",
+      "#ytshorts",
       "#youtubeshorts",
-      "#science experiments",
+      "#youtube shorts",
       "#top",
       "#knowledge",
       "#short",
       "#experiment",
-      "#youtube shorts",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "Squid Ink Science Experiment",
-      "Square Bubble",
       "4 Cool Gifts for",
       "#physics #physicsconcept #physicsfacts #shorts",
       "So how many pins",
       "Top - 3 Amazing",
-      "Ocean Depth #ocean #science"
+      "Ocean Depth #ocean #science",
+      "Balloon Explodes with Orange"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -76,18 +76,18 @@
       "The real reason {topic} does this will shock you #Shorts",
       "Top - {number} {topic} {topic} 😱 #Shorts",
       "What happens to your body when {scenario}? #Shorts",
+      "Why Don't {topic} Get {topic} Shock 😱 #Shorts",
       "Why {topic} is more {adjective} than you think #Shorts",
       "{number} {topic} You {topic}'t Want To Know 😬 #Shorts",
-      "{number} {topic} You {topic}’t Know That Could Save Your Life #Shorts",
-      "{number} {topic} facts that will blow your mind #Shorts"
+      "{number} {topic} You {topic}’t Know That Could Save Your Life #Shorts"
     ],
     "power_words": [
       "science",
       "physics",
       "experiment",
       "amazing",
-      "trick",
       "sciencefacts",
+      "trick",
       "human",
       "animals",
       "factsmine",
@@ -115,16 +115,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "osasuna - sevilla",
-        "osasuna vs sevilla",
-        "mcdonald's netflix happy meal",
-        "nava tennis",
-        "le havre vs metz",
-        "torino vs inter",
-        "fisa",
-        "arthur fils",
-        "rennes vs nantes",
-        "is wemby playing today"
+        "jordan addison",
+        "gerry conway",
+        "alexander blockx",
+        "ipl standings",
+        "wcia weather",
+        "paul dejong",
+        "chris simms",
+        "metlife stadium",
+        "jacob bethell",
+        "ksdk"
       ]
     },
     "youtube_trending": {
@@ -173,7 +173,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 27,
+    "total_tests": 28,
     "latest_status": "pending"
   },
   "channel_desc_updated": false,
