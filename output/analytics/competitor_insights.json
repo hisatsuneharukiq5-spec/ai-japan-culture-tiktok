@@ -2,9 +2,8 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 29,
+    "statement": 30,
     "number-lead": 10,
-    "science-discovery": 1,
     "statistic": 4,
     "wh-question": 3,
     "did-you-know": 3
@@ -19,55 +18,54 @@
     "Ocean Depth #ocean #science",
     "Balloon Explodes with Orange",
     "From Human to Black",
-    "ये Animals दोबारा ज़िंदा"
+    "Slicing A Bullet In"
   ],
   "power_words": [
     "science",
     "physics",
     "experiment",
     "amazing",
+    "viral",
     "sciencefacts",
     "trick",
     "human",
-    "animals",
-    "factsmine",
     "tricks",
     "could",
     "space",
     "unbelievable",
     "never",
-    "only"
+    "only",
+    "fastest"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
     "#science",
     "#education",
-    "#amazing facts",
     "#viral",
+    "#new",
     "#sciencefacts",
-    "#fact",
+    "#amazing facts",
     "#ytshorts",
     "#youtubeshorts",
-    "#youtube shorts",
-    "#top",
-    "#knowledge",
-    "#short",
     "#experiment",
+    "#short",
+    "#trending",
+    "#fact",
+    "#science experiments",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
     "physics",
+    "experiment",
     "amazing",
     "sciencefacts",
     "save",
     "life",
-    "experiment",
+    "viral",
     "human",
-    "animals",
-    "factsmine",
     "tricks",
     "could",
     "cool",
@@ -76,7 +74,8 @@
     "anubhavsir",
     "ocean",
     "unbelievable",
-    "youtubeshorts"
+    "youtubeshorts",
+    "refraction"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -90,7 +89,7 @@
     "{number} {topic} You {topic}'t Want To Know 😬 #Shorts",
     "{number} {topic} You {topic}’t Know That Could Save Your Life #Shorts"
   ],
-  "avg_duration_secs": 43.1,
+  "avg_duration_secs": 42.2,
   "hook_phrases": [
     "This is SO cool",
     "Squid Ink Science Experiment",
@@ -101,5 +100,5 @@
     "Ocean Depth #ocean #science",
     "Balloon Explodes with Orange"
   ],
-  "timestamp": "2026-04-27T17:09:17"
+  "timestamp": "2026-04-28T17:13:55"
 }

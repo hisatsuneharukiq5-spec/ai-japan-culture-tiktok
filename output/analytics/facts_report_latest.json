@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-27T17:09:18",
+  "timestamp": "2026-04-28T17:13:55",
   "internal": {
     "top5_patterns": [
       {
@@ -35,28 +35,28 @@
       "science",
       "didn",
       "physics",
+      "experiment",
       "amazing",
       "sciencefacts",
       "save",
-      "life",
-      "experiment"
+      "life"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#education",
-      "#amazing facts",
       "#viral",
+      "#new",
       "#sciencefacts",
-      "#fact",
+      "#amazing facts",
       "#ytshorts",
       "#youtubeshorts",
-      "#youtube shorts",
-      "#top",
-      "#knowledge",
-      "#short",
       "#experiment",
+      "#short",
+      "#trending",
+      "#fact",
+      "#science experiments",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -86,22 +86,21 @@
       "physics",
       "experiment",
       "amazing",
+      "viral",
       "sciencefacts",
       "trick",
       "human",
-      "animals",
-      "factsmine",
       "tricks",
       "could",
       "space",
       "unbelievable",
       "never",
-      "only"
+      "only",
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 29,
+      "statement": 30,
       "number-lead": 10,
-      "science-discovery": 1,
       "statistic": 4,
       "wh-question": 3,
       "did-you-know": 3
@@ -115,16 +114,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "jordan addison",
-        "gerry conway",
-        "alexander blockx",
-        "ipl standings",
-        "wcia weather",
-        "paul dejong",
-        "chris simms",
-        "metlife stadium",
-        "jacob bethell",
-        "ksdk"
+        "weather chicago",
+        "nyc weather",
+        "temporary protected status",
+        "morgan freeman",
+        "weather app down",
+        "fha financing",
+        "weather app",
+        "vaibhav sooryavanshi",
+        "portland weather",
+        "weather los angeles"
       ]
     },
     "youtube_trending": {
@@ -135,16 +134,16 @@
         "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
         "How Much Is Too Much 😱",
         "China&#39;s Futuristic School 😱",
-        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
-        "Inside A Camel Hump 😱",
+        "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
         "Strongest Glass in The World",
         "This Video Can Save Your Life 😱",
         "Candy Facts That Will BLOW Your Mind 🤔",
         "3 Facts You Didn&#39;t Want To Know 😬",
         "How Many Hours Do You Sleep 😱",
-        "Walking On Water Trick Revealed! #facts #shorts"
+        "Walking On Water Trick Revealed! #facts #shorts",
+        "This man collected coins for 45 years 😮"
       ]
     },
     "pytrends": {
@@ -159,7 +158,7 @@
   },
   "video_quality": {
     "status": "ok",
-    "avg_real_clips": 28.8,
+    "avg_real_clips": 29.0,
     "avg_lavfi_clips": 0,
     "avg_static_skipped": 0,
     "lavfi_rate_pct": 0.0,
@@ -173,7 +172,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 28,
+    "total_tests": 29,
     "latest_status": "pending"
   },
   "channel_desc_updated": false,
