@@ -1,6 +1,6 @@
 {
   "date": "2026-04-28",
-  "used": 2205,
+  "used": 4106,
   "log": [
     {
       "op": "commentThreads.insert",
@@ -81,6 +81,36 @@
       "op": "videos.update",
       "units": 50,
       "ts": "2026-04-28T17:14:00"
+    },
+    {
+      "op": "search.list",
+      "units": 100,
+      "ts": "2026-04-28T19:51:46"
+    },
+    {
+      "op": "search.list",
+      "units": 100,
+      "ts": "2026-04-28T19:54:06"
+    },
+    {
+      "op": "videos.insert",
+      "units": 1600,
+      "ts": "2026-04-28T19:54:10"
+    },
+    {
+      "op": "playlistItems.insert",
+      "units": 50,
+      "ts": "2026-04-28T19:54:25"
+    },
+    {
+      "op": "videos.list",
+      "units": 1,
+      "ts": "2026-04-28T19:54:48"
+    },
+    {
+      "op": "videos.update",
+      "units": 50,
+      "ts": "2026-04-28T19:54:48"
     }
   ]
 }
