@@ -1,6 +1,6 @@
 {
   "date": "2026-04-29",
-  "used": 1951,
+  "used": 2155,
   "log": [
     {
       "op": "search.list",
@@ -36,6 +36,46 @@
       "op": "commentThreads.insert",
       "units": 50,
       "ts": "2026-04-29T12:06:17"
+    },
+    {
+      "op": "channels.list",
+      "units": 1,
+      "ts": "2026-04-29T17:07:13"
+    },
+    {
+      "op": "channels.update",
+      "units": 50,
+      "ts": "2026-04-29T17:07:14"
+    },
+    {
+      "op": "videos.list",
+      "units": 1,
+      "ts": "2026-04-29T17:07:14"
+    },
+    {
+      "op": "videos.update",
+      "units": 50,
+      "ts": "2026-04-29T17:07:14"
+    },
+    {
+      "op": "videos.list",
+      "units": 1,
+      "ts": "2026-04-29T17:07:15"
+    },
+    {
+      "op": "videos.update",
+      "units": 50,
+      "ts": "2026-04-29T17:07:15"
+    },
+    {
+      "op": "videos.list",
+      "units": 1,
+      "ts": "2026-04-29T17:07:15"
+    },
+    {
+      "op": "videos.update",
+      "units": 50,
+      "ts": "2026-04-29T17:07:15"
     }
   ]
 }

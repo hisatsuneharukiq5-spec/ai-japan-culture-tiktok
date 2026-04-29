@@ -62,23 +62,23 @@ ANTHROPIC_MODELS = [
 LEARNED_TOPIC_STYLE = "science, didn, physics, experiment, amazing, sciencefacts, save, life"
 LEARNED_TITLE_TEMPLATES = [
   "Did you know that {fact}? #Shorts",
+  "How {topic} Do {topic} Have Dug Inside Earth #Shorts",
   "Only {number}% of people know this about {topic} #Shorts",
   "Scientists just discovered {topic} and it changes everything #Shorts",
   "The real reason {topic} does this will shock you #Shorts",
   "Top - {number} {topic} {topic} 😱 #Shorts",
   "What happens to your body when {scenario}? #Shorts",
-  "Why Don't {topic} Get {topic} Shock 😱 #Shorts",
   "Why {topic} is more {adjective} than you think #Shorts"
 ]
 LEARNED_HOOK_PHRASES = [
-  "This is SO cool",
   "Squid Ink Science Experiment",
   "4 Cool Gifts for",
   "#physics #physicsconcept #physicsfacts #shorts",
   "So how many pins",
   "Top - 3 Amazing",
   "Ocean Depth #ocean #science",
-  "Balloon Explodes with Orange"
+  "Balloon Explodes with Orange",
+  "From Human to Black"
 ]
 LEARNED_HASHTAGS = [
   "#shorts",
@@ -88,14 +88,14 @@ LEARNED_HASHTAGS = [
   "#viral",
   "#new",
   "#sciencefacts",
-  "#amazing facts",
-  "#ytshorts",
+  "#fact",
   "#youtubeshorts",
+  "#knowledge",
   "#experiment",
+  "#amazing facts",
   "#short",
   "#trending",
-  "#fact",
-  "#science experiments",
+  "#top",
   "#didyouknow"
 ]
 PREFERRED_POST_HOURS = [4, 10, 16, 17, 18]
