@@ -506,6 +506,59 @@ def create_thumbnail(
     return output_path
 
 
+def _thumbnail_facts(title: str, sc: dict, output_path: Path) -> None:
+    """Facts & Wonders thumbnail: bold text + large ? or ! symbol + clean branding."""
+    img = Image.new("RGB", (W, H), sc["bg"])
+    draw = ImageDraw.Draw(img)
+    _draw_bg(draw, sc)
+
+    # Large accent symbol on right — ? for questions, ! for statements
+    symbol = "?" if title.lower().lstrip().startswith(("did", "why", "how", "what", "can", "where", "when")) else "!"
+    fn_sym = _get_font(420)
+    _outline_text(draw, (835, -65), symbol, fn_sym, sc["el2"], sc["bg"], 8)
+
+    # Horizontal glow band behind text area
+    for y_g in range(60, 520):
+        t = 1 - abs(y_g - 290) / 230
+        if t > 0:
+            color = _blend(sc["bg"], sc["glow"], t * 0.18)
+            draw.line([(0, y_g), (720, y_g)], fill=color)
+
+    badge, lines = _get_thumbnail_lines(title)
+    text_x = 48
+    if badge:
+        bx, by, br = 148, 195, 118
+        draw.ellipse([bx - br, by - br, bx + br, by + br], fill=sc["badge"])
+        draw.ellipse([bx - br + 10, by - br + 10, bx, by],
+                     fill=_blend(sc["badge"], (255, 255, 255), 0.25))
+        fn_num = _get_font(175)
+        bb = draw.textbbox((0, 0), badge, font=fn_num)
+        nw, nh = bb[2] - bb[0], bb[3] - bb[1]
+        _outline_text(draw, (bx - nw // 2, by - nh // 2 - 10), badge,
+                      fn_num, sc["badge_txt"], (0, 0, 0), 2)
+        text_x = 295
+
+    y_end = _draw_text_block(draw, lines, sc, text_x, 62, [108, 86, 66], 620)
+    _draw_branding_label(draw, sc["t1"], text_x, y_end, "FACTS & WONDERS")
+
+    draw.rectangle([0, H - 14, W, H], fill=sc["el"])
+    img.save(str(output_path), "JPEG", quality=95)
+    logger.info(f"Thumbnail [facts/{sc['name']}] saved: {output_path}")
+
+
+def create_facts_thumbnail(
+    title: str,
+    topic: str,
+    output_filename: str = "latest_facts_thumbnail.jpg",
+) -> Path:
+    """Generate a Facts & Wonders thumbnail. Returns path to saved JPEG."""
+    THUMBNAIL_DIR.mkdir(parents=True, exist_ok=True)
+    output_path = THUMBNAIL_DIR / output_filename
+    sc = _pick_scheme(title)
+    _thumbnail_facts(title, sc, output_path)
+    return output_path
+
+
 def create_obscura_thumbnail(
     title: str,
     topic: str,

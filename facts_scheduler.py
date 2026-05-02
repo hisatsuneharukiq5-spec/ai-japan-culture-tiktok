@@ -716,16 +716,34 @@ def _validate_video_quality(video_path: Path, expected_duration: float) -> tuple
 
 
 def _generate_bgm(duration: float, out_path: Path) -> None:
-    # Generated tone-based track is copyright-free and always available.
+    """Generate a soft ambient chord — copyright-free, always available.
+    Rotates through 4 major/minor chords so each video sounds slightly different.
+    """
+    # (root_hz, third_hz, fifth_hz, octave_hz) — rotated randomly
+    _CHORDS = [
+        (261, 329, 392, 523),   # C major: C4+E4+G4+C5
+        (294, 370, 440, 587),   # D major: D4+F#4+A4+D5
+        (349, 440, 523, 698),   # F major: F4+A4+C5+F5
+        (220, 261, 329, 440),   # A minor: A3+C4+E4+A4
+    ]
+    root, third, fifth, octave = random.choice(_CHORDS)
+    dur = duration
+    fade_dur = min(2.0, dur / 4)
+    fade_out_start = max(0.0, dur - fade_dur)
     cmd = [
-        _ffmpeg(),
-        "-y",
-        "-f",
-        "lavfi",
-        "-i",
-        f"sine=frequency=523:sample_rate=44100:duration={duration}",
-        "-filter:a",
-        "volume=0.25",
+        _ffmpeg(), "-y",
+        "-f", "lavfi", "-i", f"sine=frequency={root}:sample_rate=44100:duration={dur}",
+        "-f", "lavfi", "-i", f"sine=frequency={third}:sample_rate=44100:duration={dur}",
+        "-f", "lavfi", "-i", f"sine=frequency={fifth}:sample_rate=44100:duration={dur}",
+        "-f", "lavfi", "-i", f"sine=frequency={octave}:sample_rate=44100:duration={dur}",
+        "-filter_complex",
+        (
+            f"[0:a]volume=0.16[a0];[1:a]volume=0.12[a1];"
+            f"[2:a]volume=0.09[a2];[3:a]volume=0.06[a3];"
+            f"[a0][a1][a2][a3]amix=inputs=4:normalize=0,"
+            f"afade=t=in:st=0:d={fade_dur:.1f},"
+            f"afade=t=out:st={fade_out_start:.1f}:d={fade_dur:.1f}"
+        ),
         str(out_path),
     ]
     _run(cmd)
@@ -1647,6 +1665,23 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
         "selfDeclaredMadeForKids": False,
     }
     _append_registry(entry)
+
+    # Generate and upload thumbnail
+    try:
+        from src.thumbnail_generator import create_facts_thumbnail
+        safe_fn = re.sub(r"[^\w\-]", "_", title[:40])
+        thumb_path = create_facts_thumbnail(
+            title=title,
+            topic=topic_used,
+            output_filename=f"facts_{timestamp}_{safe_fn}.jpg",
+        )
+        youtube.thumbnails().set(
+            videoId=video_id,
+            media_body=MediaFileUpload(str(thumb_path), mimetype="image/jpeg"),
+        ).execute()
+        logger.info("Thumbnail set for %s: %s", video_id, thumb_path.name)
+    except Exception as thumb_exc:
+        logger.warning("Thumbnail generation/upload failed (non-fatal): %s", thumb_exc)
 
     # Post-upload growth actions: comment, playlist, description trending keywords
     try:
