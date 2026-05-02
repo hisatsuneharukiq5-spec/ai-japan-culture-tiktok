@@ -16,6 +16,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}  # needs write access for token rotation
 
       - uses: actions/setup-python@v5
         with:
@@ -42,18 +44,43 @@ jobs:
           printf '%s' "$DOTENV_CONTENTS"   > .env
 
       - name: Run Obscura pipeline (long-form + short)
+        id: obscura_run
         run: python main.py obscura-run
         env:
           PYTHONIOENCODING: utf-8
           PYTHONUNBUFFERED: "1"
 
+      # Retry once on failure with a fresh attempt
+      - name: Retry Obscura pipeline on failure
+        if: failure() && steps.obscura_run.outcome == 'failure'
+        run: |
+          echo "First attempt failed — retrying after 30s..."
+          sleep 30
+          python main.py obscura-run
+        env:
+          PYTHONIOENCODING: utf-8
+          PYTHONUNBUFFERED: "1"
+
+      - name: Commit registry update
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main || true
+          git add output/ logs/ || true
+          git diff --cached --quiet || git commit -m "ci: obscura registry update [skip ci]"
+          git push || true
+
+      # Always rotate the token — even if upload failed, token may have refreshed
       - name: Rotate Obscura token secret
-        if: success()
+        if: always()
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          NEW=$(cat config/youtube_token_obscura.json)
-          echo "$NEW" | gh secret set YT_TOKEN_OBSCURA --repo "$GITHUB_REPOSITORY"
+          if [ -f config/youtube_token_obscura.json ]; then
+            NEW=$(cat config/youtube_token_obscura.json)
+            echo "$NEW" | gh secret set YT_TOKEN_OBSCURA --repo "$GITHUB_REPOSITORY"
+          fi
 
       - name: Upload logs on failure
         if: failure()

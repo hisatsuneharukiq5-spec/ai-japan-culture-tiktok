@@ -49,7 +49,19 @@ jobs:
           printf '%s' "$DOTENV_CONTENTS"   > .env
 
       - name: Post one Facts short
+        id: facts_run
         run: python main.py facts-run-single
+        env:
+          PYTHONIOENCODING: utf-8
+          PYTHONUNBUFFERED: "1"
+
+      # Auto-retry once on failure (handles transient network / Pexels errors)
+      - name: Retry Facts short on failure
+        if: failure() && steps.facts_run.outcome == 'failure'
+        run: |
+          echo "First attempt failed — retrying after 60s..."
+          sleep 60
+          python main.py facts-run-single
         env:
           PYTHONIOENCODING: utf-8
           PYTHONUNBUFFERED: "1"
@@ -65,14 +77,16 @@ jobs:
           git diff --cached --quiet || git commit -m "ci: facts registry update [skip ci]"
           git push || true
 
-      # After successful upload, save the (possibly-refreshed) token back as a Secret
+      # Always rotate token — even on failure the token may have been refreshed
       - name: Rotate token secret if refreshed
-        if: success()
+        if: always()
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          NEW=$(cat config/youtube_token_facts.json)
-          echo "$NEW" | gh secret set YT_TOKEN_FACTS --repo "$GITHUB_REPOSITORY"
+          if [ -f config/youtube_token_facts.json ]; then
+            NEW=$(cat config/youtube_token_facts.json)
+            echo "$NEW" | gh secret set YT_TOKEN_FACTS --repo "$GITHUB_REPOSITORY"
+          fi
 
       - name: Upload logs on failure
         if: failure()

@@ -1,0 +1,100 @@
+name: Facts & Obscura — Self-Healing Health Check
+
+# Triggered automatically when facts_daily or obscura_daily fails.
+# Runs self_healer.py to classify the error and apply known fixes.
+
+on:
+  workflow_run:
+    workflows:
+      - "Facts & Wonders — Daily Auto-Post"
+      - "Obscura Files — Daily Auto-Post"
+    types: [completed]
+
+concurrency:
+  group: facts-healthcheck
+  cancel-in-progress: false
+
+jobs:
+  heal:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Python deps
+        run: pip install -r requirements.txt PyNaCl
+
+      - name: Restore credentials
+        env:
+          YT_TOKEN_FACTS:    ${{ secrets.YT_TOKEN_FACTS }}
+          YT_TOKEN_OBSCURA:  ${{ secrets.YT_TOKEN_OBSCURA }}
+          YT_CLIENT_SECRETS: ${{ secrets.YT_CLIENT_SECRETS }}
+          DOTENV_CONTENTS:   ${{ secrets.DOTENV_CONTENTS }}
+        run: |
+          mkdir -p config
+          printf '%s' "$YT_TOKEN_FACTS"    > config/youtube_token_facts.json
+          printf '%s' "$YT_TOKEN_OBSCURA"  > config/youtube_token_obscura.json
+          printf '%s' "$YT_CLIENT_SECRETS" > config/youtube_client_secrets.json
+          printf '%s' "$DOTENV_CONTENTS"   > .env
+
+      - name: Detect channel from failed workflow
+        id: detect
+        run: |
+          WORKFLOW="${{ github.event.workflow_run.name }}"
+          if echo "$WORKFLOW" | grep -qi "obscura"; then
+            echo "channel=obscura" >> $GITHUB_OUTPUT
+          else
+            echo "channel=facts" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run self-healer
+        run: python -m src.self_healer ${{ steps.detect.outputs.channel }}
+        env:
+          PYTHONIOENCODING: utf-8
+          PYTHONUNBUFFERED: "1"
+
+      # If token was refreshed, update the secrets immediately
+      - name: Rotate refreshed tokens
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -f config/youtube_token_facts.json ]; then
+            echo "$(cat config/youtube_token_facts.json)" | gh secret set YT_TOKEN_FACTS --repo "$GITHUB_REPOSITORY" || true
+          fi
+          if [ -f config/youtube_token_obscura.json ]; then
+            echo "$(cat config/youtube_token_obscura.json)" | gh secret set YT_TOKEN_OBSCURA --repo "$GITHUB_REPOSITORY" || true
+          fi
+
+      - name: Commit heal log
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main || true
+          git add output/analytics/ || true
+          git diff --cached --quiet || git commit -m "ci: self-heal log [${{ steps.detect.outputs.channel }}] [skip ci]"
+          git push || true
+
+      # Re-trigger the failed workflow so it runs again with fresh token
+      - name: Re-trigger failed workflow
+        if: steps.detect.outputs.channel != ''
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          CHANNEL="${{ steps.detect.outputs.channel }}"
+          if [ "$CHANNEL" = "facts" ]; then
+            gh workflow run facts_daily.yml --repo "$GITHUB_REPOSITORY" || true
+          else
+            gh workflow run obscura_daily.yml --repo "$GITHUB_REPOSITORY" || true
+          fi
+          echo "Re-triggered $CHANNEL workflow"

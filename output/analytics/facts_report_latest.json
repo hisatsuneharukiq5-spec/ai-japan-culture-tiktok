@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-01T16:34:18",
+  "timestamp": "2026-04-29T13:59:19",
   "internal": {
     "top5_patterns": [
       {
@@ -28,81 +28,74 @@
     "retention_script_pattern": "Hook with 'Did you know that', 3-5 short numbered facts, CTA at the end"
   },
   "competitor": {
-    "status": "youtube_api",
-    "videos_analyzed": 50,
+    "status": "baseline_fallback",
+    "videos_analyzed": 0,
     "popular_topics": [
-      "science",
-      "didn",
-      "physics",
-      "experiment",
-      "amazing",
-      "save",
-      "life",
-      "viral"
+      "space",
+      "human brain",
+      "deep ocean",
+      "ancient history",
+      "extreme animals",
+      "earth science",
+      "body facts",
+      "science discovery"
     ],
     "hashtags": [
-      "#shorts",
-      "#facts",
-      "#science",
-      "#education",
-      "#viral",
-      "#new",
-      "#sciencefacts",
-      "#youtubeshorts",
-      "#experiment",
-      "#fact",
-      "#amazing facts",
-      "#short",
-      "#trending",
-      "#knowledge",
-      "#top",
-      "#didyouknow"
+      "#Facts",
+      "#DidYouKnow",
+      "#AmazingFacts",
+      "#Science",
+      "#Nature",
+      "#Shorts",
+      "#Space",
+      "#Mind",
+      "#Learn",
+      "#WowFact"
     ],
     "hook_phrases": [
-      "This is SO cool",
-      "Squid Ink Science Experiment",
-      "4 Cool Gifts for",
-      "#physics #physicsconcept #physicsfacts #shorts",
-      "So how many pins",
-      "Top - 3 Amazing",
-      "Ocean Depth #ocean #science",
-      "Balloon Explodes with Orange"
+      "Did you know that",
+      "Scientists just discovered",
+      "Here's why most people don't know",
+      "The shocking truth about",
+      "What if I told you that",
+      "Most people don't realize",
+      "This will change how you see",
+      "You won't believe what"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
-      "How {topic} Do {topic} Have Dug Inside Earth #Shorts",
-      "Only {number}% of people know this about {topic} #Shorts",
+      "{number} {topic} facts that will blow your mind #Shorts",
       "Scientists just discovered {topic} and it changes everything #Shorts",
-      "The real reason {topic} does this will shock you #Shorts",
-      "Top - {number} {topic} {topic} 😱 #Shorts",
-      "What happens to your body when {scenario}? #Shorts",
       "Why {topic} is more {adjective} than you think #Shorts",
-      "{number} {topic} You {topic}'t Want To Know 😬 #Shorts",
-      "{number} {topic} You {topic}’t Know That Could Save Your Life #Shorts"
+      "Only {number}% of people know this about {topic} #Shorts",
+      "The real reason {topic} does this will shock you #Shorts",
+      "What happens to your body when {scenario}? #Shorts"
     ],
     "power_words": [
-      "science",
-      "physics",
-      "experiment",
+      "shocking",
+      "incredible",
       "amazing",
-      "viral",
-      "trick",
-      "human",
-      "sciencefacts",
-      "tricks",
-      "could",
-      "space",
-      "unbelievable",
+      "mind-blowing",
       "never",
+      "secret",
+      "discovered",
+      "rare",
       "only",
-      "fastest"
+      "deadliest",
+      "fastest",
+      "impossible",
+      "strangest",
+      "terrifying",
+      "unbelievable",
+      "extreme"
     ],
     "pattern_counts": {
-      "statement": 29,
-      "number-lead": 10,
-      "statistic": 4,
-      "wh-question": 4,
-      "did-you-know": 3
+      "did-you-know": 42,
+      "number-lead": 18,
+      "wh-question": 16,
+      "science-discovery": 14,
+      "statistic": 6,
+      "statement": 4
     },
     "optimal_length_seconds": [
       55,
@@ -111,38 +104,19 @@
   },
   "trends": {
     "google_trends": {
-      "status": "ok",
+      "status": "fallback",
       "topics": [
-        "gracie abrams",
-        "indictment",
-        "phillies baseball",
-        "maldives",
-        "scooter braun",
-        "ecc",
-        "spirit airlines",
-        "toledo zoo",
-        "xbox game pass",
-        "prince william kate dog otto"
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
       ]
     },
     "youtube_trending": {
-      "status": "ok",
+      "status": "heuristic",
       "topics": [
-        "Steel Coil 😨",
-        "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
-        "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
-        "How Much Is Too Much 😱",
-        "China&#39;s Futuristic School 😱",
-        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
-        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
-        "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
-        "Strongest Glass in The World",
-        "This Video Can Save Your Life 😱",
-        "Candy Facts That Will BLOW Your Mind 🤔",
-        "3 Facts You Didn&#39;t Want To Know 😬",
-        "How Many Hours Do You Sleep 😱",
-        "Walking On Water Trick Revealed! #facts #shorts"
+        "did you know",
+        "science shorts",
+        "nature shorts"
       ]
     },
     "pytrends": {
@@ -157,7 +131,7 @@
   },
   "video_quality": {
     "status": "ok",
-    "avg_real_clips": 28.7,
+    "avg_real_clips": 23.1,
     "avg_lavfi_clips": 0,
     "avg_static_skipped": 0,
     "lavfi_rate_pct": 0.0,
@@ -171,7 +145,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 32,
+    "total_tests": 20,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

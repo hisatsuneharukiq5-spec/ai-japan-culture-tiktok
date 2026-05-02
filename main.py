@@ -718,6 +718,8 @@ def main():
     subparsers.add_parser("facts-scheduler-execute", help="Run one autonomous Facts daily cycle")
     subparsers.add_parser("facts-analyze", help="Run Facts AI analysis and auto-evolution")
     subparsers.add_parser("facts-growth", help="Post delayed engagement comments on recent videos (GitHub Actions)")
+    heal_parser = subparsers.add_parser("self-heal", help="Diagnose and auto-fix latest pipeline failure")
+    heal_parser.add_argument("--channel", default="facts", choices=["facts", "obscura"])
     subparsers.add_parser("facts-report", help="Show latest Facts analysis report")
     subparsers.add_parser("facts-brain-log", help="Show Facts evolution log")
 
@@ -813,6 +815,12 @@ def main():
         cmd_facts_analyze()
     elif args.command == "facts-growth":
         cmd_facts_growth()
+    elif args.command == "self-heal":
+        from src.self_healer import run as heal_run
+        import json as _json
+        channel = getattr(args, "channel", "facts")
+        result = heal_run(channel)
+        print(_json.dumps(result, indent=2))
     elif args.command == "facts-report":
         cmd_facts_report()
     elif args.command == "facts-brain-log":

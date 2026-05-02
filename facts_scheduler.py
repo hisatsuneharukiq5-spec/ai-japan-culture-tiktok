@@ -648,10 +648,14 @@ def _count_scene_changes(video_path: Path, threshold: float = 0.08) -> int:
              "-vf", f"scdet=threshold={threshold}", "-f", "null", "-"],
             capture_output=True, text=True, timeout=90,
         )
-        # Count frames whose scene-cut score exceeds 0.3 (strong clip transition)
+        # Count frames whose scene-cut score exceeds 0.3 (strong clip transition).
+        # ffmpeg scdet output format varies by version:
+        #   ffmpeg 4.x: "scene score: 0.456 at pts_time:1.23"
+        #   ffmpeg 5.x: "lavfi.scd.score: 0.456"
+        #   ffmpeg 6.x: "Scene change at pts ... score: 0.456"
         count = 0
         for line in result.stderr.splitlines():
-            m = re.search(r"scd\.score:\s*([0-9.]+)", line)
+            m = re.search(r"(?:scd\.score|lavfi\.scd\.score|scene score|scene_score|score):\s*([0-9]+\.?[0-9]*)", line)
             if m:
                 try:
                     if float(m.group(1)) > 0.3:
