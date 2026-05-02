@@ -198,19 +198,34 @@ def _fetch_real_video_stats(video_ids: list[str]) -> dict[str, dict[str, int]]:
 
 
 def _enrich_registry_with_real_stats(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Pull live stats from YouTube API and merge into registry rows in-place."""
+    """Pull live stats from YouTube API, merge into registry rows, and persist.
+
+    Updates both the in-memory rows and rewrites the JSONL registry file so
+    post-hour optimization and A/B comparisons use real view data.
+    """
     ids = [r["video_id"] for r in rows if r.get("video_id")]
     if not ids:
         return rows
     stats = _fetch_real_video_stats(ids)
     if not stats:
         return rows
+    updated = False
     for row in rows:
         vid = row.get("video_id")
         if vid and vid in stats:
             row["view_count"] = stats[vid]["views"]
             row["like_count"] = stats[vid]["likes"]
             row["comment_count"] = stats[vid]["comments"]
+            updated = True
+    if updated:
+        try:
+            REGISTRY_PATH.write_text(
+                "\n".join(json.dumps(r, ensure_ascii=False) for r in rows) + "\n",
+                encoding="utf-8",
+            )
+            logger.info("Registry enriched with live stats for %d videos", len(stats))
+        except Exception as exc:
+            logger.warning("Could not persist enriched stats to registry: %s", exc)
     return rows
 
 
