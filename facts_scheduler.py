@@ -95,14 +95,20 @@ def _optimize_title_for_growth(title: str) -> str:
     if not candidate:
         return candidate
 
-    if not any(ch.isdigit() for ch in candidate):
-        if len(candidate) <= 86:
-            candidate = f"{candidate} (3 Facts)"
-        else:
-            candidate = f"{candidate[:82].rstrip()} (3 Facts)"
+    # Strip any trailing #Shorts first so we can control placement cleanly.
+    clean = re.sub(r"\s*#[Ss]horts\s*$", "", candidate).strip()
 
-    if "#shorts" not in candidate.lower() and len(candidate) <= 92:
-        candidate = f"{candidate} #Shorts"
+    if not any(ch.isdigit() for ch in clean):
+        if len(clean) <= 86:
+            clean = f"{clean} (3 Facts)"
+        else:
+            clean = f"{clean[:82].rstrip()} (3 Facts)"
+
+    # Always append #Shorts at the very end (not mid-title).
+    if len(clean) <= 92:
+        candidate = f"{clean} #Shorts"
+    else:
+        candidate = clean
 
     return candidate[:100].strip()
 
@@ -902,11 +908,17 @@ def _build_script(topic: str | None = None, excluded_topics: set[str] | None = N
         client = anthropic.Anthropic(api_key=key)
         avoided_topics = ", ".join(sorted(excluded_topics)) if excluded_topics else "N/A"
 
-        # Pull competitor-learned hook phrases and title templates from config
+        # Pull competitor-learned hook phrases and title templates from config.
+        # Randomise which templates are shown so Claude doesn't always pick the
+        # same one (prevents the "Only X% of people know this" monotony).
         learned_hooks = getattr(config_facts, "LEARNED_HOOK_PHRASES", [])
         learned_templates = getattr(config_facts, "LEARNED_TITLE_TEMPLATES", [])
         hook_examples = "\n".join(f"  - {h}" for h in learned_hooks[:5]) if learned_hooks else "  - Did you know that"
-        template_examples = "\n".join(f"  - {t}" for t in learned_templates[:4]) if learned_templates else "  - Did you know that {fact}? #Shorts"
+        if learned_templates:
+            shown = random.sample(learned_templates, min(4, len(learned_templates)))
+        else:
+            shown = ["Did you know that {fact}? #Shorts"]
+        template_examples = "\n".join(f"  - {t}" for t in shown)
 
         prompt = f"""Write a YouTube Shorts narration for channel '{config_facts.CHANNEL_NAME}'.
 
@@ -975,6 +987,10 @@ Return strict JSON with keys: title, script, topic
             script = " ".join(words[: config_facts.SCRIPT_MAX_WORDS - 5]) + f" {FACTS_CTA}"
 
         title = data.get("title", f"Did You Know: {selected_topic.title()} Facts")
+        # Reject titles that still contain unfilled template placeholders.
+        if re.search(r"\{(?:fact|topic|number|adjective|scenario|seconds)\}", title):
+            logger.warning("Title has unfilled placeholders — using fallback: %s", title)
+            title = f"Did You Know: {selected_topic.title()} Facts #Shorts"
         return {"title": title, "script": script, "topic": data.get("topic", selected_topic)}
     except Exception as exc:
         logger.warning("Falling back to template script: %s", exc)
