@@ -914,7 +914,7 @@ Rules:
 - 100 to 130 words total
 - Open with one of these proven viral hook phrases (pick the most fitting):
 {hook_examples}
-- Include 3 to 5 related facts with concrete numbers/statistics
+- Include 3 to 5 related facts with REAL, verifiable numbers/statistics
 - End with exactly: {FACTS_CTA}
 - Keep sentences short and punchy (max 15 words each)
 - Use emotion/power words: shocking, incredible, never, secret, discovered
@@ -924,6 +924,12 @@ Rules:
 
 For the title, use one of these high-performing templates (fill in the blanks):
 {template_examples}
+
+Title rules:
+- The title MUST be about the same topic as the script (no mismatches)
+- If using "Only X% of people know this", use believable percentages: 1%, 2%, 5%, or 10% — NEVER use 0.001%, 0.0001% etc. (those look fake)
+- Do NOT use placeholder text like {{fact}}, {{topic}}, {{number}} — fill them in with real content
+- Keep title under 80 characters
 
 Return strict JSON with keys: title, script, topic
 """
