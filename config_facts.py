@@ -59,38 +59,44 @@ ANTHROPIC_MODELS = [
 ]
 
 # FACTS_BRAIN_MANAGED_START
-LEARNED_TOPIC_STYLE = "space, human brain, deep ocean, ancient history, extreme animals, earth science, body facts, science discovery"
+LEARNED_TOPIC_STYLE = "science, didn, physics, experiment, amazing, sciencefacts, save, life"
 LEARNED_TITLE_TEMPLATES = [
   "Did you know that {fact}? #Shorts",
-  "{number} {topic} facts that will blow your mind #Shorts",
-  "Scientists just discovered {topic} and it changes everything #Shorts",
-  "Why {topic} is more {adjective} than you think #Shorts",
   "Only {number}% of people know this about {topic} #Shorts",
+  "Scientists just discovered {topic} and it changes everything #Shorts",
   "The real reason {topic} does this will shock you #Shorts",
   "What happens to your body when {scenario}? #Shorts",
-  "{number} facts in {seconds} seconds #Shorts"
+  "Why {topic} is more {adjective} than you think #Shorts",
+  "{number} {topic} facts that will blow your mind #Shorts",
+  "{topic} is SO cool #Shorts"
 ]
 LEARNED_HOOK_PHRASES = [
-  "Did you know that",
-  "Scientists just discovered",
-  "Here's why most people don't know",
-  "The shocking truth about",
-  "What if I told you that",
-  "Most people don't realize",
-  "This will change how you see",
-  "You won't believe what"
+  "This is SO cool",
+  "This can help make Artificial",
+  "Did You Notice This In",
+  "Did You Know This Fact",
+  "did you know that Toph",
+  "Did You Know: Titanic Fun",
+  "The SCARIEST Fact About SPACE",
+  "How to Survive Killer Bees"
 ]
 LEARNED_HASHTAGS = [
-  "#Facts",
-  "#DidYouKnow",
-  "#AmazingFacts",
-  "#Science",
-  "#Nature",
-  "#Shorts",
-  "#Space",
-  "#Mind",
-  "#Learn",
-  "#WowFact"
+  "#shorts",
+  "#science",
+  "#facts",
+  "#education",
+  "#new",
+  "#sciencefacts",
+  "#viral",
+  "#youtubeshorts",
+  "#fact",
+  "#experiment",
+  "#science experiments",
+  "#short",
+  "#knowledge",
+  "#amazing facts",
+  "#animation",
+  "#didyouknow"
 ]
-PREFERRED_POST_HOURS = [3, 7, 11, 15, 19]
+PREFERRED_POST_HOURS = [0, 11, 12, 19, 20]
 # FACTS_BRAIN_MANAGED_END
