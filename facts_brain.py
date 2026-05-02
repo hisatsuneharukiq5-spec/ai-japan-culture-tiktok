@@ -515,28 +515,53 @@ def _compose_changes(summary: dict[str, Any]) -> dict[str, Any]:
     all_topics = list(dict.fromkeys([*pytrends_topics, *popular, *seasonal]))
     merged_topics = ", ".join(all_topics[:8]) or config_facts.TOPIC_STYLE
 
-    # Title templates: use competitor-learned templates, fall back to defaults
-    title_templates = competitor.get("title_templates", [])
-    if not title_templates:
-        title_templates = [
-            "Did you know that {fact}? #Shorts",
-            "Only {number}% of people know this about {topic} #Shorts",
-            "{number} {topic} facts that will blow your mind #Shorts",
-        ]
+    # Title templates: use competitor-learned templates, validated, fall back to defaults.
+    # Must have a placeholder, be English, reasonable length, no duplicate {topic}.
+    _GOOD_TEMPLATES = [
+        "Did you know that {fact}? #Shorts",
+        "{number} {topic} facts that will blow your mind #Shorts",
+        "Scientists just discovered {topic} and it changes everything #Shorts",
+        "Why {topic} is more {adjective} than you think #Shorts",
+        "Only {number}% of people know this about {topic} #Shorts",
+        "The real reason {topic} does this will shock you #Shorts",
+        "What happens to your body when {scenario}? #Shorts",
+        "{number} facts in {seconds} seconds #Shorts",
+    ]
+    raw_templates = competitor.get("title_templates", [])
+    validated_templates = [
+        t for t in raw_templates
+        if t and t.isascii()
+        and "{" in t
+        and t.count("{topic}") <= 1
+        and 4 <= len(t.split()) <= 14
+    ]
+    title_templates = validated_templates if len(validated_templates) >= 3 else _GOOD_TEMPLATES
     if internal.get("top5_patterns"):
         title_templates = list(dict.fromkeys(
             title_templates + ["{number} facts in {seconds} seconds #Shorts"]
         ))
 
-    # Hook phrases: competitor-learned, fall back to hardcoded
-    hook_phrases = competitor.get("hook_phrases", [])
-    if not hook_phrases:
-        hook_phrases = [
-            "Did you know that",
-            "Scientists just discovered",
-            "Here's why most people don't know",
-            "The shocking truth about",
-        ]
+    # Hook phrases: competitor-learned, validated, fall back to hardcoded.
+    # Must be short (≤ 6 words), English-only, no hashtags, not a complete sentence.
+    _GOOD_HOOKS = [
+        "Did you know that",
+        "Scientists just discovered",
+        "Here's why most people don't know",
+        "The shocking truth about",
+        "What if I told you that",
+        "Most people don't realize",
+        "This will change how you see",
+        "You won't believe what",
+    ]
+    raw_hooks = competitor.get("hook_phrases", [])
+    validated_hooks = [
+        h for h in raw_hooks
+        if h and h.isascii()
+        and 2 <= len(h.split()) <= 6
+        and "#" not in h
+        and not h[0].isdigit()
+    ]
+    hook_phrases = validated_hooks if len(validated_hooks) >= 3 else _GOOD_HOOKS
 
     rows = summary.get("_rows", [])
     best_hours = _compute_top_post_hours(rows)
@@ -574,16 +599,46 @@ def _update_config_file(updates: dict[str, Any]) -> None:
     config_path.write_text(updated, encoding="utf-8")
 
 
+def _pick_ab_pair_from_registry() -> tuple[str, str] | None:
+    """Pick two recently uploaded videos with different title patterns for A/B test.
+
+    Prefers pairs where one uses "Did you know" and the other uses a different
+    template, so the test is meaningful. Falls back to the two most recent videos.
+    """
+    rows = _load_registry()
+    if len(rows) < 2:
+        return None
+    recent = rows[-40:]  # look back at last 40 uploads
+    did_you_know = [r for r in recent if r.get("title", "").lower().startswith("did you know")]
+    other = [r for r in recent if not r.get("title", "").lower().startswith("did you know")]
+    # Prefer one "did you know" vs one "other" pair for a meaningful comparison
+    if did_you_know and other:
+        import random as _rnd
+        return _rnd.choice(did_you_know)["title"], _rnd.choice(other)["title"]
+    # Fallback: two most recent with different templates
+    last = rows[-2:]
+    if last[0].get("title") and last[1].get("title"):
+        return last[0]["title"], last[1]["title"]
+    return None
+
+
 def _update_ab_tests() -> dict[str, Any]:
     now = _now_iso()
     tests = _load_json(AB_TEST_PATH, default=[])
     if not isinstance(tests, list):
         tests = []
 
+    pair = _pick_ab_pair_from_registry()
+    if pair:
+        title_a, title_b = pair
+    else:
+        title_a = "Did you know that your brain uses 20% of your oxygen?"
+        title_b = "Only 20% oxygen: the brain fact that surprises everyone"
+
     new_test = {
         "created_at": now,
-        "title_a": "Did you know that your brain uses 20% of your oxygen?",
-        "title_b": "Only 20% oxygen: the brain fact that surprises everyone",
+        "title_a": title_a,
+        "title_b": title_b,
         "compare_after_hours": 48,
         "status": "pending",
     }

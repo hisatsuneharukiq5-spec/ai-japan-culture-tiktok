@@ -198,11 +198,21 @@ def _generate_title_templates(titles: list[str]) -> list[str]:
     """Convert real titles into reusable parametric templates."""
     templates: set[str] = set(BASELINE_PATTERNS["title_templates"])
     for title in titles:
+        # Skip non-ASCII (Hindi, Japanese, emoji-heavy) titles
+        if not title.isascii():
+            continue
         t = re.sub(r"\b\d+\b", "{number}", title)
         t = re.sub(r"\s*#\w+", "", t).strip()
-        # Generalise proper nouns/topic words
+        # Generalise proper nouns/topic words (max 2 replacements)
         t = re.sub(r"\b([A-Z][a-z]{3,})\b", "{topic}", t, count=2)
-        if len(t) > 20 and "{" in t:
+        word_count = len(t.split())
+        # Only add if: has a placeholder, 4-12 words, no duplicate placeholders
+        if (
+            "{" in t
+            and 4 <= word_count <= 12
+            and t.count("{topic}") <= 1  # avoid "How {topic} Do {topic} Have..."
+            and t.isascii()
+        ):
             templates.add(t.rstrip(" .!?,") + " #Shorts")
     return sorted(templates)[:10]
 
@@ -215,13 +225,34 @@ def _extract_patterns(videos: list[dict]) -> dict[str, Any]:
     # Title classification
     pattern_counter: Counter = Counter(_classify_title(t) for t in titles)
 
-    # Hook phrases (first 4 words, deduplicated)
+    # Hook phrases: only extract first words when the title starts with a
+    # known hook-style opener (e.g. "Did you know", "Scientists just").
+    # Avoids polluting the config with raw video titles like "Squid Ink Science".
+    _HOOK_OPENERS = {
+        "did", "scientists", "here's", "what", "most", "this", "you",
+        "only", "why", "how", "imagine", "the", "never", "meet", "warning",
+    }
     hook_counter: Counter = Counter()
     for title in titles:
-        words = title.split()[:4]
-        if words:
-            hook_counter[" ".join(words).rstrip(".,!?")] += 1
+        # Skip non-English titles
+        if not title.isascii():
+            continue
+        words = title.split()
+        if not words:
+            continue
+        first = words[0].lower().rstrip(".,!?")
+        if first not in _HOOK_OPENERS:
+            continue
+        # Take up to 5 words, strip trailing punctuation and hashtags
+        phrase = " ".join(w for w in words[:5] if not w.startswith("#")).rstrip(".,!?")
+        # Must be 2–6 words and no hashtags/emojis
+        word_count = len(phrase.split())
+        if 2 <= word_count <= 6 and phrase.isascii():
+            hook_counter[phrase] += 1
     top_hooks = [h for h, _ in hook_counter.most_common(10)]
+    # Always fall back to curated hooks if extraction yields too few
+    if len(top_hooks) < 4:
+        top_hooks = list(BASELINE_PATTERNS["hook_phrases"])
 
     # Emotional / power words
     all_text = " ".join(titles).lower()

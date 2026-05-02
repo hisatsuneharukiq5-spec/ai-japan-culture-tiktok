@@ -59,44 +59,38 @@ ANTHROPIC_MODELS = [
 ]
 
 # FACTS_BRAIN_MANAGED_START
-LEARNED_TOPIC_STYLE = "science, didn, physics, experiment, amazing, save, life, viral"
+LEARNED_TOPIC_STYLE = "space, human brain, deep ocean, ancient history, extreme animals, earth science, body facts, science discovery"
 LEARNED_TITLE_TEMPLATES = [
   "Did you know that {fact}? #Shorts",
-  "How {topic} Do {topic} Have Dug Inside Earth #Shorts",
-  "Only {number}% of people know this about {topic} #Shorts",
+  "{number} {topic} facts that will blow your mind #Shorts",
   "Scientists just discovered {topic} and it changes everything #Shorts",
+  "Why {topic} is more {adjective} than you think #Shorts",
+  "Only {number}% of people know this about {topic} #Shorts",
   "The real reason {topic} does this will shock you #Shorts",
-  "Top - {number} {topic} {topic} 😱 #Shorts",
   "What happens to your body when {scenario}? #Shorts",
-  "Why {topic} is more {adjective} than you think #Shorts"
+  "{number} facts in {seconds} seconds #Shorts"
 ]
 LEARNED_HOOK_PHRASES = [
-  "This is SO cool",
-  "Squid Ink Science Experiment",
-  "4 Cool Gifts for",
-  "#physics #physicsconcept #physicsfacts #shorts",
-  "So how many pins",
-  "Top - 3 Amazing",
-  "Ocean Depth #ocean #science",
-  "Balloon Explodes with Orange"
+  "Did you know that",
+  "Scientists just discovered",
+  "Here's why most people don't know",
+  "The shocking truth about",
+  "What if I told you that",
+  "Most people don't realize",
+  "This will change how you see",
+  "You won't believe what"
 ]
 LEARNED_HASHTAGS = [
-  "#shorts",
-  "#facts",
-  "#science",
-  "#education",
-  "#viral",
-  "#new",
-  "#sciencefacts",
-  "#youtubeshorts",
-  "#experiment",
-  "#fact",
-  "#amazing facts",
-  "#short",
-  "#trending",
-  "#knowledge",
-  "#top",
-  "#didyouknow"
+  "#Facts",
+  "#DidYouKnow",
+  "#AmazingFacts",
+  "#Science",
+  "#Nature",
+  "#Shorts",
+  "#Space",
+  "#Mind",
+  "#Learn",
+  "#WowFact"
 ]
-PREFERRED_POST_HOURS = [0, 11, 12, 19, 20]
+PREFERRED_POST_HOURS = [3, 7, 11, 15, 19]
 # FACTS_BRAIN_MANAGED_END
