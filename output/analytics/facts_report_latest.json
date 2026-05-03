@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-02T16:12:19",
+  "timestamp": "2026-05-03T16:11:52",
   "internal": {
     "top5_patterns": [
       {
@@ -35,38 +35,38 @@
       "didn",
       "physics",
       "experiment",
-      "amazing",
-      "sciencefacts",
       "save",
-      "life"
+      "life",
+      "viral",
+      "amazing"
     ],
     "hashtags": [
       "#shorts",
-      "#science",
       "#facts",
+      "#science",
       "#education",
+      "#viral",
       "#new",
       "#sciencefacts",
-      "#viral",
-      "#youtubeshorts",
-      "#fact",
+      "#trending",
       "#experiment",
-      "#science experiments",
-      "#short",
       "#knowledge",
-      "#amazing facts",
-      "#animation",
+      "#top",
+      "#fact",
+      "#youtubeshorts",
+      "#factsmine",
+      "#science experiments",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
+      "What Is The Real Shape",
       "This can help make Artificial",
+      "How Deep Do Humans Have",
       "Did You Notice This In",
       "Did You Know This Fact",
-      "did you know that Toph",
       "Did You Know: Titanic Fun",
-      "The SCARIEST Fact About SPACE",
-      "How to Survive Killer Bees"
+      "The SCARIEST Fact About SPACE"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -83,12 +83,12 @@
       "science",
       "physics",
       "experiment",
-      "amazing",
       "viral",
-      "sciencefacts",
       "trick",
-      "unbelievable",
       "human",
+      "amazing",
+      "unbelievable",
+      "sciencefacts",
       "tricks",
       "could",
       "space",
@@ -97,11 +97,11 @@
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 31,
+      "statement": 30,
       "number-lead": 10,
       "statistic": 4,
-      "wh-question": 2,
-      "did-you-know": 3
+      "wh-question": 4,
+      "did-you-know": 2
     },
     "optimal_length_seconds": [
       55,
@@ -112,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "motorcycle",
-        "the roku channel",
-        "apple tv",
-        "appletv",
-        "wwe roster",
-        "mike repole",
-        "kofi kingston",
-        "mirra andreeva",
-        "why are flags at half mast today",
-        "maul - shadow lord season 2"
+        "jason holder",
+        "pokemon target collection",
+        "dortmund",
+        "box office",
+        "tennis",
+        "liga de campeones femenina de la uefa",
+        "michael carrick",
+        "uefa women's champions league",
+        "barcelona vs bayern",
+        "matheus cunha"
       ]
     },
     "youtube_trending": {
@@ -132,9 +132,9 @@
         "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
         "How Much Is Too Much 😱",
         "China&#39;s Futuristic School 😱",
+        "Bicycle with Headlight #shorts #devkeexperiment",
         "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
         "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
         "Strongest Glass in The World",
         "This Video Can Save Your Life 😱",
@@ -170,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 21,
+    "total_tests": 22,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
