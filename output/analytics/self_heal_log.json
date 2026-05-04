@@ -75,5 +75,12 @@
     "error_category": "unknown",
     "fixed": false,
     "action": "unknown_error — logged for human review"
+  },
+  {
+    "timestamp": "2026-05-04T11:47:02+00:00",
+    "channel": "facts",
+    "error_category": "unknown",
+    "fixed": false,
+    "action": "unknown_error — logged for human review"
   }
 ]
