@@ -2,19 +2,20 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 30,
+    "statement": 29,
     "number-lead": 10,
     "statistic": 4,
     "wh-question": 4,
-    "did-you-know": 2
+    "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
-    "How Deep Do Humans Have",
+    "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
+    "did you know that Toph",
     "Did You Know: Titanic Fun",
     "The SCARIEST Fact About SPACE",
     "How to Survive Killer Bees"
@@ -23,15 +24,15 @@
     "science",
     "physics",
     "experiment",
+    "amazing",
     "viral",
     "trick",
-    "human",
-    "amazing",
-    "unbelievable",
     "sciencefacts",
+    "human",
     "tricks",
     "could",
     "space",
+    "unbelievable",
     "never",
     "only",
     "fastest"
@@ -41,17 +42,17 @@
     "#facts",
     "#science",
     "#education",
-    "#viral",
     "#new",
+    "#viral",
     "#sciencefacts",
-    "#trending",
-    "#experiment",
-    "#knowledge",
-    "#top",
-    "#fact",
     "#youtubeshorts",
-    "#factsmine",
+    "#experiment",
+    "#amazing facts",
+    "#short",
+    "#fact",
     "#science experiments",
+    "#animation",
+    "#ytshorts",
     "#didyouknow"
   ],
   "top_topics": [
@@ -59,12 +60,11 @@
     "didn",
     "physics",
     "experiment",
+    "amazing",
     "save",
     "life",
     "viral",
-    "amazing",
     "sciencefacts",
-    "unbelievable",
     "human",
     "tricks",
     "could",
@@ -73,6 +73,7 @@
     "theoryofphysics",
     "anubhavsir",
     "ocean",
+    "unbelievable",
     "youtubeshorts",
     "refraction"
   ],
@@ -87,16 +88,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.0,
+  "avg_duration_secs": 42.4,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
-    "How Deep Do Humans Have",
+    "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
-    "Did You Know: Titanic Fun",
-    "The SCARIEST Fact About SPACE"
+    "did you know that Toph",
+    "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-05-03T16:11:51"
+  "timestamp": "2026-05-04T17:13:32"
 }
