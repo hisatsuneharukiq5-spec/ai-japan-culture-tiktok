@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-05T17:07:06",
+  "timestamp": "2026-05-06T17:07:28",
   "internal": {
     "top5_patterns": [
       {
@@ -36,37 +36,36 @@
       "physics",
       "amazing",
       "experiment",
-      "tricks",
-      "save",
-      "life"
+      "sciencefacts",
+      "human",
+      "save"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#education",
+      "#sciencefacts",
       "#viral",
       "#youtubeshorts",
       "#fact",
-      "#sciencefacts",
-      "#knowledge",
+      "#science experiments",
       "#amazing facts",
       "#short",
+      "#didyouknow",
+      "#knowledge",
       "#experiment",
-      "#top",
-      "#science experiments",
-      "#animation",
-      "#didyouknow"
+      "#animation"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
-      "How Deep Do Humans Have",
       "How gullible are you",
       "Did You Notice This In",
       "Did You Know This Fact",
-      "did you know that Toph"
+      "did you know that Toph",
+      "Did You Know: Titanic Fun"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -84,22 +83,21 @@
       "physics",
       "experiment",
       "amazing",
+      "sciencefacts",
       "trick",
       "human",
       "tricks",
       "could",
-      "sciencefacts",
-      "space",
       "unbelievable",
       "never",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 28,
+      "statement": 29,
       "number-lead": 10,
       "statistic": 4,
-      "wh-question": 5,
+      "wh-question": 4,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -111,16 +109,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "columbus zoo",
-        "arizona",
-        "choose your path timed research",
-        "martin landaluce",
-        "the bear",
-        "yellowstone national park",
-        "ice border patrol funding reconciliation",
-        "mississippi",
-        "bindi irwin endometriosis battle",
-        "9/11"
+        "earthquake now",
+        "spacex ipo",
+        "jackie robinson",
+        "trader joe's summer tote release",
+        "cooper connolly",
+        "new planet",
+        "melissa barrera",
+        "jim jarvis",
+        "us coast guard special missions command",
+        "ionq"
       ]
     },
     "youtube_trending": {
@@ -132,15 +130,15 @@
         "How Much Is Too Much 😱",
         "China&#39;s Futuristic School 😱",
         "Bicycle with Headlight #shorts #devkeexperiment",
+        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
-        "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
         "Strongest Glass in The World",
         "This Video Can Save Your Life 😱",
         "Candy Facts That Will BLOW Your Mind 🤔",
         "How Many Hours Do You Sleep 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
-        "How a slinky falls in slow motion #shorts"
+        "This man collected coins for 45 years 😮"
       ]
     },
     "pytrends": {
@@ -169,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 24,
+    "total_tests": 25,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
