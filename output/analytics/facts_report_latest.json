@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-06T17:07:28",
+  "timestamp": "2026-05-07T17:22:11",
   "internal": {
     "top5_patterns": [
       {
@@ -33,12 +33,12 @@
     "popular_topics": [
       "science",
       "didn",
+      "experiment",
       "physics",
       "amazing",
-      "experiment",
       "sciencefacts",
-      "human",
-      "save"
+      "save",
+      "life"
     ],
     "hashtags": [
       "#shorts",
@@ -49,13 +49,14 @@
       "#viral",
       "#youtubeshorts",
       "#fact",
-      "#science experiments",
       "#amazing facts",
       "#short",
-      "#didyouknow",
       "#knowledge",
       "#experiment",
-      "#animation"
+      "#science experiments",
+      "#animation",
+      "#ytshorts",
+      "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
@@ -85,10 +86,10 @@
       "amazing",
       "sciencefacts",
       "trick",
+      "unbelievable",
       "human",
       "tricks",
       "could",
-      "unbelievable",
       "never",
       "only",
       "fastest"
@@ -109,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "earthquake now",
-        "spacex ipo",
-        "jackie robinson",
-        "trader joe's summer tote release",
-        "cooper connolly",
-        "new planet",
-        "melissa barrera",
-        "jim jarvis",
-        "us coast guard special missions command",
-        "ionq"
+        "seatgeek",
+        "personal injury lawyer",
+        "jasson dominguez",
+        "paul blackburn",
+        "mark hamill",
+        "stubhub",
+        "jennifer aniston",
+        "rockstar games gta online content",
+        "dance no more harry styles",
+        "fede valverde"
       ]
     },
     "youtube_trending": {
@@ -133,12 +134,12 @@
         "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
+        "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "This Video Can Save Your Life 😱",
         "Candy Facts That Will BLOW Your Mind 🤔",
         "How Many Hours Do You Sleep 😱",
-        "Walking On Water Trick Revealed! #facts #shorts",
-        "This man collected coins for 45 years 😮"
+        "Walking On Water Trick Revealed! #facts #shorts"
       ]
     },
     "pytrends": {
@@ -167,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 25,
+    "total_tests": 26,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
