@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-07T17:22:11",
+  "timestamp": "2026-05-08T16:53:26",
   "internal": {
     "top5_patterns": [
       {
@@ -32,41 +32,41 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
-      "didn",
-      "experiment",
       "physics",
+      "didn",
       "amazing",
+      "experiment",
       "sciencefacts",
-      "save",
-      "life"
+      "tricks",
+      "save"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#education",
-      "#sciencefacts",
       "#viral",
+      "#sciencefacts",
       "#youtubeshorts",
       "#fact",
+      "#knowledge",
       "#amazing facts",
       "#short",
-      "#knowledge",
       "#experiment",
+      "#top",
       "#science experiments",
       "#animation",
-      "#ytshorts",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
+      "How Deep Do Humans Have",
       "How gullible are you",
       "Did You Notice This In",
       "Did You Know This Fact",
-      "did you know that Toph",
-      "Did You Know: Titanic Fun"
+      "did you know that Toph"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -84,21 +84,22 @@
       "physics",
       "experiment",
       "amazing",
-      "sciencefacts",
       "trick",
-      "unbelievable",
+      "viral",
+      "sciencefacts",
       "human",
       "tricks",
       "could",
+      "unbelievable",
       "never",
       "only",
       "fastest"
     ],
     "pattern_counts": {
       "statement": 29,
-      "number-lead": 10,
+      "number-lead": 9,
       "statistic": 4,
-      "wh-question": 4,
+      "wh-question": 5,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -110,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "seatgeek",
-        "personal injury lawyer",
-        "jasson dominguez",
-        "paul blackburn",
-        "mark hamill",
-        "stubhub",
-        "jennifer aniston",
-        "rockstar games gta online content",
-        "dance no more harry styles",
-        "fede valverde"
+        "kendrick perkins",
+        "kristen smart",
+        "ny local police ice restrictions",
+        "tallon griekspoor",
+        "metlife stadium",
+        "fiji",
+        "steam controller reservation",
+        "dow jones stock markets",
+        "eva lys",
+        "vitamin k deficiency"
       ]
     },
     "youtube_trending": {
@@ -133,13 +134,13 @@
         "Bicycle with Headlight #shorts #devkeexperiment",
         "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "This Video Can Save Your Life 😱",
         "Candy Facts That Will BLOW Your Mind 🤔",
         "How Many Hours Do You Sleep 😱",
-        "Walking On Water Trick Revealed! #facts #shorts"
+        "Walking On Water Trick Revealed! #facts #shorts",
+        "How a slinky falls in slow motion #shorts"
       ]
     },
     "pytrends": {
@@ -168,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 26,
+    "total_tests": 27,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
