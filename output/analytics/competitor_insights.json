@@ -2,17 +2,15 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 29,
-    "number-lead": 9,
+    "statement": 30,
+    "number-lead": 10,
     "statistic": 4,
-    "wh-question": 5,
+    "wh-question": 3,
     "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
-    "What Is The Real Shape",
     "This can help make Artificial",
-    "How Deep Do Humans Have",
     "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
@@ -25,9 +23,9 @@
     "physics",
     "experiment",
     "amazing",
-    "trick",
-    "viral",
     "sciencefacts",
+    "viral",
+    "trick",
     "human",
     "tricks",
     "could",
@@ -40,32 +38,32 @@
     "#shorts",
     "#facts",
     "#science",
+    "#sciencefacts",
     "#education",
     "#viral",
-    "#sciencefacts",
     "#youtubeshorts",
     "#fact",
-    "#knowledge",
     "#amazing facts",
     "#short",
+    "#knowledge",
     "#experiment",
-    "#top",
     "#science experiments",
     "#animation",
+    "#ytshorts",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
-    "physics",
     "didn",
-    "amazing",
+    "physics",
     "experiment",
+    "amazing",
     "sciencefacts",
-    "tricks",
     "save",
     "life",
     "viral",
     "human",
+    "tricks",
     "could",
     "cool",
     "gifts",
@@ -74,7 +72,7 @@
     "ocean",
     "unbelievable",
     "youtubeshorts",
-    "earth"
+    "chemistry"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -87,16 +85,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.5,
+  "avg_duration_secs": 43.4,
   "hook_phrases": [
     "This is SO cool",
-    "What Is The Real Shape",
     "This can help make Artificial",
-    "How Deep Do Humans Have",
     "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
-    "did you know that Toph"
+    "did you know that Toph",
+    "Did You Know: Titanic Fun",
+    "How to Survive Killer Bees"
   ],
-  "timestamp": "2026-05-08T16:53:26"
+  "timestamp": "2026-05-09T16:29:52"
 }
