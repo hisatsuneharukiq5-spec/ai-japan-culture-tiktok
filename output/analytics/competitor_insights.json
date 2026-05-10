@@ -2,15 +2,17 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 30,
+    "statement": 28,
     "number-lead": 10,
     "statistic": 4,
-    "wh-question": 3,
+    "wh-question": 5,
     "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
+    "What Is The Real Shape",
     "This can help make Artificial",
+    "How Deep Do Humans Have",
     "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
@@ -23,13 +25,13 @@
     "physics",
     "experiment",
     "amazing",
-    "sciencefacts",
     "viral",
+    "sciencefacts",
     "trick",
     "human",
+    "unbelievable",
     "tricks",
     "could",
-    "unbelievable",
     "never",
     "only",
     "fastest"
@@ -38,18 +40,18 @@
     "#shorts",
     "#facts",
     "#science",
-    "#sciencefacts",
     "#education",
     "#viral",
-    "#youtubeshorts",
+    "#sciencefacts",
     "#fact",
-    "#amazing facts",
-    "#short",
+    "#youtubeshorts",
     "#knowledge",
+    "#short",
     "#experiment",
+    "#top",
     "#science experiments",
+    "#amazing facts",
     "#animation",
-    "#ytshorts",
     "#didyouknow"
   ],
   "top_topics": [
@@ -62,6 +64,7 @@
     "save",
     "life",
     "viral",
+    "unbelievable",
     "human",
     "tricks",
     "could",
@@ -70,9 +73,8 @@
     "theoryofphysics",
     "anubhavsir",
     "ocean",
-    "unbelievable",
     "youtubeshorts",
-    "chemistry"
+    "earth"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -85,16 +87,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.4,
+  "avg_duration_secs": 42.8,
   "hook_phrases": [
     "This is SO cool",
+    "What Is The Real Shape",
     "This can help make Artificial",
+    "How Deep Do Humans Have",
     "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
-    "did you know that Toph",
-    "Did You Know: Titanic Fun",
-    "How to Survive Killer Bees"
+    "did you know that Toph"
   ],
-  "timestamp": "2026-05-09T16:29:52"
+  "timestamp": "2026-05-10T16:31:01"
 }

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-09T16:29:53",
+  "timestamp": "2026-05-10T16:31:01",
   "internal": {
     "top5_patterns": [
       {
@@ -44,29 +44,29 @@
       "#shorts",
       "#facts",
       "#science",
-      "#sciencefacts",
       "#education",
       "#viral",
-      "#youtubeshorts",
+      "#sciencefacts",
       "#fact",
-      "#amazing facts",
-      "#short",
+      "#youtubeshorts",
       "#knowledge",
+      "#short",
       "#experiment",
+      "#top",
       "#science experiments",
+      "#amazing facts",
       "#animation",
-      "#ytshorts",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
+      "What Is The Real Shape",
       "This can help make Artificial",
+      "How Deep Do Humans Have",
       "How gullible are you",
       "Did You Notice This In",
       "Did You Know This Fact",
-      "did you know that Toph",
-      "Did You Know: Titanic Fun",
-      "How to Survive Killer Bees"
+      "did you know that Toph"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -84,22 +84,22 @@
       "physics",
       "experiment",
       "amazing",
-      "sciencefacts",
       "viral",
+      "sciencefacts",
       "trick",
       "human",
+      "unbelievable",
       "tricks",
       "could",
-      "unbelievable",
       "never",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 30,
+      "statement": 28,
       "number-lead": 10,
       "statistic": 4,
-      "wh-question": 3,
+      "wh-question": 5,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -111,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "inter miami vs toronto",
-        "jordan spieth",
-        "galatasaray vs antalyaspor",
-        "inter milan",
-        "wings vs fever",
-        "iran war hormuz",
-        "john goble",
-        "barca vs madrid",
-        "indy 500",
-        "nikoloz basilashvili"
+        "trossard",
+        "storm vs sun",
+        "alexander bublik",
+        "al pacino",
+        "learner tien",
+        "ben white",
+        "nationals - marlins",
+        "ruby tuesday",
+        "real oviedo vs getafe",
+        "iran response to us proposal"
       ]
     },
     "youtube_trending": {
@@ -137,10 +137,10 @@
         "Inside A Camel Hump 😱",
         "This Video Can Save Your Life 😱",
         "Strongest Glass in The World",
-        "Candy Facts That Will BLOW Your Mind 🤔",
         "3 Facts You Didn&#39;t Want To Know 😬",
         "How Many Hours Do You Sleep 😱",
-        "Walking On Water Trick Revealed! #facts #shorts"
+        "Walking On Water Trick Revealed! #facts #shorts",
+        "Fun Facts That Are Not Funny"
       ]
     },
     "pytrends": {
@@ -169,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 28,
+    "total_tests": 29,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

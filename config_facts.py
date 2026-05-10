@@ -72,30 +72,30 @@ LEARNED_TITLE_TEMPLATES = [
 ]
 LEARNED_HOOK_PHRASES = [
   "This is SO cool",
+  "What Is The Real Shape",
   "This can help make Artificial",
+  "How Deep Do Humans Have",
   "How gullible are you",
   "Did You Notice This In",
   "Did You Know This Fact",
-  "did you know that Toph",
-  "Did You Know: Titanic Fun",
-  "How to Survive Killer Bees"
+  "did you know that Toph"
 ]
 LEARNED_HASHTAGS = [
   "#shorts",
   "#facts",
   "#science",
-  "#sciencefacts",
   "#education",
   "#viral",
-  "#youtubeshorts",
+  "#sciencefacts",
   "#fact",
-  "#amazing facts",
-  "#short",
+  "#youtubeshorts",
   "#knowledge",
+  "#short",
   "#experiment",
+  "#top",
   "#science experiments",
+  "#amazing facts",
   "#animation",
-  "#ytshorts",
   "#didyouknow"
 ]
 PREFERRED_POST_HOURS = [0, 11, 12, 19, 20]
