@@ -2,17 +2,16 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 28,
+    "statement": 29,
     "number-lead": 10,
     "statistic": 4,
-    "wh-question": 5,
+    "wh-question": 4,
     "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
-    "How Deep Do Humans Have",
     "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
@@ -25,11 +24,10 @@
     "physics",
     "experiment",
     "amazing",
-    "viral",
     "sciencefacts",
     "trick",
-    "human",
     "unbelievable",
+    "human",
     "tricks",
     "could",
     "never",
@@ -41,29 +39,28 @@
     "#facts",
     "#science",
     "#education",
-    "#viral",
     "#sciencefacts",
-    "#fact",
+    "#viral",
     "#youtubeshorts",
-    "#knowledge",
-    "#short",
-    "#experiment",
-    "#top",
+    "#fact",
     "#science experiments",
+    "#short",
+    "#knowledge",
+    "#experiment",
     "#amazing facts",
     "#animation",
+    "#ytshorts",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
-    "physics",
     "experiment",
+    "physics",
     "amazing",
     "sciencefacts",
     "save",
     "life",
-    "viral",
     "unbelievable",
     "human",
     "tricks",
@@ -74,7 +71,8 @@
     "anubhavsir",
     "ocean",
     "youtubeshorts",
-    "earth"
+    "chemistry",
+    "ytshorts"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -87,16 +85,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.8,
+  "avg_duration_secs": 43.1,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
-    "How Deep Do Humans Have",
     "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
-    "did you know that Toph"
+    "did you know that Toph",
+    "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-05-10T16:31:01"
+  "timestamp": "2026-05-11T17:35:33"
 }
