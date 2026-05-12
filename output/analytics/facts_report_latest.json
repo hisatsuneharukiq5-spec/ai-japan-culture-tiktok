@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-11T17:35:33",
+  "timestamp": "2026-05-12T17:35:12",
   "internal": {
     "top5_patterns": [
       {
@@ -45,28 +45,28 @@
       "#facts",
       "#science",
       "#education",
-      "#sciencefacts",
       "#viral",
-      "#youtubeshorts",
+      "#sciencefacts",
       "#fact",
-      "#science experiments",
-      "#short",
       "#knowledge",
+      "#youtubeshorts",
       "#experiment",
+      "#top",
+      "#science experiments",
       "#amazing facts",
       "#animation",
-      "#ytshorts",
+      "#short",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
+      "How Deep Do Humans Have",
       "How gullible are you",
       "Did You Notice This In",
       "Did You Know This Fact",
-      "did you know that Toph",
-      "Did You Know: Titanic Fun"
+      "did you know that Toph"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -83,22 +83,22 @@
       "science",
       "physics",
       "experiment",
+      "trick",
       "amazing",
       "sciencefacts",
-      "trick",
-      "unbelievable",
       "human",
       "tricks",
       "could",
+      "unbelievable",
       "never",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 29,
-      "number-lead": 10,
+      "statement": 27,
+      "number-lead": 11,
       "statistic": 4,
-      "wh-question": 4,
+      "wh-question": 5,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -110,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "six flags magic mountain",
-        "cyberpunk 2077",
-        "abishek porel",
-        "neom vs al-shabab",
-        "russia",
-        "ryan smith",
-        "fred johnson",
-        "ripple neuberger berman funding",
-        "giannis",
-        "will sharpe"
+        "nintendo switch 2",
+        "kevin warsh",
+        "norwegian cruise line",
+        "spotify 20",
+        "al-nassr vs al-hilal",
+        "is spotify down",
+        "real betis - elche c. f.",
+        "doj wall street journal subpoenas",
+        "real betis vs elche",
+        "abc 2026 fall tv lineup"
       ]
     },
     "youtube_trending": {
@@ -168,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 30,
+    "total_tests": 31,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

@@ -74,28 +74,28 @@ LEARNED_HOOK_PHRASES = [
   "This is SO cool",
   "What Is The Real Shape",
   "This can help make Artificial",
+  "How Deep Do Humans Have",
   "How gullible are you",
   "Did You Notice This In",
   "Did You Know This Fact",
-  "did you know that Toph",
-  "Did You Know: Titanic Fun"
+  "did you know that Toph"
 ]
 LEARNED_HASHTAGS = [
   "#shorts",
   "#facts",
   "#science",
   "#education",
-  "#sciencefacts",
   "#viral",
-  "#youtubeshorts",
+  "#sciencefacts",
   "#fact",
-  "#science experiments",
-  "#short",
   "#knowledge",
+  "#youtubeshorts",
   "#experiment",
+  "#top",
+  "#science experiments",
   "#amazing facts",
   "#animation",
-  "#ytshorts",
+  "#short",
   "#didyouknow"
 ]
 PREFERRED_POST_HOURS = [0, 11, 12, 19, 20]
