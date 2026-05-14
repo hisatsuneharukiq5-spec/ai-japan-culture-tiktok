@@ -2,10 +2,10 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 28,
+    "statement": 27,
     "number-lead": 11,
     "statistic": 4,
-    "wh-question": 4,
+    "wh-question": 5,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -13,6 +13,7 @@
     "What Is The Real Shape",
     "This can help make Artificial",
     "How Deep Do Humans Have",
+    "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
     "did you know that Toph",
@@ -39,17 +40,17 @@
     "#facts",
     "#science",
     "#viral",
+    "#new",
     "#education",
     "#sciencefacts",
     "#youtubeshorts",
+    "#trending",
     "#experiment",
     "#knowledge",
     "#top",
     "#fact",
-    "#science experiments",
     "#factsmine",
-    "#trending",
-    "#amazing facts",
+    "#science experiments",
     "#didyouknow"
   ],
   "top_topics": [
@@ -85,16 +86,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.7,
+  "avg_duration_secs": 42.6,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
     "How Deep Do Humans Have",
+    "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
-    "did you know that Toph",
-    "Did You Know: Titanic Fun"
+    "did you know that Toph"
   ],
-  "timestamp": "2026-05-13T17:37:09"
+  "timestamp": "2026-05-14T17:22:22"
 }
