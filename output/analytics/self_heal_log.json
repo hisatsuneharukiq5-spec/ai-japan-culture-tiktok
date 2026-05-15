@@ -544,5 +544,12 @@
     "error_category": "unknown",
     "fixed": false,
     "action": "unknown_error — logged for human review"
+  },
+  {
+    "timestamp": "2026-05-15T17:27:29+00:00",
+    "channel": "obscura",
+    "error_category": "unknown",
+    "fixed": false,
+    "action": "unknown_error — logged for human review"
   }
 ]
