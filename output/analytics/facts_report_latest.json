@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-15T17:11:47",
+  "timestamp": "2026-05-16T16:30:28",
   "internal": {
     "top5_patterns": [
       {
@@ -44,18 +44,18 @@
       "#shorts",
       "#facts",
       "#science",
-      "#viral",
       "#education",
-      "#sciencefacts",
+      "#viral",
       "#youtubeshorts",
+      "#sciencefacts",
+      "#short",
       "#experiment",
-      "#knowledge",
-      "#top",
       "#fact",
       "#science experiments",
-      "#factsmine",
-      "#trending",
+      "#knowledge",
+      "#top",
       "#amazing facts",
+      "#animation",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -95,8 +95,8 @@
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 28,
-      "number-lead": 11,
+      "statement": 29,
+      "number-lead": 10,
       "statistic": 4,
       "wh-question": 4,
       "did-you-know": 3
@@ -110,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "isaiah hill basketball",
-        "manon rheaume",
-        "rizespor vs beşiktaş",
-        "deer",
-        "chud the builder gofundme",
-        "farmer",
-        "steve cohen",
-        "westfarms mall police presence",
-        "searsmont maine",
-        "rivian"
+        "coco gauff",
+        "jose ortiz",
+        "where is the pga championship being played",
+        "bernardo silva",
+        "prince william",
+        "the boys mexico",
+        "fallout",
+        "john stones",
+        "kamala harris",
+        "elf cosmetics"
       ]
     },
     "youtube_trending": {
@@ -129,17 +129,17 @@
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
+        "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
+        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
+        "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
         "Inside A Camel Hump 😱",
         "This Video Can Save Your Life 😱",
         "Strongest Glass in The World",
         "Candy Facts That Will BLOW Your Mind 🤔",
         "3 Facts You Didn&#39;t Want To Know 😬",
         "How Many Hours Do You Sleep 😱",
-        "Walking On Water Trick Revealed! #facts #shorts",
-        "How a slinky falls in slow motion #shorts",
-        "Fun Facts That Are Not Funny",
-        "ये इतिहास के सबसे अज़ीब Experiments थे 😨 Worst Human Experiments In History 🤯 #factsdastan #shorts"
+        "Walking On Water Trick Revealed! #facts #shorts"
       ]
     },
     "pytrends": {
@@ -168,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 34,
+    "total_tests": 35,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

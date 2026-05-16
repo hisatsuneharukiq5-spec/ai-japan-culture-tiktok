@@ -2,8 +2,8 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 28,
-    "number-lead": 11,
+    "statement": 29,
+    "number-lead": 10,
     "statistic": 4,
     "wh-question": 4,
     "did-you-know": 3
@@ -38,18 +38,18 @@
     "#shorts",
     "#facts",
     "#science",
-    "#viral",
     "#education",
-    "#sciencefacts",
+    "#viral",
     "#youtubeshorts",
+    "#sciencefacts",
+    "#short",
     "#experiment",
-    "#knowledge",
-    "#top",
     "#fact",
     "#science experiments",
-    "#factsmine",
-    "#trending",
+    "#knowledge",
+    "#top",
     "#amazing facts",
+    "#animation",
     "#didyouknow"
   ],
   "top_topics": [
@@ -85,7 +85,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.7,
+  "avg_duration_secs": 42.3,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -96,5 +96,5 @@
     "did you know that Toph",
     "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-05-15T17:11:47"
+  "timestamp": "2026-05-16T16:30:28"
 }
