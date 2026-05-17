@@ -59,7 +59,7 @@ ANTHROPIC_MODELS = [
 ]
 
 # FACTS_BRAIN_MANAGED_START
-LEARNED_TOPIC_STYLE = "science, didn, physics, experiment, tricks, save, life, amazing"
+LEARNED_TOPIC_STYLE = "science, didn, physics, sciencefacts, save, life, experiment, amazing"
 LEARNED_TITLE_TEMPLATES = [
   "Did you know that {fact}? #Shorts",
   "Only {number}% of people know this about {topic} #Shorts",
@@ -68,34 +68,34 @@ LEARNED_TITLE_TEMPLATES = [
   "What happens to your body when {scenario}? #Shorts",
   "Why {topic} is more {adjective} than you think #Shorts",
   "{number} {topic} facts that will blow your mind #Shorts",
-  "{topic} is SO cool #Shorts"
+  "{topic}'s the fastest way to empty a bottle #Shorts"
 ]
 LEARNED_HOOK_PHRASES = [
-  "This is SO cool",
   "What Is The Real Shape",
   "This can help make Artificial",
-  "How Deep Do Humans Have",
   "Did You Notice This In",
   "Did You Know This Fact",
   "did you know that Toph",
-  "Did You Know: Titanic Fun"
+  "Did You Know: Titanic Fun",
+  "The SCARIEST Fact About SPACE",
+  "How to Survive Killer Bees"
 ]
 LEARNED_HASHTAGS = [
   "#shorts",
   "#facts",
   "#science",
-  "#education",
   "#viral",
-  "#youtubeshorts",
-  "#sciencefacts",
-  "#short",
-  "#experiment",
-  "#fact",
-  "#science experiments",
   "#knowledge",
+  "#fact",
+  "#sciencefacts",
+  "#education",
   "#top",
+  "#factsmine",
+  "#new",
+  "#amazing",
+  "#youtubeshorts",
+  "#experiment",
   "#amazing facts",
-  "#animation",
   "#didyouknow"
 ]
 PREFERRED_POST_HOURS = [0, 11, 12, 19, 20]

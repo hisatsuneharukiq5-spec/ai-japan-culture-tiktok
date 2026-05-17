@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-16T16:30:28",
+  "timestamp": "2026-05-17T16:32:10",
   "internal": {
     "top5_patterns": [
       {
@@ -29,44 +29,44 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 50,
+    "videos_analyzed": 49,
     "popular_topics": [
       "science",
       "didn",
       "physics",
-      "experiment",
-      "tricks",
+      "sciencefacts",
       "save",
       "life",
+      "experiment",
       "amazing"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#education",
       "#viral",
-      "#youtubeshorts",
-      "#sciencefacts",
-      "#short",
-      "#experiment",
-      "#fact",
-      "#science experiments",
       "#knowledge",
+      "#fact",
+      "#sciencefacts",
+      "#education",
       "#top",
+      "#factsmine",
+      "#new",
+      "#amazing",
+      "#youtubeshorts",
+      "#experiment",
       "#amazing facts",
-      "#animation",
       "#didyouknow"
     ],
     "hook_phrases": [
-      "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
-      "How Deep Do Humans Have",
       "Did You Notice This In",
       "Did You Know This Fact",
       "did you know that Toph",
-      "Did You Know: Titanic Fun"
+      "Did You Know: Titanic Fun",
+      "The SCARIEST Fact About SPACE",
+      "How to Survive Killer Bees"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -76,7 +76,6 @@
       "What happens to your body when {scenario}? #Shorts",
       "Why {topic} is more {adjective} than you think #Shorts",
       "{number} {topic} facts that will blow your mind #Shorts",
-      "{topic} is SO cool #Shorts",
       "{topic}'s the fastest way to empty a bottle #Shorts"
     ],
     "power_words": [
@@ -84,21 +83,24 @@
       "physics",
       "experiment",
       "trick",
+      "sciencefacts",
+      "amazing",
+      "factsmine",
       "human",
       "tricks",
-      "amazing",
-      "sciencefacts",
       "could",
+      "space",
       "unbelievable",
       "never",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 29,
+      "statement": 27,
+      "science-discovery": 2,
       "number-lead": 10,
+      "wh-question": 3,
       "statistic": 4,
-      "wh-question": 4,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -110,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "coco gauff",
-        "jose ortiz",
-        "where is the pga championship being played",
-        "bernardo silva",
-        "prince william",
-        "the boys mexico",
-        "fallout",
-        "john stones",
-        "kamala harris",
-        "elf cosmetics"
+        "sevilla - real madrid",
+        "atlético madrid - girona",
+        "tornado warning",
+        "real oviedo - alavés",
+        "levante - r.c.d. mallorca",
+        "severe thunderstorm warning",
+        "athletic club vs celta",
+        "real sociedad - valencia c. f.",
+        "rayo vallecano - villarreal",
+        "madison weather"
       ]
     },
     "youtube_trending": {
@@ -138,8 +140,8 @@
         "Strongest Glass in The World",
         "Candy Facts That Will BLOW Your Mind 🤔",
         "3 Facts You Didn&#39;t Want To Know 😬",
-        "How Many Hours Do You Sleep 😱",
-        "Walking On Water Trick Revealed! #facts #shorts"
+        "Walking On Water Trick Revealed! #facts #shorts",
+        "How Many Hours Do You Sleep 😱"
       ]
     },
     "pytrends": {
@@ -168,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 35,
+    "total_tests": 36,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
