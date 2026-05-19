@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-18T17:40:50",
+  "timestamp": "2026-05-19T17:52:58",
   "internal": {
     "top5_patterns": [
       {
@@ -32,13 +32,13 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
-      "physics",
       "didn",
-      "experiment",
-      "tricks",
+      "physics",
       "save",
       "life",
-      "viral"
+      "experiment",
+      "amazing",
+      "human"
     ],
     "hashtags": [
       "#shorts",
@@ -46,16 +46,16 @@
       "#science",
       "#viral",
       "#education",
-      "#sciencefacts",
-      "#youtubeshorts",
+      "#science experiments",
+      "#experiment",
       "#knowledge",
       "#top",
       "#fact",
-      "#experiment",
+      "#youtubeshorts",
       "#factsmine",
       "#trending",
-      "#science experiments",
       "#amazing facts",
+      "#new",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -84,20 +84,19 @@
       "physics",
       "experiment",
       "trick",
-      "viral",
+      "space",
       "human",
-      "tricks",
       "amazing",
-      "sciencefacts",
       "could",
+      "tricks",
       "unbelievable",
       "never",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 28,
-      "number-lead": 10,
+      "statement": 29,
+      "number-lead": 9,
       "statistic": 5,
       "wh-question": 4,
       "did-you-know": 3
@@ -111,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "social security earnings limit 2026",
-        "amy schumer",
-        "yam madar",
-        "xbox cloud gaming",
-        "indiana hoosiers curt cignetti",
-        "playstation plus subscription price hike",
-        "morgan wallen award show snubs",
-        "pete hegseth",
-        "stan wawrinka",
-        "baseball america bracket projection 2026"
+        "goog stock",
+        "tommy paul",
+        "six flags titan power outage",
+        "mindy kaling",
+        "ryan upchurch",
+        "kysre gondrezick",
+        "nashville",
+        "faa ground stop dfw",
+        "ben shelton",
+        "gracie hunt"
       ]
     },
     "youtube_trending": {
@@ -138,8 +137,8 @@
         "This Video Can Save Your Life 😱",
         "Strongest Glass in The World",
         "Candy Facts That Will BLOW Your Mind 🤔",
-        "3 Facts You Didn&#39;t Want To Know 😬",
         "Walking On Water Trick Revealed! #facts #shorts",
+        "3 Facts You Didn&#39;t Want To Know 😬",
         "How Many Hours Do You Sleep 😱"
       ]
     },
@@ -169,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 37,
+    "total_tests": 38,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

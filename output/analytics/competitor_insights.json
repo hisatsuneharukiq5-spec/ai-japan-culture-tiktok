@@ -2,8 +2,8 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 28,
-    "number-lead": 10,
+    "statement": 29,
+    "number-lead": 9,
     "statistic": 5,
     "wh-question": 4,
     "did-you-know": 3
@@ -17,6 +17,7 @@
     "Did You Know This Fact",
     "did you know that Toph",
     "Did You Know: Titanic Fun",
+    "The SCARIEST Fact About SPACE",
     "How to Survive Killer Bees"
   ],
   "power_words": [
@@ -24,12 +25,11 @@
     "physics",
     "experiment",
     "trick",
-    "viral",
+    "space",
     "human",
-    "tricks",
     "amazing",
-    "sciencefacts",
     "could",
+    "tricks",
     "unbelievable",
     "never",
     "only",
@@ -41,39 +41,39 @@
     "#science",
     "#viral",
     "#education",
-    "#sciencefacts",
-    "#youtubeshorts",
+    "#science experiments",
+    "#experiment",
     "#knowledge",
     "#top",
     "#fact",
-    "#experiment",
+    "#youtubeshorts",
     "#factsmine",
     "#trending",
-    "#science experiments",
     "#amazing facts",
+    "#new",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
-    "physics",
     "didn",
-    "experiment",
-    "tricks",
+    "physics",
     "save",
     "life",
-    "viral",
+    "experiment",
     "amazing",
-    "sciencefacts",
     "human",
     "could",
+    "tricks",
+    "space",
     "cool",
-    "magic",
     "trick",
     "gifts",
     "theoryofphysics",
     "anubhavsir",
-    "ocean",
-    "unbelievable"
+    "unbelievable",
+    "youtubeshorts",
+    "chemistry",
+    "half"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -97,5 +97,5 @@
     "did you know that Toph",
     "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-05-18T17:40:50"
+  "timestamp": "2026-05-19T17:52:58"
 }
