@@ -2,8 +2,8 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 28,
-    "number-lead": 9,
+    "statement": 27,
+    "number-lead": 10,
     "statistic": 5,
     "wh-question": 5,
     "did-you-know": 3
@@ -27,7 +27,6 @@
     "trick",
     "human",
     "amazing",
-    "sciencefacts",
     "could",
     "tricks",
     "unbelievable",
@@ -41,16 +40,16 @@
     "#science",
     "#viral",
     "#education",
+    "#fact",
+    "#science experiments",
+    "#youtubeshorts",
+    "#experiment",
     "#trending",
     "#knowledge",
-    "#fact",
-    "#experiment",
-    "#top",
-    "#science experiments",
     "#amazing facts",
-    "#new",
-    "#sciencefacts",
-    "#youtubeshorts",
+    "#top",
+    "#short",
+    "#amazing",
     "#didyouknow"
   ],
   "top_topics": [
@@ -60,20 +59,20 @@
     "save",
     "life",
     "amazing",
-    "sciencefacts",
     "human",
     "could",
     "tricks",
     "experiment",
+    "need",
     "cool",
-    "trick",
     "gifts",
     "theoryofphysics",
     "anubhavsir",
-    "ocean",
     "unbelievable",
     "youtubeshorts",
-    "half"
+    "half",
+    "earth",
+    "mind"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -86,7 +85,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 44.0,
+  "avg_duration_secs": 43.3,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -97,5 +96,5 @@
     "Did You Know This Fact",
     "did you know that Toph"
   ],
-  "timestamp": "2026-05-20T18:04:59"
+  "timestamp": "2026-05-21T17:38:50"
 }
