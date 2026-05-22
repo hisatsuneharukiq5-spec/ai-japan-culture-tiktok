@@ -41,11 +41,11 @@
     "#viral",
     "#education",
     "#fact",
-    "#science experiments",
     "#youtubeshorts",
     "#experiment",
     "#trending",
     "#knowledge",
+    "#science experiments",
     "#amazing facts",
     "#top",
     "#short",
@@ -58,11 +58,11 @@
     "physics",
     "save",
     "life",
+    "experiment",
     "amazing",
     "human",
     "could",
     "tricks",
-    "experiment",
     "need",
     "cool",
     "gifts",
@@ -70,9 +70,9 @@
     "anubhavsir",
     "unbelievable",
     "youtubeshorts",
+    "chemistry",
     "half",
-    "earth",
-    "mind"
+    "earth"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -85,7 +85,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.3,
+  "avg_duration_secs": 44.3,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -96,5 +96,5 @@
     "Did You Know This Fact",
     "did you know that Toph"
   ],
-  "timestamp": "2026-05-21T17:38:50"
+  "timestamp": "2026-05-22T17:26:26"
 }

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-21T17:38:50",
+  "timestamp": "2026-05-22T17:26:27",
   "internal": {
     "top5_patterns": [
       {
@@ -36,9 +36,9 @@
       "physics",
       "save",
       "life",
+      "experiment",
       "amazing",
-      "human",
-      "could"
+      "human"
     ],
     "hashtags": [
       "#shorts",
@@ -47,11 +47,11 @@
       "#viral",
       "#education",
       "#fact",
-      "#science experiments",
       "#youtubeshorts",
       "#experiment",
       "#trending",
       "#knowledge",
+      "#science experiments",
       "#amazing facts",
       "#top",
       "#short",
@@ -109,16 +109,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "al-nassr vs damac",
-        "destiny 2",
-        "white house ai model oversight",
-        "india news",
-        "bajrakitiyabha",
-        "al khaleej - al-ahli saudi",
-        "cody johnson",
-        "england squad for 2026 world cup",
-        "learner tien",
-        "ajax - groningen"
+        "tulsi gabbard",
+        "edc 2027",
+        "tulsi",
+        "uber stock",
+        "huntsville weather",
+        "waff 48",
+        "sakib hussain",
+        "sam darnold",
+        "fort worth shooting",
+        "boil water advisory atlanta map"
       ]
     },
     "youtube_trending": {
@@ -167,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 40,
+    "total_tests": 41,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
