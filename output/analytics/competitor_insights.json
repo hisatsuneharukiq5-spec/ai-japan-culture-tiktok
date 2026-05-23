@@ -18,12 +18,13 @@
     "Did You Know This Fact",
     "did you know that Toph",
     "Did You Know: Titanic Fun",
-    "How to Survive Killer Bees"
+    "The SCARIEST Fact About SPACE"
   ],
   "power_words": [
     "science",
     "physics",
     "experiment",
+    "space",
     "trick",
     "human",
     "amazing",
@@ -58,11 +59,12 @@
     "physics",
     "save",
     "life",
-    "experiment",
     "amazing",
     "human",
     "could",
     "tricks",
+    "experiment",
+    "space",
     "need",
     "cool",
     "gifts",
@@ -70,7 +72,6 @@
     "anubhavsir",
     "unbelievable",
     "youtubeshorts",
-    "chemistry",
     "half",
     "earth"
   ],
@@ -83,9 +84,10 @@
     "Why {topic} is more {adjective} than you think #Shorts",
     "{number} {topic} facts that will blow your mind #Shorts",
     "{topic} is SO cool #Shorts",
+    "{topic} that can save your life! #{number} #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 44.3,
+  "avg_duration_secs": 44.0,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -96,5 +98,5 @@
     "Did You Know This Fact",
     "did you know that Toph"
   ],
-  "timestamp": "2026-05-22T17:26:26"
+  "timestamp": "2026-05-23T16:33:38"
 }

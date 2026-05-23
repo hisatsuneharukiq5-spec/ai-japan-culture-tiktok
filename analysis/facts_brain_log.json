@@ -3535,5 +3535,104 @@
       "status": "pending",
       "note": "Will be updated after next publish cycle"
     }
+  },
+  {
+    "date": "2026-05-23",
+    "analysis_summary": {
+      "internal": {
+        "top5_patterns": [
+          {
+            "avg_title_length": 38,
+            "title_pattern_counts": {
+              "did-you-know": 1,
+              "statement": 4
+            },
+            "topic_counts": {
+              "did you know": 1,
+              "your brain uses": 1,
+              "the immortal jellyfish": 1,
+              "the ocean glowing": 1,
+              "your body hidden": 1
+            },
+            "post_hour_counts": {
+              "11": 1,
+              "00": 3,
+              "12": 1
+            }
+          }
+        ],
+        "bottom5_issues": [
+          "Collect more data to identify weak patterns"
+        ]
+      },
+      "competitor_topics": [
+        "science",
+        "didn",
+        "physics",
+        "save",
+        "life",
+        "amazing",
+        "human",
+        "could"
+      ],
+      "trends": [
+        "space exploration",
+        "human body mysteries",
+        "extreme nature facts"
+      ]
+    },
+    "changed_settings": {
+      "LEARNED_TOPIC_STYLE": "science, didn, physics, save, life, amazing, human, could",
+      "LEARNED_TITLE_TEMPLATES": [
+        "Did you know that {fact}? #Shorts",
+        "Only {number}% of people know this about {topic} #Shorts",
+        "Scientists just discovered {topic} and it changes everything #Shorts",
+        "The real reason {topic} does this will shock you #Shorts",
+        "What happens to your body when {scenario}? #Shorts",
+        "Why {topic} is more {adjective} than you think #Shorts",
+        "{number} {topic} facts that will blow your mind #Shorts",
+        "{topic} is SO cool #Shorts"
+      ],
+      "LEARNED_HOOK_PHRASES": [
+        "This is SO cool",
+        "What Is The Real Shape",
+        "This can help make Artificial",
+        "How Deep Do Humans Have",
+        "How gullible are you",
+        "Did You Notice This In",
+        "Did You Know This Fact",
+        "did you know that Toph"
+      ],
+      "LEARNED_HASHTAGS": [
+        "#shorts",
+        "#facts",
+        "#science",
+        "#viral",
+        "#education",
+        "#fact",
+        "#youtubeshorts",
+        "#experiment",
+        "#trending",
+        "#knowledge",
+        "#science experiments",
+        "#amazing facts",
+        "#top",
+        "#short",
+        "#amazing",
+        "#didyouknow"
+      ],
+      "PREFERRED_POST_HOURS": [
+        0,
+        11,
+        12,
+        19,
+        20
+      ]
+    },
+    "change_reason": "Adopt top performing topics, hashtags, and posting windows from latest analysis",
+    "post_change_performance": {
+      "status": "pending",
+      "note": "Will be updated after next publish cycle"
+    }
   }
 ]
