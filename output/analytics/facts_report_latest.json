@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-24T16:34:45",
+  "timestamp": "2026-05-25T17:20:42",
   "internal": {
     "top5_patterns": [
       {
@@ -38,24 +38,24 @@
       "save",
       "life",
       "amazing",
-      "sciencefacts"
+      "human"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#viral",
-      "#education",
-      "#experiment",
-      "#youtubeshorts",
       "#trending",
+      "#experiment",
+      "#education",
+      "#youtubeshorts",
       "#fact",
-      "#sciencefacts",
       "#knowledge",
-      "#top",
       "#science experiments",
       "#amazing facts",
-      "#animation",
+      "#top",
+      "#short",
+      "#amazing",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -63,10 +63,10 @@
       "What Is The Real Shape",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "How gullible are you",
       "Did You Notice This In",
       "Did You Know This Fact",
-      "did you know that Toph"
+      "did you know that Toph",
+      "Did You Know: Titanic Fun"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -84,21 +84,21 @@
       "experiment",
       "physics",
       "viral",
+      "trick",
       "human",
       "amazing",
-      "sciencefacts",
-      "trick",
       "could",
+      "tricks",
       "unbelievable",
       "never",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 27,
+      "statement": 28,
       "number-lead": 10,
       "statistic": 5,
-      "wh-question": 5,
+      "wh-question": 4,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -110,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "rocket league",
-        "rocket league unreal engine 6",
-        "portland thorns vs kc current",
-        "bernardo silva",
-        "club de fútbol cruz azul",
-        "tufts lacrosse",
-        "amc theatres",
-        "rob gronkowski",
-        "pirates schedule",
-        "federico cinà"
+        "notre dame lacrosse",
+        "brewers schedule",
+        "jeļena ostapenko",
+        "marcos giron",
+        "mlb games",
+        "tesla model y",
+        "utsa baseball",
+        "exstetra ps5 remaster release",
+        "cubs vs pirates",
+        "rays vs orioles"
       ]
     },
     "youtube_trending": {
@@ -127,6 +127,7 @@
       "topics": [
         "Steel Coil 😨",
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
+        "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
@@ -138,8 +139,7 @@
         "This Video Can Save Your Life 😱",
         "Strongest Glass in The World",
         "Candy Facts That Will BLOW Your Mind 🤔",
-        "Walking On Water Trick Revealed! #facts #shorts",
-        "3 Facts You Didn&#39;t Want To Know 😬"
+        "Walking On Water Trick Revealed! #facts #shorts"
       ]
     },
     "pytrends": {
@@ -168,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 43,
+    "total_tests": 44,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
