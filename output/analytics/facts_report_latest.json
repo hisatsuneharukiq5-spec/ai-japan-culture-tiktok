@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-25T17:20:42",
+  "timestamp": "2026-05-26T18:11:10",
   "internal": {
     "top5_patterns": [
       {
@@ -34,9 +34,9 @@
       "science",
       "didn",
       "physics",
-      "experiment",
       "save",
       "life",
+      "experiment",
       "amazing",
       "human"
     ],
@@ -45,17 +45,17 @@
       "#facts",
       "#science",
       "#viral",
-      "#trending",
       "#experiment",
       "#education",
       "#youtubeshorts",
+      "#trending",
       "#fact",
       "#knowledge",
-      "#science experiments",
-      "#amazing facts",
       "#top",
       "#short",
-      "#amazing",
+      "#science experiments",
+      "#amazing facts",
+      "#sciencefacts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -63,10 +63,10 @@
       "What Is The Real Shape",
       "This can help make Artificial",
       "How Deep Do Humans Have",
+      "How gullible are you",
       "Did You Notice This In",
       "Did You Know This Fact",
-      "did you know that Toph",
-      "Did You Know: Titanic Fun"
+      "did you know that Toph"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -81,9 +81,10 @@
     ],
     "power_words": [
       "science",
-      "experiment",
       "physics",
+      "experiment",
       "viral",
+      "space",
       "trick",
       "human",
       "amazing",
@@ -95,10 +96,10 @@
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 28,
+      "statement": 27,
       "number-lead": 10,
       "statistic": 5,
-      "wh-question": 4,
+      "wh-question": 5,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -110,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "notre dame lacrosse",
-        "brewers schedule",
-        "jeļena ostapenko",
-        "marcos giron",
-        "mlb games",
-        "tesla model y",
-        "utsa baseball",
-        "exstetra ps5 remaster release",
-        "cubs vs pirates",
-        "rays vs orioles"
+        "silver",
+        "kehlani tour",
+        "alexia putellas",
+        "drinking water",
+        "redistricting in alabama",
+        "felix auger aliassime",
+        "denny hamlin",
+        "julie andrews",
+        "madison keys",
+        "sai sudharsan"
       ]
     },
     "youtube_trending": {
@@ -168,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 44,
+    "total_tests": 45,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
