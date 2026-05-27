@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-26T18:11:10",
+  "timestamp": "2026-05-27T18:12:26",
   "internal": {
     "top5_patterns": [
       {
@@ -33,11 +33,11 @@
     "popular_topics": [
       "science",
       "didn",
+      "experiment",
       "physics",
+      "amazing",
       "save",
       "life",
-      "experiment",
-      "amazing",
       "human"
     ],
     "hashtags": [
@@ -47,15 +47,15 @@
       "#viral",
       "#experiment",
       "#education",
-      "#youtubeshorts",
-      "#trending",
       "#fact",
+      "#youtubeshorts",
       "#knowledge",
+      "#trending",
+      "#sciencefacts",
       "#top",
       "#short",
       "#science experiments",
       "#amazing facts",
-      "#sciencefacts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -81,13 +81,12 @@
     ],
     "power_words": [
       "science",
-      "physics",
       "experiment",
+      "physics",
       "viral",
-      "space",
+      "amazing",
       "trick",
       "human",
-      "amazing",
       "could",
       "tricks",
       "unbelievable",
@@ -111,36 +110,36 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "silver",
-        "kehlani tour",
-        "alexia putellas",
-        "drinking water",
-        "redistricting in alabama",
-        "felix auger aliassime",
-        "denny hamlin",
-        "julie andrews",
-        "madison keys",
-        "sai sudharsan"
+        "seguridad social",
+        "sorana cîrstea",
+        "eva lys",
+        "jamaica vs india",
+        "jana kramer",
+        "tuvalu",
+        "zohran mamdani",
+        "marlins",
+        "cardinals vs brewers",
+        "vivek ramaswamy"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "Steel Coil 😨",
+        "उत्तरी सागर / North Sea #shorts #facts #hindi #new",
+        "Aeroplane के बारे में 5 Amazing Facts     #shorts",
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
-        "China&#39;s Futuristic School 😱",
-        "How Much Is Too Much 😱",
         "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
+        "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
-        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
-        "Inside A Camel Hump 😱",
         "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
-        "This Video Can Save Your Life 😱",
         "Strongest Glass in The World",
-        "Candy Facts That Will BLOW Your Mind 🤔",
-        "Walking On Water Trick Revealed! #facts #shorts"
+        "Walking On Water Trick Revealed! #facts #shorts",
+        "This can help make Artificial Human Hearts! #science #sciencefacts",
+        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
+        "🧠Brain Tumor को कैसे निकाला जाता है? 😯 #shorts #viralshorts #trending #shortvideo #youtubeshorts",
+        "Fun Facts That Are Not Funny"
       ]
     },
     "pytrends": {
@@ -169,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 45,
+    "total_tests": 46,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

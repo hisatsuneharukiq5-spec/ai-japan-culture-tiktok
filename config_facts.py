@@ -59,7 +59,7 @@ ANTHROPIC_MODELS = [
 ]
 
 # FACTS_BRAIN_MANAGED_START
-LEARNED_TOPIC_STYLE = "science, didn, physics, save, life, experiment, amazing, human"
+LEARNED_TOPIC_STYLE = "science, didn, experiment, physics, amazing, save, life, human"
 LEARNED_TITLE_TEMPLATES = [
   "Did you know that {fact}? #Shorts",
   "Only {number}% of people know this about {topic} #Shorts",
@@ -87,15 +87,15 @@ LEARNED_HASHTAGS = [
   "#viral",
   "#experiment",
   "#education",
-  "#youtubeshorts",
-  "#trending",
   "#fact",
+  "#youtubeshorts",
   "#knowledge",
+  "#trending",
+  "#sciencefacts",
   "#top",
   "#short",
   "#science experiments",
   "#amazing facts",
-  "#sciencefacts",
   "#didyouknow"
 ]
 PREFERRED_POST_HOURS = [0, 11, 12, 19, 20]
