@@ -2,22 +2,19 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 27,
-    "number-lead": 10,
+    "statement": 30,
+    "number-lead": 11,
     "statistic": 5,
-    "wh-question": 5,
-    "did-you-know": 3
+    "wh-question": 2,
+    "did-you-know": 2
   },
   "top_hooks": [
     "This is SO cool",
-    "What Is The Real Shape",
     "This can help make Artificial",
-    "How Deep Do Humans Have",
-    "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
-    "did you know that Toph",
     "Did You Know: Titanic Fun",
+    "The SCARIEST Fact About SPACE",
     "How to Survive Killer Bees"
   ],
   "power_words": [
@@ -26,31 +23,31 @@
     "physics",
     "viral",
     "amazing",
+    "sciencefacts",
     "trick",
-    "human",
-    "could",
-    "tricks",
     "unbelievable",
-    "never",
+    "human",
+    "tricks",
+    "could",
+    "space",
     "only",
     "fastest"
   ],
   "top_hashtags": [
     "#shorts",
-    "#facts",
     "#science",
-    "#viral",
+    "#facts",
     "#experiment",
     "#education",
-    "#fact",
-    "#youtubeshorts",
-    "#knowledge",
-    "#trending",
+    "#new",
     "#sciencefacts",
-    "#top",
+    "#youtubeshorts",
+    "#fact",
+    "#viral",
     "#short",
+    "#knowledge",
+    "#top",
     "#science experiments",
-    "#amazing facts",
     "#didyouknow"
   ],
   "top_topics": [
@@ -59,21 +56,21 @@
     "experiment",
     "physics",
     "amazing",
+    "sciencefacts",
+    "viral",
+    "unbelievable",
+    "human",
+    "tricks",
+    "could",
     "save",
     "life",
-    "human",
-    "could",
-    "tricks",
     "need",
     "cool",
     "gifts",
-    "viral",
     "theoryofphysics",
     "anubhavsir",
-    "unbelievable",
-    "youtubeshorts",
-    "half",
-    "earth"
+    "ocean",
+    "youtubeshorts"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -86,16 +83,15 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.1,
+  "avg_duration_secs": 41.5,
   "hook_phrases": [
     "This is SO cool",
-    "What Is The Real Shape",
     "This can help make Artificial",
-    "How Deep Do Humans Have",
-    "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
-    "did you know that Toph"
+    "Did You Know: Titanic Fun",
+    "The SCARIEST Fact About SPACE",
+    "How to Survive Killer Bees"
   ],
-  "timestamp": "2026-05-27T18:12:26"
+  "timestamp": "2026-05-28T18:24:59"
 }
