@@ -3,18 +3,18 @@
   "videos_analyzed": 50,
   "pattern_counts": {
     "statement": 30,
-    "number-lead": 11,
+    "number-lead": 10,
     "statistic": 5,
-    "wh-question": 2,
+    "wh-question": 3,
     "did-you-know": 2
   },
   "top_hooks": [
     "This is SO cool",
     "This can help make Artificial",
+    "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
     "Did You Know: Titanic Fun",
-    "The SCARIEST Fact About SPACE",
     "How to Survive Killer Bees"
   ],
   "power_words": [
@@ -29,18 +29,16 @@
     "human",
     "tricks",
     "could",
-    "space",
     "only",
     "fastest"
   ],
   "top_hashtags": [
     "#shorts",
-    "#science",
     "#facts",
-    "#experiment",
+    "#science",
     "#education",
-    "#new",
     "#sciencefacts",
+    "#experiment",
     "#youtubeshorts",
     "#fact",
     "#viral",
@@ -48,13 +46,14 @@
     "#knowledge",
     "#top",
     "#science experiments",
-    "#didyouknow"
+    "#didyouknow",
+    "#factsmine"
   ],
   "top_topics": [
     "science",
-    "didn",
     "experiment",
     "physics",
+    "didn",
     "amazing",
     "sciencefacts",
     "viral",
@@ -83,15 +82,15 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.5,
+  "avg_duration_secs": 42.4,
   "hook_phrases": [
     "This is SO cool",
     "This can help make Artificial",
+    "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
     "Did You Know: Titanic Fun",
-    "The SCARIEST Fact About SPACE",
     "How to Survive Killer Bees"
   ],
-  "timestamp": "2026-05-28T18:24:59"
+  "timestamp": "2026-05-29T18:20:30"
 }

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-28T18:25:00",
+  "timestamp": "2026-05-29T18:20:31",
   "internal": {
     "top5_patterns": [
       {
@@ -32,9 +32,9 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
-      "didn",
       "experiment",
       "physics",
+      "didn",
       "amazing",
       "sciencefacts",
       "viral",
@@ -42,12 +42,11 @@
     ],
     "hashtags": [
       "#shorts",
-      "#science",
       "#facts",
-      "#experiment",
+      "#science",
       "#education",
-      "#new",
       "#sciencefacts",
+      "#experiment",
       "#youtubeshorts",
       "#fact",
       "#viral",
@@ -55,15 +54,16 @@
       "#knowledge",
       "#top",
       "#science experiments",
-      "#didyouknow"
+      "#didyouknow",
+      "#factsmine"
     ],
     "hook_phrases": [
       "This is SO cool",
       "This can help make Artificial",
+      "How gullible are you",
       "Did You Notice This In",
       "Did You Know This Fact",
       "Did You Know: Titanic Fun",
-      "The SCARIEST Fact About SPACE",
       "How to Survive Killer Bees"
     ],
     "title_templates": [
@@ -89,15 +89,14 @@
       "human",
       "tricks",
       "could",
-      "space",
       "only",
       "fastest"
     ],
     "pattern_counts": {
       "statement": 30,
-      "number-lead": 11,
+      "number-lead": 10,
       "statistic": 5,
-      "wh-question": 2,
+      "wh-question": 3,
       "did-you-know": 2
     },
     "optimal_length_seconds": [
@@ -109,16 +108,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "twins vs white sox",
-        "scott bessent",
-        "cuba news",
-        "strongsville ohio records",
-        "wenceel perez",
-        "irlanda - catar",
-        "hood stock",
-        "ireland vs qatar",
-        "southwest",
-        "anastasia potapova"
+        "mamelodi sundowns vs rb leipzig",
+        "bosnia and herzegovina vs north macedonia",
+        "luke evans",
+        "auburn baseball",
+        "anabella gyasi dulles detention",
+        "ku baseball",
+        "tommy paul",
+        "fable",
+        "nancy guthrie missing persons",
+        "andy cohen ciara miller summer house"
       ]
     },
     "youtube_trending": {
@@ -167,7 +166,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 47,
+    "total_tests": 48,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
