@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-29T18:20:31",
+  "timestamp": "2026-05-30T16:35:16",
   "internal": {
     "top5_patterns": [
       {
@@ -32,9 +32,9 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
+      "didn",
       "experiment",
       "physics",
-      "didn",
       "amazing",
       "sciencefacts",
       "viral",
@@ -60,10 +60,10 @@
     "hook_phrases": [
       "This is SO cool",
       "This can help make Artificial",
-      "How gullible are you",
       "Did You Notice This In",
       "Did You Know This Fact",
       "Did You Know: Titanic Fun",
+      "The SCARIEST Fact About SPACE",
       "How to Survive Killer Bees"
     ],
     "title_templates": [
@@ -89,14 +89,15 @@
       "human",
       "tricks",
       "could",
+      "space",
       "only",
       "fastest"
     ],
     "pattern_counts": {
       "statement": 30,
-      "number-lead": 10,
+      "number-lead": 11,
       "statistic": 5,
-      "wh-question": 3,
+      "wh-question": 2,
       "did-you-know": 2
     },
     "optimal_length_seconds": [
@@ -108,16 +109,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "mamelodi sundowns vs rb leipzig",
-        "bosnia and herzegovina vs north macedonia",
-        "luke evans",
-        "auburn baseball",
-        "anabella gyasi dulles detention",
-        "ku baseball",
-        "tommy paul",
-        "fable",
-        "nancy guthrie missing persons",
-        "andy cohen ciara miller summer house"
+        "hincapie",
+        "storm vs toronto tempo",
+        "hungary",
+        "william saliba",
+        "vcu",
+        "marquinhos",
+        "trossard",
+        "streamed",
+        "univision",
+        "désiré doué"
       ]
     },
     "youtube_trending": {
@@ -126,18 +127,18 @@
         "Steel Coil 😨",
         "उत्तरी सागर / North Sea #shorts #facts #hindi #new",
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
+        "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
+        "Inside A Camel Hump 😱",
         "This Video Can Save Your Life 😱",
         "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
         "Strongest Glass in The World",
-        "Candy Facts That Will BLOW Your Mind 🤔",
-        "Walking On Water Trick Revealed! #facts #shorts",
-        "3 Facts You Didn&#39;t Want To Know 😬"
+        "Candy Facts That Will BLOW Your Mind 🤔"
       ]
     },
     "pytrends": {
@@ -166,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 48,
+    "total_tests": 49,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
