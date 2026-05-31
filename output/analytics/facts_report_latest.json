@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-30T16:35:16",
+  "timestamp": "2026-05-31T16:43:36",
   "internal": {
     "top5_patterns": [
       {
@@ -36,29 +36,31 @@
       "experiment",
       "physics",
       "amazing",
-      "sciencefacts",
-      "viral",
-      "unbelievable"
+      "unbelievable",
+      "human",
+      "tricks"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#education",
-      "#sciencefacts",
-      "#experiment",
-      "#youtubeshorts",
-      "#fact",
       "#viral",
+      "#education",
+      "#youtubeshorts",
+      "#experiment",
+      "#trending",
+      "#fact",
+      "#sciencefacts",
       "#short",
+      "#ytshorts",
       "#knowledge",
       "#top",
       "#science experiments",
-      "#didyouknow",
-      "#factsmine"
+      "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
+      "What Is The Real Shape",
       "This can help make Artificial",
       "Did You Notice This In",
       "Did You Know This Fact",
@@ -82,22 +84,22 @@
       "experiment",
       "physics",
       "viral",
-      "amazing",
-      "sciencefacts",
       "trick",
+      "amazing",
       "unbelievable",
       "human",
       "tricks",
       "could",
       "space",
+      "never",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 30,
+      "statement": 29,
       "number-lead": 11,
       "statistic": 5,
-      "wh-question": 2,
+      "wh-question": 3,
       "did-you-know": 2
     },
     "optimal_length_seconds": [
@@ -109,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "hincapie",
-        "storm vs toronto tempo",
-        "hungary",
-        "william saliba",
-        "vcu",
-        "marquinhos",
-        "trossard",
-        "streamed",
-        "univision",
-        "désiré doué"
+        "wake forest baseball",
+        "orioles game today",
+        "teichmann",
+        "iihf world championship",
+        "ksi",
+        "poland vs ukraine",
+        "mirra andreeva",
+        "zverev french open 2026",
+        "dejong tennis",
+        "callum turner"
       ]
     },
     "youtube_trending": {
@@ -138,7 +140,7 @@
         "This Video Can Save Your Life 😱",
         "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
         "Strongest Glass in The World",
-        "Candy Facts That Will BLOW Your Mind 🤔"
+        "Walking On Water Trick Revealed! #facts #shorts"
       ]
     },
     "pytrends": {
@@ -167,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 49,
+    "total_tests": 50,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
