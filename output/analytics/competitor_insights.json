@@ -22,8 +22,8 @@
     "experiment",
     "physics",
     "viral",
-    "amazing",
     "sciencefacts",
+    "amazing",
     "trick",
     "unbelievable",
     "human",
@@ -37,8 +37,8 @@
     "#shorts",
     "#science",
     "#facts",
-    "#education",
     "#sciencefacts",
+    "#education",
     "#experiment",
     "#youtubeshorts",
     "#short",
@@ -53,10 +53,10 @@
   "top_topics": [
     "science",
     "didn",
-    "experiment",
     "physics",
-    "amazing",
+    "experiment",
     "sciencefacts",
+    "amazing",
     "viral",
     "unbelievable",
     "human",
@@ -83,7 +83,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.9,
+  "avg_duration_secs": 41.4,
   "hook_phrases": [
     "This is SO cool",
     "This can help make Artificial",
@@ -93,5 +93,5 @@
     "The SCARIEST Fact About SPACE",
     "How to Survive Killer Bees"
   ],
-  "timestamp": "2026-06-01T20:03:36"
+  "timestamp": "2026-06-02T19:01:33"
 }

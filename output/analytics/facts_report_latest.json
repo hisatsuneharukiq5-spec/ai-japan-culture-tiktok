@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-01T20:03:37",
+  "timestamp": "2026-06-02T19:01:34",
   "internal": {
     "top5_patterns": [
       {
@@ -33,10 +33,10 @@
     "popular_topics": [
       "science",
       "didn",
-      "experiment",
       "physics",
-      "amazing",
+      "experiment",
       "sciencefacts",
+      "amazing",
       "viral",
       "unbelievable"
     ],
@@ -44,8 +44,8 @@
       "#shorts",
       "#science",
       "#facts",
-      "#education",
       "#sciencefacts",
+      "#education",
       "#experiment",
       "#youtubeshorts",
       "#short",
@@ -82,8 +82,8 @@
       "experiment",
       "physics",
       "viral",
-      "amazing",
       "sciencefacts",
+      "amazing",
       "trick",
       "unbelievable",
       "human",
@@ -109,16 +109,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "karmelo anthony",
-        "melissa casias",
-        "house",
-        "florida state baseball",
-        "nbc news",
-        "wcws schedule today",
-        "denver weather",
-        "austria vs tunisia",
-        "fortnite",
-        "sabalenka"
+        "zaya wade",
+        "trump ai executive order",
+        "nick pasqual",
+        "mortal kombat 2 digital release",
+        "mensik",
+        "avengers doomsday trailer",
+        "dot cakes",
+        "criminal defense attorney",
+        "spider-man: brand new day",
+        "jalen hurts a.j. brown relationship"
       ]
     },
     "youtube_trending": {
@@ -129,16 +129,16 @@
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
+        "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
+        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
+        "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
         "This Video Can Save Your Life 😱",
+        "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
         "Strongest Glass in The World",
         "Walking On Water Trick Revealed! #facts #shorts",
-        "Candy Facts That Will BLOW Your Mind 🤔",
-        "How Many Hours Do You Sleep 😱",
-        "Fun Facts That Are Not Funny",
-        "ये इतिहास के सबसे अज़ीब Experiments थे 😨 Worst Human Experiments In History 🤯 #factsdastan #shorts",
-        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts"
+        "Candy Facts That Will BLOW Your Mind 🤔"
       ]
     },
     "pytrends": {
@@ -166,7 +166,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 51,
+    "total_tests": 52,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
