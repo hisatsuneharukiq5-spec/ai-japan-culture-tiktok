@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-03T19:10:26",
+  "timestamp": "2026-06-04T18:00:28",
   "internal": {
     "top5_patterns": [
       {
@@ -33,12 +33,12 @@
     "popular_topics": [
       "science",
       "didn",
-      "experiment",
       "physics",
+      "experiment",
       "amazing",
-      "unbelievable",
       "human",
-      "tricks"
+      "tricks",
+      "could"
     ],
     "hashtags": [
       "#shorts",
@@ -47,15 +47,15 @@
       "#education",
       "#viral",
       "#experiment",
+      "#sciencefacts",
       "#youtubeshorts",
       "#fact",
-      "#sciencefacts",
       "#short",
       "#knowledge",
       "#top",
       "#science experiments",
       "#amazing facts",
-      "#ytshorts",
+      "#animation",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -65,8 +65,8 @@
       "How Deep Do Humans Have",
       "Did You Notice This In",
       "Did You Know This Fact",
-      "Did You Know: Titanic Fun",
-      "The SCARIEST Fact About SPACE"
+      "did you know that Toph",
+      "Did You Know: Titanic Fun"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -83,24 +83,25 @@
       "science",
       "experiment",
       "physics",
-      "space",
       "viral",
       "trick",
       "human",
       "amazing",
-      "unbelievable",
       "tricks",
       "could",
+      "sciencefacts",
+      "space",
+      "unbelievable",
+      "shocking",
       "never",
-      "only",
-      "fastest"
+      "only"
     ],
     "pattern_counts": {
-      "statement": 28,
+      "statement": 27,
       "number-lead": 11,
       "statistic": 5,
       "wh-question": 4,
-      "did-you-know": 2
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -111,24 +112,36 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "playerunknown productions halting game development",
-        "robert redford",
-        "mlb all star voting",
-        "superyacht",
-        "nick castellanos",
-        "hannah dugan",
-        "travel visa",
-        "netherlands vs algeria",
-        "kevin sobieski",
-        "países bajos - argelia"
+        "guardians - yankees",
+        "xbox game pass premium games",
+        "ming xi",
+        "cole hauser dutton ranch texas",
+        "padres - phillies",
+        "truck accident lawyer",
+        "trump iran news",
+        "oreo",
+        "northern ireland vs guinea",
+        "browns qb battle 2026"
       ]
     },
     "youtube_trending": {
-      "status": "heuristic",
+      "status": "ok",
       "topics": [
-        "did you know",
-        "science shorts",
-        "nature shorts"
+        "Steel Coil 😨",
+        "उत्तरी सागर / North Sea #shorts #facts #hindi #new",
+        "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
+        "China&#39;s Futuristic School 😱",
+        "How Much Is Too Much 😱",
+        "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
+        "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
+        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
+        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
+        "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
+        "This Video Can Save Your Life 😱",
+        "Inside A Camel Hump 😱",
+        "Strongest Glass in The World",
+        "Walking On Water Trick Revealed! #facts #shorts",
+        "Candy Facts That Will BLOW Your Mind 🤔"
       ]
     },
     "pytrends": {
@@ -156,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 53,
+    "total_tests": 54,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
