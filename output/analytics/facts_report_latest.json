@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-05T17:30:30",
+  "timestamp": "2026-06-06T16:41:42",
   "internal": {
     "top5_patterns": [
       {
@@ -29,42 +29,44 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 47,
+    "videos_analyzed": 50,
     "popular_topics": [
       "science",
       "didn",
-      "mind",
       "physics",
-      "human",
       "experiment",
       "sciencefacts",
-      "space"
+      "viral",
+      "amazing",
+      "human"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#viral",
+      "#education",
       "#sciencefacts",
       "#experiment",
+      "#viral",
       "#youtubeshorts",
-      "#trending",
-      "#wildlife",
       "#science experiments",
-      "#new",
+      "#amazing facts",
+      "#animation",
       "#short",
-      "#satisfying",
+      "#ytshorts",
       "#knowledge",
-      "#fun facts",
+      "#history",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
-      "What Is The Real Shape",
       "This can help make Artificial",
+      "Did You Notice This In",
+      "Did You Know This Fact",
+      "did you know that Toph",
       "Did You Know: Titanic Fun",
       "The SCARIEST Fact About SPACE",
-      "The 5 Scariest Space Facts"
+      "How to Survive Killer Bees"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -79,27 +81,27 @@
     ],
     "power_words": [
       "science",
-      "experiment",
       "physics",
+      "experiment",
       "viral",
-      "human",
-      "space",
       "sciencefacts",
       "trick",
-      "animal",
-      "blowing",
       "amazing",
+      "human",
       "tricks",
-      "scary",
-      "videos",
-      "mind-blowing"
+      "could",
+      "space",
+      "unbelievable",
+      "shocking",
+      "never",
+      "only"
     ],
     "pattern_counts": {
-      "statement": 32,
-      "number-lead": 10,
-      "statistic": 3,
-      "wh-question": 1,
-      "did-you-know": 1
+      "statement": 29,
+      "number-lead": 11,
+      "statistic": 5,
+      "wh-question": 2,
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -110,36 +112,36 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "ned jarrett",
-        "judge john mcconnell immigration ruling",
-        "alexandra eala",
-        "ev charging",
-        "christopher macchio",
-        "antonio gracias spacex investment",
-        "qqq",
-        "jonathan cooper",
-        "spy",
-        "wvu baseball today"
+        "us women's open",
+        "storm vs lynx",
+        "the traitors",
+        "columbus weather",
+        "wvu baseball today",
+        "alison lee",
+        "the memorial tournament",
+        "solar energy",
+        "malaysia airlines",
+        "randy travis"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "Steel Coil 😨",
-        "उत्तरी सागर / North Sea #shorts #facts #hindi #new",
-        "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
-        "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
-        "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
-        "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
-        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
-        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
-        "This Video Can Save Your Life 😱",
-        "Strongest Glass in The World",
-        "Walking On Water Trick Revealed! #facts #shorts",
-        "Candy Facts That Will BLOW Your Mind 🤔",
-        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts"
+        "Fun Facts That Are Not Funny",
+        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
+        "WARNING : This is Highly Relatable 😱 #shorts",
+        "Watch This Before Eating Fish 😱 #shorts #facts #amazingfacts",
+        "How Movie Sounds Are ACTUALLY Made 😱 #shorts",
+        "Biggest Discoveries By Genius Kids",
+        "ये आविष्कार दुनिया बदल देंगे😱 | Inventions that will change the World #shorts #factsmine",
+        "Top 3 Amazing Nature Facts 🤣🤣😮 @MRINDIANHACKER  @CrazyXYZ  || #shorts || #FactBeast",
+        "Astronauts Can&#39;t Do These Things In Space #shorts #factsmine",
+        "Highest INSANE Temperatures Ever Achieved By Humans! FactTechz Short AMAZING FACTS Show #shorts",
+        "Top secret Amazing Facts About Food 🍵 🤯| Mind Blowing Facts In Hindi | Random Facts #facts #shorts",
+        "ऐसी JOB कभी मत करना ❌ | Don&#39;t Do This Job | The Fact | #shorts #ytshorts",
+        "जापान के #3 दिमाग़ हिलाने वाले Facts🤯 | Mind Blowing Facts About JAPAN #shorts #factsmine",
+        "5 Must Have WEIRD Gadgets !! 😱😂 #shorts"
       ]
     },
     "pytrends": {
@@ -167,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 55,
+    "total_tests": 56,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
