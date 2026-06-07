@@ -10,27 +10,27 @@
   },
   "top_hooks": [
     "This is SO cool",
+    "What Is The Real Shape",
     "This can help make Artificial",
     "Did You Notice This In",
     "Did You Know This Fact",
     "did you know that Toph",
     "Did You Know: Titanic Fun",
-    "The SCARIEST Fact About SPACE",
-    "How to Survive Killer Bees"
+    "The SCARIEST Fact About SPACE"
   ],
   "power_words": [
     "science",
-    "physics",
     "experiment",
-    "viral",
+    "physics",
     "sciencefacts",
+    "viral",
     "trick",
     "amazing",
+    "unbelievable",
     "human",
     "tricks",
     "could",
     "space",
-    "unbelievable",
     "shocking",
     "never",
     "only"
@@ -39,28 +39,28 @@
     "#shorts",
     "#facts",
     "#science",
-    "#education",
     "#sciencefacts",
+    "#education",
     "#experiment",
     "#viral",
     "#youtubeshorts",
-    "#science experiments",
-    "#amazing facts",
-    "#animation",
     "#short",
+    "#fact",
+    "#science experiments",
+    "#animation",
     "#ytshorts",
     "#knowledge",
-    "#history",
+    "#tiktok",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
-    "physics",
-    "experiment",
     "sciencefacts",
-    "viral",
+    "experiment",
+    "physics",
     "amazing",
+    "unbelievable",
     "human",
     "tricks",
     "could",
@@ -69,11 +69,11 @@
     "need",
     "cool",
     "gifts",
-    "theoryofphysics",
-    "anubhavsir",
     "ocean",
-    "unbelievable",
-    "youtubeshorts"
+    "youtubeshorts",
+    "half",
+    "mind",
+    "make"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -86,16 +86,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.8,
+  "avg_duration_secs": 41.2,
   "hook_phrases": [
     "This is SO cool",
+    "What Is The Real Shape",
     "This can help make Artificial",
     "Did You Notice This In",
     "Did You Know This Fact",
     "did you know that Toph",
     "Did You Know: Titanic Fun",
-    "The SCARIEST Fact About SPACE",
-    "How to Survive Killer Bees"
+    "The SCARIEST Fact About SPACE"
   ],
-  "timestamp": "2026-06-06T16:41:41"
+  "timestamp": "2026-06-07T16:54:22"
 }
