@@ -2,15 +2,14 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 29,
+    "statement": 30,
     "number-lead": 11,
     "statistic": 5,
-    "wh-question": 2,
+    "wh-question": 1,
     "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
-    "What Is The Real Shape",
     "This can help make Artificial",
     "Did You Notice This In",
     "Did You Know This Fact",
@@ -20,10 +19,10 @@
   ],
   "power_words": [
     "science",
-    "experiment",
     "physics",
-    "sciencefacts",
+    "experiment",
     "viral",
+    "sciencefacts",
     "trick",
     "amazing",
     "unbelievable",
@@ -32,8 +31,8 @@
     "could",
     "space",
     "shocking",
-    "never",
-    "only"
+    "only",
+    "fastest"
   ],
   "top_hashtags": [
     "#shorts",
@@ -42,23 +41,24 @@
     "#sciencefacts",
     "#education",
     "#experiment",
-    "#viral",
     "#youtubeshorts",
     "#short",
-    "#fact",
     "#science experiments",
+    "#viral",
     "#animation",
-    "#ytshorts",
-    "#knowledge",
-    "#tiktok",
+    "#history",
+    "#top",
+    "#memes",
+    "#fact",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
+    "physics",
     "sciencefacts",
     "experiment",
-    "physics",
+    "viral",
     "amazing",
     "unbelievable",
     "human",
@@ -69,11 +69,10 @@
     "need",
     "cool",
     "gifts",
+    "theoryofphysics",
+    "anubhavsir",
     "ocean",
-    "youtubeshorts",
-    "half",
-    "mind",
-    "make"
+    "youtubeshorts"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -86,10 +85,9 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.2,
+  "avg_duration_secs": 41.3,
   "hook_phrases": [
     "This is SO cool",
-    "What Is The Real Shape",
     "This can help make Artificial",
     "Did You Notice This In",
     "Did You Know This Fact",
@@ -97,5 +95,5 @@
     "Did You Know: Titanic Fun",
     "The SCARIEST Fact About SPACE"
   ],
-  "timestamp": "2026-06-07T16:54:22"
+  "timestamp": "2026-06-08T18:12:45"
 }

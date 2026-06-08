@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-07T16:54:23",
+  "timestamp": "2026-06-08T18:12:46",
   "internal": {
     "top5_patterns": [
       {
@@ -33,12 +33,12 @@
     "popular_topics": [
       "science",
       "didn",
+      "physics",
       "sciencefacts",
       "experiment",
-      "physics",
+      "viral",
       "amazing",
-      "unbelievable",
-      "human"
+      "unbelievable"
     ],
     "hashtags": [
       "#shorts",
@@ -47,20 +47,19 @@
       "#sciencefacts",
       "#education",
       "#experiment",
-      "#viral",
       "#youtubeshorts",
       "#short",
-      "#fact",
       "#science experiments",
+      "#viral",
       "#animation",
-      "#ytshorts",
-      "#knowledge",
-      "#tiktok",
+      "#history",
+      "#top",
+      "#memes",
+      "#fact",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
-      "What Is The Real Shape",
       "This can help make Artificial",
       "Did You Notice This In",
       "Did You Know This Fact",
@@ -81,10 +80,10 @@
     ],
     "power_words": [
       "science",
-      "experiment",
       "physics",
-      "sciencefacts",
+      "experiment",
       "viral",
+      "sciencefacts",
       "trick",
       "amazing",
       "unbelievable",
@@ -93,14 +92,14 @@
       "could",
       "space",
       "shocking",
-      "never",
-      "only"
+      "only",
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 29,
+      "statement": 30,
       "number-lead": 11,
       "statistic": 5,
-      "wh-question": 2,
+      "wh-question": 1,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -112,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "georgia baseball",
-        "colombia vs",
-        "denmark vs ukraine",
-        "john smoltz",
-        "toto wolff",
-        "lewis hamilton kim kardashian",
-        "rye barcott",
-        "zverev age",
-        "earthquake",
-        "ted lindsay award"
+        "netherlands vs uzbekistan",
+        "ios 27 beta",
+        "citizenship",
+        "macos golden gate",
+        "vanilla ice",
+        "hello fresh",
+        "sorrento valley fire",
+        "indiana fever caitlin clark",
+        "karmelo anthony verdict",
+        "kennedy center trump name removal"
       ]
     },
     "youtube_trending": {
@@ -141,7 +140,7 @@
         "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
         "Strongest Glass in The World",
         "Walking On Water Trick Revealed! #facts #shorts",
-        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts"
+        "Candy Facts That Will BLOW Your Mind 🤔"
       ]
     },
     "pytrends": {
@@ -169,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 57,
+    "total_tests": 58,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
