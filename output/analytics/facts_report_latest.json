@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-09T17:35:09",
+  "timestamp": "2026-06-10T18:16:04",
   "internal": {
     "top5_patterns": [
       {
@@ -33,9 +33,9 @@
     "popular_topics": [
       "science",
       "didn",
-      "experiment",
       "physics",
-      "sciencefacts",
+      "experiment",
+      "tricks",
       "amazing",
       "unbelievable",
       "human"
@@ -45,28 +45,28 @@
       "#facts",
       "#science",
       "#education",
-      "#sciencefacts",
-      "#viral",
-      "#experiment",
       "#youtubeshorts",
-      "#fact",
+      "#experiment",
+      "#viral",
+      "#sciencefacts",
       "#short",
-      "#knowledge",
-      "#top",
+      "#fact",
       "#science experiments",
-      "#amazing facts",
       "#animation",
+      "#ytshorts",
+      "#knowledge",
+      "#tiktok",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
-      "How Deep Do Humans Have",
       "Did You Notice This In",
       "Did You Know This Fact",
       "did you know that Toph",
-      "Did You Know: Titanic Fun"
+      "Did You Know: Titanic Fun",
+      "The SCARIEST Fact About SPACE"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -83,24 +83,24 @@
       "science",
       "experiment",
       "physics",
-      "viral",
       "trick",
-      "human",
-      "sciencefacts",
+      "viral",
+      "tricks",
       "amazing",
       "unbelievable",
-      "tricks",
+      "human",
       "could",
+      "sciencefacts",
       "space",
       "shocking",
       "never",
       "only"
     ],
     "pattern_counts": {
-      "statement": 28,
+      "statement": 29,
       "number-lead": 11,
       "statistic": 5,
-      "wh-question": 3,
+      "wh-question": 2,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -112,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "mgk",
-        "personal injury attorney",
-        "dr congo vs chile",
-        "argentina vs france",
-        "club américa",
-        "new sunscreen ingredient bemt",
-        "destiny 2",
-        "earthquake redlands",
-        "car accident attorneys",
-        "nick kyrgios"
+        "shabana azeez the pitt update",
+        "england vs costa rica",
+        "raúl gonzález",
+        "jake lang",
+        "red sox - rays",
+        "sony trailer leak spider-man",
+        "yankees - guardians",
+        "jim farley",
+        "moana live action",
+        "kcrg weather"
       ]
     },
     "youtube_trending": {
@@ -133,7 +133,6 @@
         "How Much Is Too Much 😱",
         "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
-        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
         "This Video Can Save Your Life 😱",
@@ -141,7 +140,8 @@
         "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
         "Strongest Glass in The World",
         "Walking On Water Trick Revealed! #facts #shorts",
-        "Candy Facts That Will BLOW Your Mind 🤔"
+        "Candy Facts That Will BLOW Your Mind 🤔",
+        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts"
       ]
     },
     "pytrends": {
@@ -169,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 59,
+    "total_tests": 60,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
