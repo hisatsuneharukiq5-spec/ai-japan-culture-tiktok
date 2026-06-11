@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-10T18:16:04",
+  "timestamp": "2026-06-11T18:37:55",
   "internal": {
     "top5_patterns": [
       {
@@ -33,9 +33,9 @@
     "popular_topics": [
       "science",
       "didn",
-      "physics",
       "experiment",
-      "tricks",
+      "physics",
+      "sciencefacts",
       "amazing",
       "unbelievable",
       "human"
@@ -44,29 +44,29 @@
       "#shorts",
       "#facts",
       "#science",
-      "#education",
-      "#youtubeshorts",
-      "#experiment",
       "#viral",
       "#sciencefacts",
-      "#short",
+      "#education",
       "#fact",
-      "#science experiments",
-      "#animation",
-      "#ytshorts",
+      "#experiment",
+      "#youtubeshorts",
+      "#trending",
       "#knowledge",
-      "#tiktok",
+      "#amazing facts",
+      "#short",
+      "#ytshorts",
+      "#top",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
+      "How Deep Do Humans Have",
       "Did You Notice This In",
       "Did You Know This Fact",
       "did you know that Toph",
-      "Did You Know: Titanic Fun",
-      "The SCARIEST Fact About SPACE"
+      "Did You Know: Titanic Fun"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -83,24 +83,24 @@
       "science",
       "experiment",
       "physics",
-      "trick",
       "viral",
-      "tricks",
+      "trick",
+      "human",
+      "sciencefacts",
       "amazing",
       "unbelievable",
-      "human",
+      "tricks",
       "could",
-      "sciencefacts",
       "space",
-      "shocking",
       "never",
+      "rare",
       "only"
     ],
     "pattern_counts": {
-      "statement": 29,
-      "number-lead": 11,
+      "statement": 28,
+      "number-lead": 10,
       "statistic": 5,
-      "wh-question": 2,
+      "wh-question": 4,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -112,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "shabana azeez the pitt update",
-        "england vs costa rica",
-        "raúl gonzález",
-        "jake lang",
-        "red sox - rays",
-        "sony trailer leak spider-man",
-        "yankees - guardians",
-        "jim farley",
-        "moana live action",
-        "kcrg weather"
+        "brian gutiérrez",
+        "raúl jiménez",
+        "世界杯直播",
+        "book",
+        "jay clayton",
+        "ochoa",
+        "lyle foster",
+        "roberto alvarado",
+        "landon donovan",
+        "raúl rangel"
       ]
     },
     "youtube_trending": {
@@ -133,6 +133,7 @@
         "How Much Is Too Much 😱",
         "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
+        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
         "This Video Can Save Your Life 😱",
@@ -140,8 +141,7 @@
         "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
         "Strongest Glass in The World",
         "Walking On Water Trick Revealed! #facts #shorts",
-        "Candy Facts That Will BLOW Your Mind 🤔",
-        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts"
+        "Candy Facts That Will BLOW Your Mind 🤔"
       ]
     },
     "pytrends": {
@@ -169,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 60,
+    "total_tests": 61,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

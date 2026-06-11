@@ -700,12 +700,24 @@
     "title_a": "Did you know that glass is actually a liquid? #Shorts (3 Facts)",
     "title_b": "Only 0.1% of people know this about octopus brains #Shorts",
     "compare_after_hours": 48,
-    "status": "pending"
+    "status": "learned",
+    "winner": "title_a",
+    "loser": "title_b",
+    "views_a": 0,
+    "views_b": 0,
+    "reason": "Compared 48h view counts from facts upload registry"
   },
   {
     "created_at": "2026-06-10T18:16:05",
     "title_a": "Did you know that butterflies taste with their feet? #Shorts (3 Facts)",
     "title_b": "Only 0.01% of people know this about mantis shrimp #Shorts",
+    "compare_after_hours": 48,
+    "status": "pending"
+  },
+  {
+    "created_at": "2026-06-11T18:37:56",
+    "title_a": "Did you know that tardigrades survive by nearly dying? #Shorts (3 Facts)",
+    "title_b": "Only 2% of people know this about human tears #Shorts",
     "compare_after_hours": 48,
     "status": "pending"
   }
