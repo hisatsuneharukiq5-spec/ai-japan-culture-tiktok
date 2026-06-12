@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-11T18:37:55",
+  "timestamp": "2026-06-12T17:52:04",
   "internal": {
     "top5_patterns": [
       {
@@ -33,9 +33,9 @@
     "popular_topics": [
       "science",
       "didn",
+      "sciencefacts",
       "experiment",
       "physics",
-      "sciencefacts",
       "amazing",
       "unbelievable",
       "human"
@@ -47,26 +47,26 @@
       "#viral",
       "#sciencefacts",
       "#education",
-      "#fact",
       "#experiment",
       "#youtubeshorts",
       "#trending",
-      "#knowledge",
-      "#amazing facts",
-      "#short",
-      "#ytshorts",
       "#top",
+      "#amazing",
+      "#science experiments",
+      "#amazing facts",
+      "#new",
+      "#latest",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
-      "How Deep Do Humans Have",
       "Did You Notice This In",
       "Did You Know This Fact",
       "did you know that Toph",
-      "Did You Know: Titanic Fun"
+      "Did You Know: Titanic Fun",
+      "The SCARIEST Fact About SPACE"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -83,24 +83,24 @@
       "science",
       "experiment",
       "physics",
+      "sciencefacts",
       "viral",
       "trick",
-      "human",
-      "sciencefacts",
+      "space",
       "amazing",
       "unbelievable",
+      "human",
       "tricks",
       "could",
-      "space",
       "never",
-      "rare",
-      "only"
+      "only",
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 28,
+      "statement": 29,
       "number-lead": 10,
-      "statistic": 5,
-      "wh-question": 4,
+      "statistic": 6,
+      "wh-question": 2,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -112,36 +112,36 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "brian gutiérrez",
-        "raúl jiménez",
-        "世界杯直播",
-        "book",
-        "jay clayton",
-        "ochoa",
-        "lyle foster",
-        "roberto alvarado",
-        "landon donovan",
-        "raúl rangel"
+        "general hospital",
+        "canada opening ceremony",
+        "blake lively, justin baldoni settlement",
+        "thomas partey",
+        "irán",
+        "sndk",
+        "they will kill you",
+        "southwest",
+        "college world series",
+        "selección de fútbol de brasil"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "Steel Coil 😨",
-        "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
-        "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
-        "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
-        "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
-        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
-        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
-        "This Video Can Save Your Life 😱",
-        "Inside A Camel Hump 😱",
-        "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
         "Strongest Glass in The World",
-        "Walking On Water Trick Revealed! #facts #shorts",
-        "Candy Facts That Will BLOW Your Mind 🤔"
+        "Fun Facts That Are Not Funny",
+        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
+        "WARNING : This is Highly Relatable 😱 #shorts",
+        "Watch This Before Eating Fish 😱 #shorts #facts #amazingfacts",
+        "How Movie Sounds Are ACTUALLY Made 😱 #shorts",
+        "Biggest Discoveries By Genius Kids",
+        "ये आविष्कार दुनिया बदल देंगे😱 | Inventions that will change the World #shorts #factsmine",
+        "Top 3 Amazing Nature Facts 🤣🤣😮 @MRINDIANHACKER  @CrazyXYZ  || #shorts || #FactBeast",
+        "Highest INSANE Temperatures Ever Achieved By Humans! FactTechz Short AMAZING FACTS Show #shorts",
+        "Top secret Amazing Facts About Food 🍵 🤯| Mind Blowing Facts In Hindi | Random Facts #facts #shorts",
+        "ऐसी JOB कभी मत करना ❌ | Don&#39;t Do This Job | The Fact | #shorts #ytshorts",
+        "जापान के #3 दिमाग़ हिलाने वाले Facts🤯 | Mind Blowing Facts About JAPAN #shorts #factsmine",
+        "5 Must Have WEIRD Gadgets !! 😱😂 #shorts"
       ]
     },
     "pytrends": {
@@ -169,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 61,
+    "total_tests": 62,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

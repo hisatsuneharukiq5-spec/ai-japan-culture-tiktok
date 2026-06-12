@@ -2,40 +2,38 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 28,
+    "statement": 29,
     "number-lead": 10,
-    "statistic": 5,
-    "wh-question": 4,
+    "statistic": 6,
+    "wh-question": 2,
     "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
-    "How Deep Do Humans Have",
     "Did You Notice This In",
     "Did You Know This Fact",
     "did you know that Toph",
     "Did You Know: Titanic Fun",
-    "The SCARIEST Fact About SPACE",
-    "How RARE You Are"
+    "The SCARIEST Fact About SPACE"
   ],
   "power_words": [
     "science",
     "experiment",
     "physics",
+    "sciencefacts",
     "viral",
     "trick",
-    "human",
-    "sciencefacts",
+    "space",
     "amazing",
     "unbelievable",
+    "human",
     "tricks",
     "could",
-    "space",
     "never",
-    "rare",
-    "only"
+    "only",
+    "fastest"
   ],
   "top_hashtags": [
     "#shorts",
@@ -44,23 +42,23 @@
     "#viral",
     "#sciencefacts",
     "#education",
-    "#fact",
     "#experiment",
     "#youtubeshorts",
     "#trending",
-    "#knowledge",
-    "#amazing facts",
-    "#short",
-    "#ytshorts",
     "#top",
+    "#amazing",
+    "#science experiments",
+    "#amazing facts",
+    "#new",
+    "#latest",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
+    "sciencefacts",
     "experiment",
     "physics",
-    "sciencefacts",
     "amazing",
     "unbelievable",
     "human",
@@ -68,14 +66,14 @@
     "could",
     "save",
     "life",
+    "space",
     "cool",
     "gifts",
+    "ocean",
     "youtubeshorts",
     "half",
-    "earth",
     "mind",
-    "make",
-    "inside"
+    "make"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -88,16 +86,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.1,
+  "avg_duration_secs": 41.2,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
-    "How Deep Do Humans Have",
     "Did You Notice This In",
     "Did You Know This Fact",
     "did you know that Toph",
-    "Did You Know: Titanic Fun"
+    "Did You Know: Titanic Fun",
+    "The SCARIEST Fact About SPACE"
   ],
-  "timestamp": "2026-06-11T18:37:54"
+  "timestamp": "2026-06-12T17:52:03"
 }
