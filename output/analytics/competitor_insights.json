@@ -2,21 +2,21 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 29,
+    "statement": 28,
     "number-lead": 10,
     "statistic": 6,
-    "wh-question": 2,
+    "wh-question": 3,
     "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
+    "How Deep Do Humans Have",
     "Did You Notice This In",
     "Did You Know This Fact",
     "did you know that Toph",
-    "Did You Know: Titanic Fun",
-    "The SCARIEST Fact About SPACE"
+    "Did You Know: Titanic Fun"
   ],
   "power_words": [
     "science",
@@ -25,10 +25,9 @@
     "sciencefacts",
     "viral",
     "trick",
-    "space",
+    "human",
     "amazing",
     "unbelievable",
-    "human",
     "tricks",
     "could",
     "never",
@@ -42,15 +41,15 @@
     "#viral",
     "#sciencefacts",
     "#education",
-    "#experiment",
-    "#youtubeshorts",
     "#trending",
     "#top",
-    "#amazing",
-    "#science experiments",
-    "#amazing facts",
-    "#new",
+    "#experiment",
+    "#youtubeshorts",
     "#latest",
+    "#factsmine",
+    "#knowledge",
+    "#fact",
+    "#amazing",
     "#didyouknow"
   ],
   "top_topics": [
@@ -66,12 +65,12 @@
     "could",
     "save",
     "life",
-    "space",
     "cool",
     "gifts",
     "ocean",
     "youtubeshorts",
     "half",
+    "earth",
     "mind",
     "make"
   ],
@@ -86,16 +85,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.2,
+  "avg_duration_secs": 41.1,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
+    "How Deep Do Humans Have",
     "Did You Notice This In",
     "Did You Know This Fact",
     "did you know that Toph",
-    "Did You Know: Titanic Fun",
-    "The SCARIEST Fact About SPACE"
+    "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-06-12T17:52:03"
+  "timestamp": "2026-06-13T16:58:18"
 }
