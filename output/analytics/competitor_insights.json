@@ -22,14 +22,15 @@
     "science",
     "experiment",
     "physics",
-    "sciencefacts",
-    "viral",
     "trick",
+    "viral",
     "human",
+    "tricks",
     "amazing",
     "unbelievable",
-    "tricks",
     "could",
+    "sciencefacts",
+    "space",
     "never",
     "only",
     "fastest"
@@ -39,12 +40,12 @@
     "#facts",
     "#science",
     "#viral",
-    "#sciencefacts",
     "#education",
+    "#youtubeshorts",
     "#trending",
     "#top",
     "#experiment",
-    "#youtubeshorts",
+    "#sciencefacts",
     "#latest",
     "#factsmine",
     "#knowledge",
@@ -55,23 +56,23 @@
   "top_topics": [
     "science",
     "didn",
-    "sciencefacts",
     "experiment",
     "physics",
+    "tricks",
     "amazing",
     "unbelievable",
     "human",
-    "tricks",
     "could",
     "save",
     "life",
+    "sciencefacts",
     "cool",
     "gifts",
-    "ocean",
     "youtubeshorts",
     "half",
     "earth",
     "mind",
+    "space",
     "make"
   ],
   "title_templates": [
@@ -85,7 +86,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.1,
+  "avg_duration_secs": 41.2,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -96,5 +97,5 @@
     "did you know that Toph",
     "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-06-13T16:58:18"
+  "timestamp": "2026-06-14T16:58:30"
 }
