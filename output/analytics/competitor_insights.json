@@ -16,21 +16,22 @@
     "Did You Notice This In",
     "Did You Know This Fact",
     "did you know that Toph",
-    "Did You Know: Titanic Fun"
+    "Did You Know: Titanic Fun",
+    "The SCARIEST Fact About SPACE"
   ],
   "power_words": [
     "science",
     "experiment",
     "physics",
-    "trick",
+    "space",
     "viral",
+    "trick",
     "human",
-    "tricks",
     "amazing",
     "unbelievable",
+    "tricks",
     "could",
     "sciencefacts",
-    "space",
     "never",
     "only",
     "fastest"
@@ -41,11 +42,11 @@
     "#science",
     "#viral",
     "#education",
-    "#youtubeshorts",
     "#trending",
     "#top",
     "#experiment",
     "#sciencefacts",
+    "#youtubeshorts",
     "#latest",
     "#factsmine",
     "#knowledge",
@@ -58,10 +59,11 @@
     "didn",
     "experiment",
     "physics",
-    "tricks",
+    "space",
     "amazing",
     "unbelievable",
     "human",
+    "tricks",
     "could",
     "save",
     "life",
@@ -72,7 +74,6 @@
     "half",
     "earth",
     "mind",
-    "space",
     "make"
   ],
   "title_templates": [
@@ -86,7 +87,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.2,
+  "avg_duration_secs": 41.3,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -97,5 +98,5 @@
     "did you know that Toph",
     "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-06-14T16:58:30"
+  "timestamp": "2026-06-15T19:13:52"
 }
