@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-15T19:13:53",
+  "timestamp": "2026-06-16T19:05:08",
   "internal": {
     "top5_patterns": [
       {
@@ -33,29 +33,29 @@
     "popular_topics": [
       "science",
       "didn",
-      "experiment",
       "physics",
-      "space",
+      "experiment",
       "amazing",
       "unbelievable",
-      "human"
+      "human",
+      "tricks"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#viral",
       "#education",
-      "#trending",
-      "#top",
+      "#viral",
+      "#youtubeshorts",
       "#experiment",
       "#sciencefacts",
-      "#youtubeshorts",
-      "#latest",
-      "#factsmine",
-      "#knowledge",
       "#fact",
-      "#amazing",
+      "#short",
+      "#knowledge",
+      "#top",
+      "#science experiments",
+      "#youtube shorts",
+      "#amazing facts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -83,7 +83,6 @@
       "science",
       "experiment",
       "physics",
-      "space",
       "viral",
       "trick",
       "human",
@@ -92,6 +91,7 @@
       "tricks",
       "could",
       "sciencefacts",
+      "space",
       "never",
       "only",
       "fastest"
@@ -112,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "cardi b",
-        "character ai down",
-        "doku",
-        "gavin newsom",
-        "seattle weather",
-        "lumen field",
-        "mostafa shobeir",
-        "national hurricane center",
-        "world cup players",
-        "star wars ahsoka season 2"
+        "william saliba",
+        "floyd mayweather",
+        "spacex stock price prediction",
+        "ousmane dembélé",
+        "android 17",
+        "mike maignan",
+        "russian warship fires at british",
+        "luke lachey",
+        "global war on terrorism memorial",
+        "fed meeting"
       ]
     },
     "youtube_trending": {
@@ -141,7 +141,7 @@
         "Science के 3 जादुई Tricks😲 PT-1 |Amazing Facts |#shorts",
         "Walking On Water Trick Revealed! #facts #shorts",
         "Strongest Glass in The World",
-        "3 Facts You Didn&#39;t Want To Know 😬"
+        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts"
       ]
     },
     "pytrends": {
@@ -169,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 65,
+    "total_tests": 66,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
