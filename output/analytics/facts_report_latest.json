@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-18T18:17:32",
+  "timestamp": "2026-06-19T17:31:42",
   "internal": {
     "top5_patterns": [
       {
@@ -33,29 +33,29 @@
     "popular_topics": [
       "science",
       "didn",
-      "experiment",
+      "save",
+      "life",
       "physics",
-      "tricks",
       "unbelievable",
-      "human",
-      "could"
+      "animals",
+      "factsmine"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#youtubeshorts",
-      "#education",
-      "#experiment",
-      "#viral",
       "#fact",
-      "#sciencefacts",
-      "#short",
+      "#education",
+      "#viral",
+      "#youtubeshorts",
       "#knowledge",
-      "#top",
-      "#science experiments",
-      "#youtube shorts",
+      "#short",
       "#amazing facts",
+      "#trending",
+      "#top",
+      "#factsmine",
+      "#amazing",
+      "#science experiments",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -63,7 +63,6 @@
       "What Is The Real Shape",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "Did You Notice This In",
       "Did You Know This Fact",
       "did you know that Toph",
       "Did You Know: Titanic Fun"
@@ -77,29 +76,31 @@
       "Why {topic} is more {adjective} than you think #Shorts",
       "{number} {topic} facts that will blow your mind #Shorts",
       "{topic} is SO cool #Shorts",
+      "{topic} that can save your life! #{number} #Shorts",
       "{topic}'s the fastest way to empty a bottle #Shorts"
     ],
     "power_words": [
       "science",
-      "experiment",
       "physics",
+      "experiment",
       "trick",
-      "space",
-      "viral",
-      "human",
-      "tricks",
       "unbelievable",
+      "animals",
+      "factsmine",
       "could",
+      "tricks",
       "sciencefacts",
+      "human",
       "amazing",
       "never",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 28,
-      "number-lead": 10,
-      "statistic": 6,
+      "statement": 30,
+      "science-discovery": 2,
+      "number-lead": 8,
+      "statistic": 4,
       "wh-question": 3,
       "did-you-know": 3
     },
@@ -112,16 +113,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "marc anthony",
-        "extreme heat watch",
-        "kevin mccarthy",
-        "million dollar nannies",
-        "bono",
-        "kaden henderson",
-        "rama duwaji",
-        "tyler kolek",
-        "mike babcock",
-        "blue jays - red sox"
+        "tommy paul",
+        "medvedev",
+        "capcom pragmata development diana police",
+        "actor faizon love jailed florida",
+        "commodore callback 8020 flip phone",
+        "eala",
+        "malia sasha obama public appearance",
+        "jonathan toews",
+        "wind farm",
+        "elina svitolina"
       ]
     },
     "youtube_trending": {
@@ -131,8 +132,8 @@
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
-        "America ने बनाकर तैयार कर दिया future public transportation || #gyroscope transport #shorts",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
+        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "इसे कोई 1₹ में भी😱 नही खरीदना चाहता🤯 | #shorts",
         "This Video Can Save Your Life 😱",
@@ -169,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 68,
+    "total_tests": 69,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
