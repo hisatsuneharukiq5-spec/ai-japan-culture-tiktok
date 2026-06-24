@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-23T17:28:14",
+  "timestamp": "2026-06-24T17:29:24",
   "internal": {
     "top5_patterns": [
       {
@@ -32,12 +32,12 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
-      "physics",
       "didn",
+      "physics",
       "experiment",
-      "sciencefacts",
-      "unbelievable",
       "human",
+      "jong",
+      "unbelievable",
       "tricks"
     ],
     "hashtags": [
@@ -48,22 +48,22 @@
       "#education",
       "#youtubeshorts",
       "#physics",
-      "#sciencefacts",
       "#viral",
       "#funny",
-      "#short",
+      "#sciencefacts",
       "#tiktok",
       "#science experiments",
       "#youtube shorts",
-      "#amazing facts",
+      "#viralshorts",
+      "#knowledge",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
+      "What Is The Real Shape",
       "This can help make Artificial",
       "Did You Notice This In",
       "Did You Know This Fact",
-      "did you know that Toph",
       "Did You Know: Titanic Fun",
       "The SCARIEST Fact About SPACE"
     ],
@@ -83,23 +83,23 @@
       "physics",
       "experiment",
       "viral",
-      "sciencefacts",
       "trick",
-      "amazing",
-      "unbelievable",
       "human",
+      "unbelievable",
       "tricks",
       "could",
+      "sciencefacts",
       "space",
+      "amazing",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 31,
-      "number-lead": 10,
-      "statistic": 5,
+      "statement": 30,
+      "number-lead": 11,
+      "statistic": 6,
       "wh-question": 1,
-      "did-you-know": 3
+      "did-you-know": 2
     },
     "optimal_length_seconds": [
       55,
@@ -110,25 +110,27 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "ronaldo goal",
-        "portugal hoy",
-        "nuno mendes",
-        "big tigger",
-        "cr7",
-        "ipad",
-        "roberto martinez",
-        "chris wright",
-        "portugal x uzbequistão",
-        "emma watson"
+        "world cup rankings 2026",
+        "supergirl",
+        "daisy chain festival",
+        "aldi blind box",
+        "earthquake ca",
+        "earthquake california",
+        "earthquake today",
+        "dianna russini",
+        "uber stock",
+        "earthquake near me"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
         "Steel Coil 😨",
+        "उत्तरी सागर / North Sea #shorts #facts #hindi #new",
         "China&#39;s Futuristic School 😱",
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
         "How Much Is Too Much 😱",
+        "Bicycle with Headlight #shorts #devkeexperiment",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
@@ -137,9 +139,7 @@
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
-        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts",
-        "3 Facts You Didn&#39;t Want To Know 😬",
-        "How Many Hours Do You Sleep 😱"
+        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts"
       ]
     },
     "pytrends": {
@@ -167,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 73,
+    "total_tests": 74,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
