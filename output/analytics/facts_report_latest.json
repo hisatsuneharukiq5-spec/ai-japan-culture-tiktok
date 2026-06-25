@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-24T17:29:24",
+  "timestamp": "2026-06-25T17:32:08",
   "internal": {
     "top5_patterns": [
       {
@@ -36,26 +36,26 @@
       "physics",
       "experiment",
       "human",
-      "jong",
       "unbelievable",
-      "tricks"
+      "tricks",
+      "could"
     ],
     "hashtags": [
       "#shorts",
-      "#science",
       "#facts",
+      "#science",
       "#experiment",
       "#education",
+      "#viral",
       "#youtubeshorts",
       "#physics",
-      "#viral",
       "#funny",
       "#sciencefacts",
+      "#short",
       "#tiktok",
       "#science experiments",
       "#youtube shorts",
-      "#viralshorts",
-      "#knowledge",
+      "#amazing facts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -64,6 +64,7 @@
       "This can help make Artificial",
       "Did You Notice This In",
       "Did You Know This Fact",
+      "did you know that Toph",
       "Did You Know: Titanic Fun",
       "The SCARIEST Fact About SPACE"
     ],
@@ -80,26 +81,27 @@
     ],
     "power_words": [
       "science",
-      "physics",
       "experiment",
+      "physics",
       "viral",
       "trick",
       "human",
+      "amazing",
       "unbelievable",
       "tricks",
       "could",
       "sciencefacts",
       "space",
-      "amazing",
       "only",
+      "never",
       "fastest"
     ],
     "pattern_counts": {
       "statement": 30,
-      "number-lead": 11,
-      "statistic": 6,
-      "wh-question": 1,
-      "did-you-know": 2
+      "number-lead": 10,
+      "statistic": 5,
+      "wh-question": 2,
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -110,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "world cup rankings 2026",
-        "supergirl",
-        "daisy chain festival",
-        "aldi blind box",
-        "earthquake ca",
-        "earthquake california",
-        "earthquake today",
-        "dianna russini",
-        "uber stock",
-        "earthquake near me"
+        "tom dundon",
+        "bangladesh vs india",
+        "supreme court hawaii",
+        "hendrix lapierre",
+        "bond",
+        "allure katseye",
+        "trump mail ballot order ruling",
+        "garnet hathaway",
+        "world cup best teams 2026",
+        "ella langley red rocks"
       ]
     },
     "youtube_trending": {
@@ -130,16 +132,16 @@
         "China&#39;s Futuristic School 😱",
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
         "How Much Is Too Much 😱",
-        "Bicycle with Headlight #shorts #devkeexperiment",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
-        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
+        "क्या हुआ जब एक हेलीकॉप्टर उबलते ज्वालामुखी के अंदर जा गिरा | #shorts #curio",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
-        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts"
+        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts",
+        "3 Facts You Didn&#39;t Want To Know 😬"
       ]
     },
     "pytrends": {
@@ -167,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 74,
+    "total_tests": 75,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

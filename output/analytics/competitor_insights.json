@@ -3,10 +3,10 @@
   "videos_analyzed": 50,
   "pattern_counts": {
     "statement": 30,
-    "number-lead": 11,
-    "statistic": 6,
-    "wh-question": 1,
-    "did-you-know": 2
+    "number-lead": 10,
+    "statistic": 5,
+    "wh-question": 2,
+    "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
@@ -14,41 +14,43 @@
     "This can help make Artificial",
     "Did You Notice This In",
     "Did You Know This Fact",
+    "did you know that Toph",
     "Did You Know: Titanic Fun",
     "The SCARIEST Fact About SPACE"
   ],
   "power_words": [
     "science",
-    "physics",
     "experiment",
+    "physics",
     "viral",
     "trick",
     "human",
+    "amazing",
     "unbelievable",
     "tricks",
     "could",
     "sciencefacts",
     "space",
-    "amazing",
     "only",
+    "never",
     "fastest"
   ],
   "top_hashtags": [
     "#shorts",
-    "#science",
     "#facts",
+    "#science",
     "#experiment",
     "#education",
+    "#viral",
     "#youtubeshorts",
     "#physics",
-    "#viral",
     "#funny",
     "#sciencefacts",
+    "#short",
     "#tiktok",
     "#science experiments",
     "#youtube shorts",
-    "#viralshorts",
-    "#knowledge",
+    "#amazing facts",
     "#didyouknow"
   ],
   "top_topics": [
@@ -57,21 +59,21 @@
     "physics",
     "experiment",
     "human",
-    "jong",
     "unbelievable",
     "tricks",
     "could",
     "save",
     "life",
+    "amazing",
     "sciencefacts",
     "cool",
     "kids",
     "gravity",
     "gifts",
-    "theoryofphysics",
-    "anubhavsir",
     "youtubeshorts",
-    "amazing"
+    "cloud",
+    "make",
+    "crazy"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -84,15 +86,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.3,
+  "avg_duration_secs": 41.7,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
     "Did You Notice This In",
     "Did You Know This Fact",
+    "did you know that Toph",
     "Did You Know: Titanic Fun",
     "The SCARIEST Fact About SPACE"
   ],
-  "timestamp": "2026-06-24T17:29:23"
+  "timestamp": "2026-06-25T17:32:07"
 }
