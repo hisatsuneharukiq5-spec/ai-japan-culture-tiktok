@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-25T17:32:08",
+  "timestamp": "2026-06-26T17:17:51",
   "internal": {
     "top5_patterns": [
       {
@@ -35,8 +35,8 @@
       "didn",
       "physics",
       "experiment",
-      "human",
       "unbelievable",
+      "human",
       "tricks",
       "could"
     ],
@@ -49,13 +49,13 @@
       "#viral",
       "#youtubeshorts",
       "#physics",
+      "#amazing facts",
       "#funny",
       "#sciencefacts",
       "#short",
+      "#knowledge",
       "#tiktok",
-      "#science experiments",
-      "#youtube shorts",
-      "#amazing facts",
+      "#fact",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -85,15 +85,15 @@
       "physics",
       "viral",
       "trick",
-      "human",
       "amazing",
       "unbelievable",
+      "human",
       "tricks",
       "could",
       "sciencefacts",
       "space",
-      "only",
       "never",
+      "only",
       "fastest"
     ],
     "pattern_counts": {
@@ -112,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "tom dundon",
-        "bangladesh vs india",
-        "supreme court hawaii",
-        "hendrix lapierre",
-        "bond",
-        "allure katseye",
-        "trump mail ballot order ruling",
-        "garnet hathaway",
-        "world cup best teams 2026",
-        "ella langley red rocks"
+        "paul mullin",
+        "netflix the boroughs cancellation",
+        "strait of hormuz news",
+        "the new york times",
+        "ugo humbert",
+        "iran vs egypt",
+        "joe doering",
+        "strawberry moon 2026",
+        "adam lambert",
+        "isaiah joe"
       ]
     },
     "youtube_trending": {
@@ -132,16 +132,16 @@
         "China&#39;s Futuristic School 😱",
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
         "How Much Is Too Much 😱",
+        "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "क्या हुआ जब एक हेलीकॉप्टर उबलते ज्वालामुखी के अंदर जा गिरा | #shorts #curio",
+        "Candy Facts That Will BLOW Your Mind 🤔",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
-        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts",
-        "3 Facts You Didn&#39;t Want To Know 😬"
+        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts"
       ]
     },
     "pytrends": {
@@ -169,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 75,
+    "total_tests": 76,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
