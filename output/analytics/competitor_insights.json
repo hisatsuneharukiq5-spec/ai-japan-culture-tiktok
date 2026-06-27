@@ -20,8 +20,8 @@
   ],
   "power_words": [
     "science",
-    "experiment",
     "physics",
+    "experiment",
     "viral",
     "trick",
     "amazing",
@@ -31,7 +31,6 @@
     "could",
     "sciencefacts",
     "space",
-    "never",
     "only",
     "fastest"
   ],
@@ -41,22 +40,22 @@
     "#science",
     "#experiment",
     "#education",
-    "#viral",
     "#youtubeshorts",
     "#physics",
-    "#amazing facts",
+    "#viral",
     "#funny",
     "#sciencefacts",
     "#short",
-    "#knowledge",
     "#tiktok",
-    "#fact",
+    "#science experiments",
+    "#youtube shorts",
+    "#amazing facts",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
-    "didn",
     "physics",
+    "didn",
     "experiment",
     "unbelievable",
     "human",
@@ -70,10 +69,10 @@
     "kids",
     "gravity",
     "gifts",
+    "theoryofphysics",
+    "anubhavsir",
     "youtubeshorts",
-    "cloud",
-    "make",
-    "crazy"
+    "cloud"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -97,5 +96,5 @@
     "Did You Know: Titanic Fun",
     "The SCARIEST Fact About SPACE"
   ],
-  "timestamp": "2026-06-26T17:17:50"
+  "timestamp": "2026-06-27T16:41:35"
 }

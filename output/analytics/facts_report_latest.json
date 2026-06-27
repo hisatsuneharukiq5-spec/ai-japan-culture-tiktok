@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-26T17:17:51",
+  "timestamp": "2026-06-27T16:41:36",
   "internal": {
     "top5_patterns": [
       {
@@ -32,8 +32,8 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
-      "didn",
       "physics",
+      "didn",
       "experiment",
       "unbelievable",
       "human",
@@ -46,16 +46,16 @@
       "#science",
       "#experiment",
       "#education",
-      "#viral",
       "#youtubeshorts",
       "#physics",
-      "#amazing facts",
+      "#viral",
       "#funny",
       "#sciencefacts",
       "#short",
-      "#knowledge",
       "#tiktok",
-      "#fact",
+      "#science experiments",
+      "#youtube shorts",
+      "#amazing facts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -81,8 +81,8 @@
     ],
     "power_words": [
       "science",
-      "experiment",
       "physics",
+      "experiment",
       "viral",
       "trick",
       "amazing",
@@ -92,7 +92,6 @@
       "could",
       "sciencefacts",
       "space",
-      "never",
       "only",
       "fastest"
     ],
@@ -112,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "paul mullin",
-        "netflix the boroughs cancellation",
-        "strait of hormuz news",
-        "the new york times",
-        "ugo humbert",
-        "iran vs egypt",
-        "joe doering",
-        "strawberry moon 2026",
-        "adam lambert",
-        "isaiah joe"
+        "taxpayers",
+        "brek liske",
+        "tomas galvas",
+        "michal oleksiejczuk",
+        "brandon carlo",
+        "hector bello",
+        "western",
+        "big tigger",
+        "xavier villeneuve",
+        "fifa world cup 2026 qualifiers table"
       ]
     },
     "youtube_trending": {
@@ -169,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 76,
+    "total_tests": 77,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
