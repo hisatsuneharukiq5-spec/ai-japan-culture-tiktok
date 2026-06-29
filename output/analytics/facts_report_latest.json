@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-28T16:44:36",
+  "timestamp": "2026-06-29T17:59:40",
   "internal": {
     "top5_patterns": [
       {
@@ -34,28 +34,28 @@
       "science",
       "didn",
       "physics",
-      "save",
-      "life",
+      "experiment",
+      "human",
       "tricks",
-      "animals",
-      "factsmine"
+      "jong",
+      "unbelievable"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#education",
       "#viral",
-      "#fact",
-      "#knowledge",
-      "#top",
       "#youtubeshorts",
       "#experiment",
-      "#amazing facts",
-      "#factsmine",
+      "#education",
+      "#sciencefacts",
+      "#viralshorts",
+      "#knowledge",
+      "#top",
+      "#fact",
+      "#tiktok",
       "#science experiments",
-      "#trending",
-      "#amazing",
+      "#youtube shorts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -65,7 +65,6 @@
       "How Deep Do Humans Have",
       "Did You Notice This In",
       "Did You Know This Fact",
-      "did you know that Toph",
       "Did You Know: Titanic Fun"
     ],
     "title_templates": [
@@ -81,28 +80,26 @@
     ],
     "power_words": [
       "science",
-      "physics",
       "experiment",
+      "physics",
       "trick",
-      "tricks",
       "human",
-      "amazing",
-      "animals",
-      "factsmine",
+      "viral",
+      "tricks",
+      "unbelievable",
       "could",
       "sciencefacts",
-      "unbelievable",
-      "never",
+      "amazing",
       "only",
+      "never",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 29,
-      "science-discovery": 2,
-      "number-lead": 9,
-      "statistic": 4,
-      "wh-question": 3,
-      "did-you-know": 3
+      "statement": 28,
+      "number-lead": 12,
+      "statistic": 6,
+      "wh-question": 2,
+      "did-you-know": 2
     },
     "optimal_length_seconds": [
       55,
@@ -113,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "brazil vs japan",
-        "netflix show cancellations",
-        "winter storm warning",
-        "essential american songbook",
-        "bet awards",
-        "coach",
-        "selección de fútbol de japón",
-        "ken paxton james talarico polls",
-        "ben stokes",
-        "elbridge a colby"
+        "thylane blondeau",
+        "fox",
+        "ronaldinho",
+        "fubo",
+        "alisson becker",
+        "hiroki ito",
+        "suzuki",
+        "peacock",
+        "youtube tv",
+        "fox sports"
       ]
     },
     "youtube_trending": {
@@ -133,8 +130,8 @@
         "China&#39;s Futuristic School 😱",
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
         "How Much Is Too Much 😱",
-        "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
+        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
@@ -170,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 78,
+    "total_tests": 79,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
