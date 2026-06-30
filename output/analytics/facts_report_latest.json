@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-29T17:59:40",
+  "timestamp": "2026-06-30T17:25:38",
   "internal": {
     "top5_patterns": [
       {
@@ -29,43 +29,44 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 50,
+    "videos_analyzed": 48,
     "popular_topics": [
       "science",
       "didn",
-      "physics",
-      "experiment",
       "human",
       "tricks",
-      "jong",
-      "unbelievable"
+      "space",
+      "experiments",
+      "amazing",
+      "creepy"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
-      "#science",
       "#viral",
-      "#youtubeshorts",
-      "#experiment",
-      "#education",
-      "#sciencefacts",
-      "#viralshorts",
+      "#science",
       "#knowledge",
-      "#top",
+      "#short",
+      "#trending",
+      "#youtubeshorts",
       "#fact",
-      "#tiktok",
-      "#science experiments",
-      "#youtube shorts",
+      "#factsmine",
+      "#viralshorts",
+      "#amazing facts",
+      "#scienceexperiment",
+      "#amazing",
+      "#ytshorts",
       "#didyouknow"
     ],
     "hook_phrases": [
-      "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "Did You Notice This In",
       "Did You Know This Fact",
-      "Did You Know: Titanic Fun"
+      "Did You Know: Titanic Fun",
+      "The SCARIEST Fact About SPACE",
+      "what Dinosaurs ACTUALLY Looked Like",
+      "Did you Know CORALINE is"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -74,32 +75,31 @@
       "The real reason {topic} does this will shock you #Shorts",
       "What happens to your body when {scenario}? #Shorts",
       "Why {topic} is more {adjective} than you think #Shorts",
-      "{number} {topic} facts that will blow your mind #Shorts",
-      "{topic} is SO cool #Shorts",
-      "{topic}'s the fastest way to empty a bottle #Shorts"
+      "{number} {topic} facts that will blow your mind #Shorts"
     ],
     "power_words": [
       "science",
-      "experiment",
-      "physics",
-      "trick",
+      "space",
       "human",
-      "viral",
+      "experiment",
       "tricks",
-      "unbelievable",
-      "could",
-      "sciencefacts",
       "amazing",
-      "only",
+      "physics",
+      "experiments",
+      "creepy",
+      "earth",
+      "invention",
+      "factsmine",
+      "dinosaur",
       "never",
-      "fastest"
+      "only"
     ],
     "pattern_counts": {
-      "statement": 28,
-      "number-lead": 12,
-      "statistic": 6,
-      "wh-question": 2,
-      "did-you-know": 2
+      "statement": 31,
+      "statistic": 4,
+      "wh-question": 5,
+      "number-lead": 5,
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -110,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "thylane blondeau",
-        "fox",
-        "ronaldinho",
-        "fubo",
-        "alisson becker",
-        "hiroki ito",
-        "suzuki",
-        "peacock",
-        "youtube tv",
-        "fox sports"
+        "dirk nowitzki",
+        "mateus fernandes",
+        "ange-yoan bonny",
+        "marcus smart",
+        "côte d'ivoire",
+        "yan diomandé",
+        "samsung",
+        "elina svitolina",
+        "emma navarro",
+        "michael jordan"
       ]
     },
     "youtube_trending": {
@@ -132,14 +132,14 @@
         "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
-        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "क्या हुआ जब एक हेलीकॉप्टर उबलते ज्वालामुखी के अंदर जा गिरा | #shorts #curio",
         "Candy Facts That Will BLOW Your Mind 🤔",
-        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts"
+        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts",
+        "3 Facts You Didn&#39;t Want To Know 😬"
       ]
     },
     "pytrends": {
@@ -167,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 79,
+    "total_tests": 80,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
