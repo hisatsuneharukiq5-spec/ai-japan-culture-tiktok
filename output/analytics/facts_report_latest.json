@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-30T17:25:38",
+  "timestamp": "2026-07-01T17:30:27",
   "internal": {
     "top5_patterns": [
       {
@@ -29,44 +29,44 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 48,
+    "videos_analyzed": 49,
     "popular_topics": [
       "science",
       "didn",
+      "physics",
+      "experiment",
+      "unbelievable",
       "human",
       "tricks",
-      "space",
-      "experiments",
-      "amazing",
-      "creepy"
+      "could"
     ],
     "hashtags": [
       "#shorts",
-      "#facts",
-      "#viral",
       "#science",
-      "#knowledge",
+      "#facts",
+      "#experiment",
+      "#education",
       "#short",
-      "#trending",
+      "#funny",
+      "#physics",
+      "#viral",
       "#youtubeshorts",
+      "#science experiments",
+      "#sciencefacts",
+      "#tiktok",
       "#fact",
-      "#factsmine",
-      "#viralshorts",
       "#amazing facts",
-      "#scienceexperiment",
-      "#amazing",
-      "#ytshorts",
       "#didyouknow"
     ],
     "hook_phrases": [
+      "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
-      "How Deep Do Humans Have",
+      "How gullible are you",
+      "Did You Notice This In",
       "Did You Know This Fact",
-      "Did You Know: Titanic Fun",
-      "The SCARIEST Fact About SPACE",
-      "what Dinosaurs ACTUALLY Looked Like",
-      "Did you Know CORALINE is"
+      "did you know that Toph",
+      "Did You Know: Titanic Fun"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -75,30 +75,30 @@
       "The real reason {topic} does this will shock you #Shorts",
       "What happens to your body when {scenario}? #Shorts",
       "Why {topic} is more {adjective} than you think #Shorts",
-      "{number} {topic} facts that will blow your mind #Shorts"
+      "{number} {topic} facts that will blow your mind #Shorts",
+      "{topic} is SO cool #Shorts",
+      "{topic}'s the fastest way to empty a bottle #Shorts"
     ],
     "power_words": [
       "science",
-      "space",
-      "human",
       "experiment",
-      "tricks",
-      "amazing",
       "physics",
-      "experiments",
-      "creepy",
-      "earth",
-      "invention",
-      "factsmine",
-      "dinosaur",
-      "never",
-      "only"
+      "viral",
+      "trick",
+      "amazing",
+      "unbelievable",
+      "human",
+      "tricks",
+      "could",
+      "sciencefacts",
+      "only",
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 31,
+      "statement": 29,
+      "number-lead": 10,
       "statistic": 4,
-      "wh-question": 5,
-      "number-lead": 5,
+      "wh-question": 3,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -110,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "dirk nowitzki",
-        "mateus fernandes",
-        "ange-yoan bonny",
-        "marcus smart",
-        "côte d'ivoire",
-        "yan diomandé",
-        "samsung",
-        "elina svitolina",
-        "emma navarro",
-        "michael jordan"
+        "corey perry",
+        "joe veleno",
+        "noel acciari",
+        "rashford",
+        "jack roslovic",
+        "arthur masuaku",
+        "wissa",
+        "iva jovic",
+        "medicaid",
+        "ilya mikheyev"
       ]
     },
     "youtube_trending": {
@@ -130,16 +130,16 @@
         "China&#39;s Futuristic School 😱",
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
         "How Much Is Too Much 😱",
+        "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
+        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "क्या हुआ जब एक हेलीकॉप्टर उबलते ज्वालामुखी के अंदर जा गिरा | #shorts #curio",
-        "Candy Facts That Will BLOW Your Mind 🤔",
-        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts",
-        "3 Facts You Didn&#39;t Want To Know 😬"
+        "Candy Facts That Will BLOW Your Mind 🤔"
       ]
     },
     "pytrends": {
@@ -167,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 80,
+    "total_tests": 81,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

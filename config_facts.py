@@ -59,7 +59,7 @@ ANTHROPIC_MODELS = [
 ]
 
 # FACTS_BRAIN_MANAGED_START
-LEARNED_TOPIC_STYLE = "science, didn, human, tricks, space, experiments, amazing, creepy"
+LEARNED_TOPIC_STYLE = "science, didn, physics, experiment, unbelievable, human, tricks, could"
 LEARNED_TITLE_TEMPLATES = [
   "Did you know that {fact}? #Shorts",
   "Only {number}% of people know this about {topic} #Shorts",
@@ -68,34 +68,34 @@ LEARNED_TITLE_TEMPLATES = [
   "What happens to your body when {scenario}? #Shorts",
   "Why {topic} is more {adjective} than you think #Shorts",
   "{number} {topic} facts that will blow your mind #Shorts",
-  "{number} facts in {seconds} seconds #Shorts"
+  "{topic} is SO cool #Shorts"
 ]
 LEARNED_HOOK_PHRASES = [
+  "This is SO cool",
   "What Is The Real Shape",
   "This can help make Artificial",
-  "How Deep Do Humans Have",
+  "How gullible are you",
+  "Did You Notice This In",
   "Did You Know This Fact",
-  "Did You Know: Titanic Fun",
-  "The SCARIEST Fact About SPACE",
-  "what Dinosaurs ACTUALLY Looked Like",
-  "Did you Know CORALINE is"
+  "did you know that Toph",
+  "Did You Know: Titanic Fun"
 ]
 LEARNED_HASHTAGS = [
   "#shorts",
-  "#facts",
-  "#viral",
   "#science",
-  "#knowledge",
+  "#facts",
+  "#experiment",
+  "#education",
   "#short",
-  "#trending",
+  "#funny",
+  "#physics",
+  "#viral",
   "#youtubeshorts",
+  "#science experiments",
+  "#sciencefacts",
+  "#tiktok",
   "#fact",
-  "#factsmine",
-  "#viralshorts",
   "#amazing facts",
-  "#scienceexperiment",
-  "#amazing",
-  "#ytshorts",
   "#didyouknow"
 ]
 PREFERRED_POST_HOURS = [0, 11, 12, 19, 20]
