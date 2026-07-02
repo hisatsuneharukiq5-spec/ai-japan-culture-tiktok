@@ -1,22 +1,24 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 49,
+  "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 29,
+    "statement": 28,
     "number-lead": 10,
-    "statistic": 4,
-    "wh-question": 3,
+    "statistic": 5,
+    "wh-question": 4,
     "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
+    "How Deep Do Humans Have",
     "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
     "did you know that Toph",
-    "Did You Know: Titanic Fun"
+    "Did You Know: Titanic Fun",
+    "The SCARIEST Fact About SPACE"
   ],
   "power_words": [
     "science",
@@ -26,38 +28,39 @@
     "trick",
     "amazing",
     "unbelievable",
-    "human",
     "tricks",
     "could",
     "sciencefacts",
-    "only",
-    "fastest"
+    "human",
+    "space",
+    "shocking",
+    "never",
+    "only"
   ],
   "top_hashtags": [
     "#shorts",
-    "#science",
     "#facts",
-    "#experiment",
+    "#science",
     "#education",
-    "#short",
-    "#funny",
-    "#physics",
+    "#experiment",
     "#viral",
     "#youtubeshorts",
-    "#science experiments",
-    "#sciencefacts",
-    "#tiktok",
+    "#knowledge",
     "#fact",
     "#amazing facts",
+    "#funny",
+    "#short",
+    "#top",
+    "#science experiments",
+    "#physics",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
-    "physics",
     "experiment",
+    "physics",
     "unbelievable",
-    "human",
     "tricks",
     "could",
     "save",
@@ -70,8 +73,9 @@
     "gifts",
     "youtubeshorts",
     "cloud",
-    "crazy",
-    "experiments"
+    "earth",
+    "make",
+    "human"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -84,16 +88,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.1,
+  "avg_duration_secs": 42.7,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
+    "How Deep Do Humans Have",
     "How gullible are you",
     "Did You Notice This In",
     "Did You Know This Fact",
-    "did you know that Toph",
-    "Did You Know: Titanic Fun"
+    "did you know that Toph"
   ],
-  "timestamp": "2026-07-01T17:30:27"
+  "timestamp": "2026-07-02T17:13:17"
 }
