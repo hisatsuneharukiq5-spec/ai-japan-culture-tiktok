@@ -952,7 +952,12 @@
     "title_a": "Did you know that glass is actually a liquid? #Shorts (3 Facts)",
     "title_b": "Only 1% of people know this about Mantis Shrimp #Shorts",
     "compare_after_hours": 48,
-    "status": "pending"
+    "status": "learned",
+    "winner": "title_a",
+    "loser": "title_b",
+    "views_a": 0,
+    "views_b": 0,
+    "reason": "Compared 48h view counts from facts upload registry"
   },
   {
     "created_at": "2026-07-01T17:30:28",
@@ -965,6 +970,13 @@
     "created_at": "2026-07-02T17:13:19",
     "title_a": "Did you know that glass is actually a liquid? #Shorts (3 Facts)",
     "title_b": "Only 1% of people know this about hibernation #Shorts",
+    "compare_after_hours": 48,
+    "status": "pending"
+  },
+  {
+    "created_at": "2026-07-03T16:56:25",
+    "title_a": "Did you know that butterflies taste with their feet? #Shorts (3 Facts)",
+    "title_b": "Only 1% of people know this about Immortal Jellyfish #Shorts",
     "compare_after_hours": 48,
     "status": "pending"
   }

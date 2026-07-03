@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-02T17:13:18",
+  "timestamp": "2026-07-03T16:56:24",
   "internal": {
     "top5_patterns": [
       {
@@ -33,40 +33,40 @@
     "popular_topics": [
       "science",
       "didn",
-      "experiment",
       "physics",
-      "unbelievable",
+      "experiment",
+      "sciencefacts",
       "tricks",
-      "could",
-      "save"
+      "unbelievable",
+      "human"
     ],
     "hashtags": [
       "#shorts",
-      "#facts",
       "#science",
+      "#facts",
       "#education",
       "#experiment",
-      "#viral",
       "#youtubeshorts",
-      "#knowledge",
-      "#fact",
-      "#amazing facts",
+      "#physics",
+      "#sciencefacts",
+      "#viral",
       "#funny",
       "#short",
-      "#top",
+      "#tiktok",
       "#science experiments",
-      "#physics",
+      "#animation",
+      "#viralshorts",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
-      "What Is The Real Shape",
       "This can help make Artificial",
-      "How Deep Do Humans Have",
       "How gullible are you",
       "Did You Notice This In",
       "Did You Know This Fact",
-      "did you know that Toph"
+      "did you know that Toph",
+      "Did You Know: Titanic Fun",
+      "The SCARIEST Fact About SPACE"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -83,24 +83,24 @@
       "science",
       "experiment",
       "physics",
-      "viral",
       "trick",
+      "viral",
+      "sciencefacts",
+      "tricks",
       "amazing",
       "unbelievable",
-      "tricks",
-      "could",
-      "sciencefacts",
       "human",
+      "could",
       "space",
       "shocking",
-      "never",
-      "only"
+      "only",
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 28,
+      "statement": 30,
       "number-lead": 10,
       "statistic": 5,
-      "wh-question": 4,
+      "wh-question": 2,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -112,36 +112,36 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "alex ovechkin",
-        "jan choinski",
+        "coco gauff",
+        "dorian finney smith",
+        "ostapenko",
+        "instacart down",
+        "nato",
+        "bts chile",
         "us senior open",
-        "tim hardaway",
-        "college football 27",
-        "lexie hull",
-        "stephen a smith jaylen brown",
-        "yahoo mail login",
-        "tsa",
-        "blake coleman"
+        "estatus de protección temporal",
+        "nathan ake",
+        "sting operation"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "China&#39;s Futuristic School 😱",
+        "Steel Coil 😨",
+        "उत्तरी सागर / North Sea #shorts #facts #hindi #new",
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
         "How Much Is Too Much 😱",
+        "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
+        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
+        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "Candy Facts That Will BLOW Your Mind 🤔",
-        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts",
-        "How Many Hours Do You Sleep 😱",
-        "Fun Facts That Are Not Funny",
-        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
-        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
-        "WARNING : This is Highly Relatable 😱 #shorts"
+        "क्या हुआ जब एक हेलीकॉप्टर उबलते ज्वालामुखी के अंदर जा गिरा | #shorts #curio",
+        "प्राचीन इतिहास की पांच सबसे दर्दनाक सजाएं | #shorts #trending #facts #amazingfacts",
+        "Candy Facts That Will BLOW Your Mind 🤔"
       ]
     },
     "pytrends": {
@@ -169,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 82,
+    "total_tests": 83,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
