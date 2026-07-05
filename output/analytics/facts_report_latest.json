@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-04T16:33:52",
+  "timestamp": "2026-07-05T16:36:10",
   "internal": {
     "top5_patterns": [
       {
@@ -29,40 +29,40 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 50,
+    "videos_analyzed": 49,
     "popular_topics": [
       "science",
-      "didn",
       "physics",
+      "didn",
+      "experiment",
+      "human",
+      "tricks",
       "unbelievable",
-      "could",
-      "save",
-      "life",
-      "amazing"
+      "could"
     ],
     "hashtags": [
       "#shorts",
-      "#facts",
-      "#viral",
       "#science",
-      "#youtubeshorts",
-      "#knowledge",
+      "#facts",
+      "#experiment",
       "#education",
-      "#fact",
-      "#trending",
-      "#top",
-      "#amazing facts",
-      "#factsmine",
-      "#amazing",
+      "#viral",
+      "#youtubeshorts",
+      "#physics",
+      "#funny",
+      "#sciencefacts",
       "#short",
-      "#science experiments",
+      "#knowledge",
+      "#top",
+      "#fact",
+      "#tiktok",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
-      "How Deep Do Humans Have",
+      "How gullible are you",
       "Did You Notice This In",
       "Did You Know This Fact",
       "did you know that Toph",
@@ -81,24 +81,24 @@
     ],
     "power_words": [
       "science",
-      "physics",
-      "space",
       "experiment",
+      "physics",
       "trick",
+      "viral",
       "human",
-      "amazing",
+      "tricks",
       "unbelievable",
       "could",
-      "tricks",
+      "sciencefacts",
+      "space",
+      "amazing",
       "only",
-      "never",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 29,
-      "science-discovery": 1,
+      "statement": 30,
       "number-lead": 9,
-      "statistic": 5,
+      "statistic": 4,
       "wh-question": 3,
       "did-you-know": 3
     },
@@ -111,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "valkyries vs dream",
-        "kelly ripa",
-        "martina navratilova",
-        "andrew giuliani",
-        "caroline wozniacki",
-        "lost",
-        "malia obama",
-        "fireworks nyc",
-        "madison keys",
-        "who plays in the world cup today"
+        "andy roddick",
+        "fifa matches today",
+        "paul george celtics trade statement",
+        "f1 race",
+        "isaac del toro",
+        "george russell",
+        "guam",
+        "max verstappen",
+        "hubert hurkacz",
+        "iphone 17 pro"
       ]
     },
     "youtube_trending": {
@@ -131,7 +131,6 @@
         "China&#39;s Futuristic School 😱",
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
         "How Much Is Too Much 😱",
-        "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
@@ -140,7 +139,8 @@
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "क्या हुआ जब एक हेलीकॉप्टर उबलते ज्वालामुखी के अंदर जा गिरा | #shorts #curio",
-        "प्राचीन इतिहास की पांच सबसे दर्दनाक सजाएं | #shorts #trending #facts #amazingfacts"
+        "प्राचीन इतिहास की पांच सबसे दर्दनाक सजाएं | #shorts #trending #facts #amazingfacts",
+        "Candy Facts That Will BLOW Your Mind 🤔"
       ]
     },
     "pytrends": {
@@ -168,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 84,
+    "total_tests": 85,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
