@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-05T16:36:10",
+  "timestamp": "2026-07-06T17:59:05",
   "internal": {
     "top5_patterns": [
       {
@@ -29,44 +29,44 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 49,
+    "videos_analyzed": 50,
     "popular_topics": [
       "science",
-      "physics",
       "didn",
+      "physics",
       "experiment",
       "human",
-      "tricks",
-      "unbelievable",
-      "could"
+      "save",
+      "life",
+      "tricks"
     ],
     "hashtags": [
       "#shorts",
-      "#science",
       "#facts",
+      "#science",
+      "#viral",
       "#experiment",
       "#education",
-      "#viral",
-      "#youtubeshorts",
       "#physics",
+      "#youtubeshorts",
+      "#knowledge",
+      "#fact",
+      "#amazing facts",
       "#funny",
       "#sciencefacts",
       "#short",
-      "#knowledge",
       "#top",
-      "#fact",
-      "#tiktok",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
-      "How gullible are you",
       "Did You Notice This In",
       "Did You Know This Fact",
       "did you know that Toph",
-      "Did You Know: Titanic Fun"
+      "Did You Know: Titanic Fun",
+      "The SCARIEST Fact About SPACE"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -83,23 +83,24 @@
       "science",
       "experiment",
       "physics",
-      "trick",
       "viral",
+      "trick",
       "human",
+      "amazing",
       "tricks",
-      "unbelievable",
       "could",
       "sciencefacts",
       "space",
-      "amazing",
       "only",
+      "unbelievable",
+      "never",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 30,
-      "number-lead": 9,
+      "statement": 31,
+      "number-lead": 10,
       "statistic": 4,
-      "wh-question": 3,
+      "wh-question": 2,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -111,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "andy roddick",
-        "fifa matches today",
-        "paul george celtics trade statement",
-        "f1 race",
-        "isaac del toro",
-        "george russell",
-        "guam",
-        "max verstappen",
-        "hubert hurkacz",
-        "iphone 17 pro"
+        "taylor fritz",
+        "lauren bennett",
+        "david streever ice email lawsuit",
+        "kate mansi",
+        "united states department of justice",
+        "wrigley field",
+        "rasul douglas",
+        "rui hachimura",
+        "pringles pop dog buns",
+        "ukraine drone strike omsk refinery"
       ]
     },
     "youtube_trending": {
@@ -132,7 +133,6 @@
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
         "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
-        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
@@ -140,7 +140,8 @@
         "Strongest Glass in The World",
         "क्या हुआ जब एक हेलीकॉप्टर उबलते ज्वालामुखी के अंदर जा गिरा | #shorts #curio",
         "प्राचीन इतिहास की पांच सबसे दर्दनाक सजाएं | #shorts #trending #facts #amazingfacts",
-        "Candy Facts That Will BLOW Your Mind 🤔"
+        "Candy Facts That Will BLOW Your Mind 🤔",
+        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts"
       ]
     },
     "pytrends": {
@@ -168,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 85,
+    "total_tests": 86,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
