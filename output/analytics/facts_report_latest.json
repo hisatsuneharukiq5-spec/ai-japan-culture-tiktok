@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-06T17:59:05",
+  "timestamp": "2026-07-07T17:35:03",
   "internal": {
     "top5_patterns": [
       {
@@ -35,27 +35,27 @@
       "didn",
       "physics",
       "experiment",
-      "human",
+      "tricks",
       "save",
       "life",
-      "tricks"
+      "jong"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#viral",
       "#experiment",
       "#education",
-      "#physics",
       "#youtubeshorts",
-      "#knowledge",
-      "#fact",
-      "#amazing facts",
+      "#viral",
+      "#physics",
       "#funny",
       "#sciencefacts",
-      "#short",
+      "#viralshorts",
+      "#knowledge",
       "#top",
+      "#science experiments",
+      "#youtube shorts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -83,23 +83,22 @@
       "science",
       "experiment",
       "physics",
-      "viral",
       "trick",
-      "human",
-      "amazing",
+      "viral",
       "tricks",
+      "amazing",
+      "human",
       "could",
       "sciencefacts",
       "space",
-      "only",
       "unbelievable",
-      "never",
+      "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 31,
+      "statement": 29,
       "number-lead": 10,
-      "statistic": 4,
+      "statistic": 6,
       "wh-question": 2,
       "did-you-know": 3
     },
@@ -112,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "taylor fritz",
-        "lauren bennett",
-        "david streever ice email lawsuit",
-        "kate mansi",
-        "united states department of justice",
-        "wrigley field",
-        "rasul douglas",
-        "rui hachimura",
-        "pringles pop dog buns",
-        "ukraine drone strike omsk refinery"
+        "novak djokovic",
+        "partido argentina",
+        "fiat little mouse",
+        "argentina fc",
+        "ben rice",
+        "ken paxton",
+        "fox sports",
+        "egypt goalkeeper",
+        "youtube tv",
+        "fubo"
       ]
     },
     "youtube_trending": {
@@ -138,10 +137,10 @@
         "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "क्या हुआ जब एक हेलीकॉप्टर उबलते ज्वालामुखी के अंदर जा गिरा | #shorts #curio",
         "प्राचीन इतिहास की पांच सबसे दर्दनाक सजाएं | #shorts #trending #facts #amazingfacts",
         "Candy Facts That Will BLOW Your Mind 🤔",
-        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts"
+        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts",
+        "3 Facts You Didn&#39;t Want To Know 😬"
       ]
     },
     "pytrends": {
@@ -169,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 86,
+    "total_tests": 87,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

@@ -2,9 +2,9 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 31,
+    "statement": 29,
     "number-lead": 10,
-    "statistic": 4,
+    "statistic": 6,
     "wh-question": 2,
     "did-you-know": 3
   },
@@ -22,35 +22,34 @@
     "science",
     "experiment",
     "physics",
-    "viral",
     "trick",
-    "human",
-    "amazing",
+    "viral",
     "tricks",
+    "amazing",
+    "human",
     "could",
     "sciencefacts",
     "space",
-    "only",
     "unbelievable",
-    "never",
+    "only",
     "fastest"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
     "#science",
-    "#viral",
     "#experiment",
     "#education",
-    "#physics",
     "#youtubeshorts",
-    "#knowledge",
-    "#fact",
-    "#amazing facts",
+    "#viral",
+    "#physics",
     "#funny",
     "#sciencefacts",
-    "#short",
+    "#viralshorts",
+    "#knowledge",
     "#top",
+    "#science experiments",
+    "#youtube shorts",
     "#didyouknow"
   ],
   "top_topics": [
@@ -58,10 +57,11 @@
     "didn",
     "physics",
     "experiment",
-    "human",
+    "tricks",
     "save",
     "life",
-    "tricks",
+    "jong",
+    "human",
     "could",
     "amazing",
     "sciencefacts",
@@ -72,8 +72,7 @@
     "unbelievable",
     "youtubeshorts",
     "cloud",
-    "funny",
-    "make"
+    "funny"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -86,7 +85,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.4,
+  "avg_duration_secs": 41.8,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -97,5 +96,5 @@
     "Did You Know: Titanic Fun",
     "The SCARIEST Fact About SPACE"
   ],
-  "timestamp": "2026-07-06T17:59:04"
+  "timestamp": "2026-07-07T17:35:02"
 }
