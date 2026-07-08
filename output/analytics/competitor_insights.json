@@ -22,34 +22,35 @@
     "science",
     "experiment",
     "physics",
-    "trick",
     "viral",
-    "tricks",
-    "amazing",
+    "trick",
     "human",
+    "amazing",
+    "tricks",
     "could",
     "sciencefacts",
     "space",
-    "unbelievable",
     "only",
+    "unbelievable",
+    "never",
     "fastest"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
     "#science",
+    "#viral",
     "#experiment",
     "#education",
     "#youtubeshorts",
-    "#viral",
     "#physics",
     "#funny",
     "#sciencefacts",
-    "#viralshorts",
     "#knowledge",
     "#top",
     "#science experiments",
     "#youtube shorts",
+    "#amazing facts",
     "#didyouknow"
   ],
   "top_topics": [
@@ -57,11 +58,11 @@
     "didn",
     "physics",
     "experiment",
-    "tricks",
+    "human",
     "save",
     "life",
     "jong",
-    "human",
+    "tricks",
     "could",
     "amazing",
     "sciencefacts",
@@ -85,7 +86,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.8,
+  "avg_duration_secs": 41.7,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -96,5 +97,5 @@
     "Did You Know: Titanic Fun",
     "The SCARIEST Fact About SPACE"
   ],
-  "timestamp": "2026-07-07T17:35:02"
+  "timestamp": "2026-07-08T16:58:42"
 }

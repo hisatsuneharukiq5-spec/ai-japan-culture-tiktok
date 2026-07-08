@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-07T17:35:03",
+  "timestamp": "2026-07-08T16:58:42",
   "internal": {
     "top5_patterns": [
       {
@@ -35,7 +35,7 @@
       "didn",
       "physics",
       "experiment",
-      "tricks",
+      "human",
       "save",
       "life",
       "jong"
@@ -44,18 +44,18 @@
       "#shorts",
       "#facts",
       "#science",
+      "#viral",
       "#experiment",
       "#education",
       "#youtubeshorts",
-      "#viral",
       "#physics",
       "#funny",
       "#sciencefacts",
-      "#viralshorts",
       "#knowledge",
       "#top",
       "#science experiments",
       "#youtube shorts",
+      "#amazing facts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -83,16 +83,17 @@
       "science",
       "experiment",
       "physics",
-      "trick",
       "viral",
-      "tricks",
-      "amazing",
+      "trick",
       "human",
+      "amazing",
+      "tricks",
       "could",
       "sciencefacts",
       "space",
-      "unbelievable",
       "only",
+      "unbelievable",
+      "never",
       "fastest"
     ],
     "pattern_counts": {
@@ -111,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "novak djokovic",
-        "partido argentina",
-        "fiat little mouse",
-        "argentina fc",
-        "ben rice",
-        "ken paxton",
-        "fox sports",
-        "egypt goalkeeper",
-        "youtube tv",
-        "fubo"
+        "pringles hot dog buns",
+        "andrey santos",
+        "quasi moon",
+        "connor storrie",
+        "otan",
+        "tour de france stage 5",
+        "fery tennis",
+        "jac caglianone",
+        "simone biles",
+        "andy beshear"
       ]
     },
     "youtube_trending": {
@@ -131,16 +132,16 @@
         "China&#39;s Futuristic School 😱",
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
         "How Much Is Too Much 😱",
+        "Bicycle with Headlight #shorts #devkeexperiment",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
+        "Pictures That Confused The Internet #shorts",
         "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "प्राचीन इतिहास की पांच सबसे दर्दनाक सजाएं | #shorts #trending #facts #amazingfacts",
-        "Candy Facts That Will BLOW Your Mind 🤔",
-        "Amazon Rainforest 🤯 #sciencefacts #facts #shorts",
-        "3 Facts You Didn&#39;t Want To Know 😬"
+        "क्या हुआ जब एक हेलीकॉप्टर उबलते ज्वालामुखी के अंदर जा गिरा | #shorts #curio",
+        "Candy Facts That Will BLOW Your Mind 🤔"
       ]
     },
     "pytrends": {
@@ -168,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 87,
+    "total_tests": 88,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
