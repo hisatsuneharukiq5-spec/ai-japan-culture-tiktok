@@ -1,39 +1,38 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 49,
+  "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 31,
-    "number-lead": 9,
-    "statistic": 3,
-    "wh-question": 3,
-    "did-you-know": 3
+    "statement": 29,
+    "number-lead": 11,
+    "statistic": 6,
+    "wh-question": 2,
+    "did-you-know": 2
   },
   "top_hooks": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
     "How Deep Do Humans Have",
+    "Did You Notice This In",
     "Did You Know This Fact",
     "Did You Know: Titanic Fun",
-    "what Dinosaurs ACTUALLY Looked Like",
-    "Did you Know CORALINE is"
+    "The SCARIEST Fact About SPACE"
   ],
   "power_words": [
     "science",
     "experiment",
     "physics",
+    "trick",
     "human",
     "viral",
-    "trick",
     "tricks",
+    "unbelievable",
     "could",
-    "sciencefacts",
-    "dinosaur",
-    "animal",
-    "story",
+    "space",
     "amazing",
+    "only",
     "never",
-    "only"
+    "fastest"
   ],
   "top_hashtags": [
     "#shorts",
@@ -41,39 +40,39 @@
     "#science",
     "#viral",
     "#experiment",
-    "#trending",
-    "#knowledge",
-    "#funny",
-    "#physics",
     "#education",
-    "#short",
     "#youtubeshorts",
-    "#tiktok",
-    "#sciencefacts",
-    "#science experiments",
+    "#knowledge",
+    "#physics",
+    "#top",
+    "#fact",
+    "#funny",
+    "#viralshorts",
+    "#factsmine",
+    "#trending",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
-    "human",
     "physics",
     "experiment",
+    "human",
     "tricks",
+    "jong",
+    "unbelievable",
     "could",
     "save",
     "life",
-    "blow",
-    "mind",
-    "sciencefacts",
     "cool",
     "kids",
     "gravity",
     "gifts",
     "youtubeshorts",
     "funny",
-    "real",
-    "earth"
+    "earth",
+    "amazing",
+    "sciencefacts"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -86,16 +85,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 39.3,
+  "avg_duration_secs": 41.8,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
     "How Deep Do Humans Have",
+    "Did You Notice This In",
     "Did You Know This Fact",
     "Did You Know: Titanic Fun",
-    "what Dinosaurs ACTUALLY Looked Like",
-    "Did you Know CORALINE is"
+    "The SCARIEST Fact About SPACE"
   ],
-  "timestamp": "2026-07-11T16:27:16"
+  "timestamp": "2026-07-12T16:30:18"
 }
