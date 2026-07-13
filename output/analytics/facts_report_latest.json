@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-12T16:30:19",
+  "timestamp": "2026-07-13T17:32:16",
   "internal": {
     "top5_patterns": [
       {
@@ -35,27 +35,27 @@
       "didn",
       "physics",
       "experiment",
-      "human",
       "tricks",
-      "jong",
-      "unbelievable"
+      "save",
+      "life",
+      "jong"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#viral",
+      "#youtubeshorts",
       "#experiment",
       "#education",
-      "#youtubeshorts",
-      "#knowledge",
-      "#physics",
       "#top",
-      "#fact",
-      "#funny",
       "#viralshorts",
-      "#factsmine",
       "#trending",
+      "#knowledge",
+      "#fact",
+      "#science experiments",
+      "#youtube shorts",
+      "#amazing facts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -65,8 +65,8 @@
       "How Deep Do Humans Have",
       "Did You Notice This In",
       "Did You Know This Fact",
-      "Did You Know: Titanic Fun",
-      "The SCARIEST Fact About SPACE"
+      "did you know that Toph",
+      "Did You Know: Titanic Fun"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -84,23 +84,24 @@
       "experiment",
       "physics",
       "trick",
-      "human",
-      "viral",
-      "tricks",
-      "unbelievable",
-      "could",
       "space",
+      "viral",
+      "human",
+      "tricks",
       "amazing",
-      "only",
+      "could",
+      "animal",
+      "unbelievable",
       "never",
+      "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 29,
-      "number-lead": 11,
+      "statement": 28,
+      "number-lead": 10,
       "statistic": 6,
-      "wh-question": 2,
-      "did-you-know": 2
+      "wh-question": 3,
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -111,36 +112,36 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "kate middleton",
-        "blowing dust advisory",
-        "zverev allegations",
-        "min woo lee",
-        "zverev girlfriend",
-        "wimbeldon",
-        "tennis",
-        "pirates schedule",
-        "alcaraz injury",
-        "sinner age"
+        "russia",
+        "james fishback",
+        "earthquake",
+        "francia vs españa",
+        "earthquake now",
+        "earthquake los angeles",
+        "crm stock",
+        "donald trump irs lawsuit",
+        "new york knicks",
+        "jaume munar"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "😲What if Whale Swallowed You (ALIVE)? - By Kishor Singh #shorts",
         "Steel Coil 😨",
-        "उत्तरी सागर / North Sea #shorts #facts #hindi #new",
-        "Aeroplane के बारे में 5 Amazing Facts     #shorts",
         "China&#39;s Futuristic School 😱",
         "TURTLE REFLEX VS CAT REFLEX! #shorts #ytshorts #shortvideo #facts #trending #viralshorts #viralvideo",
         "How Much Is Too Much 😱",
-        "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
         "Pictures That Confused The Internet #shorts",
         "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
-        "Strongest Glass in The World"
+        "Strongest Glass in The World",
+        "Candy Facts That Will BLOW Your Mind 🤔",
+        "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
+        "How Many Hours Do You Sleep 😱",
+        "Fun Facts That Are Not Funny"
       ]
     },
     "pytrends": {
@@ -168,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 92,
+    "total_tests": 93,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

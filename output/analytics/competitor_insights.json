@@ -2,11 +2,11 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 29,
-    "number-lead": 11,
+    "statement": 28,
+    "number-lead": 10,
     "statistic": 6,
-    "wh-question": 2,
-    "did-you-know": 2
+    "wh-question": 3,
+    "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
@@ -15,6 +15,7 @@
     "How Deep Do Humans Have",
     "Did You Notice This In",
     "Did You Know This Fact",
+    "did you know that Toph",
     "Did You Know: Titanic Fun",
     "The SCARIEST Fact About SPACE"
   ],
@@ -23,15 +24,16 @@
     "experiment",
     "physics",
     "trick",
-    "human",
-    "viral",
-    "tricks",
-    "unbelievable",
-    "could",
     "space",
+    "viral",
+    "human",
+    "tricks",
     "amazing",
-    "only",
+    "could",
+    "animal",
+    "unbelievable",
     "never",
+    "only",
     "fastest"
   ],
   "top_hashtags": [
@@ -39,17 +41,17 @@
     "#facts",
     "#science",
     "#viral",
+    "#youtubeshorts",
     "#experiment",
     "#education",
-    "#youtubeshorts",
-    "#knowledge",
-    "#physics",
     "#top",
-    "#fact",
-    "#funny",
     "#viralshorts",
-    "#factsmine",
     "#trending",
+    "#knowledge",
+    "#fact",
+    "#science experiments",
+    "#youtube shorts",
+    "#amazing facts",
     "#didyouknow"
   ],
   "top_topics": [
@@ -57,22 +59,22 @@
     "didn",
     "physics",
     "experiment",
-    "human",
     "tricks",
-    "jong",
-    "unbelievable",
-    "could",
     "save",
     "life",
+    "jong",
+    "human",
+    "could",
+    "amazing",
+    "space",
     "cool",
     "kids",
-    "gravity",
     "gifts",
+    "unbelievable",
     "youtubeshorts",
+    "cloud",
     "funny",
-    "earth",
-    "amazing",
-    "sciencefacts"
+    "earth"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -85,7 +87,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.8,
+  "avg_duration_secs": 42.5,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -93,8 +95,8 @@
     "How Deep Do Humans Have",
     "Did You Notice This In",
     "Did You Know This Fact",
-    "Did You Know: Titanic Fun",
-    "The SCARIEST Fact About SPACE"
+    "did you know that Toph",
+    "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-07-12T16:30:18"
+  "timestamp": "2026-07-13T17:32:16"
 }
