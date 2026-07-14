@@ -1,10 +1,10 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 50,
+  "videos_analyzed": 49,
   "pattern_counts": {
     "statement": 28,
     "number-lead": 10,
-    "statistic": 6,
+    "statistic": 5,
     "wh-question": 3,
     "did-you-know": 3
   },
@@ -16,21 +16,18 @@
     "Did You Notice This In",
     "Did You Know This Fact",
     "did you know that Toph",
-    "Did You Know: Titanic Fun",
-    "The SCARIEST Fact About SPACE"
+    "Did You Know: Titanic Fun"
   ],
   "power_words": [
     "science",
     "experiment",
     "physics",
-    "trick",
-    "space",
     "viral",
+    "trick",
     "human",
-    "tricks",
     "amazing",
+    "tricks",
     "could",
-    "animal",
     "unbelievable",
     "never",
     "only",
@@ -40,41 +37,41 @@
     "#shorts",
     "#facts",
     "#science",
-    "#viral",
-    "#youtubeshorts",
-    "#experiment",
     "#education",
-    "#top",
-    "#viralshorts",
-    "#trending",
-    "#knowledge",
+    "#viral",
+    "#experiment",
+    "#short",
+    "#youtubeshorts",
     "#fact",
+    "#knowledge",
+    "#top",
     "#science experiments",
-    "#youtube shorts",
+    "#physics",
+    "#trending",
     "#amazing facts",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
-    "physics",
     "experiment",
-    "tricks",
+    "physics",
     "save",
     "life",
-    "jong",
     "human",
+    "tricks",
     "could",
     "amazing",
-    "space",
     "cool",
-    "kids",
+    "gravity",
     "gifts",
     "unbelievable",
     "youtubeshorts",
-    "cloud",
-    "funny",
-    "earth"
+    "earth",
+    "sciencefacts",
+    "make",
+    "inside",
+    "crazy"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -87,7 +84,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.5,
+  "avg_duration_secs": 41.1,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -98,5 +95,5 @@
     "did you know that Toph",
     "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-07-13T17:32:16"
+  "timestamp": "2026-07-14T16:48:06"
 }

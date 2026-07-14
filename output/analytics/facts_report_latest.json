@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-13T17:32:16",
+  "timestamp": "2026-07-14T16:48:06",
   "internal": {
     "top5_patterns": [
       {
@@ -29,32 +29,32 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 50,
+    "videos_analyzed": 49,
     "popular_topics": [
       "science",
       "didn",
-      "physics",
       "experiment",
-      "tricks",
+      "physics",
       "save",
       "life",
-      "jong"
+      "human",
+      "tricks"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#viral",
-      "#youtubeshorts",
-      "#experiment",
       "#education",
-      "#top",
-      "#viralshorts",
-      "#trending",
-      "#knowledge",
+      "#viral",
+      "#experiment",
+      "#short",
+      "#youtubeshorts",
       "#fact",
+      "#knowledge",
+      "#top",
       "#science experiments",
-      "#youtube shorts",
+      "#physics",
+      "#trending",
       "#amazing facts",
       "#didyouknow"
     ],
@@ -83,14 +83,12 @@
       "science",
       "experiment",
       "physics",
-      "trick",
-      "space",
       "viral",
+      "trick",
       "human",
-      "tricks",
       "amazing",
+      "tricks",
       "could",
-      "animal",
       "unbelievable",
       "never",
       "only",
@@ -99,7 +97,7 @@
     "pattern_counts": {
       "statement": 28,
       "number-lead": 10,
-      "statistic": 6,
+      "statistic": 5,
       "wh-question": 3,
       "did-you-know": 3
     },
@@ -112,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "russia",
-        "james fishback",
-        "earthquake",
-        "francia vs españa",
-        "earthquake now",
-        "earthquake los angeles",
-        "crm stock",
-        "donald trump irs lawsuit",
-        "new york knicks",
-        "jaume munar"
+        "paula badosa",
+        "v",
+        "e jean carroll",
+        "usaid",
+        "nhl 27",
+        "suni lee",
+        "the mandalorian and grogu digital release",
+        "whoopi goldberg",
+        "ashley hinson",
+        "gervonta davis"
       ]
     },
     "youtube_trending": {
@@ -140,8 +138,8 @@
         "Strongest Glass in The World",
         "Candy Facts That Will BLOW Your Mind 🤔",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
-        "How Many Hours Do You Sleep 😱",
-        "Fun Facts That Are Not Funny"
+        "3 Facts You Didn&#39;t Want To Know 😬",
+        "How Many Hours Do You Sleep 😱"
       ]
     },
     "pytrends": {
@@ -169,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 93,
+    "total_tests": 94,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
