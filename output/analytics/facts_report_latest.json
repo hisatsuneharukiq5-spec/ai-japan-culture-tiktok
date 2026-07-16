@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-15T16:53:13",
+  "timestamp": "2026-07-16T16:50:56",
   "internal": {
     "top5_patterns": [
       {
@@ -33,12 +33,12 @@
     "popular_topics": [
       "science",
       "didn",
-      "sciencefacts",
+      "experiment",
       "physics",
       "tricks",
-      "save",
-      "life",
-      "jong"
+      "unbelievable",
+      "human",
+      "could"
     ],
     "hashtags": [
       "#shorts",
@@ -46,16 +46,16 @@
       "#science",
       "#viral",
       "#education",
-      "#sciencefacts",
       "#youtubeshorts",
-      "#knowledge",
+      "#experiment",
       "#trending",
+      "#science experiments",
+      "#knowledge",
       "#top",
       "#fact",
-      "#factsmine",
-      "#amazing facts",
-      "#amazing",
-      "#viralshorts",
+      "#physics",
+      "#short",
+      "#youtube shorts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -63,10 +63,10 @@
       "What Is The Real Shape",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "How gullible are you",
       "Did You Notice This In",
       "Did You Know This Fact",
-      "did you know that Toph"
+      "did you know that Toph",
+      "Did You Know: Titanic Fun"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -76,30 +76,30 @@
       "What happens to your body when {scenario}? #Shorts",
       "Why {topic} is more {adjective} than you think #Shorts",
       "{number} {topic} facts that will blow your mind #Shorts",
-      "{topic} is SO cool #Shorts"
+      "{topic} is SO cool #Shorts",
+      "{topic}'s the fastest way to empty a bottle #Shorts"
     ],
     "power_words": [
       "science",
+      "experiment",
       "physics",
-      "sciencefacts",
+      "trick",
       "viral",
       "human",
       "tricks",
-      "experiment",
       "amazing",
-      "magic",
+      "unbelievable",
       "could",
       "space",
       "never",
       "only",
-      "unbelievable"
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 27,
-      "science-discovery": 1,
-      "number-lead": 9,
-      "statistic": 6,
-      "wh-question": 4,
+      "statement": 28,
+      "number-lead": 11,
+      "statistic": 5,
+      "wh-question": 3,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -111,22 +111,21 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "nolan wells story",
-        "sparks vs lynx",
-        "the odyssey rotten tomatoes",
-        "france at the fifa world cup",
-        "jay clayton",
-        "ddhq house and senate forecast",
-        "bzzr",
-        "michael weatherly",
-        "octavia spencer",
-        "weather tornado warning"
+        "gary trent jr",
+        "chase burns",
+        "israel",
+        "henrik stenson",
+        "copa mundial de fútbol",
+        "nhl 27",
+        "mitch mcconnell prolonged senate absence",
+        "nbis stock",
+        "new jersey home meteorite fragments",
+        "spacex"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "Steel Coil 😨",
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
@@ -137,10 +136,11 @@
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "Candy Facts That Will BLOW Your Mind 🤔",
-        "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "3 Facts You Didn&#39;t Want To Know 😬",
         "How Many Hours Do You Sleep 😱",
-        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts"
+        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
+        "Fun Facts That Are Not Funny",
+        "🧠Brain Tumor को कैसे निकाला जाता है? 😯 #shorts #viralshorts #trending #shortvideo #youtubeshorts"
       ]
     },
     "pytrends": {
@@ -168,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 95,
+    "total_tests": 96,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
