@@ -2,18 +2,20 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 31,
-    "number-lead": 10,
+    "statement": 29,
+    "number-lead": 11,
     "statistic": 4,
     "wh-question": 3,
-    "did-you-know": 2
+    "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
     "How Deep Do Humans Have",
+    "Did You Notice This In",
     "Did You Know This Fact",
+    "did you know that Toph",
     "Did You Know: Titanic Fun",
     "The SCARIEST Fact About SPACE"
   ],
@@ -21,17 +23,16 @@
     "science",
     "experiment",
     "physics",
+    "trick",
     "human",
     "space",
     "viral",
-    "trick",
+    "tricks",
     "amazing",
     "unbelievable",
-    "tricks",
     "could",
-    "animal",
-    "never",
     "only",
+    "never",
     "fastest"
   ],
   "top_hashtags": [
@@ -45,24 +46,24 @@
     "#knowledge",
     "#top",
     "#fact",
-    "#science experiments",
     "#physics",
     "#short",
     "#trending",
-    "#sciencefacts",
+    "#science experiments",
+    "#amazing facts",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
-    "save",
-    "life",
     "experiment",
     "physics",
     "human",
-    "unbelievable",
     "tricks",
+    "unbelievable",
     "could",
+    "save",
+    "life",
     "amazing",
     "space",
     "cool",
@@ -72,7 +73,7 @@
     "earth",
     "sciencefacts",
     "make",
-    "crazy"
+    "want"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -85,15 +86,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.4,
+  "avg_duration_secs": 41.9,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
     "How Deep Do Humans Have",
+    "Did You Notice This In",
     "Did You Know This Fact",
-    "Did You Know: Titanic Fun",
-    "The SCARIEST Fact About SPACE"
+    "did you know that Toph",
+    "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-07-18T16:29:20"
+  "timestamp": "2026-07-19T16:28:45"
 }
