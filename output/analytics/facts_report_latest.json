@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-19T16:28:46",
+  "timestamp": "2026-07-20T16:58:34",
   "internal": {
     "top5_patterns": [
       {
@@ -36,26 +36,26 @@
       "experiment",
       "physics",
       "human",
-      "tricks",
       "unbelievable",
+      "tricks",
       "could"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#education",
       "#viral",
       "#experiment",
-      "#youtubeshorts",
+      "#education",
       "#knowledge",
-      "#top",
+      "#youtubeshorts",
       "#fact",
+      "#sciencefacts",
+      "#ytshorts",
+      "#trending",
+      "#top",
       "#physics",
       "#short",
-      "#trending",
-      "#science experiments",
-      "#amazing facts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -83,13 +83,13 @@
       "science",
       "experiment",
       "physics",
-      "trick",
       "human",
       "space",
       "viral",
-      "tricks",
+      "trick",
       "amazing",
       "unbelievable",
+      "tricks",
       "could",
       "only",
       "never",
@@ -111,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "sparks vs wings",
-        "remco evenepoel",
-        "lu dort",
-        "ryan nembhard",
-        "dodgers - yankees",
-        "zlatan ibrahimovic",
-        "espncricinfo",
-        "zlatan",
-        "july 18 powerball results",
-        "pistons kevin durant trade rumors"
+        "jon ossoff",
+        "military air base",
+        "artificial sweeteners cognitive decline",
+        "le'veon bell",
+        "new jersey meteorite organic molecules",
+        "elizabeth ii",
+        "pep guardiola",
+        "ignacio buse",
+        "jersey mike's ipo",
+        "incendiary device"
       ]
     },
     "youtube_trending": {
@@ -135,12 +135,12 @@
         "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "प्राचीन इतिहास की पांच सबसे दर्दनाक सजाएं | #shorts #trending #facts #amazingfacts",
         "Candy Facts That Will BLOW Your Mind 🤔",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "3 Facts You Didn&#39;t Want To Know 😬",
         "How Many Hours Do You Sleep 😱",
-        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts"
+        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
+        "Fun Facts That Are Not Funny"
       ]
     },
     "pytrends": {
@@ -168,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 99,
+    "total_tests": 100,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
