@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-20T16:58:34",
+  "timestamp": "2026-07-21T16:57:22",
   "internal": {
     "top5_patterns": [
       {
@@ -34,28 +34,28 @@
       "science",
       "didn",
       "experiment",
-      "physics",
-      "human",
-      "unbelievable",
       "tricks",
-      "could"
+      "physics",
+      "unbelievable",
+      "could",
+      "save"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#viral",
       "#experiment",
       "#education",
-      "#knowledge",
       "#youtubeshorts",
-      "#fact",
-      "#sciencefacts",
-      "#ytshorts",
-      "#trending",
-      "#top",
-      "#physics",
+      "#viral",
       "#short",
+      "#knowledge",
+      "#top",
+      "#fact",
+      "#science experiments",
+      "#viralshorts",
+      "#trending",
+      "#youtube shorts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -83,13 +83,13 @@
       "science",
       "experiment",
       "physics",
-      "human",
+      "trick",
       "space",
       "viral",
-      "trick",
+      "tricks",
+      "human",
       "amazing",
       "unbelievable",
-      "tricks",
       "could",
       "only",
       "never",
@@ -97,8 +97,8 @@
     ],
     "pattern_counts": {
       "statement": 29,
-      "number-lead": 11,
-      "statistic": 4,
+      "number-lead": 10,
+      "statistic": 5,
       "wh-question": 3,
       "did-you-know": 3
     },
@@ -111,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "jon ossoff",
-        "military air base",
-        "artificial sweeteners cognitive decline",
-        "le'veon bell",
-        "new jersey meteorite organic molecules",
-        "elizabeth ii",
-        "pep guardiola",
-        "ignacio buse",
-        "jersey mike's ipo",
-        "incendiary device"
+        "florian lipowitz",
+        "mv barima",
+        "raphael collignon",
+        "bart scott",
+        "jordyn brooks",
+        "cam newton",
+        "sunshine protection act",
+        "malcolm jamal warner",
+        "anthony taylor",
+        "charlie woods"
       ]
     },
     "youtube_trending": {
@@ -130,17 +130,17 @@
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
+        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
+        "प्राचीन इतिहास की पांच सबसे दर्दनाक सजाएं | #shorts #trending #facts #amazingfacts",
         "Candy Facts That Will BLOW Your Mind 🤔",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "3 Facts You Didn&#39;t Want To Know 😬",
-        "How Many Hours Do You Sleep 😱",
-        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
-        "Fun Facts That Are Not Funny"
+        "How Many Hours Do You Sleep 😱"
       ]
     },
     "pytrends": {
@@ -168,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 100,
+    "total_tests": 101,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
