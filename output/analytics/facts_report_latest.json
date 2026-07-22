@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-21T16:57:22",
+  "timestamp": "2026-07-22T16:57:43",
   "internal": {
     "top5_patterns": [
       {
@@ -33,29 +33,29 @@
     "popular_topics": [
       "science",
       "didn",
-      "experiment",
-      "tricks",
+      "sciencefacts",
       "physics",
-      "unbelievable",
-      "could",
-      "save"
+      "viral",
+      "amazing",
+      "human",
+      "tricks"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#experiment",
       "#education",
-      "#youtubeshorts",
       "#viral",
-      "#short",
-      "#knowledge",
+      "#sciencefacts",
       "#top",
       "#fact",
-      "#science experiments",
-      "#viralshorts",
+      "#youtubeshorts",
+      "#knowledge",
       "#trending",
+      "#factsmine",
+      "#short",
       "#youtube shorts",
+      "#amazing facts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -63,10 +63,10 @@
       "What Is The Real Shape",
       "This can help make Artificial",
       "How Deep Do Humans Have",
+      "How gullible are you",
       "Did You Notice This In",
       "Did You Know This Fact",
-      "did you know that Toph",
-      "Did You Know: Titanic Fun"
+      "did you know that Toph"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -76,30 +76,29 @@
       "What happens to your body when {scenario}? #Shorts",
       "Why {topic} is more {adjective} than you think #Shorts",
       "{number} {topic} facts that will blow your mind #Shorts",
-      "{topic} is SO cool #Shorts",
-      "{topic}'s the fastest way to empty a bottle #Shorts"
+      "{topic} is SO cool #Shorts"
     ],
     "power_words": [
       "science",
-      "experiment",
       "physics",
-      "trick",
+      "sciencefacts",
       "space",
       "viral",
-      "tricks",
       "human",
+      "experiment",
       "amazing",
-      "unbelievable",
+      "tricks",
       "could",
-      "only",
+      "unbelievable",
       "never",
-      "fastest"
+      "only"
     ],
     "pattern_counts": {
-      "statement": 29,
+      "statement": 27,
+      "science-discovery": 1,
       "number-lead": 10,
       "statistic": 5,
-      "wh-question": 3,
+      "wh-question": 4,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -111,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "florian lipowitz",
-        "mv barima",
-        "raphael collignon",
-        "bart scott",
-        "jordyn brooks",
-        "cam newton",
-        "sunshine protection act",
-        "malcolm jamal warner",
-        "anthony taylor",
-        "charlie woods"
+        "amazon prime subscription lawsuit payout",
+        "mali",
+        "pirates vs yankees",
+        "napoli vs arezzo",
+        "nic and olandria",
+        "instagram messages",
+        "spacex ipo stock performance",
+        "cory mills",
+        "star wars jedi new sequel",
+        "topps"
       ]
     },
     "youtube_trending": {
@@ -168,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 101,
+    "total_tests": 102,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
