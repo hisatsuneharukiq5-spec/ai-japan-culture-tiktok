@@ -1,8 +1,8 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 50,
+  "videos_analyzed": 49,
   "pattern_counts": {
-    "statement": 27,
+    "statement": 26,
     "science-discovery": 1,
     "number-lead": 10,
     "statistic": 5,
@@ -18,14 +18,12 @@
     "Did You Notice This In",
     "Did You Know This Fact",
     "did you know that Toph",
-    "Did You Know: Titanic Fun",
-    "The SCARIEST Fact About SPACE"
+    "Did You Know: Titanic Fun"
   ],
   "power_words": [
     "science",
     "physics",
     "sciencefacts",
-    "space",
     "viral",
     "human",
     "experiment",
@@ -66,7 +64,6 @@
     "could",
     "save",
     "life",
-    "space",
     "cool",
     "gifts",
     "ocean",
@@ -74,7 +71,8 @@
     "make",
     "inside",
     "crazy",
-    "experiments"
+    "experiments",
+    "history"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -86,7 +84,7 @@
     "{number} {topic} facts that will blow your mind #Shorts",
     "{topic} is SO cool #Shorts"
   ],
-  "avg_duration_secs": 44.4,
+  "avg_duration_secs": 44.3,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -97,5 +95,5 @@
     "Did You Know This Fact",
     "did you know that Toph"
   ],
-  "timestamp": "2026-07-22T16:57:42"
+  "timestamp": "2026-07-23T17:00:44"
 }
