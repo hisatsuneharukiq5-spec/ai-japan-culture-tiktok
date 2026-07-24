@@ -1,38 +1,39 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 49,
+  "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 26,
+    "statement": 31,
     "science-discovery": 1,
     "number-lead": 10,
-    "statistic": 5,
-    "wh-question": 4,
-    "did-you-know": 3
+    "wh-question": 3,
+    "statistic": 3,
+    "did-you-know": 2
   },
   "top_hooks": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
     "How Deep Do Humans Have",
-    "How gullible are you",
-    "Did You Notice This In",
     "Did You Know This Fact",
-    "did you know that Toph",
-    "Did You Know: Titanic Fun"
+    "Did You Know: Titanic Fun",
+    "The SCARIEST Fact About SPACE"
   ],
   "power_words": [
     "science",
-    "physics",
-    "sciencefacts",
-    "viral",
-    "human",
     "experiment",
-    "amazing",
+    "physics",
+    "trick",
+    "human",
+    "space",
+    "viral",
     "tricks",
-    "could",
+    "amazing",
     "unbelievable",
+    "could",
+    "animal",
     "never",
-    "only"
+    "only",
+    "fastest"
   ],
   "top_hashtags": [
     "#shorts",
@@ -40,39 +41,39 @@
     "#science",
     "#education",
     "#viral",
-    "#sciencefacts",
+    "#youtubeshorts",
     "#top",
     "#fact",
-    "#youtubeshorts",
     "#knowledge",
     "#trending",
+    "#experiment",
     "#factsmine",
     "#short",
-    "#youtube shorts",
-    "#amazing facts",
+    "#science experiments",
+    "#new",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
-    "sciencefacts",
-    "physics",
-    "viral",
-    "amazing",
-    "human",
-    "tricks",
-    "could",
     "save",
     "life",
+    "experiment",
+    "physics",
+    "human",
+    "tricks",
+    "unbelievable",
+    "could",
+    "amazing",
+    "space",
     "cool",
     "gifts",
-    "ocean",
+    "youtubeshorts",
     "earth",
+    "sciencefacts",
     "make",
-    "inside",
     "crazy",
-    "experiments",
-    "history"
+    "experiments"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -82,18 +83,18 @@
     "What happens to your body when {scenario}? #Shorts",
     "Why {topic} is more {adjective} than you think #Shorts",
     "{number} {topic} facts that will blow your mind #Shorts",
-    "{topic} is SO cool #Shorts"
+    "{topic} is SO cool #Shorts",
+    "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 44.3,
+  "avg_duration_secs": 42.7,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
     "How Deep Do Humans Have",
-    "How gullible are you",
-    "Did You Notice This In",
     "Did You Know This Fact",
-    "did you know that Toph"
+    "Did You Know: Titanic Fun",
+    "The SCARIEST Fact About SPACE"
   ],
-  "timestamp": "2026-07-23T17:00:44"
+  "timestamp": "2026-07-24T17:07:33"
 }

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-23T17:00:45",
+  "timestamp": "2026-07-24T17:07:33",
   "internal": {
     "top5_patterns": [
       {
@@ -29,14 +29,14 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 49,
+    "videos_analyzed": 50,
     "popular_topics": [
       "science",
       "didn",
-      "sciencefacts",
+      "save",
+      "life",
+      "experiment",
       "physics",
-      "viral",
-      "amazing",
       "human",
       "tricks"
     ],
@@ -46,16 +46,16 @@
       "#science",
       "#education",
       "#viral",
-      "#sciencefacts",
+      "#youtubeshorts",
       "#top",
       "#fact",
-      "#youtubeshorts",
       "#knowledge",
       "#trending",
+      "#experiment",
       "#factsmine",
       "#short",
-      "#youtube shorts",
-      "#amazing facts",
+      "#science experiments",
+      "#new",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -63,10 +63,9 @@
       "What Is The Real Shape",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "How gullible are you",
-      "Did You Notice This In",
       "Did You Know This Fact",
-      "did you know that Toph"
+      "Did You Know: Titanic Fun",
+      "The SCARIEST Fact About SPACE"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -76,29 +75,33 @@
       "What happens to your body when {scenario}? #Shorts",
       "Why {topic} is more {adjective} than you think #Shorts",
       "{number} {topic} facts that will blow your mind #Shorts",
-      "{topic} is SO cool #Shorts"
+      "{topic} is SO cool #Shorts",
+      "{topic}'s the fastest way to empty a bottle #Shorts"
     ],
     "power_words": [
       "science",
-      "physics",
-      "sciencefacts",
-      "viral",
-      "human",
       "experiment",
-      "amazing",
+      "physics",
+      "trick",
+      "human",
+      "space",
+      "viral",
       "tricks",
-      "could",
+      "amazing",
       "unbelievable",
+      "could",
+      "animal",
       "never",
-      "only"
+      "only",
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 26,
+      "statement": 31,
       "science-discovery": 1,
       "number-lead": 10,
-      "statistic": 5,
-      "wh-question": 4,
-      "did-you-know": 3
+      "wh-question": 3,
+      "statistic": 3,
+      "did-you-know": 2
     },
     "optimal_length_seconds": [
       55,
@@ -109,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "ransom",
-        "william, prince of wales",
-        "jon bernthal",
-        "middlesbrough",
-        "padres - braves",
-        "trump iran",
-        "nic scourton",
-        "karoline leavitt",
-        "richard carapaz",
-        "microsoft outage"
+        "terence crawford",
+        "dwight howard",
+        "alexander blockx",
+        "permanent daylight saving state impacts",
+        "tyson fury",
+        "jalen brunson",
+        "mitchell robinson",
+        "lakers roster",
+        "caleb love",
+        "jared mccain"
       ]
     },
     "youtube_trending": {
@@ -126,19 +129,19 @@
       "topics": [
         "Steel Coil 😨",
         "China&#39;s Futuristic School 😱",
+        "Bicycle with Headlight #shorts #devkeexperiment",
         "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
-        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "प्राचीन इतिहास की पांच सबसे दर्दनाक सजाएं | #shorts #trending #facts #amazingfacts",
         "Candy Facts That Will BLOW Your Mind 🤔",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "3 Facts You Didn&#39;t Want To Know 😬",
-        "How Many Hours Do You Sleep 😱"
+        "How Many Hours Do You Sleep 😱",
+        "Fun Facts That Are Not Funny"
       ]
     },
     "pytrends": {
@@ -166,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 103,
+    "total_tests": 104,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
