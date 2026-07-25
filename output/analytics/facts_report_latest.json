@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-24T17:07:33",
+  "timestamp": "2026-07-25T16:27:51",
   "internal": {
     "top5_patterns": [
       {
@@ -33,10 +33,10 @@
     "popular_topics": [
       "science",
       "didn",
-      "save",
-      "life",
       "experiment",
       "physics",
+      "amazing",
+      "unbelievable",
       "human",
       "tricks"
     ],
@@ -45,17 +45,17 @@
       "#facts",
       "#science",
       "#education",
-      "#viral",
       "#youtubeshorts",
+      "#viral",
+      "#experiment",
       "#top",
       "#fact",
-      "#knowledge",
-      "#trending",
-      "#experiment",
-      "#factsmine",
       "#short",
+      "#trending",
+      "#knowledge",
       "#science experiments",
-      "#new",
+      "#youtube shorts",
+      "#amazing facts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -63,9 +63,10 @@
       "What Is The Real Shape",
       "This can help make Artificial",
       "How Deep Do Humans Have",
+      "Did You Notice This In",
       "Did You Know This Fact",
-      "Did You Know: Titanic Fun",
-      "The SCARIEST Fact About SPACE"
+      "did you know that Toph",
+      "Did You Know: Titanic Fun"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -82,13 +83,13 @@
       "science",
       "experiment",
       "physics",
+      "space",
+      "amazing",
+      "viral",
       "trick",
       "human",
-      "space",
-      "viral",
-      "tricks",
-      "amazing",
       "unbelievable",
+      "tricks",
       "could",
       "animal",
       "never",
@@ -96,12 +97,11 @@
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 31,
-      "science-discovery": 1,
+      "statement": 29,
       "number-lead": 10,
+      "statistic": 5,
       "wh-question": 3,
-      "statistic": 3,
-      "did-you-know": 2
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -112,36 +112,36 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "terence crawford",
-        "dwight howard",
-        "alexander blockx",
-        "permanent daylight saving state impacts",
-        "tyson fury",
-        "jalen brunson",
-        "mitchell robinson",
-        "lakers roster",
-        "caleb love",
-        "jared mccain"
+        "zach lavine",
+        "kyle shanahan",
+        "deandre hopkins",
+        "apple ios 27",
+        "nyt connections hints",
+        "vernon taylor",
+        "on patrol: live",
+        "chatgpt outage",
+        "hungarian grand prix",
+        "troy jackson"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "Steel Coil 😨",
-        "China&#39;s Futuristic School 😱",
-        "Bicycle with Headlight #shorts #devkeexperiment",
         "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
-        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "This Video Can Save Your Life 😱",
-        "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "Candy Facts That Will BLOW Your Mind 🤔",
-        "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
-        "3 Facts You Didn&#39;t Want To Know 😬",
-        "How Many Hours Do You Sleep 😱",
-        "Fun Facts That Are Not Funny"
+        "Fun Facts That Are Not Funny",
+        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
+        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
+        "WARNING : This is Highly Relatable 😱 #shorts",
+        "Watch This Before Eating Fish 😱 #shorts #facts #amazingfacts",
+        "How Movie Sounds Are ACTUALLY Made 😱 #shorts",
+        "Biggest Discoveries By Genius Kids",
+        "What If You Dig a Straight Tunnel Through the Earth? 😨",
+        "Crazy Facts About Queen Cleopatra 🇪🇬 #history #shorts #cleopatra",
+        "ये आविष्कार दुनिया बदल देंगे😱 | Inventions that will change the World #shorts #factsmine",
+        "Top 3 Amazing Nature Facts 🤣🤣😮 @MRINDIANHACKER  @CrazyXYZ  || #shorts || #FactBeast"
       ]
     },
     "pytrends": {
@@ -169,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 104,
+    "total_tests": 105,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
