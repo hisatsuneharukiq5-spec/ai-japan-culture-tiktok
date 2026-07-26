@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-25T16:27:51",
+  "timestamp": "2026-07-26T16:32:02",
   "internal": {
     "top5_patterns": [
       {
@@ -35,26 +35,26 @@
       "didn",
       "experiment",
       "physics",
-      "amazing",
-      "unbelievable",
       "human",
-      "tricks"
+      "tricks",
+      "unbelievable",
+      "could"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#education",
-      "#youtubeshorts",
       "#viral",
-      "#experiment",
       "#top",
       "#fact",
-      "#short",
-      "#trending",
+      "#youtubeshorts",
       "#knowledge",
+      "#trending",
+      "#experiment",
+      "#factsmine",
+      "#short",
       "#science experiments",
-      "#youtube shorts",
       "#amazing facts",
       "#didyouknow"
     ],
@@ -83,23 +83,24 @@
       "science",
       "experiment",
       "physics",
-      "space",
-      "amazing",
-      "viral",
       "trick",
       "human",
-      "unbelievable",
+      "space",
+      "viral",
       "tricks",
+      "amazing",
+      "unbelievable",
       "could",
       "animal",
-      "never",
       "only",
+      "never",
       "fastest"
     ],
     "pattern_counts": {
       "statement": 29,
+      "science-discovery": 1,
       "number-lead": 10,
-      "statistic": 5,
+      "statistic": 4,
       "wh-question": 3,
       "did-you-know": 3
     },
@@ -112,36 +113,36 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "zach lavine",
-        "kyle shanahan",
-        "deandre hopkins",
-        "apple ios 27",
-        "nyt connections hints",
-        "vernon taylor",
-        "on patrol: live",
-        "chatgpt outage",
-        "hungarian grand prix",
-        "troy jackson"
+        "guardians - rays",
+        "meghan guest judge masterchef",
+        "doe clean-energy grant lawsuit",
+        "sheinelle jones",
+        "heather tom",
+        "james harden darius garland cavaliers trade",
+        "nfl schedule",
+        "f1 driver standings",
+        "max verstappen",
+        "driver of the day f1"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
+        "Steel Coil 😨",
+        "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
+        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
+        "This Video Can Save Your Life 😱",
+        "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "Fun Facts That Are Not Funny",
-        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
-        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
-        "WARNING : This is Highly Relatable 😱 #shorts",
-        "Watch This Before Eating Fish 😱 #shorts #facts #amazingfacts",
-        "How Movie Sounds Are ACTUALLY Made 😱 #shorts",
-        "Biggest Discoveries By Genius Kids",
-        "What If You Dig a Straight Tunnel Through the Earth? 😨",
-        "Crazy Facts About Queen Cleopatra 🇪🇬 #history #shorts #cleopatra",
-        "ये आविष्कार दुनिया बदल देंगे😱 | Inventions that will change the World #shorts #factsmine",
-        "Top 3 Amazing Nature Facts 🤣🤣😮 @MRINDIANHACKER  @CrazyXYZ  || #shorts || #FactBeast"
+        "Candy Facts That Will BLOW Your Mind 🤔",
+        "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
+        "3 Facts You Didn&#39;t Want To Know 😬",
+        "How Many Hours Do You Sleep 😱",
+        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
+        "Fun Facts That Are Not Funny"
       ]
     },
     "pytrends": {
@@ -169,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 105,
+    "total_tests": 106,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
