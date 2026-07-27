@@ -1240,19 +1240,36 @@
     "title_a": "Did you know that glass is actually a liquid? #Shorts (3 Facts)",
     "title_b": "Only 7% of people know this about human cells #Shorts",
     "compare_after_hours": 48,
-    "status": "pending"
+    "status": "learned",
+    "winner": "title_a",
+    "loser": "title_b",
+    "views_a": 0,
+    "views_b": 0,
+    "reason": "Compared 48h view counts from facts upload registry"
   },
   {
     "created_at": "2026-07-25T16:27:52",
     "title_a": "Did you know that butterflies taste with their feet? #Shorts (3 Facts)",
     "title_b": "Only 5% of people know this about Non-Newtonian Fluids #Shorts",
     "compare_after_hours": 48,
-    "status": "pending"
+    "status": "learned",
+    "winner": "title_a",
+    "loser": "title_b",
+    "views_a": 0,
+    "views_b": 0,
+    "reason": "Compared 48h view counts from facts upload registry"
   },
   {
     "created_at": "2026-07-26T16:32:03",
     "title_a": "Did you know that glass is actually a liquid? #Shorts (3 Facts)",
     "title_b": "Only 0.00001% of people know this about Pistol Shrimp #Shorts",
+    "compare_after_hours": 48,
+    "status": "pending"
+  },
+  {
+    "created_at": "2026-07-27T17:20:43",
+    "title_a": "Did you know that tardigrades survive by nearly dying? #Shorts (3 Facts)",
+    "title_b": "The real reason didn't have dinosaurs will shock you #Shorts (3 Facts)",
     "compare_after_hours": 48,
     "status": "pending"
   }
