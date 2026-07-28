@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-27T17:20:42",
+  "timestamp": "2026-07-28T17:00:50",
   "internal": {
     "top5_patterns": [
       {
@@ -34,28 +34,28 @@
       "science",
       "didn",
       "experiment",
-      "save",
-      "life",
       "physics",
+      "unbelievable",
       "human",
-      "tricks"
+      "could",
+      "save"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#youtubeshorts",
       "#education",
-      "#fact",
-      "#top",
-      "#experiment",
       "#viral",
-      "#short",
-      "#viralshorts",
-      "#amazing",
+      "#fact",
+      "#knowledge",
+      "#top",
       "#factsmine",
       "#trending",
-      "#knowledge",
+      "#experiment",
+      "#youtubeshorts",
+      "#amazing facts",
+      "#amazing",
+      "#science experiments",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -63,9 +63,10 @@
       "What Is The Real Shape",
       "This can help make Artificial",
       "How Deep Do Humans Have",
+      "Did You Notice This In",
       "Did You Know This Fact",
-      "Did You Know: Titanic Fun",
-      "The SCARIEST Fact About SPACE"
+      "did you know that Toph",
+      "Did You Know: Titanic Fun"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -82,24 +83,25 @@
       "science",
       "experiment",
       "physics",
-      "human",
       "space",
-      "amazing",
       "viral",
-      "black",
-      "tricks",
+      "trick",
+      "human",
+      "amazing",
+      "unbelievable",
       "could",
+      "tricks",
       "never",
       "only",
-      "fastest",
-      "unbelievable"
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 30,
-      "number-lead": 11,
+      "statement": 29,
+      "science-discovery": 1,
+      "number-lead": 10,
       "wh-question": 3,
       "statistic": 4,
-      "did-you-know": 2
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -110,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "kelly ripa",
-        "national weather service",
-        "zoe saldaña",
-        "fauci diary",
-        "2027",
-        "weather forecast",
-        "us-iran",
-        "severe thunderstorm warning",
-        "terence crawford",
-        "scottie scheffler pga tour performance"
+        "shaquille o'neal comments lebron james",
+        "bacon recall",
+        "madison beer",
+        "broncos schedule",
+        "lost coast outpost",
+        "real madrid",
+        "ticketmaster",
+        "netflix movies",
+        "u.s. airport ground stops",
+        "taco bell mexican pizza"
       ]
     },
     "youtube_trending": {
@@ -137,9 +139,9 @@
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "3 Facts You Didn&#39;t Want To Know 😬",
         "How Many Hours Do You Sleep 😱",
+        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "Fun Facts That Are Not Funny",
-        "How a slinky falls in slow motion #shorts",
-        "INSANE CRAZY FACTS YOU DIDN&#39;T KNOW!"
+        "How a slinky falls in slow motion #shorts"
       ]
     },
     "pytrends": {
@@ -167,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 107,
+    "total_tests": 108,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
