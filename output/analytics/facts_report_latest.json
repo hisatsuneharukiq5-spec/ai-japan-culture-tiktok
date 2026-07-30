@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-29T16:51:56",
+  "timestamp": "2026-07-30T17:03:43",
   "internal": {
     "top5_patterns": [
       {
@@ -35,27 +35,27 @@
       "didn",
       "experiment",
       "physics",
+      "tricks",
+      "unbelievable",
       "human",
-      "amazing",
-      "save",
-      "life"
+      "could"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#fact",
-      "#youtubeshorts",
-      "#top",
       "#education",
+      "#youtubeshorts",
       "#viral",
+      "#fact",
       "#experiment",
-      "#amazing",
-      "#factsmine",
       "#knowledge",
+      "#top",
       "#amazing facts",
-      "#sciencefacts",
       "#short",
+      "#factsmine",
+      "#trending",
+      "#science experiments",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -63,10 +63,10 @@
       "What Is The Real Shape",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "How gullible are you",
+      "Did You Notice This In",
       "Did You Know This Fact",
-      "Did You Know: Titanic Fun",
-      "The SCARIEST Fact About SPACE"
+      "did you know that Toph",
+      "Did You Know: Titanic Fun"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -83,25 +83,25 @@
       "science",
       "experiment",
       "physics",
-      "human",
-      "amazing",
-      "viral",
       "trick",
-      "black",
-      "sciencefacts",
-      "tricks",
-      "factsmine",
-      "could",
       "space",
+      "viral",
+      "human",
+      "tricks",
+      "amazing",
+      "unbelievable",
+      "could",
       "animal",
-      "unbelievable"
+      "never",
+      "only",
+      "fastest"
     ],
     "pattern_counts": {
       "statement": 30,
-      "number-lead": 11,
+      "number-lead": 10,
       "wh-question": 3,
       "statistic": 4,
-      "did-you-know": 2
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -112,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "house",
-        "flood warning",
-        "idaho murders documentary",
-        "cat stock",
-        "fire weather watch",
-        "nbis",
-        "liudmila samsonova",
-        "full moon july 2026 buck moon astrology",
-        "samsung galaxy s25 ultra",
-        "outer banks season 5"
+        "amc theater",
+        "fbi",
+        "alexander skarsgård",
+        "kristina liutova",
+        "amc",
+        "todd blanche",
+        "regal movie theater",
+        "maya joint",
+        "republican party",
+        "pan am 103"
       ]
     },
     "youtube_trending": {
@@ -169,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 109,
+    "total_tests": 110,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
