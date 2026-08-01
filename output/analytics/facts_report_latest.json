@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-31T17:06:38",
+  "timestamp": "2026-08-01T16:30:28",
   "internal": {
     "top5_patterns": [
       {
@@ -38,35 +38,34 @@
       "amazing",
       "human",
       "tricks",
-      "could"
+      "sciencefacts"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#viral",
-      "#fact",
-      "#experiment",
       "#education",
       "#youtubeshorts",
+      "#experiment",
+      "#viral",
+      "#fact",
+      "#amazing facts",
+      "#sciencefacts",
+      "#short",
       "#knowledge",
       "#top",
-      "#amazing facts",
-      "#short",
+      "#ytshorts",
       "#factsmine",
-      "#trending",
-      "#sciencefacts",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
-      "How Deep Do Humans Have",
-      "How gullible are you",
-      "Did You Notice This In",
       "Did You Know This Fact",
-      "did you know that Toph"
+      "did you know that Toph",
+      "Did You Know: Titanic Fun",
+      "The SCARIEST Fact About SPACE"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -83,23 +82,24 @@
       "science",
       "experiment",
       "physics",
-      "space",
       "amazing",
       "viral",
       "human",
       "tricks",
+      "sciencefacts",
       "could",
+      "space",
       "animal",
-      "never",
       "only",
-      "fastest",
-      "unbelievable"
+      "unbelievable",
+      "never",
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 29,
+      "statement": 32,
       "number-lead": 10,
-      "wh-question": 4,
-      "statistic": 4,
+      "wh-question": 2,
+      "statistic": 3,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -111,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "brittney griner",
-        "tom pelphrey",
-        "trump rx",
-        "keegan bradley",
-        "juventus",
-        "red flag (fire weather) warning",
-        "trump quinnipiac poll numbers",
-        "garth brooks denver 2026",
-        "trump accounts",
-        "samara weaving"
+        "iran us news",
+        "aces vs sky",
+        "dazn",
+        "real madrid tv",
+        "xbox game pass august 2026 games",
+        "streamer games",
+        "sha carri richardson",
+        "aig women's open leaderboard",
+        "belgrade arena",
+        "warren buffett"
       ]
     },
     "youtube_trending": {
@@ -139,8 +139,8 @@
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "3 Facts You Didn&#39;t Want To Know 😬",
         "How Many Hours Do You Sleep 😱",
-        "Fun Facts That Are Not Funny",
-        "Journey of a Sperm to baby #facts #science #shorts"
+        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
+        "Fun Facts That Are Not Funny"
       ]
     },
     "pytrends": {
@@ -168,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 111,
+    "total_tests": 112,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
