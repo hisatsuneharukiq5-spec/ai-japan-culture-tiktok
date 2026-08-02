@@ -3,8 +3,9 @@
   "videos_analyzed": 50,
   "pattern_counts": {
     "statement": 32,
+    "science-discovery": 1,
     "number-lead": 10,
-    "wh-question": 2,
+    "wh-question": 1,
     "statistic": 3,
     "did-you-know": 3
   },
@@ -21,35 +22,35 @@
     "science",
     "experiment",
     "physics",
-    "amazing",
     "viral",
     "human",
     "tricks",
+    "amazing",
     "sciencefacts",
     "could",
+    "ytshorts",
     "space",
     "animal",
     "only",
     "unbelievable",
-    "never",
-    "fastest"
+    "never"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
     "#science",
+    "#viral",
     "#education",
     "#youtubeshorts",
-    "#experiment",
-    "#viral",
-    "#fact",
-    "#amazing facts",
-    "#sciencefacts",
-    "#short",
     "#knowledge",
+    "#fact",
+    "#experiment",
+    "#sciencefacts",
+    "#trending",
     "#top",
     "#ytshorts",
-    "#factsmine",
+    "#new",
+    "#amazing",
     "#didyouknow"
   ],
   "top_topics": [
@@ -57,22 +58,22 @@
     "didn",
     "experiment",
     "physics",
-    "amazing",
     "human",
     "tricks",
-    "sciencefacts",
-    "could",
     "save",
     "life",
+    "sciencefacts",
+    "could",
+    "amazing",
+    "ytshorts",
     "cool",
     "gifts",
     "ocean",
-    "ashusir",
-    "ytshorts",
     "make",
     "crazy",
     "experiments",
-    "history"
+    "history",
+    "need"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -85,7 +86,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.6,
+  "avg_duration_secs": 42.4,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -95,5 +96,5 @@
     "Did You Know: Titanic Fun",
     "The SCARIEST Fact About SPACE"
   ],
-  "timestamp": "2026-08-01T16:30:27"
+  "timestamp": "2026-08-02T16:30:48"
 }
