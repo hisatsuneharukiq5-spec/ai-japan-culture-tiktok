@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-04T17:15:47",
+  "timestamp": "2026-08-05T17:05:03",
   "internal": {
     "top5_patterns": [
       {
@@ -111,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "the hood marvel",
-        "grasshopper fire",
-        "little league softball world series",
-        "robert f. kennedy jr.",
-        "georgina rodríguez",
-        "iga świątek",
-        "2027 social security payment increase",
-        "violent night 2",
-        "james bond",
-        "hubert hurkacz"
+        "goog stock",
+        "googl",
+        "gastelum",
+        "napoli vs osasuna",
+        "howard stern",
+        "klystron 9",
+        "zizou bergs",
+        "jeff dean",
+        "roblox stock",
+        "tom segura"
       ]
     },
     "youtube_trending": {
@@ -130,17 +130,17 @@
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
-        "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
+        "World’s smallest computer #unknownfacts #tech #shorts",
+        "3 Facts You Didn&#39;t Want To Know 😬",
         "How Many Hours Do You Sleep 😱",
-        "Fun Facts That Are Not Funny",
-        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
-        "लोगों के कुछ comedy कारनामे 😝🤣😅 | Funny Facts | Amazing Facts #shorts #youtubeshorts #funny"
+        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
+        "Fun Facts That Are Not Funny"
       ]
     },
     "pytrends": {
@@ -168,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 115,
+    "total_tests": 116,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
