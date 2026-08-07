@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-05T17:05:03",
+  "timestamp": "2026-08-07T16:26:56",
   "internal": {
     "top5_patterns": [
       {
@@ -33,29 +33,29 @@
     "popular_topics": [
       "science",
       "didn",
+      "experiment",
+      "physics",
+      "human",
       "save",
       "life",
-      "amazing",
-      "tricks",
-      "physics",
-      "sciencefacts"
+      "tricks"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#viral",
-      "#youtubeshorts",
       "#education",
-      "#knowledge",
+      "#viral",
       "#experiment",
-      "#trending",
-      "#fact",
+      "#youtubeshorts",
+      "#knowledge",
       "#top",
-      "#short",
-      "#science experiments",
+      "#fact",
+      "#trending",
       "#sciencefacts",
-      "#ytshorts",
+      "#science experiments",
+      "#factsmine",
+      "#short",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -77,27 +77,28 @@
       "Why {topic} is more {adjective} than you think #Shorts",
       "{number} {topic} facts that will blow your mind #Shorts",
       "{topic} is SO cool #Shorts",
-      "{topic} that can save your life! #{number} #Shorts",
       "{topic}'s the fastest way to empty a bottle #Shorts"
     ],
     "power_words": [
       "science",
-      "physics",
       "experiment",
+      "physics",
       "trick",
-      "amazing",
-      "tricks",
       "human",
+      "space",
+      "viral",
+      "tricks",
+      "amazing",
       "unbelievable",
       "sciencefacts",
-      "youtubeshorts",
       "could",
       "only",
       "fastest"
     ],
     "pattern_counts": {
       "statement": 31,
-      "number-lead": 9,
+      "science-discovery": 1,
+      "number-lead": 8,
       "wh-question": 3,
       "statistic": 4,
       "did-you-know": 3
@@ -111,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "goog stock",
-        "googl",
-        "gastelum",
-        "napoli vs osasuna",
-        "howard stern",
-        "klystron 9",
-        "zizou bergs",
-        "jeff dean",
-        "roblox stock",
-        "tom segura"
+        "elon musk",
+        "mountain dew baja leo release",
+        "2027 dodge charger super bee",
+        "trump iran news",
+        "mina chan",
+        "tour de france femmes",
+        "trump ballroom construction injunction",
+        "marcus williamson",
+        "rochester air show",
+        "iva jovic"
       ]
     },
     "youtube_trending": {
@@ -168,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 116,
+    "total_tests": 117,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
