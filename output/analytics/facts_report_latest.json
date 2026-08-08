@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-07T16:26:56",
+  "timestamp": "2026-08-08T15:57:59",
   "internal": {
     "top5_patterns": [
       {
@@ -46,8 +46,8 @@
       "#science",
       "#education",
       "#viral",
-      "#experiment",
       "#youtubeshorts",
+      "#experiment",
       "#knowledge",
       "#top",
       "#fact",
@@ -63,10 +63,10 @@
       "What Is The Real Shape",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "Did You Notice This In",
       "Did You Know This Fact",
       "did you know that Toph",
-      "Did You Know: Titanic Fun"
+      "Did You Know: Titanic Fun",
+      "The SCARIEST Fact About SPACE"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -112,22 +112,23 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "elon musk",
-        "mountain dew baja leo release",
-        "2027 dodge charger super bee",
-        "trump iran news",
-        "mina chan",
-        "tour de france femmes",
-        "trump ballroom construction injunction",
-        "marcus williamson",
-        "rochester air show",
-        "iva jovic"
+        "man u",
+        "police officer",
+        "elon musk rocket moon crash",
+        "luther burden",
+        "marshall manning",
+        "vfb stuttgart vs everton",
+        "hartsfield-jackson delta flight emergency",
+        "mutv",
+        "elon musk largest building",
+        "2027 dodge charger super bee"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
         "Steel Coil 😨",
+        "Aeroplane के बारे में 5 Amazing Facts     #shorts",
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
@@ -140,8 +141,7 @@
         "World’s smallest computer #unknownfacts #tech #shorts",
         "3 Facts You Didn&#39;t Want To Know 😬",
         "How Many Hours Do You Sleep 😱",
-        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
-        "Fun Facts That Are Not Funny"
+        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts"
       ]
     },
     "pytrends": {
@@ -169,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 117,
+    "total_tests": 118,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

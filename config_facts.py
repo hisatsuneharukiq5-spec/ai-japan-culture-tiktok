@@ -75,10 +75,10 @@ LEARNED_HOOK_PHRASES = [
   "What Is The Real Shape",
   "This can help make Artificial",
   "How Deep Do Humans Have",
-  "Did You Notice This In",
   "Did You Know This Fact",
   "did you know that Toph",
-  "Did You Know: Titanic Fun"
+  "Did You Know: Titanic Fun",
+  "The SCARIEST Fact About SPACE"
 ]
 LEARNED_HASHTAGS = [
   "#shorts",
@@ -86,8 +86,8 @@ LEARNED_HASHTAGS = [
   "#science",
   "#education",
   "#viral",
-  "#experiment",
   "#youtubeshorts",
+  "#experiment",
   "#knowledge",
   "#top",
   "#fact",
