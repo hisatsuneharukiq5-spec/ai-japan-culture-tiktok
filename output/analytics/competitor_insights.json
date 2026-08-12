@@ -16,8 +16,8 @@
     "How Deep Do Humans Have",
     "Did You Know This Fact",
     "did you know that Toph",
-    "Did You Know: Titanic Fun",
-    "The SCARIEST Fact About SPACE"
+    "The SCARIEST Fact About SPACE",
+    "Did You Know: Titanic Fun"
   ],
   "power_words": [
     "science",
@@ -27,7 +27,6 @@
     "human",
     "space",
     "viral",
-    "sciencefacts",
     "tricks",
     "amazing",
     "unbelievable",
@@ -42,38 +41,38 @@
     "#viral",
     "#education",
     "#knowledge",
-    "#experiment",
-    "#sciencefacts",
-    "#youtubeshorts",
     "#trending",
+    "#experiment",
+    "#youtubeshorts",
+    "#top",
+    "#fact",
     "#science experiments",
-    "#youtube shorts",
     "#factsmine",
     "#new",
-    "#latest",
+    "#amazing",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
+    "experiment",
     "physics",
-    "sciencefacts",
     "human",
     "save",
     "life",
     "tricks",
-    "experiment",
     "unbelievable",
     "could",
     "amazing",
     "space",
     "cool",
     "gifts",
-    "ocean",
     "youtubeshorts",
     "earth",
+    "sciencefacts",
     "crazy",
-    "inside"
+    "inside",
+    "experiments"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -86,7 +85,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.2,
+  "avg_duration_secs": 42.5,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -94,8 +93,8 @@
     "How Deep Do Humans Have",
     "Did You Know This Fact",
     "did you know that Toph",
-    "Did You Know: Titanic Fun",
-    "The SCARIEST Fact About SPACE"
+    "The SCARIEST Fact About SPACE",
+    "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-08-11T16:25:42"
+  "timestamp": "2026-08-12T16:27:52"
 }

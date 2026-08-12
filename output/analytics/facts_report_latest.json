@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-11T16:25:42",
+  "timestamp": "2026-08-12T16:27:52",
   "internal": {
     "top5_patterns": [
       {
@@ -33,8 +33,8 @@
     "popular_topics": [
       "science",
       "didn",
+      "experiment",
       "physics",
-      "sciencefacts",
       "human",
       "save",
       "life",
@@ -47,15 +47,15 @@
       "#viral",
       "#education",
       "#knowledge",
-      "#experiment",
-      "#sciencefacts",
-      "#youtubeshorts",
       "#trending",
+      "#experiment",
+      "#youtubeshorts",
+      "#top",
+      "#fact",
       "#science experiments",
-      "#youtube shorts",
       "#factsmine",
       "#new",
-      "#latest",
+      "#amazing",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -65,8 +65,8 @@
       "How Deep Do Humans Have",
       "Did You Know This Fact",
       "did you know that Toph",
-      "Did You Know: Titanic Fun",
-      "The SCARIEST Fact About SPACE"
+      "The SCARIEST Fact About SPACE",
+      "Did You Know: Titanic Fun"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -87,7 +87,6 @@
       "human",
       "space",
       "viral",
-      "sciencefacts",
       "tricks",
       "amazing",
       "unbelievable",
@@ -112,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "judge judy",
-        "executive privilege",
-        "robert gilman",
-        "weather near me",
-        "kroger",
-        "dijonai carrington sophie cunningham",
-        "nws",
-        "project 2025",
-        "tornado chicago",
-        "tornado warning"
+        "basketball",
+        "hopkins daycare center",
+        "emeka egbuka",
+        "insta360 x6",
+        "grok 4.6",
+        "disease outbreak",
+        "tommy devito",
+        "spider-man",
+        "gears of war: e-day",
+        "everton vs newcastle"
       ]
     },
     "youtube_trending": {
@@ -135,13 +134,13 @@
         "This Video Can Save Your Life 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
-        "How To Survive Drowning 😱",
         "Strongest Glass in The World",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "3 Facts You Didn&#39;t Want To Know 😬",
         "How Many Hours Do You Sleep 😱",
         "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
-        "Science के 2 Magical Tricks #shorts #factmind"
+        "Science के 2 Magical Tricks #shorts #factmind",
+        "Fun Facts That Are Not Funny"
       ]
     },
     "pytrends": {
@@ -169,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 121,
+    "total_tests": 122,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

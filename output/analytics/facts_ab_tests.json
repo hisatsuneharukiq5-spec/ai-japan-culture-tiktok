@@ -1432,12 +1432,24 @@
     "title_a": "Did you know that glass is actually a liquid? #Shorts (3 Facts)",
     "title_b": "Only 0.01% of people know this about octopus brains #Shorts",
     "compare_after_hours": 48,
-    "status": "pending"
+    "status": "learned",
+    "winner": "title_a",
+    "loser": "title_b",
+    "views_a": 0,
+    "views_b": 0,
+    "reason": "Compared 48h view counts from facts upload registry"
   },
   {
     "created_at": "2026-08-11T16:25:43",
     "title_a": "Did you know that tardigrades survive by nearly dying? #Shorts (3 Facts)",
     "title_b": "Only 5% of people know this about Non-Newtonian Fluids #Shorts",
+    "compare_after_hours": 48,
+    "status": "pending"
+  },
+  {
+    "created_at": "2026-08-12T16:27:53",
+    "title_a": "Did you know that tardigrades survive by nearly dying? #Shorts (3 Facts)",
+    "title_b": "Only 0.00001% of people know this about Pistol Shrimp #Shorts",
     "compare_after_hours": 48,
     "status": "pending"
   }
