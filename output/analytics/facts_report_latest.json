@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-13T16:26:27",
+  "timestamp": "2026-08-14T16:26:02",
   "internal": {
     "top5_patterns": [
       {
@@ -33,29 +33,29 @@
     "popular_topics": [
       "science",
       "didn",
-      "experiment",
-      "sciencefacts",
+      "physics",
+      "human",
       "save",
       "life",
       "tricks",
-      "physics"
+      "experiment"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#education",
       "#viral",
+      "#knowledge",
+      "#education",
+      "#trending",
       "#experiment",
       "#youtubeshorts",
-      "#knowledge",
+      "#factsmine",
       "#top",
-      "#trending",
       "#fact",
       "#sciencefacts",
-      "#science experiments",
-      "#factsmine",
       "#youtube shorts",
+      "#new",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -83,20 +83,21 @@
       "experiment",
       "physics",
       "trick",
-      "viral",
-      "sciencefacts",
-      "tricks",
       "human",
+      "viral",
+      "tricks",
       "amazing",
       "unbelievable",
+      "sciencefacts",
+      "animals",
       "could",
       "only",
       "fastest"
     ],
     "pattern_counts": {
       "statement": 30,
-      "science-discovery": 1,
-      "number-lead": 9,
+      "science-discovery": 2,
+      "number-lead": 8,
       "wh-question": 3,
       "statistic": 4,
       "did-you-know": 3
@@ -110,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "vanessa heated rivalry",
-        "temblor hoy",
-        "oreo",
-        "chuba hubbard",
-        "sndk",
-        "troy jackson",
-        "jack draper",
-        "dylan walsh cameo trouble",
-        "preseason football schedule",
-        "earthquake"
+        "elisabetta cocciaretto",
+        "deportation",
+        "mica miller",
+        "ken paxton texas senate campaign",
+        "gold found in belgium",
+        "stefanos tsitsipas",
+        "isaac teslaa",
+        "community shield",
+        "games",
+        "dee snider ozzy osbourne"
       ]
     },
     "youtube_trending": {
@@ -128,18 +129,18 @@
         "Steel Coil 😨",
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
+        "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
-        "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
+        "प्राचीन इतिहास की पांच सबसे दर्दनाक सजाएं | #shorts #trending #facts #amazingfacts",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "Science के 2 Magical Tricks #shorts #factmind",
-        "Fun Facts That Are Not Funny",
-        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts"
+        "Fun Facts That Are Not Funny"
       ]
     },
     "pytrends": {
@@ -167,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 123,
+    "total_tests": 124,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
