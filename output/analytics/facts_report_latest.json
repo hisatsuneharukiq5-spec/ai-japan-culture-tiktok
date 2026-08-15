@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-14T16:26:02",
+  "timestamp": "2026-08-15T15:48:30",
   "internal": {
     "top5_patterns": [
       {
@@ -111,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "elisabetta cocciaretto",
-        "deportation",
-        "mica miller",
-        "ken paxton texas senate campaign",
-        "gold found in belgium",
-        "stefanos tsitsipas",
-        "isaac teslaa",
-        "community shield",
-        "games",
-        "dee snider ozzy osbourne"
+        "maja chwalińska",
+        "matteo arnaldi",
+        "true detective",
+        "dallas mavericks cooper flagg card",
+        "devon witherspoon",
+        "amanda anisimova",
+        "remi bader",
+        "lakers ownership change",
+        "elena-gabriela ruse",
+        "man u"
       ]
     },
     "youtube_trending": {
@@ -168,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 124,
+    "total_tests": 125,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
