@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-15T15:48:30",
+  "timestamp": "2026-08-16T15:49:27",
   "internal": {
     "top5_patterns": [
       {
@@ -33,12 +33,12 @@
     "popular_topics": [
       "science",
       "didn",
+      "experiment",
       "physics",
       "human",
       "save",
       "life",
-      "tricks",
-      "experiment"
+      "unbelievable"
     ],
     "hashtags": [
       "#shorts",
@@ -46,15 +46,15 @@
       "#science",
       "#viral",
       "#knowledge",
+      "#youtubeshorts",
       "#education",
       "#trending",
       "#experiment",
-      "#youtubeshorts",
+      "#fact",
+      "#youtube shorts",
       "#factsmine",
       "#top",
-      "#fact",
       "#sciencefacts",
-      "#youtube shorts",
       "#new",
       "#didyouknow"
     ],
@@ -82,22 +82,22 @@
       "science",
       "experiment",
       "physics",
-      "trick",
       "human",
       "viral",
-      "tricks",
-      "amazing",
+      "trick",
       "unbelievable",
-      "sciencefacts",
+      "youtubeshorts",
       "animals",
       "could",
+      "tricks",
+      "amazing",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 30,
-      "science-discovery": 2,
+      "statement": 31,
       "number-lead": 8,
+      "science-discovery": 1,
       "wh-question": 3,
       "statistic": 4,
       "did-you-know": 3
@@ -111,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "maja chwalińska",
-        "matteo arnaldi",
-        "true detective",
-        "dallas mavericks cooper flagg card",
-        "devon witherspoon",
-        "amanda anisimova",
-        "remi bader",
-        "lakers ownership change",
-        "elena-gabriela ruse",
-        "man u"
+        "ronaldo",
+        "mirra andreeva",
+        "marco trungelliti",
+        "highest grossing movies of all time",
+        "fever vs dream prediction",
+        "avocado",
+        "ugo humbert",
+        "donnarumma",
+        "liga española",
+        "ageing"
       ]
     },
     "youtube_trending": {
@@ -129,18 +129,18 @@
         "Steel Coil 😨",
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
-        "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "प्राचीन इतिहास की पांच सबसे दर्दनाक सजाएं | #shorts #trending #facts #amazingfacts",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "Science के 2 Magical Tricks #shorts #factmind",
-        "Fun Facts That Are Not Funny"
+        "Fun Facts That Are Not Funny",
+        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
+        "INSANE CRAZY FACTS YOU DIDN&#39;T KNOW!"
       ]
     },
     "pytrends": {
@@ -168,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 125,
+    "total_tests": 126,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
