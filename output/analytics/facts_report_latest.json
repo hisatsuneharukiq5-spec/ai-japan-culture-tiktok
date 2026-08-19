@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-18T15:59:23",
+  "timestamp": "2026-08-19T15:59:26",
   "internal": {
     "top5_patterns": [
       {
@@ -37,25 +37,25 @@
       "save",
       "life",
       "human",
-      "amazing",
-      "could"
+      "tricks",
+      "amazing"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
+      "#youtubeshorts",
       "#viral",
-      "#knowledge",
+      "#experiment",
       "#education",
       "#sciencefacts",
-      "#fact",
-      "#youtubeshorts",
-      "#trending",
-      "#experiment",
-      "#factsmine",
-      "#top",
+      "#knowledge",
+      "#physics",
+      "#short",
       "#ytshorts",
-      "#youtube shorts",
+      "#fact",
+      "#top",
+      "#trending",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -64,7 +64,6 @@
       "This can help make Artificial",
       "How Deep Do Humans Have",
       "Did You Know This Fact",
-      "The SCARIEST Fact About SPACE",
       "Did You Know: Titanic Fun"
     ],
     "title_templates": [
@@ -83,22 +82,20 @@
       "experiment",
       "physics",
       "viral",
-      "human",
-      "animal",
-      "amazing",
       "trick",
+      "human",
+      "amazing",
       "black",
+      "tricks",
       "could",
       "sciencefacts",
-      "animals",
-      "tricks",
-      "space",
-      "unbelievable"
+      "unbelievable",
+      "only",
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 31,
+      "statement": 32,
       "number-lead": 9,
-      "science-discovery": 1,
       "wh-question": 3,
       "statistic": 4,
       "did-you-know": 2
@@ -112,16 +109,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "epic",
-        "nuno borges",
-        "imax",
-        "madison keys",
-        "servicio de control de inmigración y aduanas",
-        "attorney general",
-        "kyle busch",
-        "lion",
-        "andrey rublev",
-        "trey mancini"
+        "nneka ogwumike",
+        "bitcoin price",
+        "ethereum",
+        "bitcoin news",
+        "bitcoin",
+        "epstein files",
+        "nestor cortes",
+        "us open",
+        "charles iii",
+        "mortgage rates"
       ]
     },
     "youtube_trending": {
@@ -169,7 +166,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 128,
+    "total_tests": 129,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

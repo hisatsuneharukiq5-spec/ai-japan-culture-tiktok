@@ -2,9 +2,8 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 31,
+    "statement": 32,
     "number-lead": 9,
-    "science-discovery": 1,
     "wh-question": 3,
     "statistic": 4,
     "did-you-know": 2
@@ -15,7 +14,6 @@
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "Did You Know This Fact",
-    "The SCARIEST Fact About SPACE",
     "Did You Know: Titanic Fun"
   ],
   "power_words": [
@@ -23,34 +21,33 @@
     "experiment",
     "physics",
     "viral",
-    "human",
-    "animal",
-    "amazing",
     "trick",
+    "human",
+    "amazing",
     "black",
+    "tricks",
     "could",
     "sciencefacts",
-    "animals",
-    "tricks",
-    "space",
-    "unbelievable"
+    "unbelievable",
+    "only",
+    "fastest"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
     "#science",
+    "#youtubeshorts",
     "#viral",
-    "#knowledge",
+    "#experiment",
     "#education",
     "#sciencefacts",
-    "#fact",
-    "#youtubeshorts",
-    "#trending",
-    "#experiment",
-    "#factsmine",
-    "#top",
+    "#knowledge",
+    "#physics",
+    "#short",
     "#ytshorts",
-    "#youtube shorts",
+    "#fact",
+    "#top",
+    "#trending",
     "#didyouknow"
   ],
   "top_topics": [
@@ -60,20 +57,20 @@
     "save",
     "life",
     "human",
+    "tricks",
     "amazing",
     "could",
     "experiment",
     "viral",
     "sciencefacts",
-    "animals",
     "black",
-    "tricks",
     "cool",
+    "gravity",
     "gifts",
     "ocean",
     "unbelievable",
     "youtubeshorts",
-    "factsmine"
+    "earth"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -86,15 +83,14 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.7,
+  "avg_duration_secs": 42.0,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "Did You Know This Fact",
-    "The SCARIEST Fact About SPACE",
     "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-08-18T15:59:23"
+  "timestamp": "2026-08-19T15:59:25"
 }
