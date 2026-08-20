@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-19T15:59:26",
+  "timestamp": "2026-08-20T16:00:51",
   "internal": {
     "top5_patterns": [
       {
@@ -32,38 +32,40 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
-      "didn",
       "physics",
+      "didn",
+      "human",
       "save",
       "life",
-      "human",
-      "tricks",
-      "amazing"
+      "experiment",
+      "viral"
     ],
     "hashtags": [
       "#shorts",
-      "#facts",
       "#science",
+      "#facts",
+      "#education",
+      "#experiment",
+      "#sciencefacts",
       "#youtubeshorts",
       "#viral",
-      "#experiment",
-      "#education",
-      "#sciencefacts",
-      "#knowledge",
       "#physics",
       "#short",
       "#ytshorts",
-      "#fact",
-      "#top",
-      "#trending",
+      "#knowledge",
+      "#youtube shorts",
+      "#animation",
+      "#viralshorts",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
-      "How Deep Do Humans Have",
+      "How gullible are you",
       "Did You Know This Fact",
+      "did you know that Toph",
+      "The SCARIEST Fact About SPACE",
       "Did You Know: Titanic Fun"
     ],
     "title_templates": [
@@ -84,21 +86,21 @@
       "viral",
       "trick",
       "human",
-      "amazing",
-      "black",
+      "unbelievable",
+      "sciencefacts",
       "tricks",
       "could",
-      "sciencefacts",
-      "unbelievable",
+      "space",
+      "amazing",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 32,
+      "statement": 31,
       "number-lead": 9,
       "wh-question": 3,
       "statistic": 4,
-      "did-you-know": 2
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -109,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "nneka ogwumike",
-        "bitcoin price",
-        "ethereum",
-        "bitcoin news",
-        "bitcoin",
-        "epstein files",
-        "nestor cortes",
-        "us open",
-        "charles iii",
-        "mortgage rates"
+        "cbs news",
+        "scott bessent",
+        "o. j. brigance",
+        "g unit sneakers",
+        "charley hull",
+        "karen bass",
+        "justin thomas",
+        "japan",
+        "eric swalwell",
+        "liberia"
       ]
     },
     "youtube_trending": {
@@ -127,7 +129,6 @@
         "Steel Coil 😨",
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
-        "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
@@ -137,8 +138,9 @@
         "How Many Hours Do You Sleep 😱",
         "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "Science के 2 Magical Tricks #shorts #factmind",
+        "Things Baby Animals won’t tell you 🐾🤫 (Part 2)",
         "Fun Facts That Are Not Funny",
-        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts"
+        "What Is The Real Shape Of Earth"
       ]
     },
     "pytrends": {
@@ -166,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 129,
+    "total_tests": 130,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
