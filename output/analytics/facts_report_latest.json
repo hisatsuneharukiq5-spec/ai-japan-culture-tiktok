@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-20T16:00:51",
+  "timestamp": "2026-08-21T16:00:44",
   "internal": {
     "top5_patterns": [
       {
@@ -32,37 +32,37 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
-      "physics",
       "didn",
-      "human",
       "save",
       "life",
-      "experiment",
-      "viral"
+      "experiments",
+      "physics",
+      "unbelievable",
+      "youtubeshorts"
     ],
     "hashtags": [
       "#shorts",
-      "#science",
       "#facts",
-      "#education",
-      "#experiment",
-      "#sciencefacts",
-      "#youtubeshorts",
+      "#science",
       "#viral",
-      "#physics",
-      "#short",
-      "#ytshorts",
       "#knowledge",
-      "#youtube shorts",
-      "#animation",
-      "#viralshorts",
+      "#youtubeshorts",
+      "#education",
+      "#trending",
+      "#factsmine",
+      "#science experiments",
+      "#amazing facts",
+      "#new",
+      "#experiment",
+      "#short",
+      "#fact",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
-      "How gullible are you",
+      "How Deep Do Humans Have",
       "Did You Know This Fact",
       "did you know that Toph",
       "The SCARIEST Fact About SPACE",
@@ -77,28 +77,30 @@
       "Why {topic} is more {adjective} than you think #Shorts",
       "{number} {topic} facts that will blow your mind #Shorts",
       "{topic} is SO cool #Shorts",
+      "{topic} that can save your life! #{number} #Shorts",
       "{topic}'s the fastest way to empty a bottle #Shorts"
     ],
     "power_words": [
       "science",
       "experiment",
       "physics",
-      "viral",
-      "trick",
-      "human",
-      "unbelievable",
-      "sciencefacts",
-      "tricks",
-      "could",
       "space",
+      "human",
+      "experiments",
       "amazing",
+      "unbelievable",
+      "trick",
+      "youtubeshorts",
+      "earth",
+      "could",
+      "invention",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 31,
-      "number-lead": 9,
-      "wh-question": 3,
+      "statement": 32,
+      "number-lead": 7,
+      "wh-question": 4,
       "statistic": 4,
       "did-you-know": 3
     },
@@ -111,16 +113,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "cbs news",
-        "scott bessent",
-        "o. j. brigance",
-        "g unit sneakers",
-        "charley hull",
-        "karen bass",
-        "justin thomas",
-        "japan",
-        "eric swalwell",
-        "liberia"
+        "nfl top 100",
+        "ncaa",
+        "al-riyadh vs al-nassr",
+        "al riyadh - al-nassr",
+        "bonnaroo",
+        "navigator of the seas canceled trips",
+        "walmart tap to pay",
+        "carlos alcaraz",
+        "prince harry privacy case payment",
+        "marc stad"
       ]
     },
     "youtube_trending": {
@@ -129,18 +131,18 @@
         "Steel Coil 😨",
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
+        "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
+        "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "Science के 2 Magical Tricks #shorts #factmind",
-        "Things Baby Animals won’t tell you 🐾🤫 (Part 2)",
-        "Fun Facts That Are Not Funny",
-        "What Is The Real Shape Of Earth"
+        "Things Baby Animals won’t tell you 🐾🤫 (Part 2)"
       ]
     },
     "pytrends": {
@@ -168,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 130,
+    "total_tests": 131,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
