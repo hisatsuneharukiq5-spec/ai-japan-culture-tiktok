@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-21T16:00:44",
+  "timestamp": "2026-08-22T15:49:08",
   "internal": {
     "top5_patterns": [
       {
@@ -32,37 +32,37 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
+      "physics",
+      "tricks",
       "didn",
       "save",
       "life",
-      "experiments",
-      "physics",
-      "unbelievable",
-      "youtubeshorts"
+      "experiment",
+      "viral"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#viral",
-      "#knowledge",
-      "#youtubeshorts",
       "#education",
+      "#sciencefacts",
+      "#youtubeshorts",
+      "#knowledge",
       "#trending",
-      "#factsmine",
-      "#science experiments",
-      "#amazing facts",
       "#new",
       "#experiment",
-      "#short",
-      "#fact",
+      "#science experiments",
+      "#factsmine",
+      "#top",
+      "#animation",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
-      "How Deep Do Humans Have",
+      "How gullible are you",
       "Did You Know This Fact",
       "did you know that Toph",
       "The SCARIEST Fact About SPACE",
@@ -77,31 +77,30 @@
       "Why {topic} is more {adjective} than you think #Shorts",
       "{number} {topic} facts that will blow your mind #Shorts",
       "{topic} is SO cool #Shorts",
-      "{topic} that can save your life! #{number} #Shorts",
       "{topic}'s the fastest way to empty a bottle #Shorts"
     ],
     "power_words": [
       "science",
-      "experiment",
       "physics",
-      "space",
-      "human",
-      "experiments",
+      "experiment",
+      "viral",
+      "trick",
+      "tricks",
       "amazing",
       "unbelievable",
-      "trick",
-      "youtubeshorts",
-      "earth",
+      "sciencefacts",
+      "human",
       "could",
-      "invention",
+      "space",
       "only",
       "fastest"
     ],
     "pattern_counts": {
       "statement": 32,
-      "number-lead": 7,
-      "wh-question": 4,
-      "statistic": 4,
+      "science-discovery": 1,
+      "number-lead": 8,
+      "wh-question": 3,
+      "statistic": 3,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -113,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "nfl top 100",
-        "ncaa",
-        "al-riyadh vs al-nassr",
-        "al riyadh - al-nassr",
-        "bonnaroo",
-        "navigator of the seas canceled trips",
-        "walmart tap to pay",
-        "carlos alcaraz",
-        "prince harry privacy case payment",
-        "marc stad"
+        "giancarlo stanton",
+        "inter milan",
+        "coronavirus",
+        "song",
+        "dewsbury hall",
+        "cfb",
+        "danielle fishel",
+        "nilson angulo",
+        "economic times",
+        "warren buffett stock market warning"
       ]
     },
     "youtube_trending": {
@@ -170,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 131,
+    "total_tests": 132,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
