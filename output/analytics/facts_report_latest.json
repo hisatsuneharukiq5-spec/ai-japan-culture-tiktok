@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-22T15:49:08",
+  "timestamp": "2026-08-23T15:50:00",
   "internal": {
     "top5_patterns": [
       {
@@ -29,16 +29,16 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 50,
+    "videos_analyzed": 49,
     "popular_topics": [
       "science",
-      "physics",
-      "tricks",
       "didn",
       "save",
       "life",
-      "experiment",
-      "viral"
+      "physics",
+      "human",
+      "tricks",
+      "could"
     ],
     "hashtags": [
       "#shorts",
@@ -46,26 +46,23 @@
       "#science",
       "#viral",
       "#education",
-      "#sciencefacts",
       "#youtubeshorts",
       "#knowledge",
-      "#trending",
-      "#new",
       "#experiment",
-      "#science experiments",
+      "#sciencefacts",
+      "#trending",
       "#factsmine",
+      "#new",
       "#top",
-      "#animation",
+      "#amazing",
+      "#fact",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
       "This can help make Artificial",
-      "How gullible are you",
       "Did You Know This Fact",
-      "did you know that Toph",
-      "The SCARIEST Fact About SPACE",
       "Did You Know: Titanic Fun"
     ],
     "title_templates": [
@@ -81,27 +78,27 @@
     ],
     "power_words": [
       "science",
-      "physics",
       "experiment",
+      "physics",
       "viral",
       "trick",
-      "tricks",
-      "amazing",
-      "unbelievable",
-      "sciencefacts",
       "human",
+      "black",
+      "tricks",
       "could",
-      "space",
+      "amazing",
+      "sciencefacts",
+      "unbelievable",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 32,
+      "statement": 31,
       "science-discovery": 1,
-      "number-lead": 8,
-      "wh-question": 3,
-      "statistic": 3,
-      "did-you-know": 3
+      "number-lead": 9,
+      "wh-question": 2,
+      "statistic": 4,
+      "did-you-know": 2
     },
     "optimal_length_seconds": [
       55,
@@ -112,16 +109,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "giancarlo stanton",
-        "inter milan",
-        "coronavirus",
-        "song",
-        "dewsbury hall",
-        "cfb",
-        "danielle fishel",
-        "nilson angulo",
-        "economic times",
-        "warren buffett stock market warning"
+        "eddie howe",
+        "bunny levine gilmore girls actress",
+        "bobby rahal",
+        "william osula",
+        "trabzonspor vs istanbul başakşehir",
+        "julian alvarez",
+        "nicaragua",
+        "feyenoord",
+        "social security 2027 cola forecast",
+        "juventus"
       ]
     },
     "youtube_trending": {
@@ -133,7 +130,6 @@
         "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "This Video Can Save Your Life 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
@@ -141,7 +137,8 @@
         "How Many Hours Do You Sleep 😱",
         "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "Science के 2 Magical Tricks #shorts #factmind",
-        "Things Baby Animals won’t tell you 🐾🤫 (Part 2)"
+        "Things Baby Animals won’t tell you 🐾🤫 (Part 2)",
+        "Fun Facts That Are Not Funny"
       ]
     },
     "pytrends": {
@@ -169,7 +166,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 132,
+    "total_tests": 133,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
