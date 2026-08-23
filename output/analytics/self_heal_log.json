@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-06T12:02:12+00:00",
-    "channel": "facts",
-    "error_category": "unknown",
-    "fixed": false,
-    "action": "unknown_error — logged for human review"
-  },
-  {
     "timestamp": "2026-08-07T00:11:59+00:00",
     "channel": "facts",
     "error_category": "unknown",
@@ -694,6 +687,13 @@
   },
   {
     "timestamp": "2026-08-23T06:30:00+00:00",
+    "channel": "facts",
+    "error_category": "unknown",
+    "fixed": false,
+    "action": "unknown_error — logged for human review"
+  },
+  {
+    "timestamp": "2026-08-23T10:17:36+00:00",
     "channel": "facts",
     "error_category": "unknown",
     "fixed": false,
