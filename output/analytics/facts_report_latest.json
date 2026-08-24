@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-23T15:50:00",
+  "timestamp": "2026-08-24T16:06:10",
   "internal": {
     "top5_patterns": [
       {
@@ -29,33 +29,33 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 49,
+    "videos_analyzed": 50,
     "popular_topics": [
       "science",
       "didn",
-      "save",
-      "life",
       "physics",
       "human",
       "tricks",
-      "could"
+      "save",
+      "life",
+      "experiment"
     ],
     "hashtags": [
       "#shorts",
-      "#facts",
       "#science",
-      "#viral",
-      "#education",
-      "#youtubeshorts",
-      "#knowledge",
+      "#facts",
       "#experiment",
+      "#education",
       "#sciencefacts",
-      "#trending",
-      "#factsmine",
-      "#new",
-      "#top",
-      "#amazing",
-      "#fact",
+      "#youtubeshorts",
+      "#viral",
+      "#science experiments",
+      "#youtube shorts",
+      "#animation",
+      "#ytshorts",
+      "#viralshorts",
+      "#knowledge",
+      "#history",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -63,6 +63,8 @@
       "What Is The Real Shape",
       "This can help make Artificial",
       "Did You Know This Fact",
+      "did you know that Toph",
+      "The SCARIEST Fact About SPACE",
       "Did You Know: Titanic Fun"
     ],
     "title_templates": [
@@ -83,22 +85,22 @@
       "viral",
       "trick",
       "human",
-      "black",
       "tricks",
-      "could",
       "amazing",
-      "sciencefacts",
       "unbelievable",
+      "sciencefacts",
+      "could",
+      "space",
+      "animal",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 31,
-      "science-discovery": 1,
+      "statement": 32,
       "number-lead": 9,
       "wh-question": 2,
       "statistic": 4,
-      "did-you-know": 2
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -109,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "eddie howe",
-        "bunny levine gilmore girls actress",
-        "bobby rahal",
-        "william osula",
-        "trabzonspor vs istanbul başakşehir",
-        "julian alvarez",
-        "nicaragua",
-        "feyenoord",
-        "social security 2027 cola forecast",
-        "juventus"
+        "h1b",
+        "st lucie county tornado warning",
+        "haiden deegan",
+        "alabama state university",
+        "renaissance",
+        "qinwen zheng",
+        "aaron philo",
+        "wwe news",
+        "film",
+        "jed york"
       ]
     },
     "youtube_trending": {
@@ -130,15 +132,15 @@
         "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
+        "This Video Can Save Your Life 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
+        "Science के 2 Magical Tricks #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
-        "Science के 2 Magical Tricks #shorts #factmind",
-        "Things Baby Animals won’t tell you 🐾🤫 (Part 2)",
-        "Fun Facts That Are Not Funny"
+        "Science के 2 Magical Tricks #shorts #factmind"
       ]
     },
     "pytrends": {
@@ -166,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 133,
+    "total_tests": 134,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
