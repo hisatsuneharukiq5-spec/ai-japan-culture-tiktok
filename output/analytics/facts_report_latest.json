@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-24T16:06:10",
+  "timestamp": "2026-08-25T16:10:19",
   "internal": {
     "top5_patterns": [
       {
@@ -91,13 +91,12 @@
       "sciencefacts",
       "could",
       "space",
-      "animal",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 32,
-      "number-lead": 9,
+      "statement": 31,
+      "number-lead": 10,
       "wh-question": 2,
       "statistic": 4,
       "did-you-know": 3
@@ -111,36 +110,36 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "h1b",
-        "st lucie county tornado warning",
-        "haiden deegan",
-        "alabama state university",
+        "tyler warren",
+        "aliens fireteam elite 2",
         "renaissance",
-        "qinwen zheng",
-        "aaron philo",
-        "wwe news",
-        "film",
-        "jed york"
+        "lebron james",
+        "atlantic hurricane season",
+        "chad bianco",
+        "us open mixed doubles",
+        "the fall guy streaming success",
+        "bryan avila",
+        "hwy 24 and piney point"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "Steel Coil 😨",
+        "Aeroplane के बारे में 5 Amazing Facts     #shorts",
         "China&#39;s Futuristic School 😱",
-        "How Much Is Too Much 😱",
-        "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
-        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "This Video Can Save Your Life 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
-        "Science के 2 Magical Tricks #shorts",
-        "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
-        "How Many Hours Do You Sleep 😱",
-        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
-        "Science के 2 Magical Tricks #shorts #factmind"
+        "Things Baby Animals won’t tell you 🐾🤫 (Part 2)",
+        "Fun Facts That Are Not Funny",
+        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
+        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
+        "WARNING : This is Highly Relatable 😱 #shorts",
+        "Facts That Could Save Your Life 😳 #30 #shorts #facts",
+        "Watch This Before Eating Fish 😱 #shorts #facts #amazingfacts",
+        "How Movie Sounds Are ACTUALLY Made 😱 #shorts",
+        "जादू दिखाते समय हुई गलतियां 😱 amazing Facts #shorts​ it&#39;s Dhakad"
       ]
     },
     "pytrends": {
@@ -168,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 134,
+    "total_tests": 135,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

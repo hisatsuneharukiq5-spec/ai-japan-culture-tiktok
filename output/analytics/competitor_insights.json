@@ -2,8 +2,8 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 32,
-    "number-lead": 9,
+    "statement": 31,
+    "number-lead": 10,
     "wh-question": 2,
     "statistic": 4,
     "did-you-know": 3
@@ -30,7 +30,6 @@
     "sciencefacts",
     "could",
     "space",
-    "animal",
     "only",
     "fastest"
   ],
@@ -71,8 +70,8 @@
     "ocean",
     "youtubeshorts",
     "ytshorts",
-    "crazy",
-    "experiments"
+    "want",
+    "crazy"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -85,7 +84,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.4,
+  "avg_duration_secs": 41.2,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -95,5 +94,5 @@
     "The SCARIEST Fact About SPACE",
     "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-08-24T16:06:09"
+  "timestamp": "2026-08-25T16:10:18"
 }
