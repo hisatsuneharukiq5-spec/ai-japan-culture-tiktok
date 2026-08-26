@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-25T16:10:19",
+  "timestamp": "2026-08-26T16:38:21",
   "internal": {
     "top5_patterns": [
       {
@@ -33,39 +33,40 @@
     "popular_topics": [
       "science",
       "didn",
+      "experiment",
+      "experiments",
       "physics",
-      "human",
-      "tricks",
-      "save",
-      "life",
-      "experiment"
+      "unbelievable",
+      "youtubeshorts",
+      "earth"
     ],
     "hashtags": [
       "#shorts",
-      "#science",
       "#facts",
-      "#experiment",
-      "#education",
-      "#sciencefacts",
-      "#youtubeshorts",
+      "#science",
       "#viral",
-      "#science experiments",
-      "#youtube shorts",
-      "#animation",
-      "#ytshorts",
-      "#viralshorts",
       "#knowledge",
-      "#history",
+      "#education",
+      "#trending",
+      "#youtubeshorts",
+      "#science experiments",
+      "#new",
+      "#experiment",
+      "#short",
+      "#viralshorts",
+      "#youtube shorts",
+      "#factsmine",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
+      "Never Do This | Science",
       "This can help make Artificial",
+      "How Deep Do Humans Have",
       "Did You Know This Fact",
       "did you know that Toph",
-      "The SCARIEST Fact About SPACE",
-      "Did You Know: Titanic Fun"
+      "The SCARIEST Fact About SPACE"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -82,22 +83,24 @@
       "science",
       "experiment",
       "physics",
-      "viral",
-      "trick",
+      "space",
       "human",
-      "tricks",
+      "experiments",
       "amazing",
       "unbelievable",
-      "sciencefacts",
+      "trick",
+      "youtubeshorts",
+      "earth",
       "could",
-      "space",
       "only",
+      "never",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 31,
-      "number-lead": 10,
-      "wh-question": 2,
+      "statement": 29,
+      "science-discovery": 1,
+      "number-lead": 9,
+      "wh-question": 4,
       "statistic": 4,
       "did-you-know": 3
     },
@@ -110,36 +113,36 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "tyler warren",
-        "aliens fireteam elite 2",
-        "renaissance",
-        "lebron james",
-        "atlantic hurricane season",
-        "chad bianco",
-        "us open mixed doubles",
-        "the fall guy streaming success",
-        "bryan avila",
-        "hwy 24 and piney point"
+        "steph curry",
+        "harrison ford",
+        "macaulay culkin",
+        "eli stowers",
+        "tom",
+        "2k",
+        "annie",
+        "brandon williams golden state warriors",
+        "tim cook",
+        "south korea jeju island"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "Aeroplane के बारे में 5 Amazing Facts     #shorts",
+        "Bromine is scary",
+        "Steel Coil 😨",
         "China&#39;s Futuristic School 😱",
+        "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
+        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
+        "This Video Can Save Your Life 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
+        "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
+        "Candy Facts That Will BLOW Your Mind 🤔",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
+        "How Many Hours Do You Sleep 😱",
         "Things Baby Animals won’t tell you 🐾🤫 (Part 2)",
-        "Fun Facts That Are Not Funny",
-        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
-        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
-        "WARNING : This is Highly Relatable 😱 #shorts",
-        "Facts That Could Save Your Life 😳 #30 #shorts #facts",
-        "Watch This Before Eating Fish 😱 #shorts #facts #amazingfacts",
-        "How Movie Sounds Are ACTUALLY Made 😱 #shorts",
-        "जादू दिखाते समय हुई गलतियां 😱 amazing Facts #shorts​ it&#39;s Dhakad"
+        "Science के 2 Magical Tricks #shorts #factmind"
       ]
     },
     "pytrends": {
@@ -167,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 135,
+    "total_tests": 136,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
