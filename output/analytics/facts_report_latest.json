@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-26T16:38:21",
+  "timestamp": "2026-08-28T00:32:59",
   "internal": {
     "top5_patterns": [
       {
@@ -32,41 +32,41 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
-      "didn",
-      "experiment",
-      "experiments",
       "physics",
-      "unbelievable",
-      "youtubeshorts",
-      "earth"
+      "didn",
+      "human",
+      "tricks",
+      "viral",
+      "amazing",
+      "sciencefacts"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#viral",
-      "#knowledge",
       "#education",
-      "#trending",
+      "#sciencefacts",
       "#youtubeshorts",
-      "#science experiments",
-      "#new",
-      "#experiment",
-      "#short",
+      "#viral",
       "#viralshorts",
       "#youtube shorts",
-      "#factsmine",
+      "#knowledge",
+      "#trending",
+      "#experiment",
+      "#history",
+      "#memes",
+      "#science experiments",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
-      "Never Do This | Science",
+      "The Last Country Norway",
       "This can help make Artificial",
       "How Deep Do Humans Have",
+      "How gullible are you",
       "Did You Know This Fact",
-      "did you know that Toph",
-      "The SCARIEST Fact About SPACE"
+      "did you know that Toph"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -81,25 +81,23 @@
     ],
     "power_words": [
       "science",
-      "experiment",
       "physics",
-      "space",
+      "experiment",
       "human",
-      "experiments",
+      "viral",
+      "tricks",
       "amazing",
-      "unbelievable",
-      "trick",
-      "youtubeshorts",
-      "earth",
+      "sciencefacts",
+      "magic",
       "could",
       "only",
-      "never",
+      "unbelievable",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 29,
+      "statement": 28,
       "science-discovery": 1,
-      "number-lead": 9,
+      "number-lead": 10,
       "wh-question": 4,
       "statistic": 4,
       "did-you-know": 3
@@ -113,34 +111,34 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "steph curry",
+        "goldie hawn",
+        "pitt state football",
+        "mica miller case",
+        "und football",
+        "nfl season start",
         "harrison ford",
-        "macaulay culkin",
-        "eli stowers",
-        "tom",
-        "2k",
-        "annie",
-        "brandon williams golden state warriors",
-        "tim cook",
-        "south korea jeju island"
+        "jackson chourio",
+        "first nfl game 2026",
+        "learner tien",
+        "will howard"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "Bromine is scary",
-        "Steel Coil 😨",
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
+        "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
-        "Walking On Water Trick Revealed! #facts #shorts",
+        "Science के 2 Magical Tricks #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "Candy Facts That Will BLOW Your Mind 🤔",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
+        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "Things Baby Animals won’t tell you 🐾🤫 (Part 2)",
         "Science के 2 Magical Tricks #shorts #factmind"
       ]
@@ -170,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 136,
+    "total_tests": 137,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
