@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-29T00:05:18",
+  "timestamp": "2026-08-29T18:47:20",
   "internal": {
     "top5_patterns": [
       {
@@ -32,29 +32,29 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
-      "didn",
       "physics",
+      "human",
+      "didn",
       "save",
       "life",
       "tricks",
-      "amazing",
-      "experiment"
+      "amazing"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#education",
-      "#viral",
       "#youtubeshorts",
-      "#sciencefacts",
+      "#experiment",
       "#science experiments",
+      "#viral",
+      "#top",
+      "#sciencefacts",
+      "#youtube shorts",
+      "#factsmine",
       "#knowledge",
       "#trending",
-      "#top",
-      "#fact",
-      "#experiment",
-      "#factsmine",
       "#amazing",
       "#didyouknow"
     ],
@@ -64,6 +64,7 @@
       "This can help make Artificial",
       "How Deep Do Humans Have",
       "Did You Know This Fact",
+      "The SCARIEST Fact About SPACE",
       "Did You Know: Titanic Fun"
     ],
     "title_templates": [
@@ -79,24 +80,25 @@
     ],
     "power_words": [
       "science",
-      "physics",
       "experiment",
+      "physics",
       "viral",
+      "human",
       "trick",
       "amazing",
-      "human",
       "black",
       "tricks",
       "unbelievable",
       "sciencefacts",
       "could",
+      "space",
       "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 30,
+      "statement": 31,
       "science-discovery": 1,
-      "number-lead": 10,
+      "number-lead": 9,
       "wh-question": 3,
       "statistic": 4,
       "did-you-know": 2
@@ -110,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "the dog stars",
-        "oil prices",
-        "buccaneers",
-        "hailey van lith",
-        "boca juniors - lanús",
-        "northern lights forecast",
-        "maxpreps football",
-        "cbs sports",
-        "chip trayanum",
-        "leanne season 2"
+        "sevilla vs atlético madrid",
+        "bijan robinson",
+        "bobby okereke",
+        "marco rubio",
+        "sabrina ionescu",
+        "emergency landing",
+        "melkart abou jaoude",
+        "southern u vs alabama state",
+        "argentina vs australia",
+        "riley leonard"
       ]
     },
     "youtube_trending": {
@@ -128,18 +130,18 @@
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
+        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
+        "Walking On Water Trick Revealed! #facts #shorts",
+        "Science के 2 Magical Tricks #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
+        "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
+        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "Things Baby Animals won’t tell you 🐾🤫 (Part 2)",
-        "Fun Facts That Are Not Funny",
-        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
-        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
-        "WARNING : This is Highly Relatable 😱 #shorts",
-        "Why Don&#39;t Birds Get Electric Shock 😱",
-        "Facts That Could Save Your Life 😳 #30 #shorts #facts",
-        "Random Facts 🤯 #2 #shorts #facts"
+        "Science के 2 Magical Tricks #shorts #factmind",
+        "Fun Facts That Are Not Funny"
       ]
     },
     "pytrends": {
@@ -167,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 138,
+    "total_tests": 139,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
