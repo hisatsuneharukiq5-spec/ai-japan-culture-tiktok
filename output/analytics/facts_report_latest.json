@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-28T00:32:59",
+  "timestamp": "2026-08-29T00:05:18",
   "internal": {
     "top5_patterns": [
       {
@@ -32,41 +32,39 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
-      "physics",
       "didn",
-      "human",
+      "physics",
+      "save",
+      "life",
       "tricks",
-      "viral",
       "amazing",
-      "sciencefacts"
+      "experiment"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#education",
-      "#sciencefacts",
-      "#youtubeshorts",
       "#viral",
-      "#viralshorts",
-      "#youtube shorts",
+      "#youtubeshorts",
+      "#sciencefacts",
+      "#science experiments",
       "#knowledge",
       "#trending",
+      "#top",
+      "#fact",
       "#experiment",
-      "#history",
-      "#memes",
-      "#science experiments",
+      "#factsmine",
+      "#amazing",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
-      "The Last Country Norway",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "How gullible are you",
       "Did You Know This Fact",
-      "did you know that Toph"
+      "Did You Know: Titanic Fun"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -83,24 +81,25 @@
       "science",
       "physics",
       "experiment",
-      "human",
       "viral",
-      "tricks",
+      "trick",
       "amazing",
+      "human",
+      "black",
+      "tricks",
+      "unbelievable",
       "sciencefacts",
-      "magic",
       "could",
       "only",
-      "unbelievable",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 28,
+      "statement": 30,
       "science-discovery": 1,
       "number-lead": 10,
-      "wh-question": 4,
+      "wh-question": 3,
       "statistic": 4,
-      "did-you-know": 3
+      "did-you-know": 2
     },
     "optimal_length_seconds": [
       55,
@@ -111,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "goldie hawn",
-        "pitt state football",
-        "mica miller case",
-        "und football",
-        "nfl season start",
-        "harrison ford",
-        "jackson chourio",
-        "first nfl game 2026",
-        "learner tien",
-        "will howard"
+        "the dog stars",
+        "oil prices",
+        "buccaneers",
+        "hailey van lith",
+        "boca juniors - lanús",
+        "northern lights forecast",
+        "maxpreps football",
+        "cbs sports",
+        "chip trayanum",
+        "leanne season 2"
       ]
     },
     "youtube_trending": {
@@ -128,19 +127,19 @@
       "topics": [
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
-        "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
-        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
-        "Science के 2 Magical Tricks #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "Candy Facts That Will BLOW Your Mind 🤔",
-        "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
-        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "Things Baby Animals won’t tell you 🐾🤫 (Part 2)",
-        "Science के 2 Magical Tricks #shorts #factmind"
+        "Fun Facts That Are Not Funny",
+        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
+        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
+        "WARNING : This is Highly Relatable 😱 #shorts",
+        "Why Don&#39;t Birds Get Electric Shock 😱",
+        "Facts That Could Save Your Life 😳 #30 #shorts #facts",
+        "Random Facts 🤯 #2 #shorts #facts"
       ]
     },
     "pytrends": {
@@ -168,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 137,
+    "total_tests": 138,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
