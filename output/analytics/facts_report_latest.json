@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-29T18:47:20",
+  "timestamp": "2026-08-30T18:45:24",
   "internal": {
     "top5_patterns": [
       {
@@ -33,12 +33,12 @@
     "popular_topics": [
       "science",
       "physics",
-      "human",
       "didn",
+      "human",
+      "tricks",
       "save",
       "life",
-      "tricks",
-      "amazing"
+      "viral"
     ],
     "hashtags": [
       "#shorts",
@@ -46,26 +46,27 @@
       "#science",
       "#education",
       "#youtubeshorts",
-      "#experiment",
-      "#science experiments",
       "#viral",
-      "#top",
       "#sciencefacts",
+      "#top",
+      "#amazing",
+      "#viralshorts",
       "#youtube shorts",
       "#factsmine",
       "#knowledge",
       "#trending",
-      "#amazing",
+      "#fact",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
+      "The Last Country Norway",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "Did You Know This Fact",
-      "The SCARIEST Fact About SPACE",
-      "Did You Know: Titanic Fun"
+      "How gullible are you",
+      "Did You Know That In",
+      "Did You Know This Fact"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -80,28 +81,28 @@
     ],
     "power_words": [
       "science",
-      "experiment",
       "physics",
-      "viral",
+      "experiment",
       "human",
-      "trick",
-      "amazing",
+      "viral",
       "black",
       "tricks",
-      "unbelievable",
+      "amazing",
       "sciencefacts",
+      "magic",
       "could",
       "space",
       "only",
-      "fastest"
+      "fastest",
+      "unbelievable"
     ],
     "pattern_counts": {
-      "statement": 31,
+      "statement": 29,
       "science-discovery": 1,
       "number-lead": 9,
-      "wh-question": 3,
+      "wh-question": 4,
       "statistic": 4,
-      "did-you-know": 2
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -112,16 +113,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "sevilla vs atlético madrid",
-        "bijan robinson",
-        "bobby okereke",
-        "marco rubio",
-        "sabrina ionescu",
-        "emergency landing",
-        "melkart abou jaoude",
-        "southern u vs alabama state",
-        "argentina vs australia",
-        "riley leonard"
+        "flamengo vs botafogo",
+        "brian kelly cbs sports debut",
+        "daniil medvedev",
+        "mark redman",
+        "lazio vs genoa",
+        "sean murphy",
+        "commissioners exempt list",
+        "justin rose",
+        "adam scott golfer",
+        "vaseline"
       ]
     },
     "youtube_trending": {
@@ -132,16 +133,16 @@
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "This Video Can Save Your Life 😱",
-        "Walking On Water Trick Revealed! #facts #shorts",
-        "Science के 2 Magical Tricks #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
-        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "Things Baby Animals won’t tell you 🐾🤫 (Part 2)",
         "Science के 2 Magical Tricks #shorts #factmind",
-        "Fun Facts That Are Not Funny"
+        "Fun Facts That Are Not Funny",
+        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
+        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
+        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts"
       ]
     },
     "pytrends": {
@@ -169,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 139,
+    "total_tests": 140,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

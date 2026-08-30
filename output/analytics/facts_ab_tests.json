@@ -1636,7 +1636,12 @@
     "title_a": "Did you know that glass is actually a liquid? #Shorts (3 Facts)",
     "title_b": "Only 0.001% of people know this about viruses #Shorts",
     "compare_after_hours": 48,
-    "status": "pending"
+    "status": "learned",
+    "winner": "title_a",
+    "loser": "title_b",
+    "views_a": 0,
+    "views_b": 0,
+    "reason": "Compared 48h view counts from facts upload registry"
   },
   {
     "created_at": "2026-08-29T00:05:18",
@@ -1649,6 +1654,13 @@
     "created_at": "2026-08-29T18:47:20",
     "title_a": "Did you know that tardigrades survive by nearly dying? #Shorts (3 Facts)",
     "title_b": "Only 2% of people know this about honey #Shorts",
+    "compare_after_hours": 48,
+    "status": "pending"
+  },
+  {
+    "created_at": "2026-08-30T18:45:25",
+    "title_a": "Did you know that tardigrades survive by nearly dying? #Shorts (3 Facts)",
+    "title_b": "Only 0.1% of people know this about octopus brains #Shorts",
     "compare_after_hours": 48,
     "status": "pending"
   }

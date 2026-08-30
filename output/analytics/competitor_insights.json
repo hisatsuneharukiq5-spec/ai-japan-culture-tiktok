@@ -2,38 +2,41 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 31,
+    "statement": 29,
     "science-discovery": 1,
     "number-lead": 9,
-    "wh-question": 3,
+    "wh-question": 4,
     "statistic": 4,
-    "did-you-know": 2
+    "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
     "What Is The Real Shape",
+    "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
+    "How gullible are you",
+    "Did You Know That In",
     "Did You Know This Fact",
     "The SCARIEST Fact About SPACE",
     "Did You Know: Titanic Fun"
   ],
   "power_words": [
     "science",
-    "experiment",
     "physics",
-    "viral",
+    "experiment",
     "human",
-    "trick",
-    "amazing",
+    "viral",
     "black",
     "tricks",
-    "unbelievable",
+    "amazing",
     "sciencefacts",
+    "magic",
     "could",
     "space",
     "only",
-    "fastest"
+    "fastest",
+    "unbelievable"
   ],
   "top_hashtags": [
     "#shorts",
@@ -41,39 +44,39 @@
     "#science",
     "#education",
     "#youtubeshorts",
-    "#experiment",
-    "#science experiments",
     "#viral",
-    "#top",
     "#sciencefacts",
+    "#top",
+    "#amazing",
+    "#viralshorts",
     "#youtube shorts",
     "#factsmine",
     "#knowledge",
     "#trending",
-    "#amazing",
+    "#fact",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "physics",
-    "human",
     "didn",
+    "human",
+    "tricks",
     "save",
     "life",
-    "tricks",
-    "amazing",
-    "experiment",
     "viral",
     "sciencefacts",
-    "unbelievable",
     "black",
+    "amazing",
     "could",
     "cool",
     "gifts",
+    "theoryofphysics",
+    "anubhavsir",
     "ocean",
-    "youtubeshorts",
+    "experiment",
     "earth",
-    "crazy"
+    "magical"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -86,15 +89,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.4,
+  "avg_duration_secs": 42.9,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
+    "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
-    "Did You Know This Fact",
-    "The SCARIEST Fact About SPACE",
-    "Did You Know: Titanic Fun"
+    "How gullible are you",
+    "Did You Know That In",
+    "Did You Know This Fact"
   ],
-  "timestamp": "2026-08-29T18:47:19"
+  "timestamp": "2026-08-30T18:45:24"
 }
