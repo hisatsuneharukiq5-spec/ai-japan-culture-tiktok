@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-01T18:45:47",
+  "timestamp": "2026-09-02T18:53:26",
   "internal": {
     "top5_patterns": [
       {
@@ -32,30 +32,30 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
-      "didn",
+      "physics",
+      "sciencefacts",
       "human",
       "tricks",
-      "amazing",
+      "didn",
       "save",
-      "life",
-      "physics"
+      "life"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
+      "#sciencefacts",
+      "#education",
       "#youtubeshorts",
       "#viral",
-      "#education",
       "#viralshorts",
+      "#youtube shorts",
       "#knowledge",
       "#trending",
-      "#top",
-      "#amazing",
-      "#sciencefacts",
-      "#factsmine",
-      "#fact",
-      "#short",
+      "#experiment",
+      "#history",
+      "#memes",
+      "#science experiments",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -64,9 +64,9 @@
       "The Last Country Norway",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "Did You Know That In",
-      "Did You Know This Fact",
-      "The SCARIEST Fact About SPACE"
+      "How gullible are you",
+      "Did You Notice This In",
+      "Did You Know This Fact"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -81,24 +81,24 @@
     "power_words": [
       "science",
       "physics",
-      "human",
-      "space",
-      "experiment",
-      "amazing",
-      "black",
-      "tricks",
-      "could",
       "sciencefacts",
-      "animal",
-      "unbelievable",
-      "only"
+      "experiment",
+      "human",
+      "viral",
+      "tricks",
+      "magic",
+      "could",
+      "space",
+      "amazing",
+      "only",
+      "unbelievable"
     ],
     "pattern_counts": {
-      "statement": 31,
+      "statement": 29,
       "science-discovery": 1,
       "number-lead": 8,
-      "wh-question": 3,
-      "statistic": 4,
+      "wh-question": 4,
+      "statistic": 5,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -110,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "ticketmaster",
-        "stan kroenke",
-        "christopher judge",
-        "ryan garcia",
-        "hebc vs dortmund",
-        "birmingham vs southampton",
-        "taco bell ice cream taco",
-        "sylvester stallone tulsa king season 4",
-        "trump approval rating",
-        "taylor fritz girlfriend"
+        "pennsylvania lottery",
+        "rafael jodar",
+        "postal voting",
+        "tuey rodriguez instructions",
+        "sloane stephens",
+        "jodar",
+        "rublev",
+        "millwall vs wrexham",
+        "emma navarro",
+        "burnley vs middlesbrough"
       ]
     },
     "youtube_trending": {
@@ -127,10 +127,8 @@
       "topics": [
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
-        "ये Animals दोबारा ज़िंदा हो सकतें हैं 😱 | Animals that Scientists can Revive #shorts #factsmine",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "This Video Can Save Your Life 😱",
         "Science के 2 Magical Tricks #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
@@ -139,7 +137,9 @@
         "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "@ITSGURIYAHERE 👈🏻 Please Is Channel Ke Long Videos Ko Dekhkar Watchtime Complete Kar Dijiye 🥺💔😓",
         "Science के 2 Magical Tricks #shorts #factmind",
-        "Fun Facts That Are Not Funny"
+        "Fun Facts That Are Not Funny",
+        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
+        "एक इंसान की कीमत कितनी होती है? | How much is a Human Body worth? | Facts&#39; Mine #shorts"
       ]
     },
     "pytrends": {
@@ -168,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 142,
+    "total_tests": 143,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
