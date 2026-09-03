@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-02T18:53:26",
+  "timestamp": "2026-09-03T18:51:54",
   "internal": {
     "top5_patterns": [
       {
@@ -33,10 +33,10 @@
     "popular_topics": [
       "science",
       "physics",
-      "sciencefacts",
+      "didn",
       "human",
       "tricks",
-      "didn",
+      "amazing",
       "save",
       "life"
     ],
@@ -44,29 +44,28 @@
       "#shorts",
       "#facts",
       "#science",
-      "#sciencefacts",
       "#education",
-      "#youtubeshorts",
       "#viral",
-      "#viralshorts",
-      "#youtube shorts",
+      "#youtubeshorts",
       "#knowledge",
-      "#trending",
+      "#sciencefacts",
       "#experiment",
-      "#history",
-      "#memes",
       "#science experiments",
+      "#trending",
+      "#top",
+      "#amazing",
+      "#fact",
+      "#youtube shorts",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
-      "The Last Country Norway",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "How gullible are you",
-      "Did You Notice This In",
-      "Did You Know This Fact"
+      "Did You Know This Fact",
+      "The SCARIEST Fact About SPACE",
+      "Did You Know: Titanic Fun"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -76,30 +75,33 @@
       "What happens to your body when {scenario}? #Shorts",
       "Why {topic} is more {adjective} than you think #Shorts",
       "{number} {topic} facts that will blow your mind #Shorts",
-      "{topic} is SO cool #Shorts"
+      "{topic} is SO cool #Shorts",
+      "{topic}'s the fastest way to empty a bottle #Shorts"
     ],
     "power_words": [
       "science",
       "physics",
-      "sciencefacts",
-      "experiment",
+      "trick",
       "human",
-      "viral",
-      "tricks",
-      "magic",
-      "could",
       "space",
+      "experiment",
       "amazing",
+      "viral",
+      "black",
+      "tricks",
+      "unbelievable",
+      "could",
+      "animals",
       "only",
-      "unbelievable"
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 29,
+      "statement": 31,
       "science-discovery": 1,
-      "number-lead": 8,
-      "wh-question": 4,
-      "statistic": 5,
-      "did-you-know": 3
+      "number-lead": 9,
+      "wh-question": 3,
+      "statistic": 4,
+      "did-you-know": 2
     },
     "optimal_length_seconds": [
       55,
@@ -110,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "pennsylvania lottery",
-        "rafael jodar",
-        "postal voting",
-        "tuey rodriguez instructions",
-        "sloane stephens",
-        "jodar",
-        "rublev",
-        "millwall vs wrexham",
-        "emma navarro",
-        "burnley vs middlesbrough"
+        "taylor fritz",
+        "dakota johnson",
+        "alabama crimson tide football",
+        "mitch mcconnell news",
+        "xbox cloud gaming",
+        "belinda bencic us open ball hit",
+        "real sociedad vs celta",
+        "kevin zegers",
+        "secretario de seguridad nacional de los estados unidos",
+        "final fantasy vii revelation"
       ]
     },
     "youtube_trending": {
@@ -129,17 +131,17 @@
         "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "Science के 2 Magical Tricks #shorts",
+        "Walking On Water Trick Revealed! #facts #shorts",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
-        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "@ITSGURIYAHERE 👈🏻 Please Is Channel Ke Long Videos Ko Dekhkar Watchtime Complete Kar Dijiye 🥺💔😓",
         "Science के 2 Magical Tricks #shorts #factmind",
         "Fun Facts That Are Not Funny",
         "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
-        "एक इंसान की कीमत कितनी होती है? | How much is a Human Body worth? | Facts&#39; Mine #shorts"
+        "एक इंसान की कीमत कितनी होती है? | How much is a Human Body worth? | Facts&#39; Mine #shorts",
+        "लोगों के कुछ comedy कारनामे 😝🤣😅 | Funny Facts | Amazing Facts #shorts #youtubeshorts #funny"
       ]
     },
     "pytrends": {
@@ -168,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 143,
+    "total_tests": 144,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
