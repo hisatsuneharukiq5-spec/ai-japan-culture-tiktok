@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-04T18:33:36",
+  "timestamp": "2026-09-05T17:31:17",
   "internal": {
     "top5_patterns": [
       {
@@ -32,40 +32,41 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
+      "sciencefacts",
       "didn",
-      "physics",
       "save",
       "life",
+      "physics",
       "human",
-      "tricks",
-      "amazing"
+      "tricks"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
+      "#sciencefacts",
       "#education",
       "#youtubeshorts",
       "#viral",
       "#top",
-      "#fact",
-      "#experiment",
-      "#knowledge",
       "#amazing",
-      "#sciencefacts",
+      "#viralshorts",
       "#science experiments",
+      "#youtube shorts",
       "#factsmine",
+      "#knowledge",
       "#trending",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
+      "The Last Country Norway",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "Did You Know This Fact",
-      "The SCARIEST Fact About SPACE",
-      "Did You Know: Titanic Fun"
+      "How gullible are you",
+      "Did You Know That In",
+      "Did You Know This Fact"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -75,33 +76,31 @@
       "What happens to your body when {scenario}? #Shorts",
       "Why {topic} is more {adjective} than you think #Shorts",
       "{number} {topic} facts that will blow your mind #Shorts",
-      "{topic} is SO cool #Shorts",
-      "{topic}'s the fastest way to empty a bottle #Shorts"
+      "{topic} is SO cool #Shorts"
     ],
     "power_words": [
       "science",
-      "experiment",
       "physics",
-      "viral",
-      "trick",
+      "sciencefacts",
       "human",
-      "amazing",
+      "viral",
       "black",
       "tricks",
+      "experiment",
+      "magic",
       "could",
-      "animals",
       "space",
-      "unbelievable",
+      "amazing",
       "only",
-      "fastest"
+      "unbelievable"
     ],
     "pattern_counts": {
-      "statement": 30,
+      "statement": 28,
       "science-discovery": 1,
-      "number-lead": 10,
-      "wh-question": 3,
-      "statistic": 4,
-      "did-you-know": 2
+      "number-lead": 9,
+      "wh-question": 4,
+      "statistic": 5,
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -112,36 +111,36 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "ipswich town vs liverpool",
-        "psg vs monaco",
-        "betis vs real madrid",
-        "wu yibing",
-        "tsa",
-        "david hearn reflecting pool case",
-        "ilia topuria",
-        "lyon vs auxerre",
-        "al-shabab vs al-hilal",
-        "alexander bublik"
+        "al-ittihad vs al-nassr",
+        "michael whatley",
+        "harry kane",
+        "nikola bartunkova",
+        "yhonzae pierre",
+        "felipe lima",
+        "brandon inniss",
+        "mario pinto",
+        "jim tressel",
+        "pakistan women's national cricket team vs india women's national cricket team standings"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
-        "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "Walking On Water Trick Revealed! #facts #shorts",
+        "This Video Can Save Your Life 😱",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "@ITSGURIYAHERE 👈🏻 Please Is Channel Ke Long Videos Ko Dekhkar Watchtime Complete Kar Dijiye 🥺💔😓",
         "Fun Facts That Are Not Funny",
-        "How a slinky falls in slow motion #shorts",
-        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
-        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts"
+        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
+        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
+        "WARNING : This is Highly Relatable 😱 #shorts",
+        "Why Don&#39;t Birds Get Electric Shock 😱",
+        "Facts That Could Save Your Life 😳 #30 #shorts #facts",
+        "Random Facts 🤯 #2 #shorts #facts"
       ]
     },
     "pytrends": {
@@ -170,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 145,
+    "total_tests": 146,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
