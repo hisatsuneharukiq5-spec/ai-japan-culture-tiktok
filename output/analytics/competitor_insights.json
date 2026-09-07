@@ -2,11 +2,11 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 29,
+    "statement": 30,
     "science-discovery": 1,
     "number-lead": 8,
     "wh-question": 3,
-    "statistic": 6,
+    "statistic": 5,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -23,59 +23,59 @@
   "power_words": [
     "science",
     "physics",
+    "amazing",
     "sciencefacts",
+    "trick",
     "human",
     "experiment",
-    "amazing",
     "viral",
     "black",
     "tricks",
     "space",
     "magic",
     "could",
-    "only",
-    "fastest",
-    "unbelievable"
+    "unbelievable",
+    "fastest"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
     "#science",
-    "#sciencefacts",
     "#viral",
+    "#sciencefacts",
     "#knowledge",
     "#education",
     "#top",
     "#fact",
-    "#youtubeshorts",
+    "#science experiments",
     "#factsmine",
     "#trending",
     "#amazing",
-    "#science experiments",
+    "#youtubeshorts",
     "#latest",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
-    "sciencefacts",
     "physics",
-    "human",
-    "tricks",
+    "sciencefacts",
     "amazing",
     "didn",
+    "tricks",
     "save",
     "life",
     "viral",
+    "human",
     "black",
     "could",
     "space",
     "cool",
     "gifts",
     "ocean",
+    "unbelievable",
     "earth",
     "half",
-    "factsmine",
-    "magical"
+    "factsmine"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -88,7 +88,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.9,
+  "avg_duration_secs": 42.4,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -99,5 +99,5 @@
     "Did You Know This Fact",
     "The SCARIEST Fact About SPACE"
   ],
-  "timestamp": "2026-09-06T17:40:41"
+  "timestamp": "2026-09-07T19:22:16"
 }
