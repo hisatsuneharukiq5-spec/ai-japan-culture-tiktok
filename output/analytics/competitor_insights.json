@@ -2,11 +2,11 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 28,
+    "statement": 29,
     "science-discovery": 1,
     "number-lead": 9,
     "wh-question": 4,
-    "statistic": 5,
+    "statistic": 4,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -18,64 +18,63 @@
     "How gullible are you",
     "Did You Know That In",
     "Did You Know This Fact",
-    "The SCARIEST Fact About SPACE",
     "Did You Know: Titanic Fun"
   ],
   "power_words": [
     "science",
     "physics",
-    "trick",
-    "experiment",
     "amazing",
+    "trick",
     "viral",
     "sciencefacts",
     "human",
     "black",
     "tricks",
-    "space",
     "magic",
     "could",
-    "unbelievable"
+    "experiment",
+    "unbelievable",
+    "only"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
     "#science",
-    "#viral",
     "#education",
-    "#trending",
-    "#top",
-    "#amazing",
     "#sciencefacts",
     "#youtubeshorts",
+    "#viral",
+    "#science experiments",
+    "#top",
+    "#fact",
+    "#viralshorts",
     "#factsmine",
     "#knowledge",
-    "#fact",
-    "#science experiments",
-    "#latest",
+    "#trending",
+    "#amazing",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
+    "amazing",
     "physics",
     "sciencefacts",
     "tricks",
-    "amazing",
     "save",
     "life",
     "viral",
     "human",
     "black",
     "could",
-    "space",
     "cool",
     "gifts",
     "ocean",
     "unbelievable",
     "earth",
     "half",
-    "factsmine"
+    "magical",
+    "experiment"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -87,7 +86,7 @@
     "{number} {topic} facts that will blow your mind #Shorts",
     "{topic} is SO cool #Shorts"
   ],
-  "avg_duration_secs": 41.9,
+  "avg_duration_secs": 41.7,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -98,5 +97,5 @@
     "Did You Know That In",
     "Did You Know This Fact"
   ],
-  "timestamp": "2026-09-09T18:49:22"
+  "timestamp": "2026-09-10T18:39:26"
 }
