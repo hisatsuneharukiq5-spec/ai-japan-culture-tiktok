@@ -2,11 +2,11 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 29,
+    "statement": 28,
     "science-discovery": 1,
     "number-lead": 9,
     "wh-question": 4,
-    "statistic": 4,
+    "statistic": 5,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -18,63 +18,64 @@
     "How gullible are you",
     "Did You Know That In",
     "Did You Know This Fact",
+    "The SCARIEST Fact About SPACE",
     "Did You Know: Titanic Fun"
   ],
   "power_words": [
     "science",
     "physics",
-    "amazing",
     "trick",
+    "experiment",
+    "amazing",
     "viral",
     "sciencefacts",
     "human",
     "black",
     "tricks",
+    "space",
     "magic",
     "could",
-    "experiment",
-    "unbelievable",
-    "only"
+    "unbelievable"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
     "#science",
-    "#education",
-    "#sciencefacts",
-    "#youtubeshorts",
     "#viral",
-    "#science experiments",
-    "#top",
-    "#fact",
-    "#viralshorts",
-    "#factsmine",
-    "#knowledge",
     "#trending",
     "#amazing",
+    "#youtubeshorts",
+    "#top",
+    "#sciencefacts",
+    "#factsmine",
+    "#knowledge",
+    "#education",
+    "#fact",
+    "#science experiments",
+    "#latest",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
-    "amazing",
     "physics",
     "sciencefacts",
     "tricks",
+    "amazing",
     "save",
     "life",
     "viral",
     "human",
     "black",
     "could",
+    "space",
     "cool",
     "gifts",
     "ocean",
-    "unbelievable",
     "earth",
     "half",
-    "magical",
-    "experiment"
+    "factsmine",
+    "magical"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -86,7 +87,7 @@
     "{number} {topic} facts that will blow your mind #Shorts",
     "{topic} is SO cool #Shorts"
   ],
-  "avg_duration_secs": 41.7,
+  "avg_duration_secs": 41.4,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -97,5 +98,5 @@
     "Did You Know That In",
     "Did You Know This Fact"
   ],
-  "timestamp": "2026-09-10T18:39:26"
+  "timestamp": "2026-09-11T18:44:22"
 }
