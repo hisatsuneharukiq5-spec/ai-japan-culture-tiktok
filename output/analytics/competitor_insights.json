@@ -2,9 +2,9 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 28,
+    "statement": 29,
     "science-discovery": 1,
-    "number-lead": 9,
+    "number-lead": 8,
     "wh-question": 4,
     "statistic": 5,
     "did-you-know": 3
@@ -24,17 +24,18 @@
   "power_words": [
     "science",
     "physics",
+    "space",
     "trick",
-    "experiment",
+    "human",
     "amazing",
     "viral",
-    "sciencefacts",
-    "human",
     "black",
     "tricks",
-    "space",
+    "experiment",
+    "sciencefacts",
     "magic",
     "could",
+    "animals",
     "unbelievable"
   ],
   "top_hashtags": [
@@ -42,40 +43,40 @@
     "#facts",
     "#science",
     "#viral",
+    "#education",
     "#trending",
+    "#top",
     "#amazing",
     "#youtubeshorts",
-    "#top",
-    "#sciencefacts",
+    "#science experiments",
     "#factsmine",
     "#knowledge",
-    "#education",
     "#fact",
-    "#science experiments",
+    "#sciencefacts",
     "#latest",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
-    "didn",
     "physics",
-    "sciencefacts",
     "tricks",
     "amazing",
+    "didn",
     "save",
     "life",
+    "space",
     "viral",
+    "sciencefacts",
     "human",
     "black",
     "could",
-    "space",
+    "animals",
+    "mind",
     "cool",
     "gifts",
     "ocean",
-    "earth",
-    "half",
-    "factsmine",
-    "magical"
+    "unbelievable",
+    "earth"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -87,7 +88,7 @@
     "{number} {topic} facts that will blow your mind #Shorts",
     "{topic} is SO cool #Shorts"
   ],
-  "avg_duration_secs": 41.4,
+  "avg_duration_secs": 42.0,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -98,5 +99,5 @@
     "Did You Know That In",
     "Did You Know This Fact"
   ],
-  "timestamp": "2026-09-11T18:44:22"
+  "timestamp": "2026-09-12T17:49:24"
 }

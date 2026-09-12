@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-11T18:44:23",
+  "timestamp": "2026-09-12T17:49:25",
   "internal": {
     "top5_patterns": [
       {
@@ -32,29 +32,29 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
-      "didn",
       "physics",
-      "sciencefacts",
       "tricks",
       "amazing",
+      "didn",
       "save",
-      "life"
+      "life",
+      "space"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#viral",
+      "#education",
       "#trending",
+      "#top",
       "#amazing",
       "#youtubeshorts",
-      "#top",
-      "#sciencefacts",
+      "#science experiments",
       "#factsmine",
       "#knowledge",
-      "#education",
       "#fact",
-      "#science experiments",
+      "#sciencefacts",
       "#latest",
       "#didyouknow"
     ],
@@ -81,23 +81,24 @@
     "power_words": [
       "science",
       "physics",
+      "space",
       "trick",
-      "experiment",
+      "human",
       "amazing",
       "viral",
-      "sciencefacts",
-      "human",
       "black",
       "tricks",
-      "space",
+      "experiment",
+      "sciencefacts",
       "magic",
       "could",
+      "animals",
       "unbelievable"
     ],
     "pattern_counts": {
-      "statement": 28,
+      "statement": 29,
       "science-discovery": 1,
-      "number-lead": 9,
+      "number-lead": 8,
       "wh-question": 4,
       "statistic": 5,
       "did-you-know": 3
@@ -111,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "cyclosporiasis",
-        "travel warning",
-        "john lowe cbs legal dispute",
-        "europa league",
-        "sun",
-        "sevilla vs valencia",
-        "sevilla - valencia c. f.",
-        "west ham vs wrexham",
-        "rennes vs marseille",
-        "flight cancellation and delay"
+        "nate frazier",
+        "gunner stockton",
+        "athletic bilbao",
+        "al-khaleej vs al-nassr",
+        "liberty football",
+        "byu football schedule",
+        "sean king iii",
+        "jennifer kupcho",
+        "what time does lsu play today",
+        "spain vs usa"
       ]
     },
     "youtube_trending": {
@@ -169,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 152,
+    "total_tests": 153,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
