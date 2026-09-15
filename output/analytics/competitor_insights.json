@@ -25,7 +25,6 @@
     "science",
     "physics",
     "experiment",
-    "trick",
     "human",
     "viral",
     "black",
@@ -35,35 +34,35 @@
     "could",
     "space",
     "amazing",
-    "unbelievable",
-    "only"
+    "only",
+    "unbelievable"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
     "#science",
     "#education",
-    "#viral",
     "#youtubeshorts",
-    "#top",
+    "#viral",
     "#sciencefacts",
+    "#top",
+    "#amazing",
+    "#viralshorts",
     "#science experiments",
+    "#youtube shorts",
     "#factsmine",
     "#knowledge",
     "#trending",
-    "#amazing",
-    "#viralshorts",
-    "#youtube shorts",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "physics",
+    "didn",
     "human",
     "tricks",
     "save",
     "life",
-    "didn",
     "viral",
     "sciencefacts",
     "black",
@@ -73,10 +72,10 @@
     "gifts",
     "ocean",
     "experiment",
-    "unbelievable",
     "earth",
     "half",
-    "amazing"
+    "amazing",
+    "magical"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -88,7 +87,7 @@
     "{number} {topic} facts that will blow your mind #Shorts",
     "{topic} is SO cool #Shorts"
   ],
-  "avg_duration_secs": 41.5,
+  "avg_duration_secs": 41.9,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -99,5 +98,5 @@
     "Did You Know That In",
     "Did You Know This Fact"
   ],
-  "timestamp": "2026-09-14T19:56:21"
+  "timestamp": "2026-09-15T19:10:37"
 }
