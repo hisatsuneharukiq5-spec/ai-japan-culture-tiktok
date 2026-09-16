@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-15T19:10:37",
+  "timestamp": "2026-09-16T19:02:30",
   "internal": {
     "top5_patterns": [
       {
@@ -33,29 +33,29 @@
     "popular_topics": [
       "science",
       "physics",
-      "didn",
       "human",
-      "tricks",
       "save",
       "life",
-      "viral"
+      "didn",
+      "viral",
+      "sciencefacts"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#education",
-      "#youtubeshorts",
       "#viral",
       "#sciencefacts",
+      "#youtubeshorts",
+      "#science experiments",
       "#top",
       "#amazing",
-      "#viralshorts",
-      "#science experiments",
       "#youtube shorts",
       "#factsmine",
       "#knowledge",
       "#trending",
+      "#fact",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -83,16 +83,17 @@
       "physics",
       "experiment",
       "human",
-      "viral",
-      "black",
-      "tricks",
-      "sciencefacts",
-      "magic",
-      "could",
       "space",
+      "viral",
+      "trick",
+      "black",
       "amazing",
-      "only",
-      "unbelievable"
+      "sciencefacts",
+      "tricks",
+      "could",
+      "animals",
+      "unbelievable",
+      "only"
     ],
     "pattern_counts": {
       "statement": 29,
@@ -111,21 +112,22 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "thomas matthew crooks",
-        "rebate",
-        "elche c. f. - real madrid",
-        "ipswich town vs arsenal",
-        "todd blanche",
-        "ajax vs willem ii",
-        "posiciones de al ain contra al-nassr",
-        "yuri nakamura",
-        "reading vs brentford",
-        "wedding"
+        "barcelona vs racing santander",
+        "jordan mason",
+        "levante - athletic",
+        "s&p 500",
+        "s and p 500",
+        "30 year mortgage rates",
+        "wsj",
+        "qqq stock",
+        "guardians",
+        "qqq"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
+        "Steel Coil 😨",
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
@@ -139,8 +141,7 @@
         "How Many Hours Do You Sleep 😱",
         "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "Fun Facts That Are Not Funny",
-        "लोगों के कुछ comedy कारनामे 😝🤣😅 | Funny Facts | Amazing Facts #shorts #youtubeshorts #funny",
-        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts"
+        "लोगों के कुछ comedy कारनामे 😝🤣😅 | Funny Facts | Amazing Facts #shorts #youtubeshorts #funny"
       ]
     },
     "pytrends": {
@@ -169,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 156,
+    "total_tests": 157,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
