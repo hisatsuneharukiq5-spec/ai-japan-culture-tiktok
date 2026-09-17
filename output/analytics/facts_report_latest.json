@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-16T19:02:30",
+  "timestamp": "2026-09-17T19:13:42",
   "internal": {
     "top5_patterns": [
       {
@@ -32,12 +32,12 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
+      "didn",
       "physics",
       "human",
+      "tricks",
       "save",
       "life",
-      "didn",
-      "viral",
       "sciencefacts"
     ],
     "hashtags": [
@@ -46,16 +46,16 @@
       "#science",
       "#education",
       "#viral",
-      "#sciencefacts",
       "#youtubeshorts",
-      "#science experiments",
       "#top",
-      "#amazing",
-      "#youtube shorts",
+      "#sciencefacts",
+      "#science experiments",
       "#factsmine",
       "#knowledge",
       "#trending",
+      "#amazing",
       "#fact",
+      "#viralshorts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -82,25 +82,22 @@
       "science",
       "physics",
       "experiment",
-      "human",
-      "space",
-      "viral",
       "trick",
+      "human",
       "black",
+      "tricks",
       "amazing",
       "sciencefacts",
-      "tricks",
       "could",
-      "animals",
       "unbelievable",
       "only"
     ],
     "pattern_counts": {
       "statement": 29,
       "science-discovery": 1,
-      "number-lead": 8,
+      "number-lead": 9,
       "wh-question": 4,
-      "statistic": 5,
+      "statistic": 4,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -112,16 +109,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "barcelona vs racing santander",
-        "jordan mason",
-        "levante - athletic",
-        "s&p 500",
-        "s and p 500",
-        "30 year mortgage rates",
-        "wsj",
-        "qqq stock",
-        "guardians",
-        "qqq"
+        "crystal palace - lech poznań",
+        "maria elvira salazar",
+        "málaga vs villarreal",
+        "celtic vs ferencváros",
+        "sal stewart",
+        "mike sweetney",
+        "juventus vs nec",
+        "new cat species",
+        "beşiktaş vs marseille",
+        "real sociedad vs bournemouth"
       ]
     },
     "youtube_trending": {
@@ -132,16 +129,16 @@
         "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
-        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Walking On Water Trick Revealed! #facts #shorts",
+        "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "@ITSGURIYAHERE 👈🏻 Please Is Channel Ke Long Videos Ko Dekhkar Watchtime Complete Kar Dijiye 🥺💔😓",
         "How Many Hours Do You Sleep 😱",
-        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "Fun Facts That Are Not Funny",
-        "लोगों के कुछ comedy कारनामे 😝🤣😅 | Funny Facts | Amazing Facts #shorts #youtubeshorts #funny"
+        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
+        "INSANE CRAZY FACTS YOU DIDN&#39;T KNOW!"
       ]
     },
     "pytrends": {
@@ -170,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 157,
+    "total_tests": 158,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

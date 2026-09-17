@@ -4,9 +4,9 @@
   "pattern_counts": {
     "statement": 29,
     "science-discovery": 1,
-    "number-lead": 8,
+    "number-lead": 9,
     "wh-question": 4,
-    "statistic": 5,
+    "statistic": 4,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -18,23 +18,19 @@
     "How gullible are you",
     "Did You Know That In",
     "Did You Know This Fact",
-    "The SCARIEST Fact About SPACE",
     "Did You Know: Titanic Fun"
   ],
   "power_words": [
     "science",
     "physics",
     "experiment",
-    "human",
-    "space",
-    "viral",
     "trick",
+    "human",
     "black",
+    "tricks",
     "amazing",
     "sciencefacts",
-    "tricks",
     "could",
-    "animals",
     "unbelievable",
     "only"
   ],
@@ -44,39 +40,39 @@
     "#science",
     "#education",
     "#viral",
-    "#sciencefacts",
     "#youtubeshorts",
-    "#science experiments",
     "#top",
-    "#amazing",
-    "#youtube shorts",
+    "#sciencefacts",
+    "#science experiments",
     "#factsmine",
     "#knowledge",
     "#trending",
+    "#amazing",
     "#fact",
+    "#viralshorts",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
+    "didn",
     "physics",
     "human",
+    "tricks",
     "save",
     "life",
-    "didn",
-    "viral",
     "sciencefacts",
     "black",
-    "tricks",
     "amazing",
     "could",
-    "animals",
-    "space",
-    "mind",
     "cool",
     "gifts",
     "ocean",
     "experiment",
-    "unbelievable"
+    "funny",
+    "unbelievable",
+    "earth",
+    "crazy",
+    "experiments"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -88,7 +84,7 @@
     "{number} {topic} facts that will blow your mind #Shorts",
     "{topic} is SO cool #Shorts"
   ],
-  "avg_duration_secs": 41.7,
+  "avg_duration_secs": 41.6,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -99,5 +95,5 @@
     "Did You Know That In",
     "Did You Know This Fact"
   ],
-  "timestamp": "2026-09-16T19:02:29"
+  "timestamp": "2026-09-17T19:13:41"
 }
