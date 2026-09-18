@@ -2,11 +2,11 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 29,
+    "statement": 28,
     "science-discovery": 1,
     "number-lead": 9,
     "wh-question": 4,
-    "statistic": 4,
+    "statistic": 5,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -71,8 +71,8 @@
     "funny",
     "unbelievable",
     "earth",
-    "crazy",
-    "experiments"
+    "half",
+    "mind"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -84,7 +84,7 @@
     "{number} {topic} facts that will blow your mind #Shorts",
     "{topic} is SO cool #Shorts"
   ],
-  "avg_duration_secs": 41.6,
+  "avg_duration_secs": 41.9,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -95,5 +95,5 @@
     "Did You Know That In",
     "Did You Know This Fact"
   ],
-  "timestamp": "2026-09-17T19:13:41"
+  "timestamp": "2026-09-18T18:38:10"
 }

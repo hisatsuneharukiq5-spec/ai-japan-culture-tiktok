@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-17T19:13:42",
+  "timestamp": "2026-09-18T18:38:10",
   "internal": {
     "top5_patterns": [
       {
@@ -93,11 +93,11 @@
       "only"
     ],
     "pattern_counts": {
-      "statement": 29,
+      "statement": 28,
       "science-discovery": 1,
       "number-lead": 9,
       "wh-question": 4,
-      "statistic": 4,
+      "statistic": 5,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -109,16 +109,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "crystal palace - lech poznań",
-        "maria elvira salazar",
-        "málaga vs villarreal",
-        "celtic vs ferencváros",
-        "sal stewart",
-        "mike sweetney",
-        "juventus vs nec",
-        "new cat species",
-        "beşiktaş vs marseille",
-        "real sociedad vs bournemouth"
+        "rcd espanyol - elche c. f.",
+        "espanyol vs elche",
+        "pa lottery",
+        "brentford vs chelsea",
+        "monaco vs lens",
+        "cam whitmore",
+        "caleb flynn american idol",
+        "us military ai false intelligence report",
+        "best of the best netflix",
+        "alavés gloriosas - barcelona"
       ]
     },
     "youtube_trending": {
@@ -167,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 158,
+    "total_tests": 159,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
