@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-18T18:38:10",
+  "timestamp": "2026-09-19T18:11:38",
   "internal": {
     "top5_patterns": [
       {
@@ -35,10 +35,10 @@
       "didn",
       "physics",
       "human",
-      "tricks",
       "save",
       "life",
-      "sciencefacts"
+      "sciencefacts",
+      "black"
     ],
     "hashtags": [
       "#shorts",
@@ -46,16 +46,16 @@
       "#science",
       "#education",
       "#viral",
-      "#youtubeshorts",
+      "#knowledge",
       "#top",
       "#sciencefacts",
+      "#youtubeshorts",
       "#science experiments",
+      "#physics",
       "#factsmine",
-      "#knowledge",
       "#trending",
       "#amazing",
       "#fact",
-      "#viralshorts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -82,22 +82,22 @@
       "science",
       "physics",
       "experiment",
-      "trick",
       "human",
+      "trick",
       "black",
-      "tricks",
       "amazing",
       "sciencefacts",
+      "tricks",
       "could",
       "unbelievable",
       "only"
     ],
     "pattern_counts": {
-      "statement": 28,
+      "statement": 29,
       "science-discovery": 1,
       "number-lead": 9,
       "wh-question": 4,
-      "statistic": 5,
+      "statistic": 4,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -109,16 +109,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "rcd espanyol - elche c. f.",
-        "espanyol vs elche",
-        "pa lottery",
-        "brentford vs chelsea",
-        "monaco vs lens",
-        "cam whitmore",
-        "caleb flynn american idol",
-        "us military ai false intelligence report",
-        "best of the best netflix",
-        "alavés gloriosas - barcelona"
+        "galatasaray",
+        "lehigh football",
+        "iowa state football",
+        "val kilmer",
+        "illinois football",
+        "dallas wings",
+        "tait reynolds",
+        "clemson football",
+        "vanderbilt football",
+        "texas state football"
       ]
     },
     "youtube_trending": {
@@ -131,14 +131,14 @@
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Walking On Water Trick Revealed! #facts #shorts",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
+        "This Video Can Save Your Life 😱",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "@ITSGURIYAHERE 👈🏻 Please Is Channel Ke Long Videos Ko Dekhkar Watchtime Complete Kar Dijiye 🥺💔😓",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
-        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
-        "INSANE CRAZY FACTS YOU DIDN&#39;T KNOW!"
+        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts"
       ]
     },
     "pytrends": {
@@ -167,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 159,
+    "total_tests": 160,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

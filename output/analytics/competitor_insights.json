@@ -2,11 +2,11 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 28,
+    "statement": 29,
     "science-discovery": 1,
     "number-lead": 9,
     "wh-question": 4,
-    "statistic": 5,
+    "statistic": 4,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -24,12 +24,12 @@
     "science",
     "physics",
     "experiment",
-    "trick",
     "human",
+    "trick",
     "black",
-    "tricks",
     "amazing",
     "sciencefacts",
+    "tricks",
     "could",
     "unbelievable",
     "only"
@@ -40,16 +40,16 @@
     "#science",
     "#education",
     "#viral",
-    "#youtubeshorts",
+    "#knowledge",
     "#top",
     "#sciencefacts",
+    "#youtubeshorts",
     "#science experiments",
+    "#physics",
     "#factsmine",
-    "#knowledge",
     "#trending",
     "#amazing",
     "#fact",
-    "#viralshorts",
     "#didyouknow"
   ],
   "top_topics": [
@@ -57,22 +57,22 @@
     "didn",
     "physics",
     "human",
-    "tricks",
     "save",
     "life",
     "sciencefacts",
     "black",
+    "tricks",
     "amazing",
     "could",
     "cool",
+    "gravity",
     "gifts",
     "ocean",
     "experiment",
     "funny",
     "unbelievable",
     "earth",
-    "half",
-    "mind"
+    "crazy"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -84,7 +84,7 @@
     "{number} {topic} facts that will blow your mind #Shorts",
     "{topic} is SO cool #Shorts"
   ],
-  "avg_duration_secs": 41.9,
+  "avg_duration_secs": 41.7,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -95,5 +95,5 @@
     "Did You Know That In",
     "Did You Know This Fact"
   ],
-  "timestamp": "2026-09-18T18:38:10"
+  "timestamp": "2026-09-19T18:11:38"
 }
