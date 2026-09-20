@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-19T18:11:38",
+  "timestamp": "2026-09-20T18:17:37",
   "internal": {
     "top5_patterns": [
       {
@@ -35,10 +35,10 @@
       "didn",
       "physics",
       "human",
+      "tricks",
       "save",
       "life",
-      "sciencefacts",
-      "black"
+      "sciencefacts"
     ],
     "hashtags": [
       "#shorts",
@@ -46,10 +46,10 @@
       "#science",
       "#education",
       "#viral",
+      "#youtubeshorts",
       "#knowledge",
       "#top",
       "#sciencefacts",
-      "#youtubeshorts",
       "#science experiments",
       "#physics",
       "#factsmine",
@@ -64,9 +64,9 @@
       "The Last Country Norway",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "How gullible are you",
       "Did You Know That In",
-      "Did You Know This Fact"
+      "Did You Know This Fact",
+      "Did You Know: Titanic Fun"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -82,21 +82,21 @@
       "science",
       "physics",
       "experiment",
-      "human",
       "trick",
+      "human",
       "black",
+      "tricks",
       "amazing",
       "sciencefacts",
-      "tricks",
       "could",
       "unbelievable",
       "only"
     ],
     "pattern_counts": {
-      "statement": 29,
+      "statement": 30,
       "science-discovery": 1,
       "number-lead": 9,
-      "wh-question": 4,
+      "wh-question": 3,
       "statistic": 4,
       "did-you-know": 3
     },
@@ -109,22 +109,21 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "galatasaray",
-        "lehigh football",
-        "iowa state football",
-        "val kilmer",
-        "illinois football",
-        "dallas wings",
-        "tait reynolds",
-        "clemson football",
-        "vanderbilt football",
-        "texas state football"
+        "jason kelce wife",
+        "rico dowdle",
+        "travis etienne",
+        "mike onwenu",
+        "dallas goedert",
+        "raiders schedule",
+        "emeka egbuka",
+        "germie bernard",
+        "kaleb johnson",
+        "street fighter movie"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "Steel Coil 😨",
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
@@ -137,6 +136,7 @@
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "@ITSGURIYAHERE 👈🏻 Please Is Channel Ke Long Videos Ko Dekhkar Watchtime Complete Kar Dijiye 🥺💔😓",
         "How Many Hours Do You Sleep 😱",
+        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "Fun Facts That Are Not Funny",
         "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts"
       ]
@@ -167,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 160,
+    "total_tests": 161,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

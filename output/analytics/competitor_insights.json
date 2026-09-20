@@ -2,10 +2,10 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 29,
+    "statement": 30,
     "science-discovery": 1,
     "number-lead": 9,
-    "wh-question": 4,
+    "wh-question": 3,
     "statistic": 4,
     "did-you-know": 3
   },
@@ -15,7 +15,6 @@
     "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
-    "How gullible are you",
     "Did You Know That In",
     "Did You Know This Fact",
     "Did You Know: Titanic Fun"
@@ -24,12 +23,12 @@
     "science",
     "physics",
     "experiment",
-    "human",
     "trick",
+    "human",
     "black",
+    "tricks",
     "amazing",
     "sciencefacts",
-    "tricks",
     "could",
     "unbelievable",
     "only"
@@ -40,10 +39,10 @@
     "#science",
     "#education",
     "#viral",
+    "#youtubeshorts",
     "#knowledge",
     "#top",
     "#sciencefacts",
-    "#youtubeshorts",
     "#science experiments",
     "#physics",
     "#factsmine",
@@ -57,11 +56,11 @@
     "didn",
     "physics",
     "human",
+    "tricks",
     "save",
     "life",
     "sciencefacts",
     "black",
-    "tricks",
     "amazing",
     "could",
     "cool",
@@ -84,16 +83,16 @@
     "{number} {topic} facts that will blow your mind #Shorts",
     "{topic} is SO cool #Shorts"
   ],
-  "avg_duration_secs": 41.7,
+  "avg_duration_secs": 41.3,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
-    "How gullible are you",
     "Did You Know That In",
-    "Did You Know This Fact"
+    "Did You Know This Fact",
+    "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-09-19T18:11:38"
+  "timestamp": "2026-09-20T18:17:37"
 }
