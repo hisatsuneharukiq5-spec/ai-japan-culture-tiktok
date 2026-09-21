@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-20T18:17:37",
+  "timestamp": "2026-09-21T20:07:05",
   "internal": {
     "top5_patterns": [
       {
@@ -35,10 +35,10 @@
       "didn",
       "physics",
       "human",
-      "tricks",
       "save",
       "life",
-      "sciencefacts"
+      "sciencefacts",
+      "black"
     ],
     "hashtags": [
       "#shorts",
@@ -46,16 +46,16 @@
       "#science",
       "#education",
       "#viral",
-      "#youtubeshorts",
-      "#knowledge",
-      "#top",
       "#sciencefacts",
+      "#youtubeshorts",
       "#science experiments",
       "#physics",
-      "#factsmine",
-      "#trending",
+      "#knowledge",
+      "#top",
       "#amazing",
-      "#fact",
+      "#experiment",
+      "#youtube shorts",
+      "#funny",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -82,22 +82,22 @@
       "science",
       "physics",
       "experiment",
-      "trick",
       "human",
+      "trick",
       "black",
-      "tricks",
       "amazing",
       "sciencefacts",
+      "tricks",
       "could",
       "unbelievable",
       "only"
     ],
     "pattern_counts": {
-      "statement": 30,
+      "statement": 28,
       "science-discovery": 1,
-      "number-lead": 9,
+      "number-lead": 10,
       "wh-question": 3,
-      "statistic": 4,
+      "statistic": 5,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -109,16 +109,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "jason kelce wife",
-        "rico dowdle",
-        "travis etienne",
-        "mike onwenu",
-        "dallas goedert",
-        "raiders schedule",
-        "emeka egbuka",
-        "germie bernard",
-        "kaleb johnson",
-        "street fighter movie"
+        "comerica park",
+        "flores amarillas",
+        "argentina",
+        "bryson dechambeau",
+        "meta stock",
+        "baseball",
+        "el nino",
+        "destiny 2",
+        "pictures",
+        "jennifer eckhart"
       ]
     },
     "youtube_trending": {
@@ -130,15 +130,15 @@
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Walking On Water Trick Revealed! #facts #shorts",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "This Video Can Save Your Life 😱",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "@ITSGURIYAHERE 👈🏻 Please Is Channel Ke Long Videos Ko Dekhkar Watchtime Complete Kar Dijiye 🥺💔😓",
         "How Many Hours Do You Sleep 😱",
-        "बादलों में बना झूला #shorts Facts Cloud by Akash Parihar Amazing Facts",
         "Fun Facts That Are Not Funny",
-        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts"
+        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
+        "INSANE CRAZY FACTS YOU DIDN&#39;T KNOW!",
+        "लोगों के कुछ comedy कारनामे 😝🤣😅 | Funny Facts | Amazing Facts #shorts #youtubeshorts #funny"
       ]
     },
     "pytrends": {
@@ -167,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 161,
+    "total_tests": 162,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

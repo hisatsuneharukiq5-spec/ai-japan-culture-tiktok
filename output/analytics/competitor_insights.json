@@ -2,11 +2,11 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 30,
+    "statement": 28,
     "science-discovery": 1,
-    "number-lead": 9,
+    "number-lead": 10,
     "wh-question": 3,
-    "statistic": 4,
+    "statistic": 5,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -23,12 +23,12 @@
     "science",
     "physics",
     "experiment",
-    "trick",
     "human",
+    "trick",
     "black",
-    "tricks",
     "amazing",
     "sciencefacts",
+    "tricks",
     "could",
     "unbelievable",
     "only"
@@ -39,16 +39,16 @@
     "#science",
     "#education",
     "#viral",
-    "#youtubeshorts",
-    "#knowledge",
-    "#top",
     "#sciencefacts",
+    "#youtubeshorts",
     "#science experiments",
     "#physics",
-    "#factsmine",
-    "#trending",
+    "#knowledge",
+    "#top",
     "#amazing",
-    "#fact",
+    "#experiment",
+    "#youtube shorts",
+    "#funny",
     "#didyouknow"
   ],
   "top_topics": [
@@ -56,11 +56,11 @@
     "didn",
     "physics",
     "human",
-    "tricks",
     "save",
     "life",
     "sciencefacts",
     "black",
+    "tricks",
     "amazing",
     "could",
     "cool",
@@ -68,10 +68,10 @@
     "gifts",
     "ocean",
     "experiment",
-    "funny",
     "unbelievable",
     "earth",
-    "crazy"
+    "half",
+    "mind"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -83,7 +83,7 @@
     "{number} {topic} facts that will blow your mind #Shorts",
     "{topic} is SO cool #Shorts"
   ],
-  "avg_duration_secs": 41.3,
+  "avg_duration_secs": 42.2,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -94,5 +94,5 @@
     "Did You Know This Fact",
     "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-09-20T18:17:37"
+  "timestamp": "2026-09-21T20:07:04"
 }
