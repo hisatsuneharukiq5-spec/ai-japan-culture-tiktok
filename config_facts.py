@@ -89,13 +89,13 @@ LEARNED_HASHTAGS = [
   "#sciencefacts",
   "#youtubeshorts",
   "#science experiments",
-  "#physics",
-  "#knowledge",
   "#top",
   "#amazing",
-  "#experiment",
   "#youtube shorts",
-  "#funny",
+  "#factsmine",
+  "#knowledge",
+  "#trending",
+  "#fact",
   "#didyouknow"
 ]
 PREFERRED_POST_HOURS = [0, 11, 12, 19, 20]

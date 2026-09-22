@@ -31,7 +31,8 @@
     "tricks",
     "could",
     "unbelievable",
-    "only"
+    "only",
+    "fastest"
   ],
   "top_hashtags": [
     "#shorts",
@@ -42,13 +43,13 @@
     "#sciencefacts",
     "#youtubeshorts",
     "#science experiments",
-    "#physics",
-    "#knowledge",
     "#top",
     "#amazing",
-    "#experiment",
     "#youtube shorts",
-    "#funny",
+    "#factsmine",
+    "#knowledge",
+    "#trending",
+    "#fact",
     "#didyouknow"
   ],
   "top_topics": [
@@ -64,14 +65,14 @@
     "amazing",
     "could",
     "cool",
-    "gravity",
     "gifts",
     "ocean",
     "experiment",
     "unbelievable",
     "earth",
     "half",
-    "mind"
+    "mind",
+    "world"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -81,9 +82,10 @@
     "What happens to your body when {scenario}? #Shorts",
     "Why {topic} is more {adjective} than you think #Shorts",
     "{number} {topic} facts that will blow your mind #Shorts",
-    "{topic} is SO cool #Shorts"
+    "{topic} is SO cool #Shorts",
+    "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.2,
+  "avg_duration_secs": 42.6,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -94,5 +96,5 @@
     "Did You Know This Fact",
     "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-09-21T20:07:04"
+  "timestamp": "2026-09-22T19:03:49"
 }

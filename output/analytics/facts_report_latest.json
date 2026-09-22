@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-21T20:07:05",
+  "timestamp": "2026-09-22T19:03:49",
   "internal": {
     "top5_patterns": [
       {
@@ -49,13 +49,13 @@
       "#sciencefacts",
       "#youtubeshorts",
       "#science experiments",
-      "#physics",
-      "#knowledge",
       "#top",
       "#amazing",
-      "#experiment",
       "#youtube shorts",
-      "#funny",
+      "#factsmine",
+      "#knowledge",
+      "#trending",
+      "#fact",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -76,7 +76,8 @@
       "What happens to your body when {scenario}? #Shorts",
       "Why {topic} is more {adjective} than you think #Shorts",
       "{number} {topic} facts that will blow your mind #Shorts",
-      "{topic} is SO cool #Shorts"
+      "{topic} is SO cool #Shorts",
+      "{topic}'s the fastest way to empty a bottle #Shorts"
     ],
     "power_words": [
       "science",
@@ -90,7 +91,8 @@
       "tricks",
       "could",
       "unbelievable",
-      "only"
+      "only",
+      "fastest"
     ],
     "pattern_counts": {
       "statement": 28,
@@ -109,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "comerica park",
-        "flores amarillas",
-        "argentina",
-        "bryson dechambeau",
-        "meta stock",
-        "baseball",
-        "el nino",
-        "destiny 2",
-        "pictures",
-        "jennifer eckhart"
+        "leicester city vs fulham u-21",
+        "kaitlan collins",
+        "vmas 2026",
+        "edd",
+        "disneyland tickets",
+        "james farthing public intoxication",
+        "adam schefter",
+        "michigan lottery",
+        "amazon ftc prime settlement update",
+        "trump canada"
       ]
     },
     "youtube_trending": {
@@ -137,8 +139,8 @@
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
         "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
-        "INSANE CRAZY FACTS YOU DIDN&#39;T KNOW!",
-        "लोगों के कुछ comedy कारनामे 😝🤣😅 | Funny Facts | Amazing Facts #shorts #youtubeshorts #funny"
+        "लोगों के कुछ comedy कारनामे 😝🤣😅 | Funny Facts | Amazing Facts #shorts #youtubeshorts #funny",
+        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts"
       ]
     },
     "pytrends": {
@@ -167,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 162,
+    "total_tests": 163,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
