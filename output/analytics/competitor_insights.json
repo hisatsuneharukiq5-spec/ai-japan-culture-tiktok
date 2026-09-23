@@ -2,11 +2,11 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 28,
+    "statement": 27,
     "science-discovery": 1,
-    "number-lead": 10,
+    "number-lead": 12,
     "wh-question": 3,
-    "statistic": 5,
+    "statistic": 4,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -24,55 +24,56 @@
     "physics",
     "experiment",
     "human",
-    "trick",
+    "tricks",
+    "sciencefacts",
     "black",
     "amazing",
-    "sciencefacts",
-    "tricks",
+    "magic",
+    "factsmine",
     "could",
-    "unbelievable",
     "only",
-    "fastest"
+    "fastest",
+    "unbelievable"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
     "#science",
-    "#education",
-    "#viral",
-    "#sciencefacts",
     "#youtubeshorts",
-    "#science experiments",
     "#top",
+    "#fact",
+    "#sciencefacts",
+    "#amazingfacts",
+    "#viral",
     "#amazing",
-    "#youtube shorts",
+    "#viralshorts",
     "#factsmine",
     "#knowledge",
-    "#trending",
-    "#fact",
+    "#education",
+    "#youtube shorts",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
     "physics",
+    "tricks",
+    "sciencefacts",
     "human",
+    "black",
+    "amazing",
+    "factsmine",
+    "could",
     "save",
     "life",
-    "sciencefacts",
-    "black",
-    "tricks",
-    "amazing",
-    "could",
     "cool",
     "gifts",
     "ocean",
     "experiment",
-    "unbelievable",
     "earth",
-    "half",
-    "mind",
-    "world"
+    "magical",
+    "world",
+    "want"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -85,7 +86,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.6,
+  "avg_duration_secs": 44.2,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -96,5 +97,5 @@
     "Did You Know This Fact",
     "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-09-22T19:03:49"
+  "timestamp": "2026-09-23T19:11:42"
 }
