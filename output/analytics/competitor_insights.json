@@ -17,37 +17,40 @@
     "How Deep Do Humans Have",
     "Did You Know That In",
     "Did You Know This Fact",
+    "The SCARIEST Fact About SPACE",
     "Did You Know: Titanic Fun"
   ],
   "power_words": [
     "science",
-    "physics",
     "experiment",
+    "physics",
     "human",
-    "sciencefacts",
+    "viral",
     "trick",
     "black",
     "amazing",
+    "sciencefacts",
     "tricks",
     "could",
+    "video",
+    "space",
     "unbelievable",
-    "only",
-    "fastest"
+    "only"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
     "#science",
     "#education",
-    "#sciencefacts",
     "#viral",
+    "#experiment",
+    "#sciencefacts",
     "#youtubeshorts",
     "#science experiments",
     "#physics",
     "#knowledge",
     "#top",
     "#amazing",
-    "#experiment",
     "#youtube shorts",
     "#funny",
     "#didyouknow"
@@ -56,25 +59,26 @@
     "science",
     "didn",
     "physics",
-    "sciencefacts",
     "human",
     "save",
     "life",
+    "experiment",
+    "sciencefacts",
     "black",
     "tricks",
     "amazing",
     "could",
     "cool",
-    "water",
     "gravity",
     "gifts",
     "ocean",
-    "experiment",
     "unbelievable",
     "earth",
-    "world"
+    "really",
+    "make"
   ],
   "title_templates": [
+    "Can WELDING really make you BLIND? (3D {topic}) #Shorts",
     "Did you know that {fact}? #Shorts",
     "Only {number}% of people know this about {topic} #Shorts",
     "Scientists just discovered {topic} and it changes everything #Shorts",
@@ -85,7 +89,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.9,
+  "avg_duration_secs": 41.6,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -94,7 +98,7 @@
     "How Deep Do Humans Have",
     "Did You Know That In",
     "Did You Know This Fact",
-    "Did You Know: Titanic Fun"
+    "The SCARIEST Fact About SPACE"
   ],
-  "timestamp": "2026-09-24T19:27:20"
+  "timestamp": "2026-09-25T19:28:45"
 }

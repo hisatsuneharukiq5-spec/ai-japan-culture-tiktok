@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-24T19:27:21",
+  "timestamp": "2026-09-25T19:28:46",
   "internal": {
     "top5_patterns": [
       {
@@ -34,26 +34,26 @@
       "science",
       "didn",
       "physics",
-      "sciencefacts",
       "human",
       "save",
       "life",
-      "black"
+      "experiment",
+      "sciencefacts"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#education",
-      "#sciencefacts",
       "#viral",
+      "#experiment",
+      "#sciencefacts",
       "#youtubeshorts",
       "#science experiments",
       "#physics",
       "#knowledge",
       "#top",
       "#amazing",
-      "#experiment",
       "#youtube shorts",
       "#funny",
       "#didyouknow"
@@ -66,9 +66,10 @@
       "How Deep Do Humans Have",
       "Did You Know That In",
       "Did You Know This Fact",
-      "Did You Know: Titanic Fun"
+      "The SCARIEST Fact About SPACE"
     ],
     "title_templates": [
+      "Can WELDING really make you BLIND? (3D {topic}) #Shorts",
       "Did you know that {fact}? #Shorts",
       "Only {number}% of people know this about {topic} #Shorts",
       "Scientists just discovered {topic} and it changes everything #Shorts",
@@ -81,18 +82,20 @@
     ],
     "power_words": [
       "science",
-      "physics",
       "experiment",
+      "physics",
       "human",
-      "sciencefacts",
+      "viral",
       "trick",
       "black",
       "amazing",
+      "sciencefacts",
       "tricks",
       "could",
+      "video",
+      "space",
       "unbelievable",
-      "only",
-      "fastest"
+      "only"
     ],
     "pattern_counts": {
       "statement": 29,
@@ -111,16 +114,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "pca",
-        "uefa nations league schedule",
-        "cameroon vs comoros",
-        "chad bianco",
-        "serbia vs greece",
-        "kosovo vs ireland",
-        "netanyahu",
-        "maduka okoye",
-        "taylor mcgregor",
-        "theragun y2k mini"
+        "rotten tomatoes",
+        "macklin celebrini",
+        "algeria vs zambia",
+        "marruecos - gabón",
+        "mali vs cabo verde",
+        "turquie – france",
+        "hungary vs ukraine",
+        "egipto - angola",
+        "egypt vs angola",
+        "morocco vs gabon"
       ]
     },
     "youtube_trending": {
@@ -169,7 +172,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 165,
+    "total_tests": 166,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

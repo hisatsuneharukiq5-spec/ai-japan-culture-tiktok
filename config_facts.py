@@ -59,16 +59,16 @@ ANTHROPIC_MODELS = [
 ]
 
 # FACTS_BRAIN_MANAGED_START
-LEARNED_TOPIC_STYLE = "science, didn, physics, sciencefacts, human, save, life, black"
+LEARNED_TOPIC_STYLE = "science, didn, physics, human, save, life, experiment, sciencefacts"
 LEARNED_TITLE_TEMPLATES = [
+  "Can WELDING really make you BLIND? (3D {topic}) #Shorts",
   "Did you know that {fact}? #Shorts",
   "Only {number}% of people know this about {topic} #Shorts",
   "Scientists just discovered {topic} and it changes everything #Shorts",
   "The real reason {topic} does this will shock you #Shorts",
   "What happens to your body when {scenario}? #Shorts",
   "Why {topic} is more {adjective} than you think #Shorts",
-  "{number} {topic} facts that will blow your mind #Shorts",
-  "{topic} is SO cool #Shorts"
+  "{number} {topic} facts that will blow your mind #Shorts"
 ]
 LEARNED_HOOK_PHRASES = [
   "This is SO cool",
@@ -78,22 +78,22 @@ LEARNED_HOOK_PHRASES = [
   "How Deep Do Humans Have",
   "Did You Know That In",
   "Did You Know This Fact",
-  "Did You Know: Titanic Fun"
+  "The SCARIEST Fact About SPACE"
 ]
 LEARNED_HASHTAGS = [
   "#shorts",
   "#facts",
   "#science",
   "#education",
-  "#sciencefacts",
   "#viral",
+  "#experiment",
+  "#sciencefacts",
   "#youtubeshorts",
   "#science experiments",
   "#physics",
   "#knowledge",
   "#top",
   "#amazing",
-  "#experiment",
   "#youtube shorts",
   "#funny",
   "#didyouknow"
