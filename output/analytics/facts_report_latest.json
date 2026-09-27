@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-26T18:42:16",
+  "timestamp": "2026-09-27T19:12:09",
   "internal": {
     "top5_patterns": [
       {
@@ -32,12 +32,12 @@
     "videos_analyzed": 50,
     "popular_topics": [
       "science",
-      "physics",
       "didn",
+      "physics",
       "sciencefacts",
+      "factsmine",
       "save",
       "life",
-      "experiment",
       "human"
     ],
     "hashtags": [
@@ -45,15 +45,15 @@
       "#facts",
       "#science",
       "#education",
+      "#top",
+      "#fact",
       "#knowledge",
       "#viral",
-      "#sciencefacts",
       "#amazing",
-      "#fact",
+      "#sciencefacts",
       "#youtubeshorts",
       "#factsmine",
-      "#top",
-      "#experiment",
+      "#amazingfacts",
       "#science experiments",
       "#youtube shorts",
       "#didyouknow"
@@ -82,25 +82,23 @@
     ],
     "power_words": [
       "science",
-      "experiment",
       "physics",
-      "viral",
+      "experiment",
       "sciencefacts",
       "trick",
       "human",
       "black",
+      "factsmine",
       "amazing",
       "tricks",
-      "factsmine",
       "could",
-      "video",
       "unbelievable",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 29,
+      "statement": 28,
       "science-discovery": 1,
-      "number-lead": 9,
+      "number-lead": 10,
       "wh-question": 4,
       "statistic": 4,
       "did-you-know": 3
@@ -114,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "iowa student death",
-        "laken tomlinson",
-        "central ar vs florida state",
-        "trump rejects iran deal",
-        "hawaii vs wyoming",
-        "pearl jam new drummer",
-        "south dakota vs youngstown st",
-        "william, prince of wales",
-        "north macedonia vs switzerland",
-        "czechia vs croatia"
+        "braves vs marlins",
+        "rangers vs twins",
+        "reds vs blue jays",
+        "olivia miles",
+        "cubs - red sox",
+        "fncs leaderboard",
+        "child",
+        "portugal fc",
+        "target pokemon 30th anniversary",
+        "cam little"
       ]
     },
     "youtube_trending": {
@@ -135,6 +133,7 @@
         "Walking On Water Trick Revealed! #facts #shorts",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
+        "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
@@ -142,8 +141,7 @@
         "@ITSGURIYAHERE 👈🏻 Please Is Channel Ke Long Videos Ko Dekhkar Watchtime Complete Kar Dijiye 🥺💔😓",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
-        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
-        "लोगों के कुछ comedy कारनामे 😝🤣😅 | Funny Facts | Amazing Facts #shorts #youtubeshorts #funny"
+        "Sharpest Knife In The World"
       ]
     },
     "pytrends": {
@@ -172,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 167,
+    "total_tests": 168,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
