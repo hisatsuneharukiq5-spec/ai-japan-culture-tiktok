@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-27T19:12:09",
+  "timestamp": "2026-09-28T21:22:02",
   "internal": {
     "top5_patterns": [
       {
@@ -34,28 +34,28 @@
       "science",
       "didn",
       "physics",
-      "sciencefacts",
-      "factsmine",
       "save",
       "life",
-      "human"
+      "sciencefacts",
+      "human",
+      "black"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#education",
-      "#top",
-      "#fact",
       "#knowledge",
       "#viral",
       "#amazing",
-      "#sciencefacts",
+      "#fact",
       "#youtubeshorts",
       "#factsmine",
-      "#amazingfacts",
+      "#top",
+      "#sciencefacts",
       "#science experiments",
       "#youtube shorts",
+      "#physics",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -84,13 +84,13 @@
       "science",
       "physics",
       "experiment",
-      "sciencefacts",
       "trick",
       "human",
       "black",
-      "factsmine",
       "amazing",
+      "sciencefacts",
       "tricks",
+      "factsmine",
       "could",
       "unbelievable",
       "fastest"
@@ -112,22 +112,21 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "braves vs marlins",
-        "rangers vs twins",
-        "reds vs blue jays",
-        "olivia miles",
-        "cubs - red sox",
-        "fncs leaderboard",
-        "child",
-        "portugal fc",
-        "target pokemon 30th anniversary",
-        "cam little"
+        "rob dillingham",
+        "tunisia vs botswana",
+        "world labs",
+        "katie miller",
+        "michael kayode",
+        "warren county ohio",
+        "data center",
+        "lieutenant stitchie",
+        "warren county ky",
+        "france"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "World&#39;s Most Expensive Slide",
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
@@ -136,6 +135,7 @@
         "Unseen Animals Amazing Facts #shorts Facts Cloud by Akash Parihar",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
+        "He Forgot His Rolls Royce For 25 Years #shorts",
         "Strongest Glass in The World",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "@ITSGURIYAHERE 👈🏻 Please Is Channel Ke Long Videos Ko Dekhkar Watchtime Complete Kar Dijiye 🥺💔😓",
@@ -170,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 168,
+    "total_tests": 169,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

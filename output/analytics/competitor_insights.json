@@ -24,13 +24,13 @@
     "science",
     "physics",
     "experiment",
-    "sciencefacts",
     "trick",
     "human",
     "black",
-    "factsmine",
     "amazing",
+    "sciencefacts",
     "tricks",
+    "factsmine",
     "could",
     "unbelievable",
     "fastest"
@@ -40,40 +40,40 @@
     "#facts",
     "#science",
     "#education",
-    "#top",
-    "#fact",
     "#knowledge",
     "#viral",
     "#amazing",
-    "#sciencefacts",
+    "#fact",
     "#youtubeshorts",
     "#factsmine",
-    "#amazingfacts",
+    "#top",
+    "#sciencefacts",
     "#science experiments",
     "#youtube shorts",
+    "#physics",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
     "physics",
-    "sciencefacts",
-    "factsmine",
     "save",
     "life",
+    "sciencefacts",
     "human",
     "black",
     "tricks",
     "amazing",
+    "factsmine",
     "could",
     "cool",
-    "water",
     "gravity",
     "gifts",
     "ocean",
     "experiment",
     "unbelievable",
-    "earth"
+    "earth",
+    "make"
   ],
   "title_templates": [
     "Can WELDING really make you BLIND? (3D {topic}) #Shorts",
@@ -87,7 +87,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.6,
+  "avg_duration_secs": 43.9,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -98,5 +98,5 @@
     "Did You Know That In",
     "Did You Know This Fact"
   ],
-  "timestamp": "2026-09-27T19:12:08"
+  "timestamp": "2026-09-28T21:22:02"
 }
