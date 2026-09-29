@@ -2,9 +2,9 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 28,
+    "statement": 27,
     "science-discovery": 1,
-    "number-lead": 10,
+    "number-lead": 11,
     "wh-question": 4,
     "statistic": 4,
     "did-you-know": 3
@@ -27,36 +27,37 @@
     "trick",
     "human",
     "black",
+    "factsmine",
     "amazing",
     "sciencefacts",
     "tricks",
-    "factsmine",
     "could",
-    "unbelievable",
-    "fastest"
+    "fastest",
+    "unbelievable"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
     "#science",
     "#education",
+    "#top",
+    "#fact",
     "#knowledge",
     "#viral",
     "#amazing",
-    "#fact",
     "#youtubeshorts",
     "#factsmine",
-    "#top",
     "#sciencefacts",
+    "#amazingfacts",
     "#science experiments",
     "#youtube shorts",
-    "#physics",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "didn",
     "physics",
+    "factsmine",
     "save",
     "life",
     "sciencefacts",
@@ -64,16 +65,15 @@
     "black",
     "tricks",
     "amazing",
-    "factsmine",
     "could",
     "cool",
     "gravity",
     "gifts",
     "ocean",
     "experiment",
-    "unbelievable",
     "earth",
-    "make"
+    "make",
+    "world"
   ],
   "title_templates": [
     "Can WELDING really make you BLIND? (3D {topic}) #Shorts",
@@ -98,5 +98,5 @@
     "Did You Know That In",
     "Did You Know This Fact"
   ],
-  "timestamp": "2026-09-28T21:22:02"
+  "timestamp": "2026-09-29T20:10:58"
 }
