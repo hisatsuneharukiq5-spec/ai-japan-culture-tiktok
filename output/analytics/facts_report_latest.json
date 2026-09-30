@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-29T20:10:58",
+  "timestamp": "2026-09-30T20:15:40",
   "internal": {
     "top5_patterns": [
       {
@@ -34,11 +34,11 @@
       "science",
       "didn",
       "physics",
+      "sciencefacts",
+      "tricks",
       "factsmine",
       "save",
-      "life",
-      "sciencefacts",
-      "human"
+      "life"
     ],
     "hashtags": [
       "#shorts",
@@ -47,14 +47,14 @@
       "#education",
       "#top",
       "#fact",
+      "#youtubeshorts",
+      "#amazing",
+      "#sciencefacts",
+      "#factsmine",
       "#knowledge",
       "#viral",
-      "#amazing",
-      "#youtubeshorts",
-      "#factsmine",
-      "#sciencefacts",
       "#amazingfacts",
-      "#science experiments",
+      "#viralshorts",
       "#youtube shorts",
       "#didyouknow"
     ],
@@ -84,16 +84,14 @@
       "science",
       "physics",
       "experiment",
-      "trick",
+      "sciencefacts",
       "human",
       "black",
+      "tricks",
       "factsmine",
       "amazing",
-      "sciencefacts",
-      "tricks",
       "could",
-      "fastest",
-      "unbelievable"
+      "fastest"
     ],
     "pattern_counts": {
       "statement": 27,
@@ -112,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "caleb flynn",
-        "españa fc",
-        "guinea-bissau national football team vs nigeria national football team standings",
-        "temporary protected status",
-        "kristi noem",
+        "mu stock",
+        "secret lair",
+        "millennials",
+        "ps5 pro",
+        "brandon marsh",
         "john kruk",
-        "san marino vs albania",
-        "jason kelce espn broadcast apology",
-        "spain fc",
-        "jesús luzardo"
+        "tyler perry $57m estate listing",
+        "marsha blackburn sues jack smith",
+        "joey votto",
+        "wolf"
       ]
     },
     "youtube_trending": {
@@ -170,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 170,
+    "total_tests": 171,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
