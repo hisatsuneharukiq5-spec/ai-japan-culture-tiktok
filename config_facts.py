@@ -76,9 +76,9 @@ LEARNED_HOOK_PHRASES = [
   "The Last Country Norway",
   "This can help make Artificial",
   "How Deep Do Humans Have",
-  "How gullible are you",
   "Did You Know That In",
-  "Did You Know This Fact"
+  "Did You Know This Fact",
+  "Did You Know: Titanic Fun"
 ]
 LEARNED_HASHTAGS = [
   "#shorts",

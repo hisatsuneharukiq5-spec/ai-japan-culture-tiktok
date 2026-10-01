@@ -2,10 +2,10 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 27,
-    "science-discovery": 1,
-    "number-lead": 11,
+    "statement": 28,
     "wh-question": 4,
+    "science-discovery": 1,
+    "number-lead": 10,
     "statistic": 4,
     "did-you-know": 3
   },
@@ -15,7 +15,6 @@
     "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
-    "How gullible are you",
     "Did You Know That In",
     "Did You Know This Fact",
     "Did You Know: Titanic Fun"
@@ -30,8 +29,10 @@
     "tricks",
     "factsmine",
     "amazing",
+    "magic",
     "could",
-    "fastest"
+    "fastest",
+    "unbelievable"
   ],
   "top_hashtags": [
     "#shorts",
@@ -70,7 +71,7 @@
     "experiment",
     "earth",
     "make",
-    "want",
+    "magical",
     "crazy"
   ],
   "title_templates": [
@@ -92,9 +93,9 @@
     "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
-    "How gullible are you",
     "Did You Know That In",
-    "Did You Know This Fact"
+    "Did You Know This Fact",
+    "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-09-30T20:15:40"
+  "timestamp": "2026-10-01T20:28:00"
 }
