@@ -2,10 +2,10 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 28,
+    "statement": 27,
     "wh-question": 4,
     "science-discovery": 1,
-    "number-lead": 10,
+    "number-lead": 11,
     "statistic": 4,
     "did-you-know": 3
   },
@@ -17,6 +17,7 @@
     "How Deep Do Humans Have",
     "Did You Know That In",
     "Did You Know This Fact",
+    "The SCARIEST Fact About SPACE",
     "Did You Know: Titanic Fun"
   ],
   "power_words": [
@@ -31,8 +32,8 @@
     "amazing",
     "magic",
     "could",
-    "fastest",
-    "unbelievable"
+    "space",
+    "fastest"
   ],
   "top_hashtags": [
     "#shorts",
@@ -72,7 +73,7 @@
     "earth",
     "make",
     "magical",
-    "crazy"
+    "want"
   ],
   "title_templates": [
     "Can WELDING really make you BLIND? (3D {topic}) #Shorts",
@@ -86,7 +87,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.6,
+  "avg_duration_secs": 43.2,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -95,7 +96,7 @@
     "How Deep Do Humans Have",
     "Did You Know That In",
     "Did You Know This Fact",
-    "Did You Know: Titanic Fun"
+    "The SCARIEST Fact About SPACE"
   ],
-  "timestamp": "2026-10-01T20:28:00"
+  "timestamp": "2026-10-02T20:07:06"
 }

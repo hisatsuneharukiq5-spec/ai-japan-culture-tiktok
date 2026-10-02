@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-01T20:28:00",
+  "timestamp": "2026-10-02T20:07:07",
   "internal": {
     "top5_patterns": [
       {
@@ -66,7 +66,7 @@
       "How Deep Do Humans Have",
       "Did You Know That In",
       "Did You Know This Fact",
-      "Did You Know: Titanic Fun"
+      "The SCARIEST Fact About SPACE"
     ],
     "title_templates": [
       "Can WELDING really make you BLIND? (3D {topic}) #Shorts",
@@ -92,14 +92,14 @@
       "amazing",
       "magic",
       "could",
-      "fastest",
-      "unbelievable"
+      "space",
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 28,
+      "statement": 27,
       "wh-question": 4,
       "science-discovery": 1,
-      "number-lead": 10,
+      "number-lead": 11,
       "statistic": 4,
       "did-you-know": 3
     },
@@ -112,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "nike stock",
-        "aircraft carrier",
-        "roger rogoff us attorney lawsuit",
-        "flash flooding",
-        "soap opera",
-        "retirement age",
-        "speea",
-        "portugal national football team",
-        "uefa nations league schedule",
-        "2027 honda civic type r"
+        "owen coyne marblehead",
+        "berkeley shooting",
+        "belgium vs turkey",
+        "france",
+        "cancer",
+        "extrema derecha",
+        "hungary vs georgia",
+        "ukraine vs northern ireland",
+        "diddy",
+        "ken paxton james talarico polls"
       ]
     },
     "youtube_trending": {
@@ -170,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 172,
+    "total_tests": 173,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

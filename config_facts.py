@@ -78,7 +78,7 @@ LEARNED_HOOK_PHRASES = [
   "How Deep Do Humans Have",
   "Did You Know That In",
   "Did You Know This Fact",
-  "Did You Know: Titanic Fun"
+  "The SCARIEST Fact About SPACE"
 ]
 LEARNED_HASHTAGS = [
   "#shorts",
