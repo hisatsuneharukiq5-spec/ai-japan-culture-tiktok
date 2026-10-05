@@ -59,7 +59,7 @@ ANTHROPIC_MODELS = [
 ]
 
 # FACTS_BRAIN_MANAGED_START
-LEARNED_TOPIC_STYLE = "science, didn, physics, sciencefacts, tricks, factsmine, save, life"
+LEARNED_TOPIC_STYLE = "science, physics, sciencefacts, human, tricks, amazing, didn, funny"
 LEARNED_TITLE_TEMPLATES = [
   "Can WELDING really make you BLIND? (3D {topic}) #Shorts",
   "Did you know that {fact}? #Shorts",
@@ -75,27 +75,27 @@ LEARNED_HOOK_PHRASES = [
   "What Is The Real Shape",
   "The Last Country Norway",
   "This can help make Artificial",
-  "How Deep Do Humans Have",
   "Did You Know That In",
   "Did You Know This Fact",
+  "The SCARIEST Fact About SPACE",
   "Did You Know: Titanic Fun"
 ]
 LEARNED_HASHTAGS = [
   "#shorts",
   "#facts",
   "#science",
+  "#viral",
+  "#sciencefacts",
+  "#youtubeshorts",
   "#education",
   "#top",
-  "#fact",
-  "#youtubeshorts",
   "#amazing",
-  "#sciencefacts",
+  "#science experiments",
   "#factsmine",
   "#knowledge",
-  "#viral",
-  "#amazingfacts",
+  "#trending",
+  "#fact",
   "#viralshorts",
-  "#youtube shorts",
   "#didyouknow"
 ]
 PREFERRED_POST_HOURS = [0, 11, 12, 19, 20]
