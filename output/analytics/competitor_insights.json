@@ -2,9 +2,9 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 29,
+    "statement": 30,
     "science-discovery": 1,
-    "number-lead": 11,
+    "number-lead": 10,
     "wh-question": 2,
     "statistic": 4,
     "did-you-know": 3
@@ -22,15 +22,16 @@
   "power_words": [
     "science",
     "physics",
-    "sciencefacts",
     "trick",
+    "sciencefacts",
     "human",
     "black",
+    "tricks",
     "factsmine",
     "experiment",
     "amazing",
     "unbelievable",
-    "tricks",
+    "magic",
     "could",
     "fastest"
   ],
@@ -43,13 +44,13 @@
     "#fact",
     "#knowledge",
     "#viral",
-    "#amazing",
-    "#sciencefacts",
     "#youtubeshorts",
     "#factsmine",
+    "#amazing",
+    "#sciencefacts",
     "#amazingfacts",
+    "#viralshorts",
     "#science experiments",
-    "#youtube shorts",
     "#didyouknow"
   ],
   "top_topics": [
@@ -57,13 +58,13 @@
     "didn",
     "physics",
     "sciencefacts",
+    "tricks",
     "factsmine",
     "save",
     "life",
     "unbelievable",
     "human",
     "black",
-    "tricks",
     "amazing",
     "could",
     "cool",
@@ -86,7 +87,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.8,
+  "avg_duration_secs": 43.2,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -97,5 +98,5 @@
     "Did You Know This Fact",
     "Did You Know: Titanic Fun"
   ],
-  "timestamp": "2026-10-06T20:30:52"
+  "timestamp": "2026-10-07T20:44:32"
 }

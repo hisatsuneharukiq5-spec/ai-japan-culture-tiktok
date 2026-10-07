@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-06T20:30:53",
+  "timestamp": "2026-10-07T20:44:32",
   "internal": {
     "top5_patterns": [
       {
@@ -35,10 +35,10 @@
       "didn",
       "physics",
       "sciencefacts",
+      "tricks",
       "factsmine",
       "save",
-      "life",
-      "unbelievable"
+      "life"
     ],
     "hashtags": [
       "#shorts",
@@ -49,13 +49,13 @@
       "#fact",
       "#knowledge",
       "#viral",
-      "#amazing",
-      "#sciencefacts",
       "#youtubeshorts",
       "#factsmine",
+      "#amazing",
+      "#sciencefacts",
       "#amazingfacts",
+      "#viralshorts",
       "#science experiments",
-      "#youtube shorts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -83,22 +83,23 @@
     "power_words": [
       "science",
       "physics",
-      "sciencefacts",
       "trick",
+      "sciencefacts",
       "human",
       "black",
+      "tricks",
       "factsmine",
       "experiment",
       "amazing",
       "unbelievable",
-      "tricks",
+      "magic",
       "could",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 29,
+      "statement": 30,
       "science-discovery": 1,
-      "number-lead": 11,
+      "number-lead": 10,
       "wh-question": 2,
       "statistic": 4,
       "did-you-know": 3
@@ -112,28 +113,36 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "hbo max paramount plus merger",
-        "mikel merino",
-        "jenna bush hager",
-        "harry kane",
-        "the gilded age - season 4",
-        "lane johnson",
-        "supreme court",
-        "elon musk net worth trillion dollars",
-        "vikings waive jeshaun jones",
-        "minecraft snapshot"
+        "disney believe reveal",
+        "maricarmen abascal",
+        "mike breen",
+        "paul ferris",
+        "yankees lineup",
+        "tbs",
+        "demeco ryans",
+        "fiu football",
+        "michele tafoya",
+        "daniel espino"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
+        "World&#39;s Most Expensive Slide",
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "@ITSGURIYAHERE 👈🏻 Please Is Channel Ke Long Videos Ko Dekhkar Watchtime Complete Kar Dijiye 🥺💔😓"
+        "Inside A Camel Hump 😱",
+        "Strongest Glass in The World",
+        "@ITSGURIYAHERE 👈🏻 Please Is Channel Ke Long Videos Ko Dekhkar Watchtime Complete Kar Dijiye 🥺💔😓",
+        "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
+        "How Many Hours Do You Sleep 😱",
+        "Fun Facts That Are Not Funny",
+        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
+        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts"
       ]
     },
     "pytrends": {
@@ -162,7 +171,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 177,
+    "total_tests": 178,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
