@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-07T20:44:32",
+  "timestamp": "2026-10-08T20:47:32",
   "internal": {
     "top5_patterns": [
       {
@@ -35,10 +35,10 @@
       "didn",
       "physics",
       "sciencefacts",
-      "tricks",
-      "factsmine",
+      "human",
       "save",
-      "life"
+      "life",
+      "black"
     ],
     "hashtags": [
       "#shorts",
@@ -46,16 +46,16 @@
       "#science",
       "#education",
       "#top",
-      "#fact",
-      "#knowledge",
       "#viral",
+      "#sciencefacts",
+      "#fact",
       "#youtubeshorts",
       "#factsmine",
+      "#knowledge",
       "#amazing",
-      "#sciencefacts",
-      "#amazingfacts",
-      "#viralshorts",
+      "#experiment",
       "#science experiments",
+      "#physics",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -69,7 +69,6 @@
       "Did You Know: Titanic Fun"
     ],
     "title_templates": [
-      "Can WELDING really make you BLIND? (3D {topic}) #Shorts",
       "Did you know that {fact}? #Shorts",
       "Only {number}% of people know this about {topic} #Shorts",
       "Scientists just discovered {topic} and it changes everything #Shorts",
@@ -82,18 +81,19 @@
     ],
     "power_words": [
       "science",
-      "physics",
-      "trick",
-      "sciencefacts",
-      "human",
-      "black",
-      "tricks",
-      "factsmine",
       "experiment",
+      "physics",
+      "human",
+      "viral",
+      "sciencefacts",
+      "trick",
+      "black",
       "amazing",
-      "unbelievable",
-      "magic",
+      "tricks",
       "could",
+      "video",
+      "unbelievable",
+      "only",
       "fastest"
     ],
     "pattern_counts": {
@@ -113,16 +113,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "disney believe reveal",
-        "maricarmen abascal",
-        "mike breen",
-        "paul ferris",
-        "yankees lineup",
-        "tbs",
-        "demeco ryans",
-        "fiu football",
+        "fort hood shooter",
+        "james comey seashell indictment status",
+        "wladimir klitschko guardianship kaya",
+        "kaytron allen",
+        "fleet week",
+        "el hijo de fishman",
+        "southeastern conference",
+        "ceedee lamb stats",
         "michele tafoya",
-        "daniel espino"
+        "james talarico campaign absence texas senate"
       ]
     },
     "youtube_trending": {
@@ -141,8 +141,8 @@
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
-        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
-        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts"
+        "Sharpest Knife In The World",
+        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts"
       ]
     },
     "pytrends": {
@@ -171,7 +171,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 178,
+    "total_tests": 179,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
