@@ -1,13 +1,13 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 48,
+  "videos_analyzed": 49,
   "pattern_counts": {
-    "statement": 27,
+    "statement": 29,
     "science-discovery": 1,
     "number-lead": 8,
     "wh-question": 5,
     "statistic": 3,
-    "did-you-know": 4
+    "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
@@ -16,23 +16,21 @@
     "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
-    "What If You Were 4D",
     "How gullible are you",
     "Did You Know That In",
-    "How wound stitches really work"
+    "How wound stitches really work",
+    "How to Remove Ear Wax"
   ],
   "power_words": [
     "science",
     "physics",
-    "experiment",
     "human",
+    "experiment",
+    "unbelievable",
     "sciencefacts",
     "trick",
-    "chemistry",
     "could",
-    "ashusir",
     "amazing",
-    "unbelievable",
     "shocking",
     "never",
     "only",
@@ -45,13 +43,13 @@
     "#viral",
     "#knowledge",
     "#science experiments",
+    "#funny",
     "#physics",
     "#education",
+    "#experiment",
     "#trending",
     "#sciencefacts",
-    "#experiment",
-    "#short",
-    "#funny",
+    "#tiktok",
     "#factsmine",
     "#latest",
     "#didyouknow"
@@ -61,22 +59,22 @@
     "physics",
     "human",
     "didn",
-    "experiment",
     "sciencefacts",
-    "chemistry",
+    "unbelievable",
     "could",
     "save",
     "life",
-    "ashusir",
+    "experiment",
     "cool",
     "gravity",
     "gifts",
     "ocean",
-    "unbelievable",
+    "funny",
+    "chemistry",
     "earth",
-    "scienceandfun",
-    "ytshorts",
-    "tricks"
+    "ashusir",
+    "tricks",
+    "amazing"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -89,7 +87,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.5,
+  "avg_duration_secs": 42.4,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -97,8 +95,8 @@
     "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
-    "What If You Were 4D",
-    "How gullible are you"
+    "How gullible are you",
+    "Did You Know That In"
   ],
-  "timestamp": "2026-10-09T20:16:37"
+  "timestamp": "2026-10-10T19:28:09"
 }
