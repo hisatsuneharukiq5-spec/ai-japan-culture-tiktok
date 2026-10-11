@@ -2,10 +2,10 @@
   "source": "youtube_api",
   "videos_analyzed": 49,
   "pattern_counts": {
-    "statement": 29,
+    "statement": 27,
     "science-discovery": 1,
-    "number-lead": 8,
-    "wh-question": 5,
+    "number-lead": 9,
+    "wh-question": 6,
     "statistic": 3,
     "did-you-know": 3
   },
@@ -24,12 +24,14 @@
   "power_words": [
     "science",
     "physics",
-    "human",
     "experiment",
+    "human",
     "unbelievable",
     "sciencefacts",
     "trick",
+    "chemistry",
     "could",
+    "ashusir",
     "amazing",
     "shocking",
     "never",
@@ -38,43 +40,43 @@
   ],
   "top_hashtags": [
     "#shorts",
-    "#science",
     "#facts",
+    "#science",
     "#viral",
     "#knowledge",
-    "#science experiments",
-    "#funny",
-    "#physics",
     "#education",
-    "#experiment",
+    "#science experiments",
+    "#physics",
     "#trending",
     "#sciencefacts",
-    "#tiktok",
+    "#experiment",
+    "#funny",
     "#factsmine",
     "#latest",
+    "#fact",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
+    "didn",
     "physics",
     "human",
-    "didn",
+    "experiment",
     "sciencefacts",
     "unbelievable",
+    "chemistry",
     "could",
     "save",
     "life",
-    "experiment",
+    "ashusir",
     "cool",
     "gravity",
     "gifts",
     "ocean",
-    "funny",
-    "chemistry",
     "earth",
-    "ashusir",
-    "tricks",
-    "amazing"
+    "scienceandfun",
+    "ytshorts",
+    "tricks"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -87,7 +89,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.4,
+  "avg_duration_secs": 43.2,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -98,5 +100,5 @@
     "How gullible are you",
     "Did You Know That In"
   ],
-  "timestamp": "2026-10-10T19:28:09"
+  "timestamp": "2026-10-11T19:41:07"
 }
