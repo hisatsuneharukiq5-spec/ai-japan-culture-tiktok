@@ -1,12 +1,12 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 49,
+  "videos_analyzed": 48,
   "pattern_counts": {
-    "statement": 27,
+    "statement": 26,
     "science-discovery": 1,
-    "number-lead": 9,
+    "number-lead": 8,
     "wh-question": 6,
-    "statistic": 3,
+    "statistic": 4,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -35,7 +35,6 @@
     "amazing",
     "shocking",
     "never",
-    "only",
     "fastest"
   ],
   "top_hashtags": [
@@ -44,39 +43,39 @@
     "#science",
     "#viral",
     "#knowledge",
-    "#education",
-    "#science experiments",
+    "#funny",
     "#physics",
+    "#education",
+    "#animation",
+    "#experiment",
+    "#science experiments",
     "#trending",
     "#sciencefacts",
-    "#experiment",
-    "#funny",
     "#factsmine",
     "#latest",
-    "#fact",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
-    "didn",
     "physics",
-    "human",
     "experiment",
     "sciencefacts",
     "unbelievable",
     "chemistry",
+    "human",
     "could",
     "save",
     "life",
+    "didn",
     "ashusir",
     "cool",
     "gravity",
     "gifts",
     "ocean",
+    "funny",
     "earth",
     "scienceandfun",
-    "ytshorts",
-    "tricks"
+    "ytshorts"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -89,7 +88,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.2,
+  "avg_duration_secs": 43.3,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -100,5 +99,5 @@
     "How gullible are you",
     "Did You Know That In"
   ],
-  "timestamp": "2026-10-11T19:41:07"
+  "timestamp": "2026-10-12T22:34:43"
 }

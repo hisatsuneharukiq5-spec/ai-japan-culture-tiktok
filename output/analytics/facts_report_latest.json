@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-11T19:41:08",
+  "timestamp": "2026-10-12T22:34:44",
   "internal": {
     "top5_patterns": [
       {
@@ -29,16 +29,16 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 49,
+    "videos_analyzed": 48,
     "popular_topics": [
       "science",
-      "didn",
       "physics",
-      "human",
       "experiment",
       "sciencefacts",
       "unbelievable",
-      "chemistry"
+      "chemistry",
+      "human",
+      "could"
     ],
     "hashtags": [
       "#shorts",
@@ -46,16 +46,16 @@
       "#science",
       "#viral",
       "#knowledge",
-      "#education",
-      "#science experiments",
+      "#funny",
       "#physics",
+      "#education",
+      "#animation",
+      "#experiment",
+      "#science experiments",
       "#trending",
       "#sciencefacts",
-      "#experiment",
-      "#funny",
       "#factsmine",
       "#latest",
-      "#fact",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -93,15 +93,14 @@
       "amazing",
       "shocking",
       "never",
-      "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 27,
+      "statement": 26,
       "science-discovery": 1,
-      "number-lead": 9,
+      "number-lead": 8,
       "wh-question": 6,
-      "statistic": 3,
+      "statistic": 4,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -113,22 +112,21 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "christian gonzalez",
-        "cruise ship passenger overboard",
-        "matthew golden",
-        "deforest buckner",
-        "jaylin noel",
-        "rebecca bennett",
-        "tim patrick",
-        "jeshaun jones",
-        "adam vinatieri",
-        "tucker kraft"
+        "alex vesia",
+        "bobby gould",
+        "christian yelich",
+        "trump ukraine",
+        "jake bauers",
+        "2028 democratic primary frontrunners harris",
+        "el nino winter snowfall predictions noaa",
+        "senators vs devils",
+        "blake corum",
+        "david hamilton"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "World&#39;s Most Expensive Slide",
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
@@ -136,13 +134,14 @@
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
-        "He Forgot His Rolls Royce For 25 Years #shorts",
         "Strongest Glass in The World",
         "Indonesia village Beauty 😍😲 #nature #travel #java #villagelife #rain #mountain #facts #shorts",
         "@ITSGURIYAHERE 👈🏻 Please Is Channel Ke Long Videos Ko Dekhkar Watchtime Complete Kar Dijiye 🥺💔😓",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
-        "Fun Facts That Are Not Funny"
+        "Fun Facts That Are Not Funny",
+        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
+        "Why We Have Crooked Teeth 😱"
       ]
     },
     "pytrends": {
@@ -171,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 182,
+    "total_tests": 183,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
