@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-13T20:48:41",
+  "timestamp": "2026-10-14T19:38:14",
   "internal": {
     "top5_patterns": [
       {
@@ -112,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "michael olise",
-        "bank of america fine",
-        "club brugge",
-        "rb leipzig",
-        "anthony gordon",
-        "mid atlantic ridge earthquakes",
-        "montez sweat",
-        "rob lowe",
-        "tanner hudson",
-        "frozen frenzy"
+        "iphone duo",
+        "marten de roon",
+        "madrid fc",
+        "la champions",
+        "real betis",
+        "real madrid",
+        "real madrid vs",
+        "child",
+        "roma vs. real madrid",
+        "madrid vs roma"
       ]
     },
     "youtube_trending": {
@@ -170,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 184,
+    "total_tests": 185,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
