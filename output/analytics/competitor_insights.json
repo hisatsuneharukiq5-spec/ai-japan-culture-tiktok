@@ -1,13 +1,13 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 48,
+  "videos_analyzed": 47,
   "pattern_counts": {
-    "statement": 25,
+    "statement": 30,
     "science-discovery": 1,
-    "number-lead": 9,
-    "wh-question": 6,
+    "number-lead": 8,
+    "wh-question": 3,
     "statistic": 4,
-    "did-you-know": 3
+    "did-you-know": 1
   },
   "top_hooks": [
     "This is SO cool",
@@ -17,65 +17,65 @@
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "How gullible are you",
-    "Did You Know That In",
-    "How wound stitches really work",
-    "How to Remove Ear Wax"
+    "The SCARIEST Fact About SPACE",
+    "Did You Know: Titanic Fun"
   ],
   "power_words": [
     "science",
     "physics",
     "experiment",
     "human",
-    "unbelievable",
+    "space",
+    "blowing",
+    "random",
+    "amazing",
+    "never",
     "sciencefacts",
+    "trick",
     "chemistry",
     "ashusir",
-    "could",
-    "amazing",
-    "shocking",
-    "never",
-    "only",
-    "fastest"
+    "mind-blowing",
+    "shocking"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
     "#science",
-    "#viral",
     "#knowledge",
-    "#education",
-    "#animation",
-    "#science experiments",
-    "#physics",
+    "#viral",
     "#trending",
+    "#fact",
+    "#satisfying",
+    "#funny",
+    "#physics",
+    "#factsmine",
+    "#education",
     "#sciencefacts",
     "#experiment",
-    "#funny",
-    "#factsmine",
-    "#latest",
+    "#science experiments",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
-    "physics",
-    "human",
-    "experiment",
+    "mind",
     "didn",
+    "human",
+    "blowing",
+    "random",
+    "physics",
+    "experiment",
     "sciencefacts",
-    "unbelievable",
     "chemistry",
     "ashusir",
-    "could",
     "save",
     "life",
+    "space",
+    "never",
+    "amazing",
     "cool",
     "gravity",
     "gifts",
-    "ocean",
-    "earth",
-    "scienceandfun",
-    "ytshorts",
-    "amazing"
+    "ocean"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -88,7 +88,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.1,
+  "avg_duration_secs": 45.1,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -97,7 +97,7 @@
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "How gullible are you",
-    "Did You Know That In"
+    "The SCARIEST Fact About SPACE"
   ],
-  "timestamp": "2026-10-14T19:38:14"
+  "timestamp": "2026-10-15T19:20:45"
 }
