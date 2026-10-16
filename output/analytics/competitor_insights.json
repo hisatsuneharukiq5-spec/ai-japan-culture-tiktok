@@ -2,12 +2,12 @@
   "source": "youtube_api",
   "videos_analyzed": 47,
   "pattern_counts": {
-    "statement": 30,
+    "statement": 25,
     "science-discovery": 1,
-    "number-lead": 8,
-    "wh-question": 3,
+    "number-lead": 7,
+    "wh-question": 7,
     "statistic": 4,
-    "did-you-know": 1
+    "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
@@ -16,66 +16,65 @@
     "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
+    "What If You Were 4D",
     "How gullible are you",
-    "The SCARIEST Fact About SPACE",
-    "Did You Know: Titanic Fun"
+    "Did You Know That In",
+    "How wound stitches really work"
   ],
   "power_words": [
     "science",
     "physics",
     "experiment",
     "human",
-    "space",
-    "blowing",
-    "random",
-    "amazing",
-    "never",
+    "unbelievable",
     "sciencefacts",
-    "trick",
     "chemistry",
     "ashusir",
-    "mind-blowing",
-    "shocking"
+    "could",
+    "amazing",
+    "shocking",
+    "never",
+    "fastest"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
     "#science",
-    "#knowledge",
     "#viral",
-    "#trending",
-    "#fact",
-    "#satisfying",
-    "#funny",
+    "#knowledge",
+    "#animation",
     "#physics",
-    "#factsmine",
     "#education",
+    "#science experiments",
+    "#trending",
     "#sciencefacts",
     "#experiment",
-    "#science experiments",
+    "#funny",
+    "#factsmine",
+    "#latest",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
-    "mind",
-    "didn",
-    "human",
-    "blowing",
-    "random",
     "physics",
     "experiment",
+    "didn",
     "sciencefacts",
+    "unbelievable",
     "chemistry",
+    "human",
     "ashusir",
+    "could",
     "save",
     "life",
-    "space",
-    "never",
-    "amazing",
     "cool",
     "gravity",
     "gifts",
-    "ocean"
+    "ocean",
+    "earth",
+    "scienceandfun",
+    "ytshorts",
+    "amazing"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -88,7 +87,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 45.1,
+  "avg_duration_secs": 42.5,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -96,8 +95,8 @@
     "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
-    "How gullible are you",
-    "The SCARIEST Fact About SPACE"
+    "What If You Were 4D",
+    "How gullible are you"
   ],
-  "timestamp": "2026-10-15T19:20:45"
+  "timestamp": "2026-10-16T18:57:23"
 }

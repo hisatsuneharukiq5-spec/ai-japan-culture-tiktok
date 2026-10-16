@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-15T19:20:46",
+  "timestamp": "2026-10-16T18:57:24",
   "internal": {
     "top5_patterns": [
       {
@@ -32,30 +32,30 @@
     "videos_analyzed": 47,
     "popular_topics": [
       "science",
-      "mind",
-      "didn",
-      "human",
-      "blowing",
-      "random",
       "physics",
-      "experiment"
+      "experiment",
+      "didn",
+      "sciencefacts",
+      "unbelievable",
+      "chemistry",
+      "human"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
-      "#knowledge",
       "#viral",
-      "#trending",
-      "#fact",
-      "#satisfying",
-      "#funny",
+      "#knowledge",
+      "#animation",
       "#physics",
-      "#factsmine",
       "#education",
+      "#science experiments",
+      "#trending",
       "#sciencefacts",
       "#experiment",
-      "#science experiments",
+      "#funny",
+      "#factsmine",
+      "#latest",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -65,8 +65,8 @@
       "The Last Country Norway",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "How gullible are you",
-      "The SCARIEST Fact About SPACE"
+      "What If You Were 4D",
+      "How gullible are you"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -84,25 +84,23 @@
       "physics",
       "experiment",
       "human",
-      "space",
-      "blowing",
-      "random",
-      "amazing",
-      "never",
+      "unbelievable",
       "sciencefacts",
-      "trick",
       "chemistry",
       "ashusir",
-      "mind-blowing",
-      "shocking"
+      "could",
+      "amazing",
+      "shocking",
+      "never",
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 30,
+      "statement": 25,
       "science-discovery": 1,
-      "number-lead": 8,
-      "wh-question": 3,
+      "number-lead": 7,
+      "wh-question": 7,
       "statistic": 4,
-      "did-you-know": 1
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -113,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "benfica",
-        "mohamed salah",
-        "daniel espino",
-        "juventus",
-        "scottie scheffler",
-        "besiktas",
-        "petey halpin",
-        "kelly ripa",
-        "jessica simpson",
-        "miami university"
+        "cnn news",
+        "karoline leavitt",
+        "lindsey vonn",
+        "sophie cunningham",
+        "le mans vs toulouse",
+        "frosinone vs sassuolo",
+        "msnow",
+        "eintracht frankfurt vs köln",
+        "deportivo - levante",
+        "cnn"
       ]
     },
     "youtube_trending": {
@@ -141,8 +139,8 @@
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
-        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
-        "Why We Have Crooked Teeth 😱"
+        "Sharpest Knife In The World",
+        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts"
       ]
     },
     "pytrends": {
@@ -171,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 186,
+    "total_tests": 187,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
