@@ -4,8 +4,8 @@
   "pattern_counts": {
     "statement": 25,
     "science-discovery": 1,
-    "number-lead": 7,
-    "wh-question": 7,
+    "number-lead": 8,
+    "wh-question": 6,
     "statistic": 4,
     "did-you-know": 3
   },
@@ -17,9 +17,9 @@
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "What If You Were 4D",
-    "How gullible are you",
     "Did You Know That In",
-    "How wound stitches really work"
+    "How wound stitches really work",
+    "How to Remove Ear Wax"
   ],
   "power_words": [
     "science",
@@ -28,8 +28,7 @@
     "human",
     "unbelievable",
     "sciencefacts",
-    "chemistry",
-    "ashusir",
+    "trick",
     "could",
     "amazing",
     "shocking",
@@ -43,12 +42,12 @@
     "#viral",
     "#knowledge",
     "#animation",
+    "#science experiments",
     "#physics",
     "#education",
-    "#science experiments",
+    "#experiment",
     "#trending",
     "#sciencefacts",
-    "#experiment",
     "#funny",
     "#factsmine",
     "#latest",
@@ -58,23 +57,23 @@
     "science",
     "physics",
     "experiment",
-    "didn",
     "sciencefacts",
     "unbelievable",
-    "chemistry",
     "human",
-    "ashusir",
     "could",
     "save",
     "life",
+    "didn",
     "cool",
     "gravity",
     "gifts",
     "ocean",
+    "chemistry",
     "earth",
-    "scienceandfun",
-    "ytshorts",
-    "amazing"
+    "ashusir",
+    "tricks",
+    "amazing",
+    "humans"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -87,7 +86,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.5,
+  "avg_duration_secs": 41.9,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -96,7 +95,7 @@
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "What If You Were 4D",
-    "How gullible are you"
+    "Did You Know That In"
   ],
-  "timestamp": "2026-10-16T18:57:23"
+  "timestamp": "2026-10-17T17:55:54"
 }
