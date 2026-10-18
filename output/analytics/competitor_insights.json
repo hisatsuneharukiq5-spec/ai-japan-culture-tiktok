@@ -2,11 +2,11 @@
   "source": "youtube_api",
   "videos_analyzed": 47,
   "pattern_counts": {
-    "statement": 25,
+    "statement": 26,
     "science-discovery": 1,
     "number-lead": 8,
     "wh-question": 6,
-    "statistic": 4,
+    "statistic": 3,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -33,6 +33,7 @@
     "amazing",
     "shocking",
     "never",
+    "only",
     "fastest"
   ],
   "top_hashtags": [
@@ -41,7 +42,6 @@
     "#science",
     "#viral",
     "#knowledge",
-    "#animation",
     "#science experiments",
     "#physics",
     "#education",
@@ -51,15 +51,16 @@
     "#funny",
     "#factsmine",
     "#latest",
+    "#fact",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "physics",
+    "human",
     "experiment",
     "sciencefacts",
     "unbelievable",
-    "human",
     "could",
     "save",
     "life",
@@ -86,7 +87,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.9,
+  "avg_duration_secs": 41.8,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -97,5 +98,5 @@
     "What If You Were 4D",
     "Did You Know That In"
   ],
-  "timestamp": "2026-10-17T17:55:54"
+  "timestamp": "2026-10-18T18:16:20"
 }
