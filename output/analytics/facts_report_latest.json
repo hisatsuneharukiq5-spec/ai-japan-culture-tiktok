@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-19T20:41:47",
+  "timestamp": "2026-10-20T19:31:34",
   "internal": {
     "top5_patterns": [
       {
@@ -45,14 +45,14 @@
       "#science",
       "#facts",
       "#viral",
-      "#knowledge",
       "#physics",
+      "#knowledge",
+      "#funny",
       "#education",
-      "#science experiments",
       "#trending",
       "#sciencefacts",
       "#experiment",
-      "#funny",
+      "#science experiments",
       "#factsmine",
       "#latest",
       "#fact",
@@ -84,22 +84,22 @@
       "physics",
       "experiment",
       "human",
-      "trick",
       "unbelievable",
       "sciencefacts",
       "chemistry",
       "ashusir",
+      "ytshorts",
       "could",
-      "tricks",
-      "amazing",
       "shocking",
+      "amazing",
       "never",
-      "only"
+      "only",
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 27,
+      "statement": 28,
       "science-discovery": 1,
-      "number-lead": 7,
+      "number-lead": 6,
       "wh-question": 6,
       "statistic": 3,
       "did-you-know": 3
@@ -113,16 +113,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "austin ekeler",
-        "romeo doubs",
-        "jacory croskey-merritt",
-        "columbus ohio",
-        "tre'davious white",
-        "tre white",
-        "pokemon 30th anniversary december release",
-        "tank dell",
-        "new mexico",
-        "carretera"
+        "youtube tv",
+        "barcelona hoy",
+        "tobias harris",
+        "nbc sports",
+        "ausar thompson",
+        "payton pritchard",
+        "duncan robinson",
+        "fight night",
+        "ferran torres",
+        "psg"
       ]
     },
     "youtube_trending": {
@@ -134,15 +134,15 @@
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "A Hole Through The Earth 😱",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "Indonesia village Beauty 😍😲 #nature #travel #java #villagelife #rain #mountain #facts #shorts",
         "@ITSGURIYAHERE 👈🏻 Please Is Channel Ke Long Videos Ko Dekhkar Watchtime Complete Kar Dijiye 🥺💔😓",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
-        "Sharpest Knife In The World"
+        "Sharpest Knife In The World",
+        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
+        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts"
       ]
     },
     "pytrends": {
@@ -171,7 +171,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 190,
+    "total_tests": 191,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

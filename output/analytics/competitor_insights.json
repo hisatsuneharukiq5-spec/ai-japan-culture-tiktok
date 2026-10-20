@@ -2,9 +2,9 @@
   "source": "youtube_api",
   "videos_analyzed": 47,
   "pattern_counts": {
-    "statement": 27,
+    "statement": 28,
     "science-discovery": 1,
-    "number-lead": 7,
+    "number-lead": 6,
     "wh-question": 6,
     "statistic": 3,
     "did-you-know": 3
@@ -26,31 +26,31 @@
     "physics",
     "experiment",
     "human",
-    "trick",
     "unbelievable",
     "sciencefacts",
     "chemistry",
     "ashusir",
+    "ytshorts",
     "could",
-    "tricks",
-    "amazing",
     "shocking",
+    "amazing",
     "never",
-    "only"
+    "only",
+    "fastest"
   ],
   "top_hashtags": [
     "#shorts",
     "#science",
     "#facts",
     "#viral",
-    "#knowledge",
     "#physics",
+    "#knowledge",
+    "#funny",
     "#education",
-    "#science experiments",
     "#trending",
     "#sciencefacts",
     "#experiment",
-    "#funny",
+    "#science experiments",
     "#factsmine",
     "#latest",
     "#fact",
@@ -65,18 +65,18 @@
     "unbelievable",
     "chemistry",
     "ashusir",
+    "ytshorts",
     "could",
     "save",
     "life",
     "didn",
-    "tricks",
     "cool",
     "gravity",
     "gifts",
     "ocean",
     "earth",
     "scienceandfun",
-    "ytshorts"
+    "humans"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -89,7 +89,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.1,
+  "avg_duration_secs": 42.9,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -100,5 +100,5 @@
     "What If You Were 4D",
     "Did You Know That In"
   ],
-  "timestamp": "2026-10-19T20:41:46"
+  "timestamp": "2026-10-20T19:31:33"
 }
