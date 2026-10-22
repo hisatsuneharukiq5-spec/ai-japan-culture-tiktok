@@ -1,8 +1,8 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 46,
+  "videos_analyzed": 47,
   "pattern_counts": {
-    "statement": 26,
+    "statement": 27,
     "science-discovery": 1,
     "number-lead": 7,
     "wh-question": 6,
@@ -27,6 +27,7 @@
     "experiment",
     "human",
     "unbelievable",
+    "sciencefacts",
     "trick",
     "chemistry",
     "ashusir",
@@ -42,24 +43,26 @@
     "#facts",
     "#science",
     "#viral",
+    "#science experiments",
     "#knowledge",
     "#trending",
-    "#science experiments",
-    "#fact",
+    "#sciencefacts",
     "#experiment",
     "#factsmine",
-    "#new",
     "#education",
     "#latest",
-    "#amazing",
-    "#short",
+    "#fact",
+    "#physics",
+    "#animation",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
-    "experiment",
     "physics",
+    "experiment",
+    "human",
     "didn",
+    "sciencefacts",
     "unbelievable",
     "chemistry",
     "ashusir",
@@ -67,15 +70,13 @@
     "could",
     "save",
     "life",
-    "human",
     "cool",
     "gifts",
+    "ocean",
     "earth",
     "scienceandfun",
     "tricks",
-    "amazing",
-    "sciencefacts",
-    "humans"
+    "amazing"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -88,7 +89,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.9,
+  "avg_duration_secs": 42.5,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -99,5 +100,5 @@
     "What If You Were 4D",
     "Did You Know That In"
   ],
-  "timestamp": "2026-10-21T19:31:03"
+  "timestamp": "2026-10-22T19:23:23"
 }
