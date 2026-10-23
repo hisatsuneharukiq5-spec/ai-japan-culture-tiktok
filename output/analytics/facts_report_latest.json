@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-22T19:23:24",
+  "timestamp": "2026-10-23T19:29:58",
   "internal": {
     "top5_patterns": [
       {
@@ -113,16 +113,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "crystal palace",
-        "real sociedad",
-        "benfica",
-        "tom skerritt",
-        "juventus vs stade rennais f.c. standings",
-        "lech poznań vs sunderland a.f.c. standings",
-        "lyon fc",
-        "c.j. gardner-johnson nfl suspension appeal",
-        "mohamed salah",
-        "joe strange"
+        "caleb wilson stats",
+        "bulls vs bucks",
+        "jesse legree",
+        "ipswich town",
+        "katie price",
+        "angie nixon",
+        "torino fc",
+        "brest vs nice",
+        "stuttgart fc",
+        "alavés vs málaga"
       ]
     },
     "youtube_trending": {
@@ -171,7 +171,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 193,
+    "total_tests": 194,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
