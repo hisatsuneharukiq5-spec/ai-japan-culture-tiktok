@@ -26,42 +26,41 @@
     "physics",
     "experiment",
     "human",
+    "trick",
     "unbelievable",
     "sciencefacts",
-    "trick",
     "chemistry",
     "ashusir",
     "ytshorts",
     "could",
+    "tricks",
     "amazing",
-    "never",
-    "only",
-    "fastest"
+    "shocking",
+    "never"
   ],
   "top_hashtags": [
     "#shorts",
-    "#facts",
     "#science",
+    "#facts",
     "#viral",
-    "#science experiments",
+    "#physics",
     "#knowledge",
-    "#trending",
+    "#education",
+    "#science experiments",
     "#sciencefacts",
     "#experiment",
-    "#factsmine",
-    "#education",
-    "#latest",
-    "#fact",
-    "#physics",
+    "#funny",
+    "#trending",
     "#animation",
+    "#youtubeshorts",
+    "#memes",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "physics",
-    "experiment",
     "human",
-    "didn",
+    "experiment",
     "sciencefacts",
     "unbelievable",
     "chemistry",
@@ -70,13 +69,14 @@
     "could",
     "save",
     "life",
+    "didn",
+    "tricks",
     "cool",
+    "gravity",
     "gifts",
     "ocean",
     "earth",
-    "scienceandfun",
-    "tricks",
-    "amazing"
+    "scienceandfun"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -89,7 +89,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.5,
+  "avg_duration_secs": 42.6,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -100,5 +100,5 @@
     "What If You Were 4D",
     "Did You Know That In"
   ],
-  "timestamp": "2026-10-23T19:29:57"
+  "timestamp": "2026-10-24T18:19:23"
 }
