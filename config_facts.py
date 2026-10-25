@@ -78,13 +78,14 @@ LEARNED_HOOK_PHRASES = [
   "This can help make Artificial",
   "How Deep Do Humans Have",
   "What If You Were 4D",
-  "Did You Know That In"
+  "How gullible are you"
 ]
 LEARNED_HASHTAGS = [
   "#shorts",
-  "#science",
   "#facts",
+  "#science",
   "#viral",
+  "#animation",
   "#physics",
   "#knowledge",
   "#education",
@@ -93,9 +94,8 @@ LEARNED_HASHTAGS = [
   "#experiment",
   "#funny",
   "#trending",
-  "#animation",
-  "#youtubeshorts",
   "#memes",
+  "#youtube shorts",
   "#didyouknow"
 ]
 PREFERRED_POST_HOURS = [0, 11, 12, 19, 20]

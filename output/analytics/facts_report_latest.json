@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-24T18:19:24",
+  "timestamp": "2026-10-25T18:32:55",
   "internal": {
     "top5_patterns": [
       {
@@ -42,9 +42,10 @@
     ],
     "hashtags": [
       "#shorts",
-      "#science",
       "#facts",
+      "#science",
       "#viral",
+      "#animation",
       "#physics",
       "#knowledge",
       "#education",
@@ -53,9 +54,8 @@
       "#experiment",
       "#funny",
       "#trending",
-      "#animation",
-      "#youtubeshorts",
       "#memes",
+      "#youtube shorts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -66,7 +66,7 @@
       "This can help make Artificial",
       "How Deep Do Humans Have",
       "What If You Were 4D",
-      "Did You Know That In"
+      "How gullible are you"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -84,24 +84,24 @@
       "physics",
       "experiment",
       "human",
-      "trick",
       "unbelievable",
       "sciencefacts",
+      "trick",
       "chemistry",
       "ashusir",
-      "ytshorts",
       "could",
-      "tricks",
       "amazing",
       "shocking",
-      "never"
+      "never",
+      "only",
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 27,
+      "statement": 25,
       "science-discovery": 1,
       "number-lead": 7,
-      "wh-question": 6,
-      "statistic": 3,
+      "wh-question": 7,
+      "statistic": 4,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -113,16 +113,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "cole palmer",
-        "barcelona - granada cf",
-        "flyers",
-        "servicio de control de inmigración y aduanas",
-        "oregon vs illinois",
-        "texas tech score",
-        "america next",
-        "f1 qualifying",
-        "robert whittaker",
-        "darian mensah"
+        "panthers vs blackhawks",
+        "joe burrow",
+        "denzel ward",
+        "quinshon judkins",
+        "amal clooney",
+        "panthers football",
+        "tampa bay buccaneers",
+        "laquon treadwell",
+        "will reichard",
+        "f1 race"
       ]
     },
     "youtube_trending": {
@@ -132,7 +132,6 @@
         "How Much Is Too Much 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
-        "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
@@ -142,6 +141,7 @@
         "Fun Facts That Are Not Funny",
         "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
         "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
+        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
         "WARNING : This is Highly Relatable 😱 #shorts"
       ]
     },
@@ -171,7 +171,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 195,
+    "total_tests": 196,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

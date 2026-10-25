@@ -2,11 +2,11 @@
   "source": "youtube_api",
   "videos_analyzed": 47,
   "pattern_counts": {
-    "statement": 27,
+    "statement": 25,
     "science-discovery": 1,
     "number-lead": 7,
-    "wh-question": 6,
-    "statistic": 3,
+    "wh-question": 7,
+    "statistic": 4,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -17,32 +17,33 @@
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "What If You Were 4D",
+    "How gullible are you",
     "Did You Know That In",
-    "How wound stitches really work",
-    "How to Remove Ear Wax"
+    "How wound stitches really work"
   ],
   "power_words": [
     "science",
     "physics",
     "experiment",
     "human",
-    "trick",
     "unbelievable",
     "sciencefacts",
+    "trick",
     "chemistry",
     "ashusir",
-    "ytshorts",
     "could",
-    "tricks",
     "amazing",
     "shocking",
-    "never"
+    "never",
+    "only",
+    "fastest"
   ],
   "top_hashtags": [
     "#shorts",
-    "#science",
     "#facts",
+    "#science",
     "#viral",
+    "#animation",
     "#physics",
     "#knowledge",
     "#education",
@@ -51,9 +52,8 @@
     "#experiment",
     "#funny",
     "#trending",
-    "#animation",
-    "#youtubeshorts",
     "#memes",
+    "#youtube shorts",
     "#didyouknow"
   ],
   "top_topics": [
@@ -65,18 +65,18 @@
     "unbelievable",
     "chemistry",
     "ashusir",
-    "ytshorts",
     "could",
     "save",
     "life",
     "didn",
-    "tricks",
     "cool",
     "gravity",
     "gifts",
     "ocean",
     "earth",
-    "scienceandfun"
+    "scienceandfun",
+    "ytshorts",
+    "tricks"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -98,7 +98,7 @@
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "What If You Were 4D",
-    "Did You Know That In"
+    "How gullible are you"
   ],
-  "timestamp": "2026-10-24T18:19:23"
+  "timestamp": "2026-10-25T18:32:54"
 }
