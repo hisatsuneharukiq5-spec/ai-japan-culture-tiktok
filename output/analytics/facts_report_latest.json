@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-25T18:32:55",
+  "timestamp": "2026-10-26T20:41:47",
   "internal": {
     "top5_patterns": [
       {
@@ -113,16 +113,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "panthers vs blackhawks",
-        "joe burrow",
-        "denzel ward",
-        "quinshon judkins",
-        "amal clooney",
-        "panthers football",
-        "tampa bay buccaneers",
-        "laquon treadwell",
-        "will reichard",
-        "f1 race"
+        "david raya",
+        "cls stock",
+        "angie nixon",
+        "john harbaugh najee harris release",
+        "sevilla",
+        "ftc dollar general price lawsuit",
+        "starbucks china new seating policy",
+        "amon ra st brown",
+        "bird flu mink farm",
+        "kentucky vs tennessee football game time"
       ]
     },
     "youtube_trending": {
@@ -139,10 +139,10 @@
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
+        "Sharpest Knife In The World",
         "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
         "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
-        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
-        "WARNING : This is Highly Relatable 😱 #shorts"
+        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts"
       ]
     },
     "pytrends": {
@@ -171,7 +171,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 196,
+    "total_tests": 197,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
