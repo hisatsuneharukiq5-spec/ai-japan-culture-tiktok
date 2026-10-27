@@ -2,10 +2,10 @@
   "source": "youtube_api",
   "videos_analyzed": 47,
   "pattern_counts": {
-    "statement": 25,
+    "statement": 27,
     "science-discovery": 1,
     "number-lead": 7,
-    "wh-question": 7,
+    "wh-question": 5,
     "statistic": 4,
     "did-you-know": 3
   },
@@ -17,9 +17,9 @@
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "What If You Were 4D",
-    "How gullible are you",
     "Did You Know That In",
-    "How wound stitches really work"
+    "How wound stitches really work",
+    "Did You Know This Fact"
   ],
   "power_words": [
     "science",
@@ -28,12 +28,12 @@
     "human",
     "unbelievable",
     "sciencefacts",
-    "trick",
     "chemistry",
     "ashusir",
+    "ytshorts",
     "could",
-    "amazing",
     "shocking",
+    "amazing",
     "never",
     "only",
     "fastest"
@@ -52,19 +52,20 @@
     "#experiment",
     "#funny",
     "#trending",
+    "#short",
     "#memes",
-    "#youtube shorts",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "physics",
-    "human",
     "experiment",
+    "human",
     "sciencefacts",
     "unbelievable",
     "chemistry",
     "ashusir",
+    "ytshorts",
     "could",
     "save",
     "life",
@@ -75,8 +76,7 @@
     "ocean",
     "earth",
     "scienceandfun",
-    "ytshorts",
-    "tricks"
+    "humans"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -89,7 +89,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.6,
+  "avg_duration_secs": 42.7,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -98,7 +98,7 @@
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "What If You Were 4D",
-    "How gullible are you"
+    "Did You Know That In"
   ],
-  "timestamp": "2026-10-26T20:41:46"
+  "timestamp": "2026-10-27T20:12:29"
 }
