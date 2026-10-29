@@ -1,12 +1,12 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 47,
+  "videos_analyzed": 48,
   "pattern_counts": {
-    "statement": 26,
+    "statement": 25,
     "science-discovery": 1,
     "number-lead": 7,
-    "wh-question": 6,
-    "statistic": 4,
+    "wh-question": 7,
+    "statistic": 5,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -26,34 +26,33 @@
     "physics",
     "experiment",
     "human",
+    "amazing",
     "unbelievable",
     "sciencefacts",
-    "trick",
     "chemistry",
     "ashusir",
     "ytshorts",
     "could",
-    "amazing",
-    "shocking",
     "never",
-    "only"
+    "only",
+    "fastest"
   ],
   "top_hashtags": [
     "#shorts",
-    "#facts",
     "#science",
+    "#facts",
     "#viral",
+    "#knowledge",
     "#animation",
     "#physics",
-    "#knowledge",
-    "#education",
     "#science experiments",
+    "#education",
     "#sciencefacts",
     "#experiment",
     "#funny",
     "#trending",
-    "#memes",
-    "#youtube shorts",
+    "#fact",
+    "#short",
     "#didyouknow"
   ],
   "top_topics": [
@@ -70,13 +69,13 @@
     "save",
     "life",
     "didn",
+    "amazing",
     "cool",
     "gravity",
     "gifts",
     "ocean",
     "earth",
-    "scienceandfun",
-    "tricks"
+    "half"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -89,7 +88,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.0,
+  "avg_duration_secs": 43.4,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -100,5 +99,5 @@
     "What If You Were 4D",
     "How gullible are you"
   ],
-  "timestamp": "2026-10-28T20:30:41"
+  "timestamp": "2026-10-29T20:30:31"
 }

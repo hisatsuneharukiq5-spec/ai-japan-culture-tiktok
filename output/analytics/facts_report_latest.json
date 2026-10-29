@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-28T20:30:41",
+  "timestamp": "2026-10-29T20:30:32",
   "internal": {
     "top5_patterns": [
       {
@@ -29,7 +29,7 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 47,
+    "videos_analyzed": 48,
     "popular_topics": [
       "science",
       "physics",
@@ -42,20 +42,20 @@
     ],
     "hashtags": [
       "#shorts",
-      "#facts",
       "#science",
+      "#facts",
       "#viral",
+      "#knowledge",
       "#animation",
       "#physics",
-      "#knowledge",
-      "#education",
       "#science experiments",
+      "#education",
       "#sciencefacts",
       "#experiment",
       "#funny",
       "#trending",
-      "#memes",
-      "#youtube shorts",
+      "#fact",
+      "#short",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -84,24 +84,23 @@
       "physics",
       "experiment",
       "human",
+      "amazing",
       "unbelievable",
       "sciencefacts",
-      "trick",
       "chemistry",
       "ashusir",
       "ytshorts",
       "could",
-      "amazing",
-      "shocking",
       "never",
-      "only"
+      "only",
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 26,
+      "statement": 25,
       "science-discovery": 1,
       "number-lead": 7,
-      "wh-question": 6,
-      "statistic": 4,
+      "wh-question": 7,
+      "statistic": 5,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -113,16 +112,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "manchester city",
-        "amzn stock",
-        "hayden panettiere",
-        "winter storm warning",
-        "now stock",
-        "mahomes",
-        "escaped inmate tennessee",
-        "msft stock",
-        "cod mw4 multiplayer",
-        "alex de minaur"
+        "sporting cristal - alianza lima",
+        "flavio cobolli",
+        "sndk stock",
+        "rddt stock",
+        "doomsday",
+        "who died today",
+        "cristiano ronaldo",
+        "patrick clancy",
+        "earnings today",
+        "man city vs psg"
       ]
     },
     "youtube_trending": {
@@ -171,7 +170,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 199,
+    "total_tests": 200,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
