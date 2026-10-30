@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-29T20:30:32",
+  "timestamp": "2026-10-30T20:01:52",
   "internal": {
     "top5_patterns": [
       {
@@ -32,41 +32,41 @@
     "videos_analyzed": 48,
     "popular_topics": [
       "science",
-      "physics",
-      "human",
+      "didn",
       "experiment",
+      "physics",
+      "could",
+      "ashusir",
       "sciencefacts",
-      "unbelievable",
-      "chemistry",
-      "ashusir"
+      "unbelievable"
     ],
     "hashtags": [
       "#shorts",
-      "#science",
       "#facts",
+      "#science",
       "#viral",
+      "#education",
       "#knowledge",
+      "#trending",
+      "#top",
+      "#factsmine",
+      "#latest",
+      "#amazing",
       "#animation",
       "#physics",
-      "#science experiments",
-      "#education",
-      "#sciencefacts",
-      "#experiment",
-      "#funny",
-      "#trending",
       "#fact",
-      "#short",
+      "#sciencefacts",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
-      "Never Do This | Science",
       "The Last Country Norway",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "What If You Were 4D",
-      "How gullible are you"
+      "How gullible are you",
+      "Did You Know That In",
+      "How wound stitches really work"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -84,22 +84,21 @@
       "physics",
       "experiment",
       "human",
+      "black",
+      "could",
       "amazing",
       "unbelievable",
-      "sciencefacts",
-      "chemistry",
       "ashusir",
-      "ytshorts",
-      "could",
-      "never",
-      "only",
+      "sciencefacts",
+      "trick",
+      "space",
       "fastest"
     ],
     "pattern_counts": {
       "statement": 25,
       "science-discovery": 1,
-      "number-lead": 7,
-      "wh-question": 7,
+      "number-lead": 9,
+      "wh-question": 5,
       "statistic": 5,
       "did-you-know": 3
     },
@@ -112,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "sporting cristal - alianza lima",
-        "flavio cobolli",
-        "sndk stock",
-        "rddt stock",
-        "doomsday",
-        "who died today",
-        "cristiano ronaldo",
-        "patrick clancy",
-        "earnings today",
-        "man city vs psg"
+        "the substance",
+        "donald tusk",
+        "mainz fc",
+        "budda baker",
+        "casa pia vs sporting",
+        "norad air defense alaska f-16",
+        "alex de minaur",
+        "bodo glimt",
+        "villarreal vs espanyol",
+        "villarreal - rcd espanyol"
       ]
     },
     "youtube_trending": {
@@ -170,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 200,
+    "total_tests": 201,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
