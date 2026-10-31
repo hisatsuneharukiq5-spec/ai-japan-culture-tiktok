@@ -2380,7 +2380,12 @@
     "title_a": "Did you know that glass is actually a liquid? #Shorts (3 Facts)",
     "title_b": "Only 0.01% of people know this about diamond rain #Shorts",
     "compare_after_hours": 48,
-    "status": "pending"
+    "status": "learned",
+    "winner": "title_a",
+    "loser": "title_b",
+    "views_a": 0,
+    "views_b": 0,
+    "reason": "Compared 48h view counts from facts upload registry"
   },
   {
     "created_at": "2026-10-29T20:30:33",
@@ -2393,6 +2398,13 @@
     "created_at": "2026-10-30T20:01:53",
     "title_a": "Did you know that tardigrades survive by nearly dying? #Shorts (3 Facts)",
     "title_b": "Scientists just discovered why this color experiment changes everything #Shorts (3 Facts)",
+    "compare_after_hours": 48,
+    "status": "pending"
+  },
+  {
+    "created_at": "2026-10-31T19:31:05",
+    "title_a": "Did you know that tardigrades survive by nearly dying? #Shorts (3 Facts)",
+    "title_b": "Only 5% of people know this about invisible ink #Shorts",
     "compare_after_hours": 48,
     "status": "pending"
   }

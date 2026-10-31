@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-30T20:01:52",
+  "timestamp": "2026-10-31T19:31:04",
   "internal": {
     "top5_patterns": [
       {
@@ -29,7 +29,7 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 48,
+    "videos_analyzed": 49,
     "popular_topics": [
       "science",
       "didn",
@@ -38,24 +38,24 @@
       "could",
       "ashusir",
       "sciencefacts",
-      "unbelievable"
+      "human"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#viral",
-      "#education",
       "#knowledge",
       "#trending",
       "#top",
       "#factsmine",
+      "#education",
       "#latest",
       "#amazing",
+      "#fact",
       "#animation",
       "#physics",
-      "#fact",
-      "#sciencefacts",
+      "#new",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -66,7 +66,7 @@
       "How Deep Do Humans Have",
       "How gullible are you",
       "Did You Know That In",
-      "How wound stitches really work"
+      "Did You Understand"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -87,11 +87,10 @@
       "black",
       "could",
       "amazing",
-      "unbelievable",
       "ashusir",
       "sciencefacts",
-      "trick",
       "space",
+      "unbelievable",
       "fastest"
     ],
     "pattern_counts": {
@@ -99,7 +98,7 @@
       "science-discovery": 1,
       "number-lead": 9,
       "wh-question": 5,
-      "statistic": 5,
+      "statistic": 6,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -111,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "the substance",
-        "donald tusk",
-        "mainz fc",
-        "budda baker",
-        "casa pia vs sporting",
-        "norad air defense alaska f-16",
-        "alex de minaur",
-        "bodo glimt",
-        "villarreal vs espanyol",
-        "villarreal - rcd espanyol"
+        "aston villa vs fulham",
+        "sabres vs kings",
+        "montana vs eastern wa",
+        "senators vs sharks",
+        "south dakota vs sd state",
+        "bruins game",
+        "stony brook football",
+        "persona 1 remake",
+        "méxico",
+        "iowa football schedule"
       ]
     },
     "youtube_trending": {
@@ -133,7 +132,7 @@
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "@ITSGURIYAHERE 👈🏻 Please Is Channel Ke Long Videos Ko Dekhkar Watchtime Complete Kar Dijiye 🥺💔😓",
+        "Things Baby Animals Won&#39;t Tell You 🐾 🤫 (Part 3)",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
@@ -169,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 201,
+    "total_tests": 202,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

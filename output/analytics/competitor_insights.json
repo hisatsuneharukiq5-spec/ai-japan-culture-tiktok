@@ -1,12 +1,12 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 48,
+  "videos_analyzed": 49,
   "pattern_counts": {
     "statement": 25,
     "science-discovery": 1,
     "number-lead": 9,
     "wh-question": 5,
-    "statistic": 5,
+    "statistic": 6,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -17,9 +17,9 @@
     "How Deep Do Humans Have",
     "How gullible are you",
     "Did You Know That In",
+    "Did You Understand",
     "How wound stitches really work",
-    "Did You Know This Fact",
-    "Did You Know: Titanic Fun"
+    "Did You Know This Fact"
   ],
   "power_words": [
     "science",
@@ -29,11 +29,10 @@
     "black",
     "could",
     "amazing",
-    "unbelievable",
     "ashusir",
     "sciencefacts",
-    "trick",
     "space",
+    "unbelievable",
     "fastest"
   ],
   "top_hashtags": [
@@ -41,17 +40,17 @@
     "#facts",
     "#science",
     "#viral",
-    "#education",
     "#knowledge",
     "#trending",
     "#top",
     "#factsmine",
+    "#education",
     "#latest",
     "#amazing",
+    "#fact",
     "#animation",
     "#physics",
-    "#fact",
-    "#sciencefacts",
+    "#new",
     "#didyouknow"
   ],
   "top_topics": [
@@ -62,7 +61,6 @@
     "could",
     "ashusir",
     "sciencefacts",
-    "unbelievable",
     "human",
     "black",
     "save",
@@ -73,6 +71,7 @@
     "scienceandfun",
     "funny",
     "ocean",
+    "unbelievable",
     "chemistry",
     "earth"
   ],
@@ -87,7 +86,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.4,
+  "avg_duration_secs": 42.1,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -96,7 +95,7 @@
     "How Deep Do Humans Have",
     "How gullible are you",
     "Did You Know That In",
-    "How wound stitches really work"
+    "Did You Understand"
   ],
-  "timestamp": "2026-10-30T20:01:52"
+  "timestamp": "2026-10-31T19:31:03"
 }
