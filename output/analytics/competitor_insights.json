@@ -1,38 +1,38 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 49,
+  "videos_analyzed": 48,
   "pattern_counts": {
-    "statement": 25,
+    "statement": 24,
     "science-discovery": 1,
-    "number-lead": 9,
+    "number-lead": 11,
     "wh-question": 5,
-    "statistic": 6,
+    "statistic": 4,
     "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
     "What Is The Real Shape",
+    "Never Do This | Science",
     "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "How gullible are you",
     "Did You Know That In",
     "Did You Understand",
-    "How wound stitches really work",
-    "Did You Know This Fact"
+    "How wound stitches really work"
   ],
   "power_words": [
     "science",
     "physics",
     "experiment",
     "human",
-    "black",
     "could",
-    "amazing",
+    "unbelievable",
     "ashusir",
     "sciencefacts",
-    "space",
-    "unbelievable",
+    "amazing",
+    "never",
+    "only",
     "fastest"
   ],
   "top_hashtags": [
@@ -41,16 +41,16 @@
     "#science",
     "#viral",
     "#knowledge",
-    "#trending",
-    "#top",
-    "#factsmine",
-    "#education",
-    "#latest",
-    "#amazing",
-    "#fact",
     "#animation",
     "#physics",
-    "#new",
+    "#education",
+    "#trending",
+    "#sciencefacts",
+    "#experiment",
+    "#science experiments",
+    "#funny",
+    "#factsmine",
+    "#latest",
     "#didyouknow"
   ],
   "top_topics": [
@@ -58,22 +58,22 @@
     "didn",
     "experiment",
     "physics",
+    "human",
     "could",
     "ashusir",
     "sciencefacts",
-    "human",
-    "black",
+    "unbelievable",
     "save",
     "life",
+    "need",
     "cool",
     "gravity",
     "gifts",
     "scienceandfun",
-    "funny",
     "ocean",
-    "unbelievable",
     "chemistry",
-    "earth"
+    "earth",
+    "without"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -86,16 +86,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.1,
+  "avg_duration_secs": 42.4,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
+    "Never Do This | Science",
     "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "How gullible are you",
-    "Did You Know That In",
-    "Did You Understand"
+    "Did You Know That In"
   ],
-  "timestamp": "2026-10-31T19:31:03"
+  "timestamp": "2026-11-01T19:53:21"
 }

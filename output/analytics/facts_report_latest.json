@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-31T19:31:04",
+  "timestamp": "2026-11-01T19:53:22",
   "internal": {
     "top5_patterns": [
       {
@@ -29,16 +29,16 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 49,
+    "videos_analyzed": 48,
     "popular_topics": [
       "science",
       "didn",
       "experiment",
       "physics",
+      "human",
       "could",
       "ashusir",
-      "sciencefacts",
-      "human"
+      "sciencefacts"
     ],
     "hashtags": [
       "#shorts",
@@ -46,27 +46,27 @@
       "#science",
       "#viral",
       "#knowledge",
-      "#trending",
-      "#top",
-      "#factsmine",
-      "#education",
-      "#latest",
-      "#amazing",
-      "#fact",
       "#animation",
       "#physics",
-      "#new",
+      "#education",
+      "#trending",
+      "#sciencefacts",
+      "#experiment",
+      "#science experiments",
+      "#funny",
+      "#factsmine",
+      "#latest",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
+      "Never Do This | Science",
       "The Last Country Norway",
       "This can help make Artificial",
       "How Deep Do Humans Have",
       "How gullible are you",
-      "Did You Know That In",
-      "Did You Understand"
+      "Did You Know That In"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -84,21 +84,21 @@
       "physics",
       "experiment",
       "human",
-      "black",
       "could",
-      "amazing",
+      "unbelievable",
       "ashusir",
       "sciencefacts",
-      "space",
-      "unbelievable",
+      "amazing",
+      "never",
+      "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 25,
+      "statement": 24,
       "science-discovery": 1,
-      "number-lead": 9,
+      "number-lead": 11,
       "wh-question": 5,
-      "statistic": 6,
+      "statistic": 4,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -110,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "aston villa vs fulham",
-        "sabres vs kings",
-        "montana vs eastern wa",
-        "senators vs sharks",
-        "south dakota vs sd state",
-        "bruins game",
-        "stony brook football",
-        "persona 1 remake",
-        "méxico",
-        "iowa football schedule"
+        "apple tv",
+        "tre tucker",
+        "wild vs capitals",
+        "court",
+        "ucla football schedule",
+        "celtics vs magic",
+        "zay flowers",
+        "jack endries",
+        "new york yankees",
+        "marseille vs toulouse"
       ]
     },
     "youtube_trending": {
@@ -128,18 +128,18 @@
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
-        "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
+        "This Video Can Save Your Life 😱",
+        "A Hole Through The Earth 😱",
+        "Indonesia village Beauty 😍😲 #nature #travel #java #villagelife #rain #mountain #facts #shorts",
+        "Animal Fact Time! 🦎 #shorts #learn #animals #kids",
+        "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "Things Baby Animals Won&#39;t Tell You 🐾 🤫 (Part 3)",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
-        "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
-        "Sharpest Knife In The World",
-        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
-        "Why We Have Crooked Teeth 😱",
-        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts"
+        "Sharpest Knife In The World"
       ]
     },
     "pytrends": {
@@ -168,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 202,
+    "total_tests": 203,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
