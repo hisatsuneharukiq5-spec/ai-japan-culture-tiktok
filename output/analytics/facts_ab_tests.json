@@ -2404,19 +2404,36 @@
     "title_a": "Did you know that tardigrades survive by nearly dying? #Shorts (3 Facts)",
     "title_b": "Scientists just discovered why this color experiment changes everything #Shorts (3 Facts)",
     "compare_after_hours": 48,
-    "status": "pending"
+    "status": "learned",
+    "winner": "title_a",
+    "loser": "title_b",
+    "views_a": 0,
+    "views_b": 0,
+    "reason": "Compared 48h view counts from facts upload registry"
   },
   {
     "created_at": "2026-10-31T19:31:05",
     "title_a": "Did you know that tardigrades survive by nearly dying? #Shorts (3 Facts)",
     "title_b": "Only 5% of people know this about invisible ink #Shorts",
     "compare_after_hours": 48,
-    "status": "pending"
+    "status": "learned",
+    "winner": "title_a",
+    "loser": "title_b",
+    "views_a": 0,
+    "views_b": 0,
+    "reason": "Compared 48h view counts from facts upload registry"
   },
   {
     "created_at": "2026-11-01T19:53:23",
     "title_a": "Did you know that glass is actually a liquid? #Shorts (3 Facts)",
     "title_b": "Scientists just discovered why this experiment glows and it changes everything #Shorts (3 Facts)",
+    "compare_after_hours": 48,
+    "status": "pending"
+  },
+  {
+    "created_at": "2026-11-02T23:12:18",
+    "title_a": "Did you know that glass is actually a liquid? #Shorts (3 Facts)",
+    "title_b": "Only 7% of people know this about human cells #Shorts",
     "compare_after_hours": 48,
     "status": "pending"
   }

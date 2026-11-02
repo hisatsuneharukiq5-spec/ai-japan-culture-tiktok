@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-01T19:53:22",
+  "timestamp": "2026-11-02T23:12:17",
   "internal": {
     "top5_patterns": [
       {
@@ -29,34 +29,33 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 48,
+    "videos_analyzed": 43,
     "popular_topics": [
       "science",
-      "didn",
       "experiment",
       "physics",
       "human",
-      "could",
       "ashusir",
-      "sciencefacts"
+      "sciencefacts",
+      "unbelievable",
+      "amazing"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#viral",
-      "#knowledge",
       "#animation",
-      "#physics",
-      "#education",
       "#trending",
+      "#funny",
+      "#physics",
+      "#knowledge",
+      "#education",
       "#sciencefacts",
       "#experiment",
+      "#didyouknow",
       "#science experiments",
-      "#funny",
-      "#factsmine",
-      "#latest",
-      "#didyouknow"
+      "#youtube shorts"
     ],
     "hook_phrases": [
       "This is SO cool",
@@ -65,8 +64,8 @@
       "The Last Country Norway",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "How gullible are you",
-      "Did You Know That In"
+      "Did You Know That In",
+      "How wound stitches really work"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -84,20 +83,18 @@
       "physics",
       "experiment",
       "human",
-      "could",
+      "amazing",
       "unbelievable",
       "ashusir",
       "sciencefacts",
-      "amazing",
       "never",
-      "only",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 24,
+      "statement": 25,
       "science-discovery": 1,
-      "number-lead": 11,
-      "wh-question": 5,
+      "number-lead": 6,
+      "wh-question": 4,
       "statistic": 4,
       "did-you-know": 3
     },
@@ -110,16 +107,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "apple tv",
-        "tre tucker",
-        "wild vs capitals",
-        "court",
-        "ucla football schedule",
-        "celtics vs magic",
-        "zay flowers",
-        "jack endries",
-        "new york yankees",
-        "marseille vs toulouse"
+        "tim sweeney",
+        "dow jones industrial average",
+        "pokémon go",
+        "weather forecast",
+        "el komander",
+        "florida basketball",
+        "yella beezy",
+        "prop 45",
+        "tax",
+        "purdue basketball"
       ]
     },
     "youtube_trending": {
@@ -128,18 +125,18 @@
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
-        "This Video Can Save Your Life 😱",
-        "A Hole Through The Earth 😱",
-        "Indonesia village Beauty 😍😲 #nature #travel #java #villagelife #rain #mountain #facts #shorts",
-        "Animal Fact Time! 🦎 #shorts #learn #animals #kids",
+        "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
         "Things Baby Animals Won&#39;t Tell You 🐾 🤫 (Part 3)",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
+        "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
-        "Sharpest Knife In The World"
+        "Sharpest Knife In The World",
+        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
+        "Why We Have Crooked Teeth 😱"
       ]
     },
     "pytrends": {
@@ -168,7 +165,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 203,
+    "total_tests": 204,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
