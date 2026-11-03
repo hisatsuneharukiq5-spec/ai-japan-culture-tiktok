@@ -1,8 +1,8 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 43,
+  "videos_analyzed": 45,
   "pattern_counts": {
-    "statement": 25,
+    "statement": 27,
     "science-discovery": 1,
     "number-lead": 6,
     "wh-question": 4,
@@ -13,24 +13,26 @@
     "This is SO cool",
     "What Is The Real Shape",
     "Never Do This | Science",
-    "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "Did You Know That In",
     "How wound stitches really work",
     "Did You Know This Fact",
-    "Did You Know: Titanic Fun"
+    "Did You Know: Titanic Fun",
+    "The COMPLETE Numbers Till INFINITY"
   ],
   "power_words": [
     "science",
-    "physics",
     "experiment",
-    "human",
+    "physics",
     "amazing",
-    "unbelievable",
     "ashusir",
+    "human",
+    "scienceandfun",
     "sciencefacts",
+    "tricks",
     "never",
+    "unbelievable",
     "fastest"
   ],
   "top_hashtags": [
@@ -38,39 +40,39 @@
     "#facts",
     "#science",
     "#viral",
-    "#animation",
+    "#knowledge",
     "#trending",
     "#funny",
-    "#physics",
-    "#knowledge",
     "#education",
-    "#sciencefacts",
     "#experiment",
     "#didyouknow",
-    "#science experiments",
-    "#youtube shorts"
+    "#animation",
+    "#youtube shorts",
+    "#physics",
+    "#youtubeshorts",
+    "#memes"
   ],
   "top_topics": [
     "science",
     "experiment",
     "physics",
-    "human",
     "ashusir",
-    "sciencefacts",
-    "unbelievable",
     "amazing",
+    "scienceandfun",
+    "sciencefacts",
+    "tricks",
+    "human",
     "didn",
     "cool",
     "gravity",
     "gifts",
-    "scienceandfun",
     "ocean",
     "journey",
-    "chemistry",
     "earth",
-    "want",
-    "experiments",
-    "frozen"
+    "chemistry",
+    "ytshorts",
+    "never",
+    "want"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -83,16 +85,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 41.6,
+  "avg_duration_secs": 43.3,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "Never Do This | Science",
-    "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "Did You Know That In",
-    "How wound stitches really work"
+    "How wound stitches really work",
+    "Did You Know This Fact"
   ],
-  "timestamp": "2026-11-02T23:12:17"
+  "timestamp": "2026-11-03T21:13:46"
 }

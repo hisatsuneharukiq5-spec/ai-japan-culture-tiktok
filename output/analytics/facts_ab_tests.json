@@ -2428,12 +2428,24 @@
     "title_a": "Did you know that glass is actually a liquid? #Shorts (3 Facts)",
     "title_b": "Scientists just discovered why this experiment glows and it changes everything #Shorts (3 Facts)",
     "compare_after_hours": 48,
-    "status": "pending"
+    "status": "learned",
+    "winner": "title_a",
+    "loser": "title_b",
+    "views_a": 0,
+    "views_b": 0,
+    "reason": "Compared 48h view counts from facts upload registry"
   },
   {
     "created_at": "2026-11-02T23:12:18",
     "title_a": "Did you know that glass is actually a liquid? #Shorts (3 Facts)",
     "title_b": "Only 7% of people know this about human cells #Shorts",
+    "compare_after_hours": 48,
+    "status": "pending"
+  },
+  {
+    "created_at": "2026-11-03T21:13:47",
+    "title_a": "Did you know that butterflies taste with their feet? #Shorts (3 Facts)",
+    "title_b": "Only 0.3% of people know this about Black Holes #Shorts",
     "compare_after_hours": 48,
     "status": "pending"
   }
