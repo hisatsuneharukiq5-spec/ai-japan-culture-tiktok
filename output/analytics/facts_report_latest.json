@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-03T21:13:46",
+  "timestamp": "2026-11-04T21:28:03",
   "internal": {
     "top5_patterns": [
       {
@@ -29,41 +29,42 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 45,
+    "videos_analyzed": 49,
     "popular_topics": [
       "science",
       "experiment",
       "physics",
+      "didn",
+      "could",
       "ashusir",
-      "amazing",
-      "scienceandfun",
       "sciencefacts",
-      "tricks"
+      "amazing"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#viral",
+      "#education",
+      "#top",
+      "#factsmine",
       "#knowledge",
       "#trending",
-      "#funny",
-      "#education",
+      "#latest",
+      "#amazing",
+      "#fact",
       "#experiment",
-      "#didyouknow",
-      "#animation",
-      "#youtube shorts",
-      "#physics",
       "#youtubeshorts",
-      "#memes"
+      "#science experiments",
+      "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
-      "Never Do This | Science",
       "This can help make Artificial",
       "How Deep Do Humans Have",
       "Did You Know That In",
+      "Did You Understand",
       "How wound stitches really work",
       "Did You Know This Fact"
     ],
@@ -82,22 +83,22 @@
       "science",
       "experiment",
       "physics",
+      "could",
       "amazing",
       "ashusir",
-      "human",
-      "scienceandfun",
       "sciencefacts",
+      "space",
       "tricks",
-      "never",
+      "human",
       "unbelievable",
       "fastest"
     ],
     "pattern_counts": {
       "statement": 27,
       "science-discovery": 1,
-      "number-lead": 6,
+      "number-lead": 8,
       "wh-question": 4,
-      "statistic": 4,
+      "statistic": 6,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -109,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "smci stock",
-        "uefa nations league",
-        "amd earnings",
-        "jensen ackles",
-        "pandilla",
-        "ryan fazio",
-        "psg schedule",
-        "villarreal",
-        "ucl",
-        "todd chrisley"
+        "oil prices",
+        "como 1907",
+        "app stock",
+        "whitney leavitt upcoming reality series",
+        "qcom stock",
+        "edp",
+        "arm stock",
+        "jimmy movie",
+        "arthur fils",
+        "bob heinz"
       ]
     },
     "youtube_trending": {
@@ -132,13 +133,13 @@
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "Things Baby Animals Won&#39;t Tell You 🐾 🤫 (Part 3)",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
-        "Sharpest Knife In The World",
         "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
-        "Why We Have Crooked Teeth 😱"
+        "Why We Have Crooked Teeth 😱",
+        "Animal Fact Time! 🦎 #shorts #learn #animals #kids",
+        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts"
       ]
     },
     "pytrends": {
@@ -167,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 205,
+    "total_tests": 206,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
