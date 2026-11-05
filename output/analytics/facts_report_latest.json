@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-04T21:28:03",
+  "timestamp": "2026-11-05T21:32:12",
   "internal": {
     "top5_patterns": [
       {
@@ -29,42 +29,42 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 49,
+    "videos_analyzed": 46,
     "popular_topics": [
       "science",
       "experiment",
       "physics",
-      "didn",
-      "could",
       "ashusir",
+      "didn",
+      "scienceandfun",
       "sciencefacts",
       "amazing"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
-      "#science",
       "#viral",
-      "#education",
-      "#top",
-      "#factsmine",
-      "#knowledge",
+      "#science",
       "#trending",
-      "#latest",
+      "#knowledge",
+      "#youtubeshorts",
+      "#education",
+      "#experiment",
+      "#youtube shorts",
+      "#funny",
+      "#physics",
       "#amazing",
       "#fact",
-      "#experiment",
-      "#youtubeshorts",
-      "#science experiments",
+      "#viralshorts",
       "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
+      "Never Do This | Science",
       "This can help make Artificial",
       "How Deep Do Humans Have",
       "Did You Know That In",
-      "Did You Understand",
       "How wound stitches really work",
       "Did You Know This Fact"
     ],
@@ -83,22 +83,21 @@
       "science",
       "experiment",
       "physics",
-      "could",
-      "amazing",
       "ashusir",
-      "sciencefacts",
-      "space",
-      "tricks",
       "human",
+      "amazing",
+      "scienceandfun",
+      "sciencefacts",
       "unbelievable",
+      "never",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 27,
+      "statement": 28,
       "science-discovery": 1,
-      "number-lead": 8,
+      "number-lead": 6,
       "wh-question": 4,
-      "statistic": 6,
+      "statistic": 4,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -110,16 +109,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "oil prices",
-        "como 1907",
-        "app stock",
-        "whitney leavitt upcoming reality series",
-        "qcom stock",
-        "edp",
-        "arm stock",
-        "jimmy movie",
-        "arthur fils",
-        "bob heinz"
+        "josh hokit",
+        "smuggling",
+        "jay silveria",
+        "93.9 lite fm",
+        "49ers news",
+        "hershey grinch max cindy lou kisses",
+        "2027 tax brackets",
+        "leverkusen",
+        "celta vs union",
+        "katseye chicago"
       ]
     },
     "youtube_trending": {
@@ -136,8 +135,8 @@
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
+        "Sharpest Knife In The World",
         "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
-        "Why We Have Crooked Teeth 😱",
         "Animal Fact Time! 🦎 #shorts #learn #animals #kids",
         "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts"
       ]
@@ -168,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 206,
+    "total_tests": 207,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
