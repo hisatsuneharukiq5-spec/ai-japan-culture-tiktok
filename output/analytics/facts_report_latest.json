@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-06T21:01:00",
+  "timestamp": "2026-11-07T19:34:07",
   "internal": {
     "top5_patterns": [
       {
@@ -29,43 +29,42 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 49,
+    "videos_analyzed": 45,
     "popular_topics": [
       "science",
       "experiment",
       "physics",
-      "didn",
       "ashusir",
-      "save",
-      "life",
-      "could"
+      "scienceandfun",
+      "sciencefacts",
+      "amazing",
+      "human"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#viral",
-      "#factholic",
-      "#factoholic",
       "#knowledge",
-      "#factaholic",
-      "#trending",
-      "#facthilic",
-      "#factsmine",
-      "#latest",
+      "#funny",
+      "#education",
       "#experiment",
+      "#animation",
       "#physics",
-      "#new",
-      "#didyouknow"
+      "#trending",
+      "#sciencefacts",
+      "#didyouknow",
+      "#memes",
+      "#science experiments"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
       "Never Do This | Science",
+      "The Last Country Norway",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "How Deep The Ocean REALLY",
-      "Did You Understand",
+      "Did You Know That In",
       "How wound stitches really work"
     ],
     "title_templates": [
@@ -83,25 +82,22 @@
       "science",
       "experiment",
       "physics",
-      "space",
       "ashusir",
-      "could",
-      "scienceandfun",
-      "ocean",
-      "sciencefacts",
-      "tricks",
       "human",
       "amazing",
-      "shocking",
+      "scienceandfun",
+      "sciencefacts",
+      "unbelievable",
       "never",
-      "rare"
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 28,
-      "wh-question": 7,
+      "statement": 27,
       "science-discovery": 1,
-      "number-lead": 8,
-      "statistic": 5
+      "number-lead": 6,
+      "wh-question": 4,
+      "statistic": 4,
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -112,16 +108,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "austin simmons",
-        "patrick lynch mt lebanon",
-        "senfronia thompson",
-        "zelda switch 2 pro controller",
-        "toulouse fc",
-        "did the stock market crash today",
-        "detención",
-        "rihanna",
-        "minnesota vikings quarterback trade rumors",
-        "toulouse vs strasbourg"
+        "vmi vs tn tech",
+        "milo ventimiglia",
+        "winthrop basketball",
+        "valencia c. f. - real madrid",
+        "texas a&m vs south carolina",
+        "psg vs troyes",
+        "psg - troyes",
+        "roma vs sassuolo",
+        "portland st vs montana",
+        "florida a&m vs alcorn state"
       ]
     },
     "youtube_trending": {
@@ -135,12 +131,12 @@
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "Animal Fact Time! 🦎 #shorts #learn #animals #kids",
-        "How Rare Are You 😱",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
+        "Why We Have Crooked Teeth 😱",
         "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
+        "Animal Fact Time! 🦎 #shorts #learn #animals #kids",
         "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts"
       ]
     },
@@ -170,7 +166,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 208,
+    "total_tests": 209,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
