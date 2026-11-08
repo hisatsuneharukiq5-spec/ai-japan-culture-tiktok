@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-07T19:34:07",
+  "timestamp": "2026-11-08T19:54:02",
   "internal": {
     "top5_patterns": [
       {
@@ -29,41 +29,41 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 45,
+    "videos_analyzed": 46,
     "popular_topics": [
       "science",
       "experiment",
       "physics",
       "ashusir",
-      "scienceandfun",
-      "sciencefacts",
       "amazing",
-      "human"
+      "didn",
+      "scienceandfun",
+      "sciencefacts"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#science",
       "#viral",
-      "#knowledge",
-      "#funny",
-      "#education",
-      "#experiment",
-      "#animation",
-      "#physics",
       "#trending",
-      "#sciencefacts",
+      "#experiment",
+      "#science experiments",
+      "#youtube shorts",
+      "#knowledge",
+      "#youtubeshorts",
       "#didyouknow",
       "#memes",
-      "#science experiments"
+      "#education",
+      "#sciencefacts",
+      "#biology"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
       "Never Do This | Science",
-      "The Last Country Norway",
       "This can help make Artificial",
       "How Deep Do Humans Have",
+      "How gullible are you",
       "Did You Know That In",
       "How wound stitches really work"
     ],
@@ -82,20 +82,20 @@
       "science",
       "experiment",
       "physics",
+      "amazing",
       "ashusir",
       "human",
-      "amazing",
       "scienceandfun",
       "sciencefacts",
+      "tricks",
       "unbelievable",
       "never",
       "fastest"
     ],
     "pattern_counts": {
       "statement": 27,
-      "science-discovery": 1,
-      "number-lead": 6,
-      "wh-question": 4,
+      "number-lead": 7,
+      "wh-question": 5,
       "statistic": 4,
       "did-you-know": 3
     },
@@ -108,16 +108,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "vmi vs tn tech",
-        "milo ventimiglia",
-        "winthrop basketball",
-        "valencia c. f. - real madrid",
-        "texas a&m vs south carolina",
-        "psg vs troyes",
-        "psg - troyes",
-        "roma vs sassuolo",
-        "portland st vs montana",
-        "florida a&m vs alcorn state"
+        "blake corum",
+        "golden knights vs sabres",
+        "ceedee lamb",
+        "cupertino show",
+        "76ers vs bulls",
+        "harrison butker",
+        "ap poll rankings",
+        "john riggins",
+        "mahomes injury",
+        "portland thorns vs washington spirit"
       ]
     },
     "youtube_trending": {
@@ -131,13 +131,13 @@
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
         "Why We Have Crooked Teeth 😱",
-        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
         "Animal Fact Time! 🦎 #shorts #learn #animals #kids",
-        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts"
+        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
+        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
+        "WARNING : This is Highly Relatable 😱 #shorts"
       ]
     },
     "pytrends": {
@@ -166,7 +166,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 209,
+    "total_tests": 210,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
