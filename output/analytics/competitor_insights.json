@@ -1,24 +1,24 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 46,
+  "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 27,
-    "number-lead": 7,
-    "wh-question": 5,
+    "statement": 30,
+    "number-lead": 8,
+    "wh-question": 6,
     "statistic": 4,
-    "did-you-know": 3
+    "did-you-know": 2
   },
   "top_hooks": [
     "This is SO cool",
     "What Is The Real Shape",
     "Never Do This | Science",
+    "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "How gullible are you",
+    "How Deep The Ocean REALLY",
     "Did You Know That In",
-    "How wound stitches really work",
-    "Did You Know This Fact",
-    "Did You Know: Titanic Fun"
+    "Did You Understand"
   ],
   "power_words": [
     "science",
@@ -26,13 +26,14 @@
     "physics",
     "amazing",
     "ashusir",
-    "human",
+    "could",
     "scienceandfun",
+    "ocean",
     "sciencefacts",
-    "tricks",
-    "unbelievable",
+    "human",
     "never",
-    "fastest"
+    "fastest",
+    "unbelievable"
   ],
   "top_hashtags": [
     "#shorts",
@@ -40,38 +41,39 @@
     "#science",
     "#viral",
     "#trending",
-    "#experiment",
-    "#science experiments",
-    "#youtube shorts",
     "#knowledge",
-    "#youtubeshorts",
-    "#didyouknow",
-    "#memes",
+    "#fact",
+    "#top",
     "#education",
-    "#sciencefacts",
-    "#biology"
+    "#amazingfacts",
+    "#amazing",
+    "#factsmine",
+    "#new",
+    "#latest",
+    "#experiment",
+    "#didyouknow"
   ],
   "top_topics": [
     "science",
     "experiment",
     "physics",
-    "ashusir",
-    "amazing",
     "didn",
+    "ashusir",
+    "could",
     "scienceandfun",
+    "ocean",
     "sciencefacts",
-    "tricks",
-    "human",
+    "amazing",
+    "save",
+    "life",
     "cool",
     "gifts",
-    "ocean",
+    "funny",
     "journey",
     "earth",
     "chemistry",
     "ytshorts",
-    "want",
-    "experiments",
-    "frozen"
+    "black"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -84,16 +86,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.0,
+  "avg_duration_secs": 43.3,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "Never Do This | Science",
+    "The Last Country Norway",
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "How gullible are you",
-    "Did You Know That In",
-    "How wound stitches really work"
+    "How Deep The Ocean REALLY"
   ],
-  "timestamp": "2026-11-08T19:54:01"
+  "timestamp": "2026-11-09T23:51:16"
 }
