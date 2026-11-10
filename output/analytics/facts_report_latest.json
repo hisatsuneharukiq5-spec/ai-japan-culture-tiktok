@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-09T23:51:17",
+  "timestamp": "2026-11-10T21:25:18",
   "internal": {
     "top5_patterns": [
       {
@@ -29,33 +29,33 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 50,
+    "videos_analyzed": 48,
     "popular_topics": [
       "science",
       "experiment",
       "physics",
-      "didn",
       "ashusir",
-      "could",
+      "didn",
       "scienceandfun",
-      "ocean"
+      "sciencefacts",
+      "history"
     ],
     "hashtags": [
       "#shorts",
-      "#facts",
       "#science",
+      "#facts",
       "#viral",
       "#trending",
       "#knowledge",
-      "#fact",
-      "#top",
-      "#education",
-      "#amazingfacts",
-      "#amazing",
-      "#factsmine",
-      "#new",
-      "#latest",
+      "#physics",
       "#experiment",
+      "#sciencefacts",
+      "#short",
+      "#viralshorts",
+      "#science experiments",
+      "#education",
+      "#biology",
+      "#factsmine",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -65,8 +65,8 @@
       "The Last Country Norway",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "How gullible are you",
-      "How Deep The Ocean REALLY"
+      "What If You Were 4D",
+      "How gullible are you"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -83,22 +83,23 @@
       "science",
       "experiment",
       "physics",
-      "amazing",
       "ashusir",
-      "could",
       "scienceandfun",
-      "ocean",
+      "viral",
       "sciencefacts",
       "human",
+      "history",
+      "shock",
+      "shocking",
+      "amazing",
       "never",
-      "fastest",
-      "unbelievable"
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 30,
-      "number-lead": 8,
-      "wh-question": 6,
-      "statistic": 4,
+      "statement": 28,
+      "statistic": 5,
+      "wh-question": 8,
+      "number-lead": 5,
       "did-you-know": 2
     },
     "optimal_length_seconds": [
@@ -110,16 +111,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "syracuse vs indiana",
-        "nba starting lineups",
-        "jet blast",
-        "bills schedule",
-        "tutu atwell",
-        "cavaliers vs hornets",
-        "wizards vs pistons",
-        "jordon hudson",
-        "marshall vs ohio state",
-        "carlos jimenez ice lawsuit 25m"
+        "andrew vorhees",
+        "apprentice jockey izzy neale",
+        "young and the restless new writers",
+        "tarik skubal",
+        "crwv stock",
+        "alina habba",
+        "john thune",
+        "xavier worthy",
+        "ny giants news",
+        "rams trade"
       ]
     },
     "youtube_trending": {
@@ -133,13 +134,13 @@
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
         "Strongest Glass in The World",
-        "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
         "Sharpest Knife In The World",
-        "Animal Fact Time! 🦎 #shorts #learn #animals #kids",
+        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
         "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
-        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts"
+        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
+        "What if You Fart in Space 😱"
       ]
     },
     "pytrends": {
@@ -168,7 +169,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 211,
+    "total_tests": 212,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
