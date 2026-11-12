@@ -2,11 +2,12 @@
   "source": "youtube_api",
   "videos_analyzed": 50,
   "pattern_counts": {
-    "statement": 31,
+    "statement": 29,
+    "science-discovery": 1,
     "number-lead": 8,
     "wh-question": 4,
     "statistic": 5,
-    "did-you-know": 2
+    "did-you-know": 3
   },
   "top_hooks": [
     "This is SO cool",
@@ -17,18 +18,18 @@
     "Did You Know That In",
     "Did You Understand",
     "How wound stitches really work",
-    "Did You Know This Fact"
+    "Did You Know This Fact",
+    "Did You Know: Titanic Fun"
   ],
   "power_words": [
     "science",
     "experiment",
     "physics",
-    "amazing",
     "ashusir",
     "could",
+    "amazing",
     "scienceandfun",
     "sciencefacts",
-    "tricks",
     "human",
     "never",
     "fastest",
@@ -37,19 +38,19 @@
   "top_hashtags": [
     "#shorts",
     "#facts",
-    "#science",
     "#viral",
-    "#trending",
+    "#science",
     "#knowledge",
+    "#trending",
     "#education",
-    "#fact",
-    "#amazingfacts",
     "#top",
-    "#experiment",
-    "#amazing",
-    "#factsmine",
+    "#fact",
     "#youtubeshorts",
+    "#factsmine",
     "#new",
+    "#latest",
+    "#amazing",
+    "#amazingfacts",
     "#didyouknow"
   ],
   "top_topics": [
@@ -61,10 +62,8 @@
     "could",
     "scienceandfun",
     "sciencefacts",
-    "amazing",
     "save",
     "life",
-    "tricks",
     "cool",
     "gravity",
     "gifts",
@@ -72,7 +71,9 @@
     "ocean",
     "journey",
     "earth",
-    "half"
+    "half",
+    "chemistry",
+    "ytshorts"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -85,7 +86,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.0,
+  "avg_duration_secs": 42.9,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -96,5 +97,5 @@
     "Did You Understand",
     "How wound stitches really work"
   ],
-  "timestamp": "2026-11-11T22:10:23"
+  "timestamp": "2026-11-12T21:55:01"
 }

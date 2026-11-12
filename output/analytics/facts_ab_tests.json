@@ -2524,19 +2524,36 @@
     "title_a": "Did you know that tardigrades survive by nearly dying? #Shorts (3 Facts)",
     "title_b": "Only 0.001% of people know this about viruses #Shorts",
     "compare_after_hours": 48,
-    "status": "pending"
+    "status": "learned",
+    "winner": "title_a",
+    "loser": "title_b",
+    "views_a": 0,
+    "views_b": 0,
+    "reason": "Compared 48h view counts from facts upload registry"
   },
   {
     "created_at": "2026-11-10T21:25:19",
     "title_a": "Did you know that glass is actually a liquid? #Shorts (3 Facts)",
     "title_b": "Scientists just discovered this egg experiment and it changes everything #Shorts (3 Facts)",
     "compare_after_hours": 48,
-    "status": "pending"
+    "status": "learned",
+    "winner": "title_a",
+    "loser": "title_b",
+    "views_a": 0,
+    "views_b": 0,
+    "reason": "Compared 48h view counts from facts upload registry"
   },
   {
     "created_at": "2026-11-11T22:10:24",
     "title_a": "Did you know that butterflies taste with their feet? #Shorts (3 Facts)",
     "title_b": "Only 1% of people know this about hibernation #Shorts",
+    "compare_after_hours": 48,
+    "status": "pending"
+  },
+  {
+    "created_at": "2026-11-12T21:55:03",
+    "title_a": "Did you know that butterflies taste with their feet? #Shorts (3 Facts)",
+    "title_b": "Scientists just discovered #Shorts and it changes everything #Shorts (3 Facts)",
     "compare_after_hours": 48,
     "status": "pending"
   }

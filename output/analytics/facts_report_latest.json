@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-11T22:10:23",
+  "timestamp": "2026-11-12T21:55:02",
   "internal": {
     "top5_patterns": [
       {
@@ -43,19 +43,19 @@
     "hashtags": [
       "#shorts",
       "#facts",
-      "#science",
       "#viral",
-      "#trending",
+      "#science",
       "#knowledge",
+      "#trending",
       "#education",
-      "#fact",
-      "#amazingfacts",
       "#top",
-      "#experiment",
-      "#amazing",
-      "#factsmine",
+      "#fact",
       "#youtubeshorts",
+      "#factsmine",
       "#new",
+      "#latest",
+      "#amazing",
+      "#amazingfacts",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -83,23 +83,23 @@
       "science",
       "experiment",
       "physics",
-      "amazing",
       "ashusir",
       "could",
+      "amazing",
       "scienceandfun",
       "sciencefacts",
-      "tricks",
       "human",
       "never",
       "fastest",
       "unbelievable"
     ],
     "pattern_counts": {
-      "statement": 31,
+      "statement": 29,
+      "science-discovery": 1,
       "number-lead": 8,
       "wh-question": 4,
       "statistic": 5,
-      "did-you-know": 2
+      "did-you-know": 3
     },
     "optimal_length_seconds": [
       55,
@@ -110,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "kamario taylor",
-        "pat tillman",
-        "severe thunderstorm watch",
-        "the vow",
-        "building collapse nyc",
-        "nick wright",
-        "frankie muniz",
-        "mortgage interest rates",
-        "softbank $3.7 billion turbine loss",
-        "muchova"
+        "caleb wilson",
+        "act",
+        "jane seymour stacy keach tribute",
+        "josh simmons",
+        "csco stock",
+        "cbrs stock",
+        "amat stock price",
+        "saúl lisazo",
+        "españa",
+        "lt. col. brandon tyner"
       ]
     },
     "youtube_trending": {
@@ -135,11 +135,11 @@
         "Strongest Glass in The World",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
-        "Sharpest Knife In The World",
         "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
         "Animal Fact Time! 🦎 #shorts #learn #animals #kids",
         "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
-        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts"
+        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
+        "WARNING : This is Highly Relatable 😱 #shorts"
       ]
     },
     "pytrends": {
@@ -168,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 213,
+    "total_tests": 214,
     "latest_status": "pending"
   },
   "channel_desc_updated": false

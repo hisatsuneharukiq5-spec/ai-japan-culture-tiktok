@@ -83,19 +83,19 @@ LEARNED_HOOK_PHRASES = [
 LEARNED_HASHTAGS = [
   "#shorts",
   "#facts",
-  "#science",
   "#viral",
-  "#trending",
+  "#science",
   "#knowledge",
+  "#trending",
   "#education",
-  "#fact",
-  "#amazingfacts",
   "#top",
-  "#experiment",
-  "#amazing",
-  "#factsmine",
+  "#fact",
   "#youtubeshorts",
+  "#factsmine",
   "#new",
+  "#latest",
+  "#amazing",
+  "#amazingfacts",
   "#didyouknow"
 ]
 PREFERRED_POST_HOURS = [0, 11, 12, 19, 20]
