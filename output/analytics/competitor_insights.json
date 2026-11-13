@@ -1,12 +1,12 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 50,
+  "videos_analyzed": 44,
   "pattern_counts": {
-    "statement": 29,
+    "statement": 25,
     "science-discovery": 1,
-    "number-lead": 8,
-    "wh-question": 4,
-    "statistic": 5,
+    "number-lead": 6,
+    "wh-question": 5,
+    "statistic": 4,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -15,8 +15,8 @@
     "Never Do This | Science",
     "This can help make Artificial",
     "How Deep Do Humans Have",
+    "How gullible are you",
     "Did You Know That In",
-    "Did You Understand",
     "How wound stitches really work",
     "Did You Know This Fact",
     "Did You Know: Titanic Fun"
@@ -26,54 +26,52 @@
     "experiment",
     "physics",
     "ashusir",
-    "could",
-    "amazing",
+    "human",
     "scienceandfun",
     "sciencefacts",
-    "human",
+    "amazing",
+    "unbelievable",
     "never",
-    "fastest",
-    "unbelievable"
+    "fastest"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
     "#viral",
     "#science",
-    "#knowledge",
     "#trending",
+    "#knowledge",
+    "#funny",
     "#education",
-    "#top",
-    "#fact",
+    "#experiment",
+    "#didyouknow",
+    "#animation",
     "#youtubeshorts",
-    "#factsmine",
-    "#new",
-    "#latest",
-    "#amazing",
-    "#amazingfacts",
-    "#didyouknow"
+    "#youtube shorts",
+    "#physics",
+    "#new"
   ],
   "top_topics": [
     "science",
     "experiment",
     "physics",
-    "didn",
     "ashusir",
-    "could",
     "scienceandfun",
     "sciencefacts",
-    "save",
-    "life",
+    "human",
+    "didn",
     "cool",
     "gravity",
     "gifts",
-    "funny",
     "ocean",
     "journey",
     "earth",
-    "half",
     "chemistry",
-    "ytshorts"
+    "ytshorts",
+    "amazing",
+    "want",
+    "kids",
+    "experiments"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -86,16 +84,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.9,
+  "avg_duration_secs": 43.2,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "Never Do This | Science",
     "This can help make Artificial",
     "How Deep Do Humans Have",
+    "How gullible are you",
     "Did You Know That In",
-    "Did You Understand",
     "How wound stitches really work"
   ],
-  "timestamp": "2026-11-12T21:55:01"
+  "timestamp": "2026-11-13T21:31:57"
 }

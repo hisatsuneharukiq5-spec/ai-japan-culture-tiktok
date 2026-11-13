@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-12T21:55:02",
+  "timestamp": "2026-11-13T21:31:58",
   "internal": {
     "top5_patterns": [
       {
@@ -29,34 +29,33 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 50,
+    "videos_analyzed": 44,
     "popular_topics": [
       "science",
       "experiment",
       "physics",
-      "didn",
       "ashusir",
-      "could",
       "scienceandfun",
-      "sciencefacts"
+      "sciencefacts",
+      "human",
+      "didn"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
       "#viral",
       "#science",
-      "#knowledge",
       "#trending",
+      "#knowledge",
+      "#funny",
       "#education",
-      "#top",
-      "#fact",
+      "#experiment",
+      "#didyouknow",
+      "#animation",
       "#youtubeshorts",
-      "#factsmine",
-      "#new",
-      "#latest",
-      "#amazing",
-      "#amazingfacts",
-      "#didyouknow"
+      "#youtube shorts",
+      "#physics",
+      "#new"
     ],
     "hook_phrases": [
       "This is SO cool",
@@ -64,8 +63,8 @@
       "Never Do This | Science",
       "This can help make Artificial",
       "How Deep Do Humans Have",
+      "How gullible are you",
       "Did You Know That In",
-      "Did You Understand",
       "How wound stitches really work"
     ],
     "title_templates": [
@@ -84,21 +83,20 @@
       "experiment",
       "physics",
       "ashusir",
-      "could",
-      "amazing",
+      "human",
       "scienceandfun",
       "sciencefacts",
-      "human",
+      "amazing",
+      "unbelievable",
       "never",
-      "fastest",
-      "unbelievable"
+      "fastest"
     ],
     "pattern_counts": {
-      "statement": 29,
+      "statement": 25,
       "science-discovery": 1,
-      "number-lead": 8,
-      "wh-question": 4,
-      "statistic": 5,
+      "number-lead": 6,
+      "wh-question": 5,
+      "statistic": 4,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -110,16 +108,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "caleb wilson",
-        "act",
-        "jane seymour stacy keach tribute",
-        "josh simmons",
-        "csco stock",
-        "cbrs stock",
-        "amat stock price",
-        "saúl lisazo",
-        "españa",
-        "lt. col. brandon tyner"
+        "planes",
+        "faa flight delays",
+        "why are flights grounded",
+        "airline ground stop",
+        "us flights grounded today",
+        "air travel",
+        "airport news",
+        "planes grounded",
+        "airports",
+        "us flights"
       ]
     },
     "youtube_trending": {
@@ -132,14 +130,14 @@
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
+        "Animal Fact Time! 🦎 #shorts #learn #animals #kids",
+        "What if You Fart in Space 😱",
+        "How Rare Are You 😱",
         "Strongest Glass in The World",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
-        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
-        "Animal Fact Time! 🦎 #shorts #learn #animals #kids",
-        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
-        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
-        "WARNING : This is Highly Relatable 😱 #shorts"
+        "Sharpest Knife In The World",
+        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts"
       ]
     },
     "pytrends": {
@@ -168,7 +166,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 214,
+    "total_tests": 215,
     "latest_status": "pending"
   },
   "channel_desc_updated": false
