@@ -1,11 +1,10 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 44,
+  "videos_analyzed": 45,
   "pattern_counts": {
-    "statement": 25,
-    "science-discovery": 1,
+    "statement": 28,
     "number-lead": 6,
-    "wh-question": 5,
+    "wh-question": 4,
     "statistic": 4,
     "did-you-know": 3
   },
@@ -15,7 +14,6 @@
     "Never Do This | Science",
     "This can help make Artificial",
     "How Deep Do Humans Have",
-    "How gullible are you",
     "Did You Know That In",
     "How wound stitches really work",
     "Did You Know This Fact",
@@ -25,13 +23,14 @@
     "science",
     "experiment",
     "physics",
-    "ashusir",
     "human",
+    "amazing",
+    "ashusir",
     "scienceandfun",
     "sciencefacts",
-    "amazing",
-    "unbelievable",
+    "tricks",
     "never",
+    "unbelievable",
     "fastest"
   ],
   "top_hashtags": [
@@ -40,15 +39,15 @@
     "#viral",
     "#science",
     "#trending",
+    "#youtubeshorts",
     "#knowledge",
-    "#funny",
-    "#education",
     "#experiment",
     "#didyouknow",
     "#animation",
-    "#youtubeshorts",
+    "#science experiments",
     "#youtube shorts",
-    "#physics",
+    "#education",
+    "#factsmine",
     "#new"
   ],
   "top_topics": [
@@ -56,22 +55,22 @@
     "experiment",
     "physics",
     "ashusir",
+    "amazing",
+    "human",
     "scienceandfun",
     "sciencefacts",
-    "human",
+    "tricks",
     "didn",
     "cool",
-    "gravity",
     "gifts",
     "ocean",
     "journey",
     "earth",
     "chemistry",
     "ytshorts",
-    "amazing",
+    "never",
     "want",
-    "kids",
-    "experiments"
+    "kids"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -84,16 +83,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.2,
+  "avg_duration_secs": 43.0,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "Never Do This | Science",
     "This can help make Artificial",
     "How Deep Do Humans Have",
-    "How gullible are you",
     "Did You Know That In",
-    "How wound stitches really work"
+    "How wound stitches really work",
+    "Did You Know This Fact"
   ],
-  "timestamp": "2026-11-13T21:31:57"
+  "timestamp": "2026-11-14T20:02:49"
 }
