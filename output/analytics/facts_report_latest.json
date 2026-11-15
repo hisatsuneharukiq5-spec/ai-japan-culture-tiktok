@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-15T17:03:21",
+  "timestamp": "2026-11-15T17:15:14",
   "internal": {
     "top5_patterns": [
       {
@@ -35,38 +35,37 @@
       "science",
       "experiment",
       "physics",
-      "ashusir",
       "human",
-      "scienceandfun",
-      "sciencefacts",
+      "didn",
+      "experiments",
+      "earth",
       "amazing"
     ],
     "hashtags": [
       "#shorts",
       "#facts",
-      "#viral",
       "#science",
+      "#viral",
       "#trending",
       "#knowledge",
       "#youtubeshorts",
       "#education",
-      "#experiment",
+      "#factsmine",
+      "#new",
+      "#amazing",
       "#didyouknow",
       "#animation",
-      "#youtube shorts",
-      "#funny",
-      "#physics",
-      "#factsmine"
+      "#ytshorts",
+      "#fact"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
-      "Never Do This | Science",
       "This can help make Artificial",
-      "How Deep Do Humans Have",
       "Did You Know That In",
       "How wound stitches really work",
-      "Did You Know This Fact"
+      "Did You Know This Fact",
+      "Did You Know: Titanic Fun"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -84,17 +83,17 @@
       "experiment",
       "physics",
       "human",
-      "ashusir",
+      "experiments",
       "amazing",
-      "scienceandfun",
-      "sciencefacts",
-      "never",
+      "earth",
+      "invention",
       "unbelievable",
+      "never",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 28,
-      "number-lead": 6,
+      "statement": 27,
+      "number-lead": 7,
       "wh-question": 4,
       "statistic": 4,
       "did-you-know": 3
@@ -108,16 +107,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
+        "ou game today",
+        "dolphins vs colts",
+        "mac jones",
+        "settlement",
         "deportivo - barcelona",
-        "deportivo vs barcelona",
-        "vikings injury report",
         "barry sanders",
         "bernie sanders social security expansion act",
-        "españa vs inglaterra",
-        "finland vs san marino",
         "usc vs south carolina",
-        "belarus vs albania",
-        "raiders vs seahawks"
+        "lan larison",
+        "belarus vs albania"
       ]
     },
     "youtube_trending": {
@@ -134,10 +133,10 @@
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
-        "Sharpest Knife In The World",
         "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
         "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
-        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts"
+        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
+        "WARNING : This is Highly Relatable 😱 #shorts"
       ]
     },
     "pytrends": {
@@ -166,18 +165,8 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 217,
+    "total_tests": 218,
     "latest_status": "pending"
   },
-  "channel_desc_updated": false,
-  "playlist_sync": {
-    "Amazing Facts #Shorts": 27,
-    "Animal Facts #Shorts": 5,
-    "Human Body Facts #Shorts": 21,
-    "Space Facts #Shorts": 8,
-    "Earth Science Facts #Shorts": 11,
-    "Ocean Facts #Shorts": 4,
-    "History Facts #Shorts": 2
-  },
-  "description_refreshed": 0
+  "channel_desc_updated": false
 }
