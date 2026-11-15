@@ -1,29 +1,30 @@
 {
-  "timestamp": "2026-11-14T20:02:49",
+  "timestamp": "2026-11-15T17:03:21",
   "internal": {
     "top5_patterns": [
       {
-        "avg_title_length": 38,
+        "avg_title_length": 44.8,
         "title_pattern_counts": {
-          "did-you-know": 1,
-          "statement": 4
+          "numeric": 2,
+          "statement": 3
         },
         "topic_counts": {
-          "did you know": 1,
-          "your brain uses": 1,
-          "the immortal jellyfish": 1,
-          "the ocean glowing": 1,
-          "your body hidden": 1
+          "your stomach grows": 1,
+          "your brain eats": 1,
+          "giant sequoias are": 1,
+          "earth shocking lightning": 1,
+          "your stomach acid": 1
         },
         "post_hour_counts": {
-          "11": 1,
-          "00": 3,
-          "12": 1
+          "22": 1,
+          "00": 2,
+          "18": 1,
+          "16": 1
         }
       }
     ],
     "bottom5_issues": [
-      "Collect more data to identify weak patterns"
+      "Titles miss concrete numbers"
     ],
     "retention_script_pattern": "Hook with 'Did you know that', 3-5 short numbered facts, CTA at the end"
   },
@@ -35,10 +36,10 @@
       "experiment",
       "physics",
       "ashusir",
-      "amazing",
       "human",
       "scienceandfun",
-      "sciencefacts"
+      "sciencefacts",
+      "amazing"
     ],
     "hashtags": [
       "#shorts",
@@ -46,16 +47,16 @@
       "#viral",
       "#science",
       "#trending",
-      "#youtubeshorts",
       "#knowledge",
+      "#youtubeshorts",
+      "#education",
       "#experiment",
       "#didyouknow",
       "#animation",
-      "#science experiments",
       "#youtube shorts",
-      "#education",
-      "#factsmine",
-      "#new"
+      "#funny",
+      "#physics",
+      "#factsmine"
     ],
     "hook_phrases": [
       "This is SO cool",
@@ -83,11 +84,10 @@
       "experiment",
       "physics",
       "human",
-      "amazing",
       "ashusir",
+      "amazing",
       "scienceandfun",
       "sciencefacts",
-      "tricks",
       "never",
       "unbelievable",
       "fastest"
@@ -108,24 +108,24 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "california vs virginia",
-        "jets vs blackhawks",
-        "jax state vs wku",
-        "ga southern vs georgia state",
-        "kentucky state football",
-        "middle tenn. vs liberty",
-        "evan elder",
-        "missouri vs georgia",
-        "boston college vs notre dame",
-        "kansas vs west virginia"
+        "deportivo - barcelona",
+        "deportivo vs barcelona",
+        "vikings injury report",
+        "barry sanders",
+        "bernie sanders social security expansion act",
+        "españa vs inglaterra",
+        "finland vs san marino",
+        "usc vs south carolina",
+        "belarus vs albania",
+        "raiders vs seahawks"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
+        "This Video Can Save Your Life 😱",
         "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
@@ -134,7 +134,7 @@
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
-        "Animal Fact Time! 🦎 #shorts #learn #animals #kids",
+        "Sharpest Knife In The World",
         "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
         "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
         "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts"
@@ -152,7 +152,7 @@
   },
   "video_quality": {
     "status": "ok",
-    "avg_real_clips": 28.7,
+    "avg_real_clips": 28.8,
     "avg_lavfi_clips": 0,
     "avg_static_skipped": 0,
     "lavfi_rate_pct": 0.0,
@@ -166,8 +166,18 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 216,
+    "total_tests": 217,
     "latest_status": "pending"
   },
-  "channel_desc_updated": false
+  "channel_desc_updated": false,
+  "playlist_sync": {
+    "Amazing Facts #Shorts": 27,
+    "Animal Facts #Shorts": 5,
+    "Human Body Facts #Shorts": 21,
+    "Space Facts #Shorts": 8,
+    "Earth Science Facts #Shorts": 11,
+    "Ocean Facts #Shorts": 4,
+    "History Facts #Shorts": 2
+  },
+  "description_refreshed": 0
 }

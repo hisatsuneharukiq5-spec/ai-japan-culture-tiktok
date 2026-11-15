@@ -24,11 +24,10 @@
     "experiment",
     "physics",
     "human",
-    "amazing",
     "ashusir",
+    "amazing",
     "scienceandfun",
     "sciencefacts",
-    "tricks",
     "never",
     "unbelievable",
     "fastest"
@@ -39,29 +38,29 @@
     "#viral",
     "#science",
     "#trending",
-    "#youtubeshorts",
     "#knowledge",
+    "#youtubeshorts",
+    "#education",
     "#experiment",
     "#didyouknow",
     "#animation",
-    "#science experiments",
     "#youtube shorts",
-    "#education",
-    "#factsmine",
-    "#new"
+    "#funny",
+    "#physics",
+    "#factsmine"
   ],
   "top_topics": [
     "science",
     "experiment",
     "physics",
     "ashusir",
-    "amazing",
     "human",
     "scienceandfun",
     "sciencefacts",
-    "tricks",
+    "amazing",
     "didn",
     "cool",
+    "gravity",
     "gifts",
     "ocean",
     "journey",
@@ -70,7 +69,7 @@
     "ytshorts",
     "never",
     "want",
-    "kids"
+    "tricks"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -83,7 +82,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.0,
+  "avg_duration_secs": 42.9,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -94,5 +93,5 @@
     "How wound stitches really work",
     "Did You Know This Fact"
   ],
-  "timestamp": "2026-11-14T20:02:49"
+  "timestamp": "2026-11-15T17:03:20"
 }
