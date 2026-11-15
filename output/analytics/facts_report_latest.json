@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-15T17:15:14",
+  "timestamp": "2026-11-15T20:31:14",
   "internal": {
     "top5_patterns": [
       {
@@ -35,11 +35,11 @@
       "science",
       "experiment",
       "physics",
-      "human",
+      "ashusir",
+      "amazing",
       "didn",
-      "experiments",
-      "earth",
-      "amazing"
+      "scienceandfun",
+      "sciencefacts"
     ],
     "hashtags": [
       "#shorts",
@@ -47,25 +47,26 @@
       "#science",
       "#viral",
       "#trending",
-      "#knowledge",
       "#youtubeshorts",
-      "#education",
-      "#factsmine",
-      "#new",
-      "#amazing",
+      "#knowledge",
+      "#experiment",
       "#didyouknow",
       "#animation",
-      "#ytshorts",
-      "#fact"
+      "#science experiments",
+      "#youtube shorts",
+      "#new",
+      "#viralshorts",
+      "#memes"
     ],
     "hook_phrases": [
       "This is SO cool",
       "What Is The Real Shape",
+      "Never Do This | Science",
       "This can help make Artificial",
+      "How Deep Do Humans Have",
       "Did You Know That In",
       "How wound stitches really work",
-      "Did You Know This Fact",
-      "Did You Know: Titanic Fun"
+      "Did You Know This Fact"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -82,11 +83,12 @@
       "science",
       "experiment",
       "physics",
-      "human",
-      "experiments",
       "amazing",
-      "earth",
-      "invention",
+      "ashusir",
+      "human",
+      "scienceandfun",
+      "sciencefacts",
+      "tricks",
       "unbelievable",
       "never",
       "fastest"
@@ -107,25 +109,25 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "ou game today",
-        "dolphins vs colts",
-        "mac jones",
-        "settlement",
-        "deportivo - barcelona",
-        "barry sanders",
-        "bernie sanders social security expansion act",
-        "usc vs south carolina",
-        "lan larison",
-        "belarus vs albania"
+        "cliff booth",
+        "cliff booth movie",
+        "president donald trump",
+        "creighton vs iowa",
+        "mackenzie scott",
+        "pascal siakam",
+        "lewis hall",
+        "nwsl schedule",
+        "matt lafleur",
+        "caleb douglas"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
+        "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
         "This Video Can Save Your Life 😱",
-        "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
@@ -133,9 +135,9 @@
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
+        "Animal Fact Time! 🦎 #shorts #learn #animals #kids",
         "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
         "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
-        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
         "WARNING : This is Highly Relatable 😱 #shorts"
       ]
     },
@@ -165,8 +167,9 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 218,
+    "total_tests": 219,
     "latest_status": "pending"
   },
-  "channel_desc_updated": false
+  "channel_desc_updated": false,
+  "description_refreshed": 0
 }
