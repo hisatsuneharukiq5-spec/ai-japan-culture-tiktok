@@ -1,0 +1,27 @@
+# Watchdog settings (no secrets here — only names, paths and thresholds).
+# Used by scripts/outcome_check.py and scripts/expiry_check.py.
+
+outcome_check:
+  # Default: flag a channel as ABNORMAL when its newest PUBLIC video is older than this.
+  # Override at runtime: --max-hours N  or  env WATCHDOG_MAX_HOURS=N
+  default_max_hours: 36
+  # How many recent uploads to inspect per channel (1 playlistItems page = 1 quota unit).
+  scan_recent_uploads: 25
+  output_file: output/analytics/outcome_check.json
+  channels:
+    - key: facts
+      label: Facts & Wonders
+      token_file: config/youtube_token_facts.json   # same file facts_scheduler.py uses
+      expected_name_contains: Facts & Wonders
+      expected_channel_id_env: YOUTUBE_CHANNEL_ID_FACTS  # optional; compared, never printed
+      # max_hours: 36   # per-channel override (optional)
+    - key: obscura
+      label: The Obscura Files
+      token_file: config/youtube_token_obscura.json # same file obscura_pipeline.py uses
+      expected_name_contains: Obscura Files
+      expected_channel_id_env: OBSCURA_YOUTUBE_CHANNEL_ID
+      # Obscura posts once a day (01:00 JST); 36h still allows one missed run.
+
+expiry_check:
+  ledger_file: config/expiry_ledger.yaml
+  warn_within_days: 30
