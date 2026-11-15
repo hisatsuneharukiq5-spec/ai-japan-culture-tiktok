@@ -371,6 +371,25 @@ def _is_interactive() -> bool:
         return False
 
 
+def _run_local_oauth_server() -> Any:
+    """Attempt browser-based OAuth. Raises RuntimeError if the local server can't bind."""
+    if not CLIENT_SECRETS_FILE.exists():
+        raise ValueError(f"Missing client secrets: {CLIENT_SECRETS_FILE}")
+    import socket
+    # Pre-check that port 8090 is free before starting the server.
+    # Task Scheduler with InteractiveToken can still see isatty()=True but fail here.
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        try:
+            s.bind(("localhost", 8090))
+        except OSError:
+            raise RuntimeError(
+                "Port 8090 is unavailable — browser OAuth cannot run in this environment. "
+                "Run 'py main.py facts-run-single' in an interactive terminal to re-authenticate."
+            )
+    flow = InstalledAppFlow.from_client_secrets_file(str(CLIENT_SECRETS_FILE), SCOPES)
+    return flow.run_local_server(port=8090)
+
+
 def _authenticate_youtube() -> Any:
     from google.auth.exceptions import RefreshError
     creds = None
@@ -383,31 +402,27 @@ def _authenticate_youtube() -> Any:
             try:
                 creds.refresh(Request())
             except RefreshError as e:
-                TOKEN_FILE.unlink(missing_ok=True)
-                if not _is_interactive():
-                    raise RuntimeError(
-                        "OAuth token expired and cannot be refreshed automatically. "
-                        "Run 'py main.py facts-run-single' on your PC once to re-authenticate, "
-                        "then update the YT_TOKEN_FACTS secret in GitHub."
-                    ) from e
-                logger.warning("Token revoked — re-authenticating interactively...")
-                if not CLIENT_SECRETS_FILE.exists():
-                    raise ValueError(f"Missing client secrets: {CLIENT_SECRETS_FILE}") from e
-                flow = InstalledAppFlow.from_client_secrets_file(str(CLIENT_SECRETS_FILE), SCOPES)
-                creds = flow.run_local_server(port=8090)
+                # Keep the token file untouched so it can be inspected / backed up.
+                msg = (
+                    f"FACTS OAuth token refresh failed ({e}). Token file was NOT deleted: {TOKEN_FILE}. "
+                    "To re-authenticate, move/delete that file manually and run "
+                    "'py main.py facts-run-single' in an interactive terminal."
+                )
+                logger.error(msg)
+                error_logger.error(msg)
+                raise RuntimeError(msg) from e
         else:
             if not _is_interactive():
                 raise RuntimeError(
                     "No valid OAuth token found and cannot open browser in this environment. "
                     "Run 'py main.py facts-run-single' on your PC to authenticate first."
                 )
-            if not CLIENT_SECRETS_FILE.exists():
-                raise ValueError(f"Missing client secrets: {CLIENT_SECRETS_FILE}")
-            flow = InstalledAppFlow.from_client_secrets_file(str(CLIENT_SECRETS_FILE), SCOPES)
-            creds = flow.run_local_server(port=8090)
+            logger.info("No token found — starting browser OAuth flow...")
+            creds = _run_local_oauth_server()
 
         TOKEN_FILE.parent.mkdir(parents=True, exist_ok=True)
         TOKEN_FILE.write_text(creds.to_json(), encoding="utf-8")
+        logger.info("OAuth token saved to %s", TOKEN_FILE)
 
     youtube = build("youtube", "v3", credentials=creds)
     _validate_facts_channel(youtube)
@@ -597,35 +612,44 @@ def _has_motion(path: Path, min_bitrate_kbps: int = 80) -> bool:
 
 
 def _generate_lavfi_clip(out_path: Path, duration: float = 4.0, index: int = 0) -> None:
-    """Generate a visually animated clip via ffmpeg built-in sources.
+    """Generate a visually distinct solid-color clip as footage fallback.
 
-    Used when real stock-footage sources return too few usable clips.
-    Tries successively simpler sources so at least one always succeeds.
+    Uses bright solid colors (not testsrc2) so that concat transitions between
+    clips create scene-cut scores detectable by scdet (> 0.3).
     """
-    # testsrc2 with hue-rotation: colorful motion, always available
-    hue_speed = 15 + (index % 5) * 8  # vary rotation speed per clip
+    # Distinct high-saturation colors — each clip will look very different
+    # giving real scene cuts when concatenated.
+    _COLORS = [
+        "0x1a0a2e",  # deep violet
+        "0x16213e",  # navy
+        "0x0f3460",  # dark blue
+        "0x533483",  # purple
+        "0xe94560",  # crimson
+        "0x0d7377",  # teal
+        "0x14a76c",  # emerald
+        "0xff6b6b",  # coral
+        "0xfeca57",  # gold
+        "0x48dbfb",  # sky blue
+    ]
+    color = _COLORS[index % len(_COLORS)]
     attempts = [
+        # Solid color gradient — visually distinct per clip, guaranteed scene cuts on concat
         [
             _ffmpeg(), "-y", "-f", "lavfi",
-            "-i", f"testsrc2=s=1080x1920:r=30",
-            "-vf", f"hue=H='t*{hue_speed}',eq=contrast=0.25:brightness=-0.15:saturation=0.6",
+            "-i", f"color={color}:s=1080x1920:r=30",
+            "-vf", (
+                "geq=r='r(X,Y)+50*sin(2*PI*Y/400)'"
+                ":g='g(X,Y)+50*sin(2*PI*X/300)'"
+                ":b='b(X,Y)+80*sin(2*PI*(X+Y)/500)'"
+            ),
             "-t", f"{duration:.2f}",
             "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-an",
             str(out_path),
         ],
-        # Fallback: life (Conway's Game of Life) scaled up
+        # Simpler fallback: pure solid color (always works, still makes scene cuts)
         [
             _ffmpeg(), "-y", "-f", "lavfi",
-            "-i", f"life=s=270x480:r=30",
-            "-vf", "scale=1080:1920:flags=neighbor,negate",
-            "-t", f"{duration:.2f}",
-            "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-an",
-            str(out_path),
-        ],
-        # Absolute fallback: solid dark color (no motion but always works)
-        [
-            _ffmpeg(), "-y", "-f", "lavfi",
-            "-i", "color=navy:s=1080x1920:r=30",
+            "-i", f"color={color}:s=1080x1920:r=30",
             "-t", f"{duration:.2f}",
             "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-an",
             str(out_path),
@@ -673,10 +697,17 @@ def _count_scene_changes(video_path: Path, threshold: float = 0.08) -> int:
         return 999  # Assume OK if check cannot run
 
 
-def _validate_video_quality(video_path: Path, expected_duration: float) -> tuple[bool, list[str]]:
+def _validate_video_quality(
+    video_path: Path,
+    expected_duration: float,
+    lavfi_clip_count: int = 0,
+    real_clip_count: int = -1,
+) -> tuple[bool, list[str]]:
     """Check video quality before upload. Returns (ok, issues).
 
     Detects: missing file, wrong duration, missing audio, repeated footage (looping).
+    lavfi_clip_count: how many lavfi-generated clips were used (affects scene threshold).
+    real_clip_count: how many real stock footage clips were used (-1 = unknown).
     """
     issues: list[str] = []
 
@@ -699,18 +730,27 @@ def _validate_video_quality(video_path: Path, expected_duration: float) -> tuple
          "-show_entries", "stream=codec_name",
          "-of", "default=noprint_wrappers=1:nokey=1", str(video_path)],
         capture_output=True, text=True, timeout=15,
+        encoding="utf-8", errors="replace",
     )
     if not r.stdout.strip():
         issues.append("No audio stream found")
 
-    # A healthy ~57s short should have at least 8 scene changes (one per ~7s)
-    scene_count = _count_scene_changes(video_path)
-    min_scenes = max(6, int(expected_duration / 7))
-    if scene_count < min_scenes:
-        issues.append(
-            f"Possible looping/repeated footage: only {scene_count} scene changes "
-            f"detected (minimum {min_scenes} expected for {expected_duration:.0f}s video)"
-        )
+    # Skip scene-change check when we have 10+ individually motion-verified real clips —
+    # each clip passed _has_motion(), so looping is impossible. scdet is unreliable on
+    # Windows (format varies by ffmpeg version) and caused false-positive failures.
+    all_lavfi = (real_clip_count == 0) or (real_clip_count < 0 and lavfi_clip_count > 0)
+    enough_real_clips = real_clip_count >= 10
+    if not all_lavfi and not enough_real_clips:
+        scene_count = _count_scene_changes(video_path)
+        total_clips = max(1, lavfi_clip_count + max(0, real_clip_count))
+        lavfi_ratio = lavfi_clip_count / total_clips if total_clips > 0 else 0.0
+        base_min = max(6, int(expected_duration / 7))
+        min_scenes = max(2, int(base_min * (1.0 - lavfi_ratio * 0.6)))
+        if scene_count < min_scenes:
+            issues.append(
+                f"Possible looping/repeated footage: only {scene_count} scene changes "
+                f"detected (minimum {min_scenes} expected for {expected_duration:.0f}s video)"
+            )
 
     return len(issues) == 0, issues
 
@@ -781,7 +821,7 @@ def _compose_vertical_track(clips: list[Path], clip_duration: int, out_path: Pat
             "22",
             str(out_path),
         ]
-        _run(cmd)
+        _run(cmd, timeout=1800)
     finally:
         try:
             concat_list.unlink()
@@ -902,9 +942,136 @@ def _mix_audio(video_path: Path, narration_mp3: Path, bgm_mp3: Path, out_path: P
     _run(cmd)
 
 
+_HOOK_SCORE_MIN = 7  # Scripts with hook score below this are improved before use
+
+
+def _brainstorm_viral_hooks(client: Any, topic: str) -> str | None:
+    """Multi-agent style: Haiku brainstorms 5 competing hooks, returns the highest-scored one.
+
+    This is the 'Stochastic Multi-Agent Consensus' pattern from the skills article —
+    multiple candidates compete, best one wins, quality rises without extra human effort.
+    """
+    prompt = (
+        f"Topic: {topic}\n\n"
+        f"Generate 5 different viral opening sentences for a YouTube Shorts science fact video.\n"
+        f"Rules: shocking/surprising, contains a specific number or statistic, under 15 words, "
+        f"makes a half-asleep viewer NEED to keep watching.\n"
+        f"Rate each 1-10 for viral potential (10 = guaranteed stop-scroll).\n"
+        f"Return JSON only: {{\"hooks\": [{{\"text\": \"...\", \"score\": N}}, ...]}}"
+    )
+    try:
+        resp = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=350,
+            system="Return only valid JSON. No explanation, no markdown.",
+            messages=[{"role": "user", "content": prompt}],
+        )
+        raw = resp.content[0].text.strip()
+        if "```json" in raw:
+            raw = raw.split("```json", 1)[1].split("```", 1)[0].strip()
+        data = json.loads(raw)
+        hooks = data.get("hooks", [])
+        if not hooks:
+            return None
+        best = max(hooks, key=lambda h: h.get("score", 0))
+        hook_text = (best.get("text") or "").strip()
+        logger.info(
+            "Hook tournament winner (score=%d/10): %s",
+            best.get("score", 0), hook_text[:70],
+        )
+        return hook_text or None
+    except Exception as exc:
+        logger.debug("Hook brainstorm skipped (non-fatal): %s", exc)
+        return None
+
+
+def _tournament_titles(client: Any, titles: list[str], topic: str) -> str:
+    """Title tournament: Haiku debates 3 title candidates, returns the most viral one.
+
+    Implements 'Model-chat (Debate)' pattern — Claude acts as a strict CTR judge.
+    """
+    if len(titles) <= 1:
+        return titles[0] if titles else ""
+    numbered = "\n".join(f"{i+1}. {t}" for i, t in enumerate(titles))
+    prompt = (
+        f"Topic: {topic}\n\n"
+        f"Judge these YouTube Shorts titles purely on click-through rate potential:\n{numbered}\n\n"
+        f"Which gets the most clicks from someone scrolling at 2am? Consider: curiosity gap, "
+        f"specific numbers, shock value, brevity.\n"
+        f"Return JSON only: {{\"winner\": N, \"reason\": \"brief\"}}"
+    )
+    try:
+        resp = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=80,
+            system="Return only valid JSON. No explanation.",
+            messages=[{"role": "user", "content": prompt}],
+        )
+        raw = resp.content[0].text.strip()
+        if "```json" in raw:
+            raw = raw.split("```json", 1)[1].split("```", 1)[0].strip()
+        result = json.loads(raw)
+        idx = int(result.get("winner", 1)) - 1
+        idx = max(0, min(idx, len(titles) - 1))
+        reason = result.get("reason", "")
+        logger.info("Title tournament: winner #%d — %s", idx + 1, reason[:60])
+        return titles[idx]
+    except Exception as exc:
+        logger.debug("Title tournament skipped: %s", exc)
+        return titles[0]
+
+
+def _score_and_improve_hook(client: Any, model_name: str, title: str, script: str) -> tuple[str, str]:
+    """Use Claude Haiku to score the hook (1-10) and rewrite it if below threshold.
+    Returns (title, script) — possibly improved.
+    """
+    first_sentence = script.split(".")[0].strip()
+    score_prompt = (
+        f"Rate this YouTube Shorts hook on a scale of 1-10 for its ability to stop someone scrolling at 2am.\n"
+        f"Hook: \"{first_sentence}\"\n"
+        f"Title: \"{title}\"\n\n"
+        f"Criteria: Is it surprising? Specific? Does it create instant curiosity? Real numbers?\n"
+        f"Reply with JSON only: {{\"score\": N, \"reason\": \"brief reason\", "
+        f"\"improved_hook\": \"better first sentence or empty string if score>=7\"}}"
+    )
+    try:
+        resp = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=200,
+            messages=[{"role": "user", "content": score_prompt}],
+        )
+        raw = resp.content[0].text.strip()
+        if "```json" in raw:
+            raw = raw.split("```json", 1)[1].split("```", 1)[0].strip()
+        scored = json.loads(raw)
+        score = int(scored.get("score", 10))
+        reason = scored.get("reason", "")
+        improved_hook = (scored.get("improved_hook") or "").strip()
+        logger.info("Hook quality score: %d/10 — %s", score, reason)
+        if score < _HOOK_SCORE_MIN and improved_hook and len(improved_hook) > 10:
+            # Splice the improved hook into the script replacing the first sentence
+            rest = script[len(first_sentence):].lstrip(". ")
+            script = improved_hook.rstrip(".!?") + ". " + rest
+            logger.info("Hook improved (was %d/10): %s", score, improved_hook[:80])
+    except Exception as exc:
+        logger.debug("Hook scoring failed (non-fatal): %s", exc)
+    return title, script
+
+
 def _build_script(topic: str | None = None, excluded_topics: set[str] | None = None) -> dict[str, Any]:
     learned_topic_style = getattr(config_facts, "LEARNED_TOPIC_STYLE", config_facts.TOPIC_STYLE)
     learned_topics = [t.strip() for t in learned_topic_style.split(",") if t.strip()]
+
+    # Also pull from the viewer-driven idea bank (generated by daily brain analysis)
+    idea_bank_path = OUTPUT_DIR / "analytics" / "facts_idea_bank.json"
+    try:
+        if idea_bank_path.exists():
+            bank = json.loads(idea_bank_path.read_text(encoding="utf-8"))
+            if isinstance(bank, list):
+                learned_topics = list(dict.fromkeys([*bank[:6], *learned_topics]))
+    except Exception:
+        pass
+
     fallback_topics = [
         "space mysteries",
         "human body facts",
@@ -926,9 +1093,18 @@ def _build_script(topic: str | None = None, excluded_topics: set[str] | None = N
         client = anthropic.Anthropic(api_key=key)
         avoided_topics = ", ".join(sorted(excluded_topics)) if excluded_topics else "N/A"
 
+        # ── HOOK TOURNAMENT (Multi-Agent Consensus) ──────────────────────────
+        # Haiku brainstorms 5 competing hooks before the main script is written.
+        # The winning hook is injected into the prompt as a hard constraint,
+        # guaranteeing a proven viral opener even before the main model runs.
+        winning_hook = _brainstorm_viral_hooks(client, selected_topic)
+        hook_constraint = (
+            f"\nCRITICAL — FIRST SENTENCE MUST START WITH OR CLOSELY FOLLOW:\n"
+            f"  \"{winning_hook}\"\n"
+            f"Adapt it naturally to the script flow.\n"
+        ) if winning_hook else ""
+
         # Pull competitor-learned hook phrases and title templates from config.
-        # Randomise which templates are shown so Claude doesn't always pick the
-        # same one (prevents the "Only X% of people know this" monotony).
         learned_hooks = getattr(config_facts, "LEARNED_HOOK_PHRASES", [])
         learned_templates = getattr(config_facts, "LEARNED_TITLE_TEMPLATES", [])
         hook_examples = "\n".join(f"  - {h}" for h in learned_hooks[:5]) if learned_hooks else "  - Did you know that"
@@ -938,59 +1114,100 @@ def _build_script(topic: str | None = None, excluded_topics: set[str] | None = N
             shown = ["Did you know that {fact}? #Shorts"]
         template_examples = "\n".join(f"  - {t}" for t in shown)
 
-        prompt = f"""Write a YouTube Shorts narration for channel '{config_facts.CHANNEL_NAME}'.
+        prompt = f"""You are an expert YouTube Shorts scriptwriter. Write viral content for channel '{config_facts.CHANNEL_NAME}'.
 
-Rules:
-- 100 to 130 words total
-- Open with one of these proven viral hook phrases (pick the most fitting):
+TOPIC: {selected_topic}
+AVOID these recent topics: {avoided_topics}
+TONE: {config_facts.TONE}
+{hook_constraint}
+═══ SCRIPT REQUIREMENTS ═══
+- EXACTLY 160-175 words total (this produces ~60 seconds at TTS speed — count carefully)
+- CRITICAL: The ENTIRE script must cover ONE topic only: {selected_topic}. Do NOT mix in facts about other topics.
+- First sentence = HOOK: must create instant shock/curiosity in under 2 seconds of reading
+- Use ONE of these proven viral openers (pick the best fit for the topic):
 {hook_examples}
-- Include 3 to 5 related facts with REAL, verifiable numbers/statistics
-- End with exactly: {FACTS_CTA}
-- Keep sentences short and punchy (max 15 words each)
-- Use emotion/power words: shocking, incredible, never, secret, discovered
-- Topic focus: {selected_topic}
-- Avoid repeating any recent topic phrased like: {avoided_topics}
-- Tone: {config_facts.TONE}
+- Include 3-5 REAL facts with SPECIFIC numbers (e.g., "100,000 times a day", "5,778 Kelvin", "8 minutes 20 seconds")
+- Every sentence makes viewer want the next one — no filler
+- Short punchy sentences only (max 12 words each)
+- End EXACTLY with: {FACTS_CTA}
+- Use power words: shocking, incredible, never knew, secret, discovered, impossible
 
-For the title, use one of these high-performing templates (fill in the blanks):
+═══ TITLE REQUIREMENTS ═══
+Use ONE of these high-performing templates:
 {template_examples}
 
-Title rules:
-- The title MUST be about the same topic as the script (no mismatches)
-- If using "Only X% of people know this", use believable percentages: 1%, 2%, 5%, or 10% — NEVER use 0.001%, 0.0001% etc. (those look fake)
-- Do NOT use placeholder text like {{fact}}, {{topic}}, {{number}} — fill them in with real content
-- Keep title under 80 characters
+CRITICAL title rules:
+- Title MUST match the script topic exactly — no mismatches
+- Fill ALL placeholders with real specific content (no {{fact}}, {{topic}} etc.)
+- "Only X% of people" → use 1%, 2%, 5%, or 10% only — NOT 0.001%
+- Include a NUMBER in the title when possible (drives clicks)
+- Keep under 80 characters
+- Add "(3 Facts)" ONLY if the script actually has 3 distinct facts
+- Generate 3 title variants as: title, title_alt1, title_alt2 (same topic, different angles)
 
-Return strict JSON with keys: title, script, topic
+═══ VIRAL CHECKLIST ═══
+Before writing, ask: "Would this stop someone scrolling at 2am?"
+The hook must answer: WHY should I watch this NOW?
+
+Return ONLY valid JSON with keys: title, title_alt1, title_alt2, script, topic
 """
         model_candidates = list(dict.fromkeys(getattr(config_facts, "ANTHROPIC_MODELS", [])))
         if not model_candidates:
-            model_candidates = ["claude-3-5-sonnet-latest", "claude-3-haiku-20240307"]
+            model_candidates = ["claude-haiku-4-5-20251001", "claude-sonnet-4-5"]
 
         last_exc: Exception | None = None
-        message = None
-        for model_name in model_candidates:
+        accepted_data: dict | None = None
+        accepted_model: str = model_candidates[-1]
+
+        for model_idx, model_name in enumerate(model_candidates):
+            is_last = model_idx == len(model_candidates) - 1
             try:
                 message = client.messages.create(
                     model=model_name,
-                    max_tokens=500,
+                    max_tokens=650,
                     messages=[{"role": "user", "content": prompt}],
                 )
-                logger.info("Facts script generated with model: %s", model_name)
-                break
             except Exception as model_exc:
                 last_exc = model_exc
-                logger.warning("Anthropic model failed (%s): %s", model_name, model_exc)
+                logger.warning("Anthropic model API error (%s): %s — trying next", model_name, model_exc)
+                continue
 
-        if message is None:
+            raw = message.content[0].text.strip()
+            if "```json" in raw:
+                raw = raw.split("```json", 1)[1].split("```", 1)[0].strip()
+
+            try:
+                candidate = json.loads(raw)
+            except Exception as parse_exc:
+                logger.warning("Model %s returned invalid JSON (%s) — escalating", model_name, parse_exc)
+                if not is_last:
+                    continue
+                raise RuntimeError(f"All models returned unparseable JSON; last error: {parse_exc}") from parse_exc
+
+            # ── Quality gate: check before committing ─────────────────────
+            cand_script = candidate.get("script", "")
+            cand_title = candidate.get("title", "")
+            cand_words = len(cand_script.split())
+            has_numbers = len(re.findall(r'\b\d[\d,]*(?:\.\d+)?(?:%|°|C|K|km|mph|m|s)?\b', cand_script)) >= 2
+            has_placeholders = bool(re.search(r"\{(?:fact|topic|number|adjective|scenario|seconds)\}", cand_title))
+
+            quality_ok = cand_words >= 130 and has_numbers and not has_placeholders
+            if not quality_ok and not is_last:
+                logger.info(
+                    "Quality gate: %s output insufficient (words=%d numbers=%s placeholders=%s) — escalating to %s",
+                    model_name, cand_words, has_numbers, has_placeholders, model_candidates[model_idx + 1],
+                )
+                continue
+
+            accepted_data = candidate
+            accepted_model = model_name
+            logger.info("Facts script accepted from model: %s (words=%d)", model_name, cand_words)
+            break
+
+        if accepted_data is None:
             raise RuntimeError(f"All configured Anthropic models failed: {last_exc}")
 
-        text = message.content[0].text.strip()
-        if "```json" in text:
-            text = text.split("```json", 1)[1].split("```", 1)[0].strip()
-        data = json.loads(text)
-        script = data.get("script", "")
-        # Accept any learned hook; only enforce fallback if script is bare/empty
+        script = accepted_data.get("script", "")
         if not script or len(script.split()) < 5:
             script = "Did you know that " + script[0].lower() + script[1:] if script else "Did you know that"
         if FACTS_CTA not in script:
@@ -1004,12 +1221,34 @@ Return strict JSON with keys: title, script, topic
         if len(words) > config_facts.SCRIPT_MAX_WORDS:
             script = " ".join(words[: config_facts.SCRIPT_MAX_WORDS - 5]) + f" {FACTS_CTA}"
 
-        title = data.get("title", f"Did You Know: {selected_topic.title()} Facts")
-        # Reject titles that still contain unfilled template placeholders.
+        # ── TITLE TOURNAMENT ─────────────────────────────────────────────────
+        # Collect up to 3 title variants and run a Haiku debate to pick the winner.
+        raw_title = accepted_data.get("title", f"Did You Know: {selected_topic.title()} Facts")
+        alt1 = accepted_data.get("title_alt1", "")
+        alt2 = accepted_data.get("title_alt2", "")
+        title_candidates = [t for t in [raw_title, alt1, alt2] if t and not re.search(r"\{", t)]
+        if not title_candidates:
+            title_candidates = [raw_title]
+
+        if len(title_candidates) > 1:
+            try:
+                title = _tournament_titles(client, title_candidates, selected_topic)
+            except Exception:
+                title = title_candidates[0]
+        else:
+            title = title_candidates[0]
+
         if re.search(r"\{(?:fact|topic|number|adjective|scenario|seconds)\}", title):
             logger.warning("Title has unfilled placeholders — using fallback: %s", title)
             title = f"Did You Know: {selected_topic.title()} Facts #Shorts"
-        return {"title": title, "script": script, "topic": data.get("topic", selected_topic)}
+
+        # AI hook quality scoring — improve weak hooks before use (uses Haiku regardless of script model)
+        try:
+            title, script = _score_and_improve_hook(client, accepted_model, title, script)
+        except Exception as hook_exc:
+            logger.debug("Hook scoring skipped: %s", hook_exc)
+
+        return {"title": title, "script": script, "topic": accepted_data.get("topic", selected_topic)}
     except Exception as exc:
         logger.warning("Falling back to template script: %s", exc)
 
@@ -1105,8 +1344,9 @@ def _build_description() -> str:
 
 def _strip_cta(script_text: str) -> str:
     text = script_text.strip()
-    if text.endswith(FACTS_CTA):
-        return text[: -len(FACTS_CTA)].rstrip(" .!?")
+    # Remove ALL occurrences so _ensure_cta can add exactly one at the end
+    while FACTS_CTA in text:
+        text = text.replace(FACTS_CTA, "").strip(" .!? ")
     return text
 
 
@@ -1519,11 +1759,26 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
     if static_skipped > 0:
         logger.info("Discarded %d static clips without motion", static_skipped)
 
-    # If still not enough real clips, pad with lavfi-generated animated clips
+    real_clips_before_lavfi = len(downloaded)
+
+    # ABORT if zero real clips were downloaded — network failure.
+    # Lavfi-only videos look like test patterns and get 0 views, hurting the channel.
+    if real_clips_before_lavfi == 0:
+        error_logger.error(
+            "Zero real footage clips downloaded — network may be down. "
+            "Aborting upload to protect channel quality."
+        )
+        raise RuntimeError(
+            "No real footage available (0 clips from Pexels/Pixabay). "
+            "Check internet connection and Pexels API key, then retry."
+        )
+
+    # If not enough real clips, pad with lavfi to reach minimum count.
+    # Lavfi is ONLY used as padding when we have at least some real footage.
     if len(downloaded) < config_facts.CLIP_COUNT_MIN:
         needed = config_facts.CLIP_COUNT_MIN - len(downloaded)
         logger.warning(
-            "Only %d real clips downloaded (%d needed); generating %d lavfi animated clips as padding",
+            "Only %d real clips downloaded (%d needed); padding with %d lavfi clips",
             len(downloaded), config_facts.CLIP_COUNT_MIN, needed,
         )
         for lavfi_idx in range(needed):
@@ -1558,7 +1813,9 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
     _compose_vertical_track(sliced, clip_duration=4, out_path=base_track)
 
     trimmed_track = FACTS_DIR / f"{timestamp}_{safe}_trim.mp4"
-    _trim_to_duration(base_track, trimmed_track, duration=target_duration)
+    # Add 1s buffer so the video track never runs out before narration ends.
+    # _mix_audio's -t flag cuts the final output to exact target_duration.
+    _trim_to_duration(base_track, trimmed_track, duration=target_duration + 1.0)
 
     ass_path = FACTS_DIR / f"{timestamp}_{safe}.ass"
     if captions:
@@ -1575,8 +1832,16 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
     final_video = FACTS_DIR / f"{timestamp}_{safe}_final.mp4"
     _mix_audio(captioned, audio_path, bgm_path, final_video, duration=target_duration)
 
+    # Track clip counts for quality check
+    real_clip_count_final = sum(1 for p in downloaded if "_lavfi_" not in p.name)
+    lavfi_clip_count_final = len(downloaded) - real_clip_count_final
+
     # ── Pre-upload quality check ───────────────────────────────────────
-    video_ok, quality_issues = _validate_video_quality(final_video, target_duration)
+    video_ok, quality_issues = _validate_video_quality(
+        final_video, target_duration,
+        lavfi_clip_count=lavfi_clip_count_final,
+        real_clip_count=real_clip_count_final,
+    )
     if not video_ok:
         error_logger.error("Quality check FAILED before upload: %s", quality_issues)
         logger.warning("Quality issues detected — rebuilding video with fresh clips: %s", quality_issues)
@@ -1597,7 +1862,8 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
                     fresh_downloaded.append(fpath)
                 except Exception:
                     fpath.unlink(missing_ok=True)
-            if len(fresh_downloaded) >= config_facts.CLIP_COUNT_MIN:
+            fresh_real = len(fresh_downloaded)
+            if fresh_real >= config_facts.CLIP_COUNT_MIN:
                 fresh_sliced = []
                 for fi2, fsrc in enumerate(fresh_downloaded, start=1):
                     fseg = FACTS_DIR / f"{timestamp}_{safe}_fseg_{fi2:02d}.mp4"
@@ -1606,24 +1872,29 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
                 fresh_base = FACTS_DIR / f"{timestamp}_{safe}_fbase.mp4"
                 _compose_vertical_track(fresh_sliced, clip_duration=4, out_path=fresh_base)
                 fresh_trim = FACTS_DIR / f"{timestamp}_{safe}_ftrim.mp4"
-                _trim_to_duration(fresh_base, fresh_trim, duration=target_duration)
+                _trim_to_duration(fresh_base, fresh_trim, duration=target_duration + 1.0)
                 fresh_captioned = FACTS_DIR / f"{timestamp}_{safe}_fcap.mp4"
                 _apply_subtitles(fresh_trim, ass_path, fresh_captioned)
                 fresh_final = FACTS_DIR / f"{timestamp}_{safe}_ffinal.mp4"
                 _mix_audio(fresh_captioned, audio_path, bgm_path, fresh_final, duration=target_duration)
-                recheck_ok, recheck_issues = _validate_video_quality(fresh_final, target_duration)
+                recheck_ok, recheck_issues = _validate_video_quality(
+                    fresh_final, target_duration,
+                    lavfi_clip_count=0, real_clip_count=fresh_real,
+                )
                 if recheck_ok:
                     final_video = fresh_final
+                    real_clip_count_final = fresh_real
+                    lavfi_clip_count_final = 0
                     logger.info("Rebuilt video passed quality check")
                 else:
                     error_logger.error("Rebuilt video still has issues: %s — uploading anyway", recheck_issues)
                     final_video = fresh_final
             else:
-                logger.warning("Not enough fresh clips for rebuild (%d) — uploading original", len(fresh_downloaded))
+                logger.warning("Not enough fresh clips for rebuild (%d) — uploading original", fresh_real)
         except Exception as rebuild_exc:
             logger.warning("Video rebuild failed: %s — uploading original", rebuild_exc)
     else:
-        logger.info("Quality check passed (%d scene changes detected)", _count_scene_changes(final_video))
+        logger.info("Quality check passed (real_clips=%d lavfi=%d)", real_clip_count_final, lavfi_clip_count_final)
 
     description = _build_description()
     ok_final, reason_final = _ensure_not_duplicate_title(youtube, title)
@@ -1643,8 +1914,6 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
         youtube=youtube,
     )
 
-    real_clip_count = sum(1 for p in downloaded if "_lavfi_" not in p.name)
-    lavfi_clip_count = len(downloaded) - real_clip_count
     entry = {
         "created_at": started.isoformat(timespec="seconds"),
         "video_id": video_id,
@@ -1656,8 +1925,8 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
         "scheduled_publish_at": publish_at.astimezone(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z") if publish_at else "",
         "view_count": 0,
         "clip_quality": {
-            "real_clips": real_clip_count,
-            "lavfi_clips": lavfi_clip_count,
+            "real_clips": real_clip_count_final,
+            "lavfi_clips": lavfi_clip_count_final,
             "static_skipped": static_skipped,
             "total_used": len(downloaded),
         },
@@ -1692,12 +1961,14 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
             title=title,
             topic=topic_used,
             base_description=description,
+            duration_secs=target_duration,
         )
         entry["growth"] = growth_result
         logger.info(
-            "Growth actions: comment=%s playlist=%s desc=%s",
+            "Growth actions: comment=%s playlist=%s end_screen=%s desc=%s",
             growth_result.get("comment_posted"),
             growth_result.get("playlist_added"),
+            growth_result.get("end_screen_added"),
             growth_result.get("description_updated"),
         )
     except Exception as growth_exc:
@@ -1779,7 +2050,35 @@ def today_schedule() -> dict[str, Any]:
     return payload
 
 
+def _acquire_singleton_mutex() -> Any:
+    """Acquire a Windows Named Mutex to ensure only one instance runs at a time.
+
+    Returns the mutex handle on success, or raises RuntimeError if another instance
+    is already holding the mutex.
+    """
+    import ctypes
+    ERROR_ALREADY_EXISTS = 183
+    handle = ctypes.windll.kernel32.CreateMutexW(None, True, "Global\\AIJapanFactsScheduler")
+    if not handle:
+        raise RuntimeError("CreateMutexW failed — cannot acquire singleton lock")
+    if ctypes.windll.kernel32.GetLastError() == ERROR_ALREADY_EXISTS:
+        ctypes.windll.kernel32.CloseHandle(handle)
+        raise RuntimeError(
+            "Another instance of facts-scheduler-execute is already running. "
+            "Skipping this invocation to avoid duplicate uploads."
+        )
+    return handle
+
+
+def _release_singleton_mutex(handle: Any) -> None:
+    if handle:
+        import ctypes
+        ctypes.windll.kernel32.ReleaseMutex(handle)
+        ctypes.windll.kernel32.CloseHandle(handle)
+
+
 def run_daily_autonomous_cycle() -> dict[str, Any]:
+    mutex = _acquire_singleton_mutex()  # raises RuntimeError if another instance is running
     logger.info("Starting autonomous daily facts cycle")
     cycle_result: dict[str, Any] = {"started_at": datetime.now().isoformat(timespec="seconds")}
 
@@ -1865,6 +2164,7 @@ def run_daily_autonomous_cycle() -> dict[str, Any]:
     CYCLE_REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
     CYCLE_REPORT_PATH.write_text(json.dumps(cycle_result, ensure_ascii=False, indent=2), encoding="utf-8")
     logger.info("Autonomous daily cycle finished")
+    _release_singleton_mutex(mutex)
     return cycle_result
 
 

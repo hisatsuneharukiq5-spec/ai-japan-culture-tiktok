@@ -127,11 +127,18 @@ def _pick_template(title: str, topic: str) -> str:
 
 def _get_thumbnail_lines(title: str) -> tuple:
     """Return (badge_number_or_None, [line1, line2, line3])."""
-    num_match = re.search(r'\b(\d+)\b', title)
+    # Match numbers with optional comma-grouping (e.g. 70,000 or 100)
+    num_match = re.search(r'\b(\d{1,3}(?:,\d{3})+|\d+)\b', title)
     badge = num_match.group(1) if num_match else None
+    # Simplify large numbers for badge display (70,000 → 70K)
+    if badge and "," in badge:
+        raw = int(badge.replace(",", ""))
+        badge = f"{raw // 1000}K" if raw >= 1000 else badge
 
     text = title.split(":", 1)[1].strip() if ":" in title else title
-    text = re.sub(r'\b\d+\b\s*', '', text).strip()
+    # Remove full number tokens (including comma-grouped) to avoid leaving stray commas
+    text = re.sub(r'\b\d{1,3}(?:,\d{3})+\b|\b\d+\b', '', text)
+    text = re.sub(r'\s+', ' ', text).strip()
 
     words = text.upper().split()
     lines, cur = [], ""
@@ -546,6 +553,54 @@ def _thumbnail_facts(title: str, sc: dict, output_path: Path) -> None:
     logger.info(f"Thumbnail [facts/{sc['name']}] saved: {output_path}")
 
 
+def _thumbnail_facts_ai_photo(title: str, bg_path: Path, output_path: Path, sc: dict) -> None:
+    """Overlay Facts & Wonders text on an AI-generated science/nature background."""
+    img = Image.open(bg_path).convert("RGBA")
+    base_rgb = img.convert("RGB")
+    base_rgb = ImageEnhance.Color(base_rgb).enhance(1.15)      # boost saturation for science look
+    base_rgb = ImageEnhance.Contrast(base_rgb).enhance(1.12)
+    base_rgb = ImageEnhance.Brightness(base_rgb).enhance(0.72) # slightly darken for text legibility
+    img = base_rgb.convert("RGBA")
+
+    overlay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ov_draw = ImageDraw.Draw(overlay)
+    # Left-side gradient — text safe zone
+    fade_w = int(W * 0.70)
+    for x in range(fade_w):
+        t = x / fade_w
+        alpha = int(210 * (1 - t ** 0.65))
+        ov_draw.line([(x, 0), (x, H)], fill=(0, 0, 0, alpha))
+    # Bottom bar
+    for y in range(H - 120, H):
+        t = (y - (H - 120)) / 120
+        alpha = int(190 * t)
+        ov_draw.line([(0, y), (W, y)], fill=(0, 0, 0, alpha))
+
+    img = Image.alpha_composite(img, overlay).convert("RGB")
+    draw = ImageDraw.Draw(img)
+
+    badge, lines = _get_thumbnail_lines(title)
+    text_x = 48
+    if badge:
+        bx, by, br = 148, 195, 118
+        draw.ellipse([bx - br, by - br, bx + br, by + br], fill=sc["badge"])
+        draw.ellipse([bx - br + 10, by - br + 10, bx, by],
+                     fill=_blend(sc["badge"], (255, 255, 255), 0.25))
+        fn_num = _get_font(175)
+        bb = draw.textbbox((0, 0), badge, font=fn_num)
+        nw, nh = bb[2] - bb[0], bb[3] - bb[1]
+        _outline_text(draw, (bx - nw // 2, by - nh // 2 - 10), badge,
+                      fn_num, sc["badge_txt"], (0, 0, 0), 2)
+        text_x = 295
+
+    y_end = _draw_text_block(draw, lines, sc, text_x, 62, [108, 86, 66], 620)
+    _draw_branding_label(draw, sc["t1"], text_x, y_end, "FACTS & WONDERS")
+    draw.rectangle([0, H - 14, W, H], fill=sc["el"])
+
+    img.save(str(output_path), "JPEG", quality=95)
+    logger.info(f"Thumbnail [facts/ai_photo] saved: {output_path}")
+
+
 def create_facts_thumbnail(
     title: str,
     topic: str,
@@ -555,6 +610,18 @@ def create_facts_thumbnail(
     THUMBNAIL_DIR.mkdir(parents=True, exist_ok=True)
     output_path = THUMBNAIL_DIR / output_filename
     sc = _pick_scheme(title)
+
+    # Try AI background first (single Pollinations attempt → programmatic fallback)
+    try:
+        from src.image_generator import generate_facts_bg_image
+        bg_path = THUMBNAIL_DIR / f"_facts_bg_{output_filename}"
+        bg = generate_facts_bg_image(title, topic, bg_path)
+        if bg:
+            _thumbnail_facts_ai_photo(title, bg, output_path, sc)
+            return output_path
+    except Exception as ai_exc:
+        logger.warning(f"Facts AI thumbnail failed, using programmatic: {ai_exc}")
+
     _thumbnail_facts(title, sc, output_path)
     return output_path
 

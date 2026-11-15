@@ -136,12 +136,19 @@ class ShortScriptGenerator:
         return parsed
 
     def _request_short_script(self, prompt: str) -> str:
-        message = self.client.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=1024,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        return message.content[0].text
+        # Escalation: try Haiku first (cheap), fall back to Sonnet only if it fails.
+        for model in ("claude-haiku-4-5-20251001", "claude-sonnet-4-6"):
+            try:
+                message = self.client.messages.create(
+                    model=model,
+                    max_tokens=800,
+                    messages=[{"role": "user", "content": prompt}],
+                )
+                logger.info("Short script generated with model: %s", model)
+                return message.content[0].text
+            except Exception as exc:
+                logger.warning("Short script model %s failed: %s — escalating", model, exc)
+        raise RuntimeError("All models failed for short script generation")
 
     def _contains_japanese(self, text: str) -> bool:
         return bool(re.search(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]", text or ""))

@@ -416,13 +416,24 @@ def _check_youtube_comments_for_issues(rows: list[dict[str, Any]]) -> dict[str, 
         logger.warning("Comment monitor: auth failed: %s", exc)
         return {"status": "auth_error", "complaints": []}
 
-    complaints: list[dict[str, Any]] = []
-    for vid_id in recent_ids[-8:]:  # Check last 8 videos
+    # ── Single-pass comment scan: complaints + positive engagement ───────────
+    # Beyond complaints, extract what viewers find exciting — these feed
+    # back into topic selection (Idea Mining pattern from Claude Skills article).
+    _EXCITEMENT_KEYWORDS = [
+        "mind blown", "mind blowing", "didn't know", "never knew", "learned",
+        "wow", "amazing", "incredible", "insane", "crazy", "what?!", "no way",
+        "more about", "tell me more", "what about", "what is", "how does", "why does",
+        "what topic", "next video", "more facts", "love this",
+    ]
+    viewer_questions: list[str] = []
+    excitement_topics: list[str] = []
+
+    for vid_id in recent_ids[-8:]:
         try:
             resp = svc.commentThreads().list(
                 part="snippet",
                 videoId=vid_id,
-                maxResults=30,
+                maxResults=50,
                 order="relevance",
                 textFormat="plainText",
             ).execute()
@@ -432,25 +443,34 @@ def _check_youtube_comments_for_issues(rows: list[dict[str, Any]]) -> dict[str, 
                     .get("topLevelComment", {})
                     .get("snippet", {})
                     .get("textDisplay", "")
-                    .lower()
                 )
-                matched = [kw for kw in _COMPLAINT_KEYWORDS if kw in text]
+                text_lower = text.lower()
+                matched = [kw for kw in _COMPLAINT_KEYWORDS if kw in text_lower]
                 if matched:
-                    complaints.append({
-                        "video_id": vid_id,
-                        "keywords": matched,
-                        "comment": text[:300],
-                    })
+                    complaints.append({"video_id": vid_id, "keywords": matched, "comment": text[:300]})
+                # Viewer-requested topics: "what about X?", "more about X"
+                question_match = re.search(
+                    r"(?:what about|more about|tell me more about|next video on|do one on)\s+([^?.!]{4,40})",
+                    text_lower,
+                )
+                if question_match:
+                    topic_hint = question_match.group(1).strip()
+                    if topic_hint and len(topic_hint) > 3:
+                        viewer_questions.append(topic_hint)
+                # Excitement signals
+                if any(kw in text_lower for kw in _EXCITEMENT_KEYWORDS):
+                    excitement_topics.append(text[:120])
         except Exception as exc:
             logger.warning("Comment fetch failed for %s: %s", vid_id, exc)
 
     quality_alert = len(complaints) >= 2
     if quality_alert:
         logger.warning(
-            "Quality complaints detected in %d comments across recent videos: %s",
-            len(complaints),
-            [c["keywords"] for c in complaints],
+            "Quality complaints detected in %d comments: %s",
+            len(complaints), [c["keywords"] for c in complaints],
         )
+    if viewer_questions:
+        logger.info("Viewer topic requests: %s", viewer_questions[:5])
 
     return {
         "status": "ok",
@@ -458,6 +478,8 @@ def _check_youtube_comments_for_issues(rows: list[dict[str, Any]]) -> dict[str, 
         "complaints_found": len(complaints),
         "quality_alert": quality_alert,
         "complaints": complaints,
+        "viewer_requested_topics": viewer_questions[:10],
+        "excitement_comment_count": len(excitement_topics),
     }
 
 
@@ -526,9 +548,19 @@ def _compose_changes(summary: dict[str, Any]) -> dict[str, Any]:
     seasonal = trends.get("seasonal", [])
     pytrends_topics = trends.get("pytrends", {}).get("topics", [])
 
-    # Topics: pytrends (real-time) > competitor > seasonal
-    all_topics = list(dict.fromkeys([*pytrends_topics, *popular, *seasonal]))
-    merged_topics = ", ".join(all_topics[:8]) or config_facts.TOPIC_STYLE
+    # Viewer-requested topics from comment mining (Idea Mining pattern)
+    comment_data = summary.get("comment_monitor", {})
+    viewer_topics = comment_data.get("viewer_requested_topics", [])
+    # Normalize: strip filler words, keep only meaningful 2-4 word phrases
+    cleaned_viewer_topics = [
+        re.sub(r"\b(the|a|an|is|are|do|does|did|can|it|this|that|i|we|you)\b", "", t, flags=re.I).strip()
+        for t in viewer_topics
+    ]
+    cleaned_viewer_topics = [t for t in cleaned_viewer_topics if len(t) > 4]
+
+    # Priority: viewer requests > pytrends > competitor > seasonal
+    all_topics = list(dict.fromkeys([*cleaned_viewer_topics, *pytrends_topics, *popular, *seasonal]))
+    merged_topics = ", ".join(all_topics[:12]) or config_facts.TOPIC_STYLE
 
     # Title templates: use competitor-learned templates, validated, fall back to defaults.
     # Must have a placeholder, be English, reasonable length, no duplicate {topic}.
@@ -614,50 +646,91 @@ def _update_config_file(updates: dict[str, Any]) -> None:
     config_path.write_text(updated, encoding="utf-8")
 
 
+_FALLBACK_AB_PAIRS = [
+    (
+        "Did you know your brain never stops working, even when you sleep? #Shorts",
+        "Scientists discovered your brain makes decisions 7 seconds before you do #Shorts",
+    ),
+    (
+        "Only 1% of people know why the sky turns red at sunset #Shorts",
+        "The real reason sunsets look red will completely change how you see them #Shorts",
+    ),
+    (
+        "Did you know octopuses have 3 hearts and blue blood? #Shorts (3 Facts)",
+        "Octopuses are SO cool — 3 hearts, 9 brains, and they can edit their own DNA #Shorts",
+    ),
+    (
+        "What happens to your body when you hold your breath? #Shorts",
+        "Scientists just discovered holding your breath changes your DNA #Shorts",
+    ),
+    (
+        "Did you know honey never expires? Archaeologists found 3000-year-old edible honey #Shorts",
+        "This ancient food secret was buried for 3000 years — and it still works #Shorts",
+    ),
+]
+
+
 def _pick_ab_pair_from_registry() -> tuple[str, str] | None:
     """Pick two recently uploaded videos with different title patterns for A/B test.
 
     Prefers pairs where one uses "Did you know" and the other uses a different
-    template, so the test is meaningful. Falls back to the two most recent videos.
+    template AND both have at least 1 view so the comparison is meaningful.
+    Falls back to pairs with any views, then to all pairs.
     """
+    import random as _rnd
+
     rows = _load_registry()
     if len(rows) < 2:
         return None
-    recent = rows[-40:]  # look back at last 40 uploads
+    recent = rows[-60:]  # look back at last 60 uploads
+
     did_you_know = [r for r in recent if r.get("title", "").lower().startswith("did you know")]
     other = [r for r in recent if not r.get("title", "").lower().startswith("did you know")]
-    # Prefer one "did you know" vs one "other" pair for a meaningful comparison
+
+    # Best case: both sides have views
+    dyk_with_views = [r for r in did_you_know if int(r.get("view_count", 0) or 0) > 0]
+    other_with_views = [r for r in other if int(r.get("view_count", 0) or 0) > 0]
+    if dyk_with_views and other_with_views:
+        return _rnd.choice(dyk_with_views)["title"], _rnd.choice(other_with_views)["title"]
+
+    # Second: at least different title patterns (even 0 views)
     if did_you_know and other:
-        import random as _rnd
         return _rnd.choice(did_you_know)["title"], _rnd.choice(other)["title"]
-    # Fallback: two most recent with different templates
+
+    # Last resort: two most recent with different templates
     last = rows[-2:]
-    if last[0].get("title") and last[1].get("title"):
+    if last[0].get("title") and last[1].get("title") and last[0]["title"] != last[1]["title"]:
         return last[0]["title"], last[1]["title"]
+
     return None
 
 
 def _update_ab_tests() -> dict[str, Any]:
+    import random as _rnd
+
     now = _now_iso()
     tests = _load_json(AB_TEST_PATH, default=[])
     if not isinstance(tests, list):
         tests = []
 
-    pair = _pick_ab_pair_from_registry()
-    if pair:
-        title_a, title_b = pair
-    else:
-        title_a = "Did you know that your brain uses 20% of your oxygen?"
-        title_b = "Only 20% oxygen: the brain fact that surprises everyone"
+    # Only add a new test if there's no pending test already
+    has_pending = any(t.get("status") == "pending" for t in tests)
+    if not has_pending:
+        pair = _pick_ab_pair_from_registry()
+        if pair:
+            title_a, title_b = pair
+        else:
+            # Use a random fallback pair so we don't repeat the same stale comparison
+            title_a, title_b = _rnd.choice(_FALLBACK_AB_PAIRS)
 
-    new_test = {
-        "created_at": now,
-        "title_a": title_a,
-        "title_b": title_b,
-        "compare_after_hours": 48,
-        "status": "pending",
-    }
-    tests.append(new_test)
+        new_test = {
+            "created_at": now,
+            "title_a": title_a,
+            "title_b": title_b,
+            "compare_after_hours": 48,
+            "status": "pending",
+        }
+        tests.append(new_test)
 
     rows = _load_registry()
 
@@ -684,6 +757,17 @@ def _update_ab_tests() -> dict[str, Any]:
 
         views_a = _title_views(test.get("title_a", ""))
         views_b = _title_views(test.get("title_b", ""))
+
+        # Skip resolution if both have 0 views — the data is meaningless
+        if views_a == 0 and views_b == 0:
+            test["status"] = "inconclusive"
+            test["winner"] = None
+            test["loser"] = None
+            test["views_a"] = 0
+            test["views_b"] = 0
+            test["reason"] = "Both variants had 0 views after 48h — no valid signal"
+            continue
+
         winner = "title_a" if views_a >= views_b else "title_b"
         loser = "title_b" if winner == "title_a" else "title_a"
 
@@ -779,6 +863,42 @@ def run_daily_analysis() -> AnalysisResult:
     except Exception as _growth_exc:
         logger.warning("Proactive growth sweep skipped: %s", _growth_exc)
         summary["channel_desc_updated"] = False
+
+    # ── SWOT Analysis + Viral Idea Bank ──────────────────────────────────
+    # Implements the "Idea Mining / YouTube Weekly Roundup" pattern:
+    # Strengths/Weaknesses from internal data, Opportunities/Threats from trends.
+    try:
+        top_rows = sorted(rows, key=lambda r: int(r.get("view_count", 0) or 0), reverse=True)
+        bottom_rows = sorted(rows, key=lambda r: int(r.get("view_count", 0) or 0))
+        top_topics = [r.get("topic", "") for r in top_rows[:5] if r.get("topic")]
+        bottom_topics = [r.get("topic", "") for r in bottom_rows[:5] if r.get("topic")]
+        competitor_topics = competitor.get("popular_topics", [])
+        covered_topics = {_extract_topic(r.get("title", "")) for r in rows}
+        opportunity_topics = [t for t in competitor_topics if t not in covered_topics]
+
+        swot = {
+            "strengths": top_topics,
+            "weaknesses": bottom_topics,
+            "opportunities": opportunity_topics[:5],
+            "threats": [f"Competitor dominates: {t}" for t in competitor_topics[:3]],
+            "viewer_requested": comment_data.get("viewer_requested_topics", [])[:5],
+        }
+        summary["swot"] = swot
+
+        # Viral idea bank: merge opportunities + viewer requests + trending
+        idea_bank = list(dict.fromkeys([
+            *opportunity_topics[:4],
+            *comment_data.get("viewer_requested_topics", [])[:4],
+            *pytrends_topics[:4],
+        ]))
+        idea_bank_path = OUTPUT_ANALYTICS_DIR / "facts_idea_bank.json"
+        existing_bank = _load_json(idea_bank_path, default=[])
+        merged_bank = list(dict.fromkeys([*idea_bank, *existing_bank]))[:30]
+        idea_bank_path.write_text(json.dumps(merged_bank, ensure_ascii=False, indent=2), encoding="utf-8")
+        summary["idea_bank_size"] = len(merged_bank)
+        logger.info("SWOT analysis complete. Idea bank: %d topics", len(merged_bank))
+    except Exception as swot_exc:
+        logger.warning("SWOT/idea bank skipped: %s", swot_exc)
 
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
     REPORT_PATH.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")

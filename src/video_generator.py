@@ -543,9 +543,11 @@ class VideoGenerator:
 
             # 7) Burn-in subtitles (if available) while muxing final audio and video
             if ass_path and ass_path.exists():
-                # For ffmpeg subtitles filter on Windows, convert to forward slashes
-                # Quote the path in the filter expression to handle colons and spaces
-                normalized_ass = str(ass_path).replace('\\', '/')
+                # Copy ASS file to the working dir and use just the filename to avoid
+                # Windows drive-letter colon being parsed as FFmpeg option separator
+                import shutil as _shutil
+                temp_ass = concat_out.parent / "subs.ass"
+                _shutil.copy(ass_path, temp_ass)
                 cmd = [
                     "ffmpeg",
                     "-y",
@@ -561,9 +563,10 @@ class VideoGenerator:
                     "192k",
                     "-shortest",
                     "-vf",
-                    f"subtitles='{normalized_ass}'",
+                    f"subtitles={temp_ass.name}",
                     str(final_path),
                 ]
+                subprocess_run(cmd, cwd=str(temp_ass.parent))
             else:
                 cmd = [
                     "ffmpeg",
@@ -581,16 +584,15 @@ class VideoGenerator:
                     "-shortest",
                     str(final_path),
                 ]
-
-            subprocess_run(cmd)
+                subprocess_run(cmd)
 
         logger.info(f"Final video written to: {final_path}")
         return final_path
 
 
-def subprocess_run(cmd: List[str]):
+def subprocess_run(cmd: List[str], cwd=None):
     logger.info("Running: %s", " ".join(cmd[:6]) + " ...")
-    res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=cwd)
     if res.returncode != 0:
         logger.error("Command failed: %s\nSTDOUT: %s\nSTDERR: %s", " ".join(cmd), res.stdout.decode(errors='replace'), res.stderr.decode(errors='replace'))
         raise RuntimeError(f"Command failed: {cmd[0]}")

@@ -14,6 +14,82 @@ from src.utils import setup_logger
 logger = setup_logger("image_generator")
 
 W, H = 1280, 720
+POLLINATIONS_MODEL = "flux"
+
+
+def _build_facts_prompt(title: str, topic: str) -> str:
+    """Build an AI image prompt for Facts & Wonders thumbnails."""
+    combined = (title + " " + topic).lower()
+
+    if any(w in combined for w in ["space", "planet", "star", "galaxy", "nasa", "universe", "astronaut", "solar", "cosmos", "orbit"]):
+        return (
+            "Stunning cinematic photograph of deep space nebula, swirling colorful gas clouds, "
+            "bright star clusters, vivid purples blues and oranges, Hubble telescope style, "
+            "ultra sharp detail, dramatic cosmic scale, photorealistic, no text, no watermark. "
+            "The center and left are slightly darker for text overlay. 16:9 landscape."
+        )
+    elif any(w in combined for w in ["brain", "neuron", "nerve", "mind", "thought", "consciousness", "memory", "neural"]):
+        return (
+            "Stunning macro closeup of glowing neural network synapse connections, "
+            "electric blue and purple bioluminescent signals, dark background, "
+            "cinematic lighting, ultra detailed, sci-fi medical photography, photorealistic, "
+            "no text, no watermark, 16:9 landscape."
+        )
+    elif any(w in combined for w in ["body", "heart", "blood", "cell", "dna", "muscle", "organ", "human", "bone"]):
+        return (
+            "Dramatic 3D render of human body internal anatomy, glowing organs, "
+            "vivid electric blue and warm red lighting, dark background, medical sci-fi style, "
+            "ultra detailed, cinematic, photorealistic, no text, no watermark, 16:9 landscape."
+        )
+    elif any(w in combined for w in ["ocean", "deep", "sea", "marine", "coral", "underwater", "fish", "whale", "shark"]):
+        return (
+            "Breathtaking underwater photograph of deep ocean, bioluminescent creatures, "
+            "rays of blue-green light piercing dark water, coral reef, exotic sea life, "
+            "dramatic depth, cinematic, ultra detailed, photorealistic, no text, no watermark, 16:9 landscape."
+        )
+    elif any(w in combined for w in ["animal", "creature", "insect", "reptile", "predator", "evolution", "bird", "mammal"]):
+        return (
+            "Stunning wildlife photograph of exotic animal in dramatic natural habitat, "
+            "intense golden hour lighting, bokeh background, National Geographic style, "
+            "ultra sharp, cinematic, photorealistic, no text, no watermark, 16:9 landscape."
+        )
+    elif any(w in combined for w in ["volcano", "earthquake", "mountain", "weather", "lightning", "storm", "geology", "lava"]):
+        return (
+            "Dramatic photograph of massive natural geological phenomenon, "
+            "lightning storm over volcanic eruption or towering mountain, "
+            "vivid saturated colors, dramatic sky, cinematic, ultra detailed, photorealistic, "
+            "no text, no watermark, 16:9 landscape."
+        )
+    elif any(w in combined for w in ["quantum", "physics", "atom", "particle", "energy", "laser", "light", "wave"]):
+        return (
+            "Futuristic visualization of quantum physics particle collision, "
+            "glowing energy fields, electric arcs, vivid neon colors on black background, "
+            "sci-fi laboratory aesthetic, ultra detailed, cinematic, no text, no watermark, 16:9 landscape."
+        )
+    elif any(w in combined for w in ["history", "ancient", "civilization", "egypt", "rome", "pyramid", "ruins", "fossil"]):
+        return (
+            "Dramatic cinematic photograph of ancient historic ruins at golden hour, "
+            "massive stone architecture, dramatic sky with clouds, epic scale, "
+            "warm cinematic grade, ultra detailed, photorealistic, no text, no watermark, 16:9 landscape."
+        )
+    elif any(w in combined for w in ["chemistry", "molecule", "reaction", "acid", "crystal", "element", "compound"]):
+        return (
+            "Macro photograph of colorful chemical crystals or molecular reaction, "
+            "vivid jewel-like colors, microscope photography style, dark background, "
+            "ultra sharp macro detail, cinematic lighting, photorealistic, no text, no watermark, 16:9 landscape."
+        )
+    elif any(w in combined for w in ["psychology", "brain", "behavior", "illusion", "perception", "emotion", "social"]):
+        return (
+            "Surreal conceptual photograph of human silhouette with glowing abstract mind visuals, "
+            "dramatic gradient lighting, vivid teal and purple, cinematic, ultra detailed, "
+            "no text, no watermark, 16:9 landscape."
+        )
+    else:
+        return (
+            "Stunning dramatic science photograph, glowing abstract energy patterns, "
+            "vivid saturated colors on dark background, cinematic lighting, ultra detailed, "
+            "futuristic and educational aesthetic, no text, no watermark, 16:9 landscape."
+        )
 
 
 def _build_prompt(title: str, topic: str) -> str:
@@ -80,74 +156,42 @@ def _build_prompt(title: str, topic: str) -> str:
     )
 
 
-def _generate_pollinations(title: str, topic: str, output_path: Path) -> Path | None:
+def _generate_pollinations(title: str, topic: str, output_path: Path, prompt: str | None = None) -> Path | None:
     """Generate background with Pollinations.ai (completely free, no API key)."""
     try:
-        prompt = _build_prompt(title, topic)
+        prompt = prompt or _build_prompt(title, topic)
         encoded = urllib.parse.quote(prompt)
         # Use non-deterministic seed so each generation creates a fresh image
         seed = random.randint(0, 2**31 - 1)
         
-        # Try multiple models for better success rate
-        models = ["flux-realism", "flux", "flux-pro"]
-        
-        for model in models:
-            try:
-                url = (
-                    f"https://image.pollinations.ai/prompt/{encoded}"
-                    f"?width={W}&height={H}&model={model}&nologo=true&seed={seed}"
-                )
-                logger.info(f"Generating image with Pollinations.ai ({model}) for: {title[:50]}")
-                r = requests.get(url, timeout=120)
-                r.raise_for_status()
-                
-                # Verify we got image data
-                if len(r.content) < 1000:
-                    raise ValueError(f"Response too small ({len(r.content)} bytes)")
-                    
-                img = Image.open(io.BytesIO(r.content)).convert("RGB")
-                img = img.resize((W, H), Image.LANCZOS)
-                img.save(str(output_path), "JPEG", quality=95)
-                logger.info(f"Pollinations.ai ({model}) background saved: {output_path}")
-                return output_path
-            except Exception as model_err:
-                logger.debug(f"Pollinations.ai model {model} failed: {model_err}")
-                continue
-                
-        raise ValueError("All Pollinations.ai models failed")
-        
+        # Free tier allows 1 image / 45s per IP (HTTP 402 FREE_LIMIT otherwise),
+        # so try exactly one model per call; retrying other models back-to-back
+        # only burns time and always hits the limit.
+        model = POLLINATIONS_MODEL
+        url = (
+            f"https://image.pollinations.ai/prompt/{encoded}"
+            f"?width={W}&height={H}&model={model}&nologo=true&seed={seed}"
+        )
+        logger.info(f"Generating image with Pollinations.ai ({model}) for: {title[:50]}")
+        r = requests.get(url, timeout=120)
+        r.raise_for_status()
+
+        # Verify we got image data
+        if len(r.content) < 1000:
+            raise ValueError(f"Response too small ({len(r.content)} bytes)")
+
+        img = Image.open(io.BytesIO(r.content)).convert("RGB")
+        img = img.resize((W, H), Image.LANCZOS)
+        img.save(str(output_path), "JPEG", quality=95)
+        logger.info(f"Pollinations.ai ({model}) background saved: {output_path}")
+        return output_path
+
     except Exception as e:
         logger.warning(f"Pollinations.ai image generation failed: {e}")
         return None
 
 
-def _generate_huggingface(title: str, topic: str, output_path: Path) -> Path | None:
-    """Generate background with HuggingFace Inference API (free with free HF account)."""
-    api_key = os.getenv("HF_API_TOKEN", "")
-    if not api_key or api_key.startswith("your_"):
-        return None
-
-    try:
-        prompt = _build_prompt(title, topic)
-        logger.info(f"Generating image with HuggingFace FLUX.1 for: {title[:50]}")
-        r = requests.post(
-            "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell",
-            headers={"Authorization": f"Bearer {api_key}"},
-            json={"inputs": prompt},
-            timeout=120,
-        )
-        r.raise_for_status()
-        img = Image.open(io.BytesIO(r.content)).convert("RGB")
-        img = img.resize((W, H), Image.LANCZOS)
-        img.save(str(output_path), "JPEG", quality=95)
-        logger.info(f"HuggingFace background saved: {output_path}")
-        return output_path
-    except Exception as e:
-        logger.warning(f"HuggingFace image generation failed: {e}")
-        return None
-
-
-def _generate_gemini(title: str, topic: str, output_path: Path) -> Path | None:
+def _generate_gemini(title: str, topic: str, output_path: Path, prompt: str | None = None) -> Path | None:
     """Generate background with Gemini (requires paid plan for image generation)."""
     api_key = os.getenv("GEMINI_API_KEY", "")
     if not api_key or api_key.startswith("your_"):
@@ -158,7 +202,7 @@ def _generate_gemini(title: str, topic: str, output_path: Path) -> Path | None:
         from google.genai import types
 
         client = genai.Client(api_key=api_key)
-        prompt = _build_prompt(title, topic)
+        prompt = prompt or _build_prompt(title, topic)
         logger.info(f"Generating image with Gemini for: {title[:50]}")
 
         # Try newest image-capable models first
@@ -191,7 +235,7 @@ def _generate_gemini(title: str, topic: str, output_path: Path) -> Path | None:
         return None
 
 
-def _generate_openai(title: str, topic: str, output_path: Path) -> Path | None:
+def _generate_openai(title: str, topic: str, output_path: Path, prompt: str | None = None) -> Path | None:
     """Generate background with DALL-E 3 (paid, fallback)."""
     api_key = os.getenv("OPENAI_API_KEY", "")
     if not api_key or api_key.startswith("your_"):
@@ -201,7 +245,7 @@ def _generate_openai(title: str, topic: str, output_path: Path) -> Path | None:
         from openai import OpenAI
 
         client = OpenAI(api_key=api_key)
-        prompt = _build_prompt(title, topic)
+        prompt = prompt or _build_prompt(title, topic)
         logger.info(f"Generating image with DALL-E 3 for: {title[:50]}")
 
         response = client.images.generate(
@@ -229,27 +273,18 @@ def _generate_openai(title: str, topic: str, output_path: Path) -> Path | None:
 def generate_bg_image(title: str, topic: str, output_path: Path) -> Path | None:
     """
     Generate a thumbnail background image.
-    Priority:
-      1. Pollinations.ai   (free, no key needed — set HF_API_TOKEN=skip to skip)
-      2. HuggingFace FLUX  (free with free HF account — set HF_API_TOKEN in .env)
-      3. DALL-E 3          (paid, set OPENAI_API_KEY)
-      4. Gemini            (paid plan required, set GEMINI_API_KEY)
-      5. None              → programmatic thumbnail fallback
+      1. Pollinations.ai (free, no key) — one model, one attempt
+      2. None → caller uses the existing programmatic background
+
+    HuggingFace FLUX.1-schnell was removed (HTTP 410, deprecated on hf-inference).
+    _generate_openai / _generate_gemini are kept but no longer in the chain.
     """
-    result = _generate_pollinations(title, topic, output_path)
-    if result:
-        return result
+    return _generate_pollinations(title, topic, output_path)
 
-    result = _generate_huggingface(title, topic, output_path)
-    if result:
-        return result
 
-    result = _generate_openai(title, topic, output_path)
-    if result:
-        return result
-
-    result = _generate_gemini(title, topic, output_path)
-    if result:
-        return result
-
-    return None
+def generate_facts_bg_image(title: str, topic: str, output_path: Path) -> Path | None:
+    """Generate an AI background for Facts & Wonders thumbnails using science/nature prompts.
+    Same policy as generate_bg_image: one Pollinations attempt, else None (programmatic fallback).
+    """
+    prompt = _build_facts_prompt(title, topic)
+    return _generate_pollinations(title, topic, output_path, prompt=prompt)

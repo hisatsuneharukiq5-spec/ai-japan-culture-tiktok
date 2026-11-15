@@ -14,8 +14,8 @@ VOICE_PITCH = "+0Hz"
 TONE = "energetic, surprising, upbeat"
 TOPIC_STYLE = "amazing facts, science, nature, space, human body"
 
-SCRIPT_MIN_WORDS = 100
-SCRIPT_MAX_WORDS = 130
+SCRIPT_MIN_WORDS = 150
+SCRIPT_MAX_WORDS = 175
 DURATION_MIN_SEC = 55
 DURATION_MAX_SEC = 59
 FPS = 30
@@ -50,47 +50,54 @@ DEFAULT_PRIVACY = "public"
 FACTS_SCHEDULER_TASK_NAME = "AIJapanFactsDaily"
 FACTS_SCHEDULER_START_TIME = "03:00"
 
-# Anthropic model order for script generation.
-# You can override the first one via FACTS_ANTHROPIC_MODEL in .env.
-ANTHROPIC_MODELS = [
-    os.getenv("FACTS_ANTHROPIC_MODEL", "claude-sonnet-4-5").strip() or "claude-sonnet-4-5",
-    "claude-sonnet-4-5",
-    "claude-haiku-4-5",
-]
+# Anthropic model escalation: Haiku first (cheapest), Sonnet if quality check fails.
+# Set FACTS_ANTHROPIC_MODEL=claude-sonnet-4-5 in .env to skip Haiku and start at Sonnet.
+_override = os.getenv("FACTS_ANTHROPIC_MODEL", "").strip()
+ANTHROPIC_MODELS = list(dict.fromkeys(filter(None, [
+    "claude-haiku-4-5-20251001",       # light task — try cheapest first
+    _override or "claude-sonnet-4-5",  # escalate if quality insufficient
+    "claude-sonnet-4-5",               # explicit fallback
+])))
 
 # FACTS_BRAIN_MANAGED_START
-LEARNED_TOPIC_STYLE = "space, human brain, deep ocean, ancient history, extreme animals, earth science, body facts, science discovery"
+LEARNED_TOPIC_STYLE = "science, didn, physics, save, life, amazing, sciencefacts, human, space exploration, human body mysteries, extreme nature facts"
 LEARNED_TITLE_TEMPLATES = [
   "Did you know that {fact}? #Shorts",
-  "{number} {topic} facts that will blow your mind #Shorts",
-  "Scientists just discovered {topic} and it changes everything #Shorts",
-  "Why {topic} is more {adjective} than you think #Shorts",
   "Only {number}% of people know this about {topic} #Shorts",
+  "Scientists just discovered {topic} and it changes everything #Shorts",
   "The real reason {topic} does this will shock you #Shorts",
   "What happens to your body when {scenario}? #Shorts",
-  "{number} facts in {seconds} seconds #Shorts"
+  "Why {topic} is more {adjective} than you think #Shorts",
+  "{number} {topic} facts that will blow your mind #Shorts",
+  "{topic} is SO cool #Shorts"
 ]
 LEARNED_HOOK_PHRASES = [
-  "Did you know that",
-  "Scientists just discovered",
-  "Here's why most people don't know",
-  "The shocking truth about",
-  "What if I told you that",
-  "Most people don't realize",
-  "This will change how you see",
-  "You won't believe what"
+  "This is SO cool",
+  "What Is The Real Shape",
+  "This can help make Artificial",
+  "How Deep Do Humans Have",
+  "How gullible are you",
+  "Did You Notice This In",
+  "Did You Know This Fact",
+  "did you know that Toph"
 ]
 LEARNED_HASHTAGS = [
-  "#Facts",
-  "#DidYouKnow",
-  "#AmazingFacts",
-  "#Science",
-  "#Nature",
-  "#Shorts",
-  "#Space",
-  "#Mind",
-  "#Learn",
-  "#WowFact"
+  "#shorts",
+  "#facts",
+  "#science",
+  "#education",
+  "#viral",
+  "#youtubeshorts",
+  "#experiment",
+  "#science experiments",
+  "#sciencefacts",
+  "#top",
+  "#fact",
+  "#short",
+  "#youtube shorts",
+  "#animation",
+  "#trending",
+  "#didyouknow"
 ]
-PREFERRED_POST_HOURS = [3, 7, 11, 15, 19]
+PREFERRED_POST_HOURS = [4, 10, 16, 17, 18]
 # FACTS_BRAIN_MANAGED_END

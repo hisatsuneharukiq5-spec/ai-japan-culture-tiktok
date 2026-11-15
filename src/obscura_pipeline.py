@@ -36,7 +36,6 @@ logger = setup_logger("obscura_pipeline")
 SCOPES = [
     "https://www.googleapis.com/auth/youtube.upload",
     "https://www.googleapis.com/auth/youtube",
-    "https://www.googleapis.com/auth/youtube.force-ssl",
 ]
 
 TARGET_MIN_DURATION = 480
@@ -997,6 +996,12 @@ class ObscuraYouTubeUploader:
                     creds = None
 
             if not creds or not creds.valid:
+                import sys
+                if not (sys.stdin.isatty() if hasattr(sys.stdin, "isatty") else False):
+                    raise RuntimeError(
+                        "Obscura OAuth token expired/invalid and cannot open browser in this environment. "
+                        "Run 'py generate_and_upload_obscura.py' in an interactive terminal to re-authenticate."
+                    )
                 if not self.client_secrets.exists():
                     raise ValueError(
                         "YouTube OAuth client secrets not found for Obscura. "
@@ -1389,6 +1394,27 @@ class ObscuraVideoGenerator:
                 pass
 
 
+def _prevent_sleep():
+    """Prevent Windows from sleeping during the long pipeline run."""
+    try:
+        import ctypes
+        ES_CONTINUOUS = 0x80000000
+        ES_SYSTEM_REQUIRED = 0x00000001
+        ctypes.windll.kernel32.SetThreadExecutionState(ES_CONTINUOUS | ES_SYSTEM_REQUIRED)
+    except Exception:
+        pass
+
+
+def _allow_sleep():
+    """Restore normal Windows sleep behavior."""
+    try:
+        import ctypes
+        ES_CONTINUOUS = 0x80000000
+        ctypes.windll.kernel32.SetThreadExecutionState(ES_CONTINUOUS)
+    except Exception:
+        pass
+
+
 def run_obscura_pipeline(topic: str | None = None) -> dict:
     lock_path = _acquire_obscura_run_lock()
     if lock_path is None:
@@ -1401,6 +1427,7 @@ def run_obscura_pipeline(topic: str | None = None) -> dict:
             "reason": "duplicate_run_locked",
         }
 
+    _prevent_sleep()
     logger.info(f"🎬 Starting Obscura Files Pipeline (Config: {'config_obscura' if config_obscura else 'environment'})")
 
     try:
@@ -1449,4 +1476,5 @@ def run_obscura_pipeline(topic: str | None = None) -> dict:
             "topic": script_data.get("topic", topic or ""),
         }
     finally:
+        _allow_sleep()
         _release_obscura_run_lock(lock_path)

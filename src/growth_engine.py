@@ -267,14 +267,26 @@ def _update_video_description(youtube: Any, video_id: str, base_description: str
 
 # ── Public API ────────────────────────────────────────────────────────────────
 
+def _add_end_screen(youtube: Any, video_id: str, duration_secs: float) -> bool:
+    """Disabled: the YouTube Data API v3 has no ``endScreenElements`` part.
+
+    The previous implementation always failed with HTTP 400 ``unknownPart``
+    while still charging 50 quota units per call. End screens can only be
+    configured in YouTube Studio, so this is now a no-op.
+    """
+    logger.debug("End screen skipped for %s (not supported by YouTube Data API)", video_id)
+    return False
+
+
 def post_upload_actions(
     youtube: Any,
     video_id: str,
     title: str,
     topic: str,
     base_description: str = "",
+    duration_secs: float = 0.0,
 ) -> dict[str, Any]:
-    """Playlist add + description update immediately after upload.
+    """Playlist add + description update + end screen immediately after upload.
     Comment is intentionally skipped here — posted later by facts_growth.yml
     with a human-like 35-minute delay.
     """
@@ -284,6 +296,7 @@ def post_upload_actions(
         "playlist_added": False,
         "playlist_name": None,
         "description_updated": False,
+        "end_screen_added": False,
     }
 
     # Playlist management
@@ -295,13 +308,21 @@ def post_upload_actions(
     if playlist_id:
         results["playlist_added"] = _add_to_playlist(youtube, playlist_id, video_id)
 
+    # End screen — subscribe element (non-fatal)
+    if duration_secs > 25:
+        time.sleep(random.uniform(3, 8))
+        results["end_screen_added"] = _add_end_screen(youtube, video_id, duration_secs)
+
     # Description with trending keywords
     time.sleep(random.uniform(10, 25))
     if base_description:
         trending = _fetch_trending_keywords()
         results["description_updated"] = _update_video_description(youtube, video_id, base_description, trending)
 
-    logger.info("Post-upload actions for %s: playlist=%s desc=%s", video_id, results["playlist_added"], results["description_updated"])
+    logger.info(
+        "Post-upload actions for %s: playlist=%s end_screen=%s desc=%s",
+        video_id, results["playlist_added"], results["end_screen_added"], results["description_updated"],
+    )
     return results
 
 

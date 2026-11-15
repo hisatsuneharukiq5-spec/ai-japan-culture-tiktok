@@ -60,10 +60,14 @@ def generate_tiktok_icon_with_ai() -> Path:
 def _generate_with_gemini(api_key: str) -> Path | None:
     """Generate icon using Google Gemini API."""
     try:
-        import google.generativeai as genai
-        
-        genai.configure(api_key=api_key)
-        
+        import base64
+        import io
+        from google import genai
+        from google.genai import types
+        from PIL import Image
+
+        client = genai.Client(api_key=api_key)
+
         prompt = """Create a professional 512x512px app icon for TikTok.
 
 Theme: AI learning Japanese culture
@@ -83,14 +87,28 @@ The icon should be:
 
 Generate a single, finished app icon image ready for use."""
         
-        model = genai.GenerativeModel('gemini-pro-vision')
-        logger.info("⏳ Sending request to Gemini...")
-        
-        # Gemini doesn't generate images via this API
-        # This is a placeholder for the correct approach
-        logger.warning("Gemini image generation in pro-vision not available. Trying alternative.")
+        # gemini-pro-vision was retired; use a current image-output model
+        # (same model as src/image_generator.py; image output needs a paid Gemini plan).
+        model = "gemini-2.5-flash-image"
+        logger.info(f"⏳ Sending request to Gemini ({model})...")
+        response = client.models.generate_content(
+            model=model,
+            contents=prompt,
+            config=types.GenerateContentConfig(response_modalities=["TEXT", "IMAGE"]),
+        )
+        for part in response.candidates[0].content.parts:
+            inline = getattr(part, "inline_data", None)
+            if inline and inline.data:
+                data = inline.data if isinstance(inline.data, bytes) else base64.b64decode(inline.data)
+                img = Image.open(io.BytesIO(data)).convert("RGB").resize((512, 512), Image.LANCZOS)
+                output_path = ICONS_DIR / "tiktok_icon_ai_512x512.png"
+                img.save(str(output_path), "PNG")
+                logger.info(f"✅ Gemini icon saved: {output_path}")
+                return output_path
+
+        logger.warning("Gemini returned no image data.")
         return None
-        
+
     except Exception as e:
         logger.warning(f"Gemini generation failed: {e}")
         return None

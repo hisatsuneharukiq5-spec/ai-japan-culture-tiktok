@@ -39,7 +39,6 @@ logger = setup_logger("obscura_shorts")
 SCOPES = [
     "https://www.googleapis.com/auth/youtube.upload",
     "https://www.googleapis.com/auth/youtube",
-    "https://www.googleapis.com/auth/youtube.force-ssl",
 ]
 
 OBSCURA_SHORTS_RECENT_TOPIC_AVOID_COUNT = 6
@@ -83,6 +82,25 @@ def _clean_shorts_text(value: str) -> str:
     return re.sub(r"\n{3,}", "\n\n", (value or "").strip())
 
 
+SHORTS_TITLE_MAX_CHARS = 40
+
+
+def _truncate_at_word(text: str, limit: int = SHORTS_TITLE_MAX_CHARS) -> str:
+    """Trim to <= limit chars without cutting a word in half.
+
+    Cuts at the last space inside the limit and drops dangling separators
+    (e.g. a trailing "—" or ":") left by the cut. Falls back to a hard cut only
+    when the first word alone is longer than the limit.
+    """
+    text = (text or "").strip()
+    if len(text) <= limit:
+        return text
+    cut = text[:limit + 1]  # +1 so a word ending exactly at the limit survives
+    space = cut.rfind(" ")
+    trimmed = cut[:space] if space > 0 else text[:limit]
+    return trimmed.rstrip(" —–-:;,|/").strip()
+
+
 def _optimize_obscura_shorts_title(title: str, topic: str = "") -> tuple[str, str]:
     """Return (optimized_title, pattern_type) for A/B tracking."""
     import random
@@ -97,7 +115,7 @@ def _optimize_obscura_shorts_title(title: str, topic: str = "") -> tuple[str, st
         "dead", "death", "missing", "survived", "escaped", "answered", "remains",
     ]
     if any(word in lowered for word in emotion_words):
-        return base[:40].strip(), "emotion_word_present"
+        return _truncate_at_word(base), "emotion_word_present"
     # パターンB/C/D/E — 多様なスタイルをラベル付きで管理
     labeled_patterns = [
         # Pattern B: number_hook — 数字や具体的事実で引き込む
@@ -120,7 +138,7 @@ def _optimize_obscura_shorts_title(title: str, topic: str = "") -> tuple[str, st
     ]
     chosen_pattern, pattern_type = random.choice(labeled_patterns)
     result = chosen_pattern.format(title=base)
-    return result[:40].strip(), pattern_type
+    return _truncate_at_word(result), pattern_type
 
 
 def _build_obscura_shorts_description(description: str, topic: str = "", long_form_url: str | None = None) -> str:
@@ -323,6 +341,7 @@ Constraints:
         message = self.client.messages.create(
             model=config_shorts.SCRIPT_MODEL,
             max_tokens=config_shorts.SCRIPT_MAX_TOKENS,
+            system="Be concise and token-efficient. Return only the requested JSON — no preamble, no explanation, no markdown wrapping.",
             messages=[{"role": "user", "content": prompt}],
         )
 
@@ -1036,13 +1055,27 @@ class ObscuraShortsUploader:
                 try:
                     creds.refresh(Request())
                 except Exception as exc:
-                    logger.warning(f"Obscura token refresh failed, starting fresh OAuth flow: {exc}")
+                    logger.warning(f"Obscura token refresh failed: {exc}")
+                    import sys
+                    _headless = not (sys.stdin.isatty() if hasattr(sys.stdin, "isatty") else False)
+                    if _headless:
+                        raise RuntimeError(
+                            "Obscura OAuth token expired and cannot refresh. "
+                            "Run 'py main.py obscura-run' in an interactive terminal to re-authenticate."
+                        ) from exc
                     creds = None
 
             if not creds or not creds.valid:
+                import sys
+                _headless = not (sys.stdin.isatty() if hasattr(sys.stdin, "isatty") else False)
+                if _headless:
+                    raise RuntimeError(
+                        "No valid Obscura OAuth token and cannot open browser in this environment. "
+                        "Run 'py main.py obscura-run' in an interactive terminal to authenticate first."
+                    )
                 if not self.credentials_file.exists():
                     raise FileNotFoundError(f"YouTube client secrets not found: {self.credentials_file}")
-                
+
                 flow = InstalledAppFlow.from_client_secrets_file(str(self.credentials_file), SCOPES)
                 creds = flow.run_local_server(port=0)
             

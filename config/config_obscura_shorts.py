@@ -16,8 +16,9 @@ ABSOLUTE_MAX_DURATION = 60  # Never exceed this
 # Script Settings
 SCRIPT_MIN_WORDS = 100
 SCRIPT_MAX_WORDS = 115
-SCRIPT_MODEL = "claude-opus-4-6"
-SCRIPT_MAX_TOKENS = 3000
+# Sonnet is sufficient for 100-115 word shorts scripts; Opus reserved for long-form.
+SCRIPT_MODEL = "claude-sonnet-4-6"
+SCRIPT_MAX_TOKENS = 1500
 
 # Voice Settings
 VOICE_NAME = "en-US-GuyNeural"

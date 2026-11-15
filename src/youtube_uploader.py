@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 from pathlib import Path
 from google.oauth2.credentials import Credentials
@@ -6,7 +7,8 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
-from tenacity import retry, stop_after_attempt, wait_exponential
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception
+from googleapiclient.errors import ResumableUploadError
 
 from src.utils import get_config, setup_logger, PROJECT_ROOT
 
@@ -40,8 +42,24 @@ class YouTubeUploader:
         if not creds or not creds.valid:
             if creds and creds.expired and creds.refresh_token:
                 logger.info("Refreshing YouTube access token...")
-                creds.refresh(Request())
-            else:
+                try:
+                    creds.refresh(Request())
+                except Exception as exc:
+                    # Keep the token file untouched so it can be inspected / backed up.
+                    msg = (
+                        f"AI Japan OAuth token refresh failed ({exc}). Token file was NOT deleted: {TOKEN_FILE}. "
+                        "To re-authenticate, move/delete that file manually and run "
+                        "'py main.py upload' in an interactive terminal."
+                    )
+                    logger.error(msg)
+                    raise RuntimeError(msg) from exc
+            if not creds or not creds.valid:
+                _is_headless = not (sys.stdin.isatty() if hasattr(sys.stdin, "isatty") else False)
+                if _is_headless:
+                    raise RuntimeError(
+                        "No valid AI Japan OAuth token and cannot open browser in this environment. "
+                        "Run 'py main.py script' in an interactive terminal to authenticate first."
+                    )
                 if CLIENT_SECRETS_FILE.exists():
                     logger.info("Starting OAuth2 flow. A browser window will open...")
                     flow = InstalledAppFlow.from_client_secrets_file(
@@ -145,6 +163,9 @@ class YouTubeUploader:
     @retry(
         stop=stop_after_attempt(3),
         wait=wait_exponential(multiplier=1, min=10, max=60),
+        retry=retry_if_exception(
+            lambda e: not (isinstance(e, ResumableUploadError) and "uploadLimitExceeded" in str(e))
+        ),
     )
     def upload(self, video_path: Path, script_data: dict) -> str:
         """
@@ -232,7 +253,16 @@ class YouTubeUploader:
 
         response = None
         while response is None:
-            status, response = request.next_chunk()
+            try:
+                status, response = request.next_chunk()
+            except ResumableUploadError as e:
+                if "uploadLimitExceeded" in str(e):
+                    logger.error(
+                        "❌ YouTube upload limit exceeded. "
+                        "Verify your channel at youtube.com/verify to raise the limit, "
+                        "or wait 24 hours for the daily quota to reset."
+                    )
+                raise
             if status:
                 progress = int(status.progress() * 100)
                 logger.info(f"Upload progress: {progress}%")
