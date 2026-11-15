@@ -744,7 +744,44 @@ def _prepare_clip_segment(in_path: Path, out_path: Path, start_sec: float, lengt
     subprocess.run(cmd, check=True)
 
 
+CROSSFADE_CHUNK_SIZE = 10
+
+
 def _build_crossfade_video(clips: list[Path], clip_lengths: list[float], out_path: Path, fade_duration: float = 0.5):
+    """Crossfade all clips into one video, in chunks to bound memory.
+
+    Opening ~110 inputs in a single ffmpeg filter graph exhausted RAM, so clips
+    are crossfaded CROSSFADE_CHUNK_SIZE at a time, then the chunk videos are
+    crossfaded together with the same fade. Every clip boundary (inside and
+    between chunks) still gets the same `fade_duration` xfade, so the visual
+    result and total length match the single-pass version.
+    """
+    if len(clips) <= CROSSFADE_CHUNK_SIZE:
+        _crossfade_single_pass(clips, clip_lengths, out_path, fade_duration, crf=20)
+        return
+
+    chunk_paths: list[Path] = []
+    chunk_lengths: list[float] = []
+    for n, start in enumerate(range(0, len(clips), CROSSFADE_CHUNK_SIZE)):
+        part = out_path.with_name(f"{out_path.stem}_chunk{n:02d}.mp4")
+        _crossfade_single_pass(
+            clips[start:start + CROSSFADE_CHUNK_SIZE],
+            clip_lengths[start:start + CROSSFADE_CHUNK_SIZE],
+            part,
+            fade_duration,
+            crf=16,  # near-lossless intermediate; re-encoded once more below
+        )
+        chunk_paths.append(part)
+        chunk_lengths.append(_audio_duration(part))
+        logger.info(f"Crossfade chunk {n + 1}: {part.name} ({chunk_lengths[-1]:.1f}s)")
+
+    # Recurse in case there are more chunks than CROSSFADE_CHUNK_SIZE.
+    _build_crossfade_video(chunk_paths, chunk_lengths, out_path, fade_duration)
+
+
+def _crossfade_single_pass(
+    clips: list[Path], clip_lengths: list[float], out_path: Path, fade_duration: float, crf: int = 20
+):
     if len(clips) == 1:
         shutil.copy(str(clips[0]), str(out_path))
         return
@@ -774,7 +811,7 @@ def _build_crossfade_video(clips: list[Path], clip_lengths: list[float], out_pat
         "-r", "30",
         "-c:v", "libx264",
         "-preset", "medium",
-        "-crf", "20",
+        "-crf", str(crf),
         str(out_path),
     ])
     subprocess.run(cmd, check=True)
