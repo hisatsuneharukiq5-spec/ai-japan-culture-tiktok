@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "used": 9453,
+  "used": 11053,
   "log": [
     {
       "op": "search.list",
@@ -631,6 +631,11 @@
       "op": "playlistItems.insert",
       "units": 50,
       "ts": "2026-11-15T17:06:02"
+    },
+    {
+      "op": "videos.insert",
+      "units": 1600,
+      "ts": "2026-11-15T22:44:44"
     }
   ]
 }
