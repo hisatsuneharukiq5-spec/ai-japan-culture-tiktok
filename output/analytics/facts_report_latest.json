@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-15T20:31:14",
+  "timestamp": "2026-11-16T23:49:21",
   "internal": {
     "top5_patterns": [
       {
@@ -30,14 +30,14 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 45,
+    "videos_analyzed": 50,
     "popular_topics": [
       "science",
       "experiment",
       "physics",
-      "ashusir",
-      "amazing",
       "didn",
+      "ashusir",
+      "could",
       "scienceandfun",
       "sciencefacts"
     ],
@@ -47,16 +47,17 @@
       "#science",
       "#viral",
       "#trending",
-      "#youtubeshorts",
       "#knowledge",
-      "#experiment",
-      "#didyouknow",
-      "#animation",
-      "#science experiments",
-      "#youtube shorts",
       "#new",
-      "#viralshorts",
-      "#memes"
+      "#latest",
+      "#youtubeshorts",
+      "#education",
+      "#factsmine",
+      "#top",
+      "#experiment",
+      "#science experiments",
+      "#fact",
+      "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
@@ -65,8 +66,8 @@
       "This can help make Artificial",
       "How Deep Do Humans Have",
       "Did You Know That In",
-      "How wound stitches really work",
-      "Did You Know This Fact"
+      "Did You Understand",
+      "How wound stitches really work"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -85,19 +86,19 @@
       "physics",
       "amazing",
       "ashusir",
-      "human",
+      "could",
       "scienceandfun",
       "sciencefacts",
-      "tricks",
-      "unbelievable",
+      "human",
       "never",
-      "fastest"
+      "fastest",
+      "unbelievable"
     ],
     "pattern_counts": {
-      "statement": 27,
-      "number-lead": 7,
+      "statement": 30,
+      "number-lead": 8,
       "wh-question": 4,
-      "statistic": 4,
+      "statistic": 5,
       "did-you-know": 3
     },
     "optimal_length_seconds": [
@@ -109,25 +110,24 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "cliff booth",
-        "cliff booth movie",
-        "president donald trump",
-        "creighton vs iowa",
-        "mackenzie scott",
-        "pascal siakam",
-        "lewis hall",
-        "nwsl schedule",
-        "matt lafleur",
-        "caleb douglas"
+        "76ers vs nets",
+        "prairie view vs ohio state",
+        "brian poindexter",
+        "iona basketball",
+        "quentin johnston",
+        "bulls vs cavaliers",
+        "grizzlies vs wizards",
+        "alcorn state vs maryland",
+        "magic vs celtics",
+        "dirty bomb"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
-        "This Video Can Save Your Life 😱",
+        "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
@@ -135,10 +135,11 @@
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
-        "Animal Fact Time! 🦎 #shorts #learn #animals #kids",
-        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
         "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
-        "WARNING : This is Highly Relatable 😱 #shorts"
+        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
+        "The Lobster 😱",
+        "How Rare Are You 😱",
+        "Why Don&#39;t Birds Get Electric Shock 😱"
       ]
     },
     "pytrends": {
@@ -167,9 +168,9 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 219,
+    "total_tests": 220,
     "latest_status": "pending"
   },
   "channel_desc_updated": false,
-  "description_refreshed": 0
+  "description_refreshed": 3
 }
