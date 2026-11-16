@@ -53,8 +53,8 @@ FACTS_SCHEDULER_START_TIME = "03:00"
 # Anthropic model order for script generation.
 # You can override the first one via FACTS_ANTHROPIC_MODEL in .env.
 ANTHROPIC_MODELS = [
-    os.getenv("FACTS_ANTHROPIC_MODEL", "claude-sonnet-4-5").strip() or "claude-sonnet-4-5",
-    "claude-sonnet-4-5",
+    os.getenv("FACTS_ANTHROPIC_MODEL", "claude-sonnet-5-5").strip() or "claude-sonnet-5-5",
+    "claude-sonnet-5-5",
     "claude-haiku-4-5",
 ]
 

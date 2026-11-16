@@ -978,7 +978,7 @@ Return strict JSON with keys: title, script, topic
             try:
                 message = client.messages.create(
                     model=model_name,
-                    max_tokens=500,
+                    max_tokens=4000,  # Sonnet 5.5 thinks by default; thinking tokens count toward max_tokens
                     messages=[{"role": "user", "content": prompt}],
                 )
                 logger.info("Facts script generated with model: %s", model_name)
@@ -990,7 +990,8 @@ Return strict JSON with keys: title, script, topic
         if message is None:
             raise RuntimeError(f"All configured Anthropic models failed: {last_exc}")
 
-        text = message.content[0].text.strip()
+        # The response may start with a thinking block; take the first text block.
+        text = next(b.text for b in message.content if b.type == "text").strip()
         if "```json" in text:
             text = text.split("```json", 1)[1].split("```", 1)[0].strip()
         data = json.loads(text)
