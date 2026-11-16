@@ -1,0 +1,48 @@
+channel:
+  name: "AI Japan"
+  language: "en"
+  default_tags:
+    - "Japan"
+    - "Japanese culture"
+    - "Japan rules"
+    - "Living in Japan"
+    - "Japan travel tips"
+    - "Japanese etiquette"
+  default_category_id: "27"   # Education
+  default_privacy: "private"  # public | private | unlisted
+
+script:
+  model: "claude-opus-4-6"
+  max_tokens: 4000
+  target_duration_minutes: 8
+  style: "informative and engaging, friendly tone"
+  language: "English"
+
+video:
+  resolution: "1080p"
+  aspect_ratio: "16:9"
+  style: "cinematic"
+  background_music: true
+  voiceover: true
+  voiceover_accent: "American English"
+
+schedule:
+  enabled: false
+  videos_per_week: 3
+  upload_days:
+    - "Monday"
+    - "Wednesday"
+    - "Friday"
+  upload_hour: 10
+  upload_minute: 0
+
+output:
+  scripts_dir: "output/scripts"
+  videos_dir: "output/videos"
+  logs_dir: "logs"
+
+# TikTok settings. This file is committed: never put secrets here.
+# client_key / client_secret come from the TIKTOK_CLIENT_KEY / TIKTOK_CLIENT_SECRET env vars.
+tiktok:
+  # Redirect URI configured in your TikTok Developer app
+  redirect_uri: "http://localhost:8080/callback"
