@@ -1,7 +1,8 @@
 # Vendored copy of quiet-pipelines
 
 This folder is an unmodified copy of quiet-pipelines (MIT, see `LICENSE`),
-taken from commit `517ec75c526300201aeac102abe066d58c69c827` (v0.1.0).
+taken from commit `3b36c81622b8d5b3b4b0ad9a8362f4a32ecc8491`
+(v0.1.0 + diagnosis error text redacted before it reaches an Issue).
 It is here only because quiet-pipelines is not published yet.
 
 Do not edit files in this folder. Make changes in the quiet-pipelines

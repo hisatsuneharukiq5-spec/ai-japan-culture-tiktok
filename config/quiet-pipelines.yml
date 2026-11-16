@@ -24,7 +24,7 @@ checks:
     workflows: [obscura_daily.yml]
 
 diagnose:
-  enabled: true              # key comes from DOTENV_CONTENTS (see watchdog.yml); skipped if absent
+  enabled: true              # key = repository secret ANTHROPIC_API_KEY (see watchdog.yml); skipped if not set
   model: claude-sonnet-5-5
   effort: medium
   language: ja
@@ -137,14 +137,18 @@ ledger:
     # ── API keys (.env names) ───────────────────────────────────────────────
     - id: anthropic_key
       kind: api_key
-      name: ANTHROPIC_API_KEY
-      used_by: [facts_scheduler.py, src/obscura_pipeline.py, src/obscura_shorts_generator.py, src/script_generator.py, src/short_script_generator.py, src/article_generator.py, src/error_article_generator.py]
-      workflows: [facts_daily, obscura_daily]
+      name: "ANTHROPIC_API_KEY (in .env / DOTENV_CONTENTS, and GitHub Secret ANTHROPIC_API_KEY for the watchdog)"
+      used_by: [facts_scheduler.py, src/obscura_pipeline.py, src/obscura_shorts_generator.py, src/script_generator.py, src/short_script_generator.py, src/article_generator.py, src/error_article_generator.py, quiet-pipelines diagnosis]
+      workflows: [facts_daily, obscura_daily, watchdog]
       expires: null
       status: active
       last_verified: 2026-11-15
       check: console.anthropic.com > Billing (credit balance, auto-reload). A 1-token messages call verifies the key.
-      note: Balance exhaustion stops every script generation.
+      note: >
+        Balance exhaustion stops every script generation.
+        The key lives in TWO places: rotating it means updating DOTENV_CONTENTS AND
+        the ANTHROPIC_API_KEY secret. Missing secret = diagnosis skipped; wrong key =
+        "Claude API call failed" in the Issue. Either way the watchdog itself keeps running.
 
     - id: pexels_key
       kind: api_key

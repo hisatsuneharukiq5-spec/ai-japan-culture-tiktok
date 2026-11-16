@@ -146,15 +146,32 @@ def build_prompt(check: dict[str, Any], run_meta: dict[str, Any] | None, log_tex
     return "\n".join(lines)
 
 
+def _exc_text(exc: BaseException, limit: int) -> str:
+    """Exception text for diag.error: redacted BEFORE truncation (so a cut can't
+    leave a partial secret that no longer matches)."""
+    text, _ = redact(str(exc))
+    return f"{type(exc).__name__}: {text[:limit]}"
+
+
 def diagnose(check: dict[str, Any], cfg, gh=None, client=None, workflows: list[str] | None = None) -> Diagnosis:
-    """cfg: DiagnoseConfig. gh: GitHub client (optional). client: anthropic.Anthropic (injectable)."""
+    """cfg: DiagnoseConfig. gh: GitHub client (optional). client: anthropic.Anthropic (injectable).
+
+    diag.error ends up in a (possibly public) Issue, so it is redacted like
+    everything else that leaves the machine."""
+    diag = _diagnose(check, cfg, gh=gh, client=client, workflows=workflows)
+    if diag.error:
+        diag.error, _ = redact(diag.error)
+    return diag
+
+
+def _diagnose(check: dict[str, Any], cfg, gh=None, client=None, workflows: list[str] | None = None) -> Diagnosis:
     diag = Diagnosis(model=cfg.model)
     run_meta, log_text = None, ""
     if gh is not None:
         try:
             run_meta, log_text = collect_logs(gh, workflows, cfg.lookback_hours, cfg.max_log_chars)
         except Exception as exc:  # logs are optional context
-            diag.error = f"could not read CI logs: {type(exc).__name__}: {str(exc)[:120]}"
+            diag.error = f"could not read CI logs: {_exc_text(exc, 120)}"
     if run_meta:
         diag.run_url = run_meta.get("html_url")
 
@@ -187,7 +204,7 @@ def diagnose(check: dict[str, Any], cfg, gh=None, client=None, workflows: list[s
     try:
         resp = client.beta.messages.create(**kwargs)
     except Exception as exc:  # anthropic.APIError family; never crash the watchdog
-        diag.error = f"Claude API call failed: {type(exc).__name__}: {str(exc)[:160]}"
+        diag.error = f"Claude API call failed: {_exc_text(exc, 160)}"
         return diag
 
     usage = getattr(resp, "usage", None)
