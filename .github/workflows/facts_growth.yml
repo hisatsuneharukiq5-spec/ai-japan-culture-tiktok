@@ -5,11 +5,11 @@ name: Facts & Wonders — Delayed Growth Actions
 
 on:
   schedule:
-    - cron: "35 18 * * *"   # 03:35 JST  (35 min after 03:00 post)
-    - cron: "35 22 * * *"   # 07:35 JST
-    - cron: "35  2 * * *"   # 11:35 JST
-    - cron: "35  6 * * *"   # 15:35 JST
-    - cron: "35 10 * * *"   # 19:35 JST
+    - cron: "42 18 * * *"   # 03:42 JST  (35 min after 03:07 post)
+    - cron: "42 22 * * *"   # 07:42 JST
+    - cron: "42  2 * * *"   # 11:42 JST
+    - cron: "42  6 * * *"   # 15:42 JST
+    - cron: "42 10 * * *"   # 19:42 JST
   workflow_dispatch:
 
 concurrency:

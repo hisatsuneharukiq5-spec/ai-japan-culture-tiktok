@@ -2,10 +2,10 @@ name: Facts & Wonders — Daily Auto-Post
 
 on:
   schedule:
-    # 3 triggers/day (JST): 03:00, 11:00, 19:00 — every 8h, to fit the YouTube API quota
-    - cron: "0 18 * * *"   # 03:00 JST
-    - cron: "0  2 * * *"   # 11:00 JST
-    - cron: "0 10 * * *"   # 19:00 JST
+    # 3 triggers/day (JST): 03:07, 11:07, 19:07 — every 8h (off :00, when GitHub delays scheduled runs most), to fit the YouTube API quota
+    - cron: "7 18 * * *"   # 03:07 JST
+    - cron: "7  2 * * *"   # 11:07 JST
+    - cron: "7 10 * * *"   # 19:07 JST
   workflow_dispatch:        # manual trigger from GitHub UI
 
 concurrency:

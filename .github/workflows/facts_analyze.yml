@@ -2,7 +2,7 @@ name: Facts & Wonders — Daily Analysis
 
 on:
   schedule:
-    - cron: "30 15 * * *"  # 00:30 JST — runs before first daily upload (03:00 JST)
+    - cron: "30 15 * * *"  # 00:30 JST — runs before first daily upload (03:07 JST)
   workflow_dispatch:        # manual trigger from GitHub UI
 
 concurrency:

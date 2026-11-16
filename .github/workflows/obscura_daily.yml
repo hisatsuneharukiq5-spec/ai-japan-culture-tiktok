@@ -2,7 +2,7 @@ name: Obscura Files — Daily Auto-Post
 
 on:
   schedule:
-    - cron: "0 16 * * *"   # 01:00 JST — long-form + short, runs once/day
+    - cron: "13 16 * * *"  # 01:13 JST — long-form + short, runs once/day
   workflow_dispatch:
     inputs:
       skip_upload:
