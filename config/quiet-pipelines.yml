@@ -236,7 +236,7 @@ ledger:
       used_by: [src/x_poster.py]
       workflows: []
       expires: null
-      status: broken
+      status: unused   # was broken (401 on 2026-11-15); X posting is not run by Actions. Set back to active when re-enabled.
       last_verified: 2026-11-15
       check: GET https://api.twitter.com/2/users/me (OAuth1) — 401 on 2026-11-15. Regenerate in X developer portal; check plan tier.
 
@@ -256,7 +256,7 @@ ledger:
       used_by: [src/substack_publisher.py, main.py (article, error-log)]
       workflows: []
       expires: 2026-11-15
-      status: expired
+      status: unused   # was expired (2026-11-15); Substack posting is local-only and paused. Set back to active after substack-setup.
       last_verified: 2026-11-15
       check: GET {publication}/api/v1/drafts returns 403 when expired. Re-run `py main.py substack-setup` (~3-month lifetime).
       note: When renewing, set expires to setup date + ~90 days.
@@ -375,7 +375,7 @@ ledger:
       used_by: [facts_brain.py, src/growth_engine.py]
       workflows: [facts_analyze]
       expires: null
-      status: broken
+      status: unused   # was broken (404 since 2026-05); code falls back to the RSS feed, so nothing depends on it.
       last_verified: 2026-05-24
       check: /trends/explore returned 404 in May; code falls back to RSS. Non-fatal.
 
