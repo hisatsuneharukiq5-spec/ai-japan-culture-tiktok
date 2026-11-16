@@ -13,8 +13,10 @@ Costs (from YouTube API docs):
   playlists.insert        = 50
   playlists.list          = 1
   playlistItems.insert    = 50
+  playlistItems.list      = 1
   channels.list           = 1
   channels.update         = 50
+  thumbnails.set          = 50
 """
 
 from __future__ import annotations
@@ -42,8 +44,10 @@ COST = {
     "playlists.insert": 50,
     "playlists.list": 1,
     "playlistItems.insert": 50,
+    "playlistItems.list": 1,
     "channels.list": 1,
     "channels.update": 50,
+    "thumbnails.set": 50,
 }
 
 

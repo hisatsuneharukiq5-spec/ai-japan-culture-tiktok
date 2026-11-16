@@ -330,6 +330,11 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
 def _get_active_channel_info(youtube: Any) -> dict[str, str]:
     resp = youtube.channels().list(part="id,snippet", mine=True, maxResults=1).execute()
+    try:
+        from src.quota_guard import charge
+        charge("channels.list")
+    except Exception:
+        pass
     items = resp.get("items") or []
     if not items:
         raise RuntimeError("No YouTube channel found for authenticated account")
@@ -1303,33 +1308,44 @@ def _find_youtube_duplicate_id(youtube: Any, title: str) -> str | None:
     if not normalized:
         return None
 
-    # search.list costs 100 units — skip if quota is tight (registry check is sufficient)
+    # Walk the channel's uploads playlist: channels.list (1 unit) + playlistItems.list
+    # (1 unit per 50 videos), instead of search.list (100 units per page).
     try:
         from src.quota_guard import can_afford, charge
-        if not can_afford("search.list"):
-            logger.warning("Quota low: skipping YouTube duplicate title search")
-            return None
-        charge("search.list")
     except Exception:
-        pass
+        can_afford = None
+        charge = None
 
-    request = youtube.search().list(
-        part="snippet",
-        forMine=True,
-        type="video",
-        maxResults=50,
-        order="date",
-    )
+    def _charge(op: str) -> None:
+        if charge is not None:
+            try:
+                charge(op)
+            except Exception:
+                pass
 
+    if can_afford is not None and not (can_afford("channels.list") and can_afford("playlistItems.list")):
+        logger.warning("Quota low: skipping YouTube duplicate title check")
+        return None
+
+    _charge("channels.list")
+    channels = youtube.channels().list(part="contentDetails", mine=True, maxResults=1).execute()
+    items = channels.get("items") or []
+    uploads_id = (((items[0] if items else {}).get("contentDetails") or {}).get("relatedPlaylists") or {}).get("uploads")
+    if not uploads_id:
+        logger.warning("Uploads playlist not found: skipping YouTube duplicate title check")
+        return None
+
+    request = youtube.playlistItems().list(part="snippet", playlistId=uploads_id, maxResults=50)
     while request:
+        _charge("playlistItems.list")
         response = request.execute()
         for item in response.get("items", []):
             snippet = item.get("snippet") or {}
             existing_title = str(snippet.get("title", ""))
             if _normalize_title(existing_title) == normalized:
-                return (item.get("id") or {}).get("videoId")
+                return (snippet.get("resourceId") or {}).get("videoId")
 
-        request = youtube.search().list_next(request, response)
+        request = youtube.playlistItems().list_next(request, response)
 
     return None
 
@@ -1679,6 +1695,11 @@ def run_facts_short(topic: str | None = None, publish_after_hours: float | None 
             videoId=video_id,
             media_body=MediaFileUpload(str(thumb_path), mimetype="image/jpeg"),
         ).execute()
+        try:
+            from src.quota_guard import charge
+            charge("thumbnails.set")
+        except Exception:
+            pass
         logger.info("Thumbnail set for %s: %s", video_id, thumb_path.name)
     except Exception as thumb_exc:
         logger.warning("Thumbnail generation/upload failed (non-fatal): %s", thumb_exc)
