@@ -1,0 +1,414 @@
+# quiet-pipelines settings for .github/workflows/watchdog.yml
+# NEVER put key/token VALUES here: only the NAMES of secrets / env vars.
+version: 1
+
+defaults:
+  max_age_hours: 36   # abnormal when the newest PUBLIC video is older than this
+
+checks:
+  # Facts posts 3x/day (03:07 / 11:07 / 19:07 JST); 36h tolerates GitHub's
+  # schedule delays and one or two missed runs.
+  - name: facts-wonders
+    type: youtube_latest_upload
+    auth: oauth
+    token_json_env: YT_TOKEN_FACTS          # GitHub Secret (kept fresh by facts_daily.yml)
+    expect_channel_name_contains: Facts & Wonders
+    workflows: [facts_daily.yml, facts_growth.yml, facts_analyze.yml, facts_healthcheck.yml]
+
+  # Obscura posts once a day (01:13 JST); 36h still allows one missed run.
+  - name: obscura-files
+    type: youtube_latest_upload
+    auth: oauth
+    token_json_env: YT_TOKEN_OBSCURA        # GitHub Secret (kept fresh by obscura_daily.yml)
+    expect_channel_name_contains: Obscura Files
+    workflows: [obscura_daily.yml]
+
+diagnose:
+  enabled: true              # key comes from DOTENV_CONTENTS (see watchdog.yml); skipped if absent
+  model: claude-sonnet-5-5
+  effort: medium
+  language: ja
+  lookback_hours: 48
+  max_log_chars: 60000
+  when: new_or_changed       # call Claude only when the problem is new or its state changed
+
+log_scan:                    # failures hidden inside green runs (`|| true`, continue-on-error)
+  enabled: true
+  workflows: []              # empty = the workflows listed on the checks above
+  lookback_hours: 24
+  max_runs: 10
+  extra_patterns: []
+  ignore: []
+
+issues:
+  enabled: true
+  label: quiet-pipelines
+  repeat_comment_hours: 24
+  assignees: []
+
+# Expiry ledger: every external dependency the pipelines rely on.
+# Moved here from config/expiry_ledger.yaml (branch watchdog-v1).
+# Fields: id, kind, name, used_by, workflows, expires (YYYY-MM-DD|null),
+#         status (active|expired|unused|broken), last_verified, check, note
+ledger:
+  warn_within_days: 30
+  stale_after_days: 30
+  items:
+    # ── YouTube OAuth tokens (one per channel) ─────────────────────────────
+    - id: yt_token_facts
+      kind: oauth_token
+      name: "config/youtube_token_facts.json  /  GitHub Secret YT_TOKEN_FACTS"
+      used_by: [facts_scheduler.py, facts_brain.py, main.py (facts-growth), src/self_healer.py, quiet-pipelines (watchdog.yml)]
+      workflows: [facts_daily, facts_analyze, facts_growth, facts_healthcheck]
+      expires: null
+      status: active
+      last_verified: 2026-11-16
+      check: >
+        The watchdog check (facts-wonders / obscura-files) reports category "auth" when the refresh fails.
+        Google revokes refresh tokens unused for 6 months, and after 7 days if the
+        OAuth consent screen is in "Testing" — check Google Cloud Console >
+        APIs & Services > OAuth consent screen > Publishing status.
+      note: Re-authenticated 2026-11-16 (old one invalid_grant). Secret YT_TOKEN_FACTS must hold the same JSON.
+
+    - id: yt_token_obscura
+      kind: oauth_token
+      name: "config/youtube_token_obscura.json  /  GitHub Secret YT_TOKEN_OBSCURA"
+      used_by: [src/obscura_pipeline.py, src/obscura_shorts_generator.py, src/self_healer.py, quiet-pipelines (watchdog.yml)]
+      workflows: [obscura_daily, facts_healthcheck]
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: Same as yt_token_facts (watchdog check obscura-files; consent-screen publishing status).
+      note: Refresh succeeded 2026-11-15. Scope youtube.force-ssl was dropped in code — comment posting may need it.
+
+    - id: yt_token_main
+      kind: oauth_token
+      name: config/youtube_token.json
+      used_by: [src/youtube_uploader.py, src/scheduler.py, src/thumbnail_generator.py]
+      workflows: []
+      expires: null
+      status: active
+      last_verified: 2026-11-16
+      check: Local only. Refresh fails => re-auth (main channel is not run by Actions).
+      note: Created 2026-11-16 (AI Japan). Not watched by the watchdog (no scheduled publishing).
+
+    - id: yt_oauth_client
+      kind: oauth_client
+      name: "config/youtube_client_secrets.json  /  GitHub Secret YT_CLIENT_SECRETS  (also YOUTUBE_CLIENT_ID / YOUTUBE_CLIENT_SECRET in .env)"
+      used_by: [facts_scheduler.py, src/youtube_uploader.py, src/obscura_pipeline.py, src/obscura_shorts_generator.py]
+      workflows: [facts_daily, facts_analyze, facts_growth, facts_healthcheck, obscura_daily]
+      expires: null
+      status: active
+      last_verified: 2026-11-16
+      check: Google Cloud Console > Credentials — client not deleted/disabled; consent screen "In production".
+      note: Desktop-app client. Rotating its secret invalidates every token above.
+
+    # ── GitHub ──────────────────────────────────────────────────────────────
+    - id: github_pat
+      kind: pat
+      name: GitHub Secret GH_PAT (fine-grained, no expiration)
+      used_by: []
+      workflows: [facts_daily, facts_analyze, facts_growth, facts_healthcheck, obscura_daily]
+      expires: null   # fine-grained token created without an expiration date
+      status: active
+      last_verified: 2026-11-17
+      check: >
+        GitHub > Settings > Developer settings > Personal access tokens > Fine-grained tokens:
+        still listed, "No expiration", not revoked. A failed `git push` / `gh secret set`
+        in facts_daily / obscura_daily is the first sign it stopped working.
+        Needs: Contents RW (checkout+push), Secrets RW (gh secret set), Actions RW (gh workflow run).
+      note: >
+        Rotated 2026-11-15 (Secret updated 16:49 UTC; pushes work since 17:01 UTC).
+        No expiry means it never warns by date: re-check it here at least every 30 days
+        (stale_after_days). The watchdog itself does NOT use it (built-in GITHUB_TOKEN only).
+        If an organization policy later forces a maximum lifetime, put the date in `expires`.
+
+    - id: dotenv_secret
+      kind: session
+      name: GitHub Secret DOTENV_CONTENTS
+      used_by: [all workflows write it to .env]
+      workflows: [facts_daily, facts_analyze, facts_growth, facts_healthcheck, obscura_daily]
+      expires: null
+      status: active
+      last_verified: 2026-11-16
+      check: Must be updated whenever a key inside .env is rotated (it is a copy, not a link).
+      note: Contains all API keys below for CI.
+
+    # ── API keys (.env names) ───────────────────────────────────────────────
+    - id: anthropic_key
+      kind: api_key
+      name: ANTHROPIC_API_KEY
+      used_by: [facts_scheduler.py, src/obscura_pipeline.py, src/obscura_shorts_generator.py, src/script_generator.py, src/short_script_generator.py, src/article_generator.py, src/error_article_generator.py]
+      workflows: [facts_daily, obscura_daily]
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: console.anthropic.com > Billing (credit balance, auto-reload). A 1-token messages call verifies the key.
+      note: Balance exhaustion stops every script generation.
+
+    - id: pexels_key
+      kind: api_key
+      name: PEXELS_API_KEY
+      used_by: [facts_scheduler.py, src/obscura_pipeline.py, src/obscura_shorts_generator.py, src/free_video_generator.py]
+      workflows: [facts_daily, obscura_daily]
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: Response header X-Ratelimit-Remaining on /videos/search (monthly allowance).
+      note: Free tier.
+
+    - id: pixabay_key
+      kind: api_key
+      name: PIXABAY_API_KEY
+      used_by: [facts_scheduler.py, facts_brain.py, src/obscura_pipeline.py, src/obscura_shorts_generator.py]
+      workflows: [facts_daily, obscura_daily]
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: GET https://pixabay.com/api/videos/?q=test returns 200.
+      note: Free tier (rate-limited per minute).
+
+    - id: freesound_key
+      kind: api_key
+      name: FREESOUND_API_KEY
+      used_by: [src/obscura_pipeline.py, src/obscura_shorts_generator.py]
+      workflows: [obscura_daily]
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: GET /apiv2/search/text/?token=... returns 200.
+      note: Free tier (daily request limit).
+
+    - id: youtube_api_key_facts
+      kind: api_key
+      name: YOUTUBE_API_KEY_FACTS
+      used_by: [config_facts.py, facts_brain.py, src/competitor_analyzer.py]
+      workflows: [facts_analyze]
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: videos.list with key returns 200. Shares the 10,000 units/day project quota.
+
+    - id: youtube_api_key_obscura
+      kind: api_key
+      name: YOUTUBE_API_KEY_OBSCURA
+      used_by: [src/config_obscura.py]
+      workflows: [obscura_daily]
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: videos.list with key returns 200.
+
+    - id: gemini_key
+      kind: api_key
+      name: GEMINI_API_KEY
+      used_by: [src/tiktok_icon_generator.py, src/image_generator.py (not in chain)]
+      workflows: []
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: GET /v1beta/models?key=... returns 200. Image output needs a paid plan (free tier = 429).
+
+    - id: hf_token
+      kind: api_key
+      name: HF_API_TOKEN
+      used_by: [src/tiktok_icon_generator.py]
+      workflows: []
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: GET https://huggingface.co/api/whoami-v2 returns 200.
+      note: Thumbnail path removed (FLUX.1-schnell 410). tiktok_icon_generator still calls an old api-inference URL — likely dead.
+
+    - id: openai_key
+      kind: api_key
+      name: OPENAI_API_KEY
+      used_by: [src/image_generator.py (not in chain)]
+      workflows: []
+      expires: null
+      status: unused
+      last_verified: 2026-11-15
+      check: Value in .env is still the placeholder (401). Ignore unless DALL-E is re-enabled.
+
+    - id: x_api
+      kind: api_key
+      name: "X_API_KEY / X_API_KEY_SECRET / X_ACCESS_TOKEN / X_ACCESS_TOKEN_SECRET (X_BEARER_TOKEN unused)"
+      used_by: [src/x_poster.py]
+      workflows: []
+      expires: null
+      status: broken
+      last_verified: 2026-11-15
+      check: GET https://api.twitter.com/2/users/me (OAuth1) — 401 on 2026-11-15. Regenerate in X developer portal; check plan tier.
+
+    - id: assemblyai_key
+      kind: api_key
+      name: ASSEMBLYAI_API_KEY
+      used_by: []
+      workflows: []
+      expires: null
+      status: unused
+      last_verified: 2026-11-15
+      check: Not referenced by any code. Candidate for removal from .env / DOTENV_CONTENTS.
+
+    - id: substack_session
+      kind: session
+      name: config/substack_session.json (cookie substack.sid) + SUBSTACK_PUBLICATION_URL
+      used_by: [src/substack_publisher.py, main.py (article, error-log)]
+      workflows: []
+      expires: 2026-11-15
+      status: expired
+      last_verified: 2026-11-15
+      check: GET {publication}/api/v1/drafts returns 403 when expired. Re-run `py main.py substack-setup` (~3-month lifetime).
+      note: When renewing, set expires to setup date + ~90 days.
+
+    # ── Models ──────────────────────────────────────────────────────────────
+    - id: model_claude_haiku_4_5
+      kind: model
+      name: claude-haiku-4-5-20251001
+      used_by: [facts_scheduler.py, config_facts.py, src/short_script_generator.py]
+      workflows: [facts_daily]
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: Anthropic models API (GET /v1/models) and docs "Model deprecations" page.
+
+    - id: model_claude_sonnet_4_5
+      kind: model
+      name: claude-sonnet-4-5 (Facts script model, first in config_facts.ANTHROPIC_MODELS)
+      used_by: [config_facts.py, facts_scheduler.py]
+      workflows: [facts_daily]
+      expires: 2026-11-30   # provider retirement date
+      status: active
+      last_verified: 2026-11-17
+      check: Anthropic docs "Model deprecations" page; GET /v1/models.
+      note: >
+        Replacement is ready on branch model-migration (claude-sonnet-5-5, plus
+        max_tokens 4000 and reading the text block, because Sonnet 5.5 thinks by
+        default). Swapping only the name makes Facts silently fall back to the
+        template script. Unknown: whether DOTENV_CONTENTS sets FACTS_ANTHROPIC_MODEL
+        (that would override the code default). After merging, set status: unused.
+
+    - id: model_claude_sonnet_4_6
+      kind: model
+      name: claude-sonnet-4-6
+      used_by: [config/config_obscura_shorts.py, src/short_script_generator.py, src/article_generator.py, src/error_article_generator.py]
+      workflows: [obscura_daily]
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: Same as above.
+
+    - id: model_claude_opus_4_6
+      kind: model
+      name: claude-opus-4-6
+      used_by: [src/obscura_pipeline.py, config/config.yaml]
+      workflows: [obscura_daily]
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: Same as above.
+
+    - id: model_env_anthropic_model
+      kind: model
+      name: ANTHROPIC_MODEL (.env)
+      used_by: []
+      workflows: []
+      expires: null
+      status: unused
+      last_verified: 2026-11-15
+      check: Points to a retired model (404) but no code reads it. Candidate for removal.
+
+    - id: model_gemini_image
+      kind: model
+      name: "gemini-2.5-flash-image / gemini-3.1-flash-image-preview"
+      used_by: [src/tiktok_icon_generator.py, src/image_generator.py (not in chain)]
+      workflows: []
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: GET /v1beta/models lists them; "preview" models are retired without long notice.
+
+    - id: model_edge_tts_voices
+      kind: model
+      name: "edge-tts voices en-US-GuyNeural, en-US-AriaNeural, en-US-JennyNeural, en-US-EmmaMultilingualNeural"
+      used_by: [facts_scheduler.py, src/obscura_pipeline.py, src/obscura_shorts_generator.py, src/free_video_generator.py]
+      workflows: [facts_daily, obscura_daily]
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: 1-sentence synthesis test. Requires edge-tts>=7.3.1 (older -> 403).
+
+    - id: model_whisper_base
+      kind: model
+      name: openai-whisper "base" (local)
+      used_by: [src/obscura_pipeline.py, src/obscura_shorts_generator.py]
+      workflows: [obscura_daily]
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: Runs locally; no expiry. Only breaks on package/Python incompatibility.
+
+    # ── Free tiers / unofficial services ────────────────────────────────────
+    - id: free_edge_tts
+      kind: free_tier
+      name: Microsoft Edge read-aloud endpoint (via edge-tts)
+      used_by: [facts_scheduler.py, src/obscura_pipeline.py, src/obscura_shorts_generator.py]
+      workflows: [facts_daily, obscura_daily]
+      expires: null
+      status: active
+      last_verified: 2026-11-15
+      check: Unofficial, no SLA. 403 = protocol changed -> `pip install -U edge-tts`. Single point of failure for ALL videos.
+
+    - id: free_pollinations
+      kind: free_tier
+      name: image.pollinations.ai
+      used_by: [src/image_generator.py]
+      workflows: [facts_daily]
+      expires: null
+      status: active
+      last_verified: 2026-11-16
+      check: Free limit 1 image / 45s / IP (402 FREE_LIMIT). Thumbnail falls back to programmatic if it fails.
+
+    - id: free_pytrends
+      kind: free_tier
+      name: Google Trends via pytrends (unofficial)
+      used_by: [facts_brain.py, src/growth_engine.py]
+      workflows: [facts_analyze]
+      expires: null
+      status: broken
+      last_verified: 2026-05-24
+      check: /trends/explore returned 404 in May; code falls back to RSS. Non-fatal.
+
+    - id: quota_youtube_data_api
+      kind: quota
+      name: YouTube Data API daily quota (10,000 units/day per Cloud project)
+      used_by: [src/quota_guard.py (budget 9,500, Facts only), quiet-pipelines (watchdog.yml, ~6 units/day)]
+      workflows: [facts_daily, facts_growth, facts_analyze, obscura_daily, watchdog]
+      expires: null   # not an expiry: a daily ceiling that resets at midnight Pacific (17:00 JST)
+      status: active
+      last_verified: 2026-11-17
+      check: >
+        Google Cloud Console > APIs & Services > YouTube Data API v3 > Quotas (per-day usage).
+        quotaExceeded in a facts_daily / obscura_daily log = over the ceiling that day.
+        Upload (videos.insert) = 1,600 units; search.list = 100; most list calls = 1.
+      note: >
+        Facts and Obscura tokens share ONE OAuth client = one project quota.
+        Estimated use per day after dedup-fix (2026-11-17, Facts 3/day):
+        Facts 3 x 1,757 = 5,271 + facts_growth 155 + facts_analyze ~12
+        + Obscura 3,353 (long 1,652 + short 1,701) + watchdog ~6 = ~8,800 / 10,000.
+        competitor_analyzer (API key, YOUTUBE_API_KEY_FACTS) adds up to ~701 if that key
+        belongs to the same Cloud project (unverified) -> ~9,500.
+        Retries after a failure and new Facts playlists (+51) are not included.
+        quota_guard only records Facts calls, so it cannot see Obscura's share.
+        History: 5 Facts/day -> 3 (quota-fix, 2026-11-15); duplicate check moved from
+        search.list (400 units/upload) to playlistItems.list (5) (dedup-fix, 2026-11-17).
+
+    - id: free_github_actions
+      kind: free_tier
+      name: GitHub Actions minutes
+      used_by: []
+      workflows: [facts_daily, facts_analyze, facts_growth, facts_healthcheck, obscura_daily]
+      expires: null
+      status: active
+      last_verified: 2026-11-16
+      check: GitHub > Settings > Billing > Actions usage (private repos have a monthly free allowance).

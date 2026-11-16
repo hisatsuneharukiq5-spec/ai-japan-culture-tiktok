@@ -1,0 +1,66 @@
+name: quiet-pipelines
+description: Catch pipelines that keep running but stop producing, and keys about to expire. Opens / updates / closes GitHub Issues.
+branding:
+  icon: eye
+  color: orange
+
+inputs:
+  config:
+    description: Path to quiet-pipelines.yml in the calling repository
+    default: quiet-pipelines.yml
+  github-token:
+    description: Token for reading Actions logs and writing Issues (the built-in token is enough)
+    default: ${{ github.token }}
+  anthropic-api-key:
+    description: Anthropic API key for the diagnosis. Leave empty to skip diagnosis.
+    default: ""
+  dry-run:
+    description: "true = do not write Issues and do not call Claude"
+    default: "false"
+  fail-on-abnormal:
+    description: "true = fail this step when something is abnormal (in addition to the Issue)"
+    default: "false"
+  python-version:
+    default: "3.12"
+
+outputs:
+  abnormal:
+    description: "true if any check or ledger item needs attention"
+    value: ${{ steps.qp.outputs.abnormal }}
+  report:
+    description: Path of the JSON report
+    value: ${{ steps.qp.outputs.report }}
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: ${{ inputs.python-version }}
+
+    - name: Install quiet-pipelines
+      shell: bash
+      run: python -m pip install --quiet --disable-pip-version-check "${{ github.action_path }}"
+
+    - name: Run quiet-pipelines
+      id: qp
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+        ANTHROPIC_API_KEY: ${{ inputs.anthropic-api-key }}
+        QP_CONFIG: ${{ inputs.config }}
+        QP_DRY_RUN: ${{ inputs.dry-run }}
+        QP_FAIL: ${{ inputs.fail-on-abnormal }}
+      run: |
+        args=(run --config "$QP_CONFIG" --output "$RUNNER_TEMP/quiet-pipelines-report.json")
+        [ "$QP_DRY_RUN" = "true" ] && args+=(--dry-run)
+        [ -z "$ANTHROPIC_API_KEY" ] && args+=(--no-diagnose)
+        set +e
+        python -m quiet_pipelines "${args[@]}"
+        code=$?
+        set -e
+        echo "report=$RUNNER_TEMP/quiet-pipelines-report.json" >> "$GITHUB_OUTPUT"
+        python -c "import json,sys;print('abnormal=' + str(json.load(open(sys.argv[1]))['abnormal']).lower())" "$RUNNER_TEMP/quiet-pipelines-report.json" >> "$GITHUB_OUTPUT" || echo "abnormal=unknown" >> "$GITHUB_OUTPUT"
+        if [ "$code" -eq 2 ]; then exit 2; fi
+        if [ "$QP_FAIL" = "true" ] && grep -q '"abnormal": true' "$RUNNER_TEMP/quiet-pipelines-report.json"; then exit 1; fi
+        exit 0

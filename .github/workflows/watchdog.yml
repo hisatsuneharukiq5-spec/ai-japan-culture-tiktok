@@ -1,0 +1,85 @@
+name: Watchdog — quiet-pipelines
+
+# Once a day: are Facts and Obscura actually publishing? Is anything in the
+# expiry ledger expired or about to expire? Did a "green" run hide a failure?
+# Abnormal -> opens / updates a GitHub Issue (label: quiet-pipelines); back to
+# normal -> closes it. Failed-run logs are diagnosed by Claude when a key is set.
+# Settings: config/quiet-pipelines.yml (no secrets in it).
+#
+# Uses only the built-in GITHUB_TOKEN (no GH_PAT): it never pushes or
+# changes secrets. YouTube cost: ~3 quota units per channel per run.
+
+on:
+  schedule:
+    - cron: "23 23 * * *"   # 08:23 JST, daily (avoids :00, when GitHub delays scheduled runs most)
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: "Dry run: no Issues, no Claude calls"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read   # checkout + read the config
+  actions: read    # read run logs for the diagnosis and the hidden-failure scan
+  issues: write    # open / comment / close Issues
+
+concurrency:
+  group: watchdog
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # The Anthropic key only exists inside DOTENV_CONTENTS. Take that one
+      # line, mask it in the logs, and hand it to the next step.
+      # (If a separate ANTHROPIC_API_KEY secret is added later, use it instead.)
+      - name: Anthropic key for the diagnosis (masked)
+        env:
+          DOTENV_CONTENTS: ${{ secrets.DOTENV_CONTENTS }}
+        run: |
+          python3 - <<'PY'
+          import os
+          value = ""
+          for line in os.environ.get("DOTENV_CONTENTS", "").splitlines():
+              s = line.strip()
+              if s.startswith("export "):
+                  s = s[7:].lstrip()
+              name, sep, val = s.partition("=")
+              if sep and name.strip() == "ANTHROPIC_API_KEY":
+                  val = val.strip()
+                  if len(val) >= 2 and val[0] == val[-1] and val[0] in "\"'":
+                      val = val[1:-1]
+                  value = val
+          if value:
+              print(f"::add-mask::{value}")
+              with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as f:
+                  f.write(f"QP_ANTHROPIC_API_KEY={value}\n")
+              print("Anthropic key found: diagnosis enabled")
+          else:
+              print("No ANTHROPIC_API_KEY in DOTENV_CONTENTS: diagnosis skipped")
+          PY
+
+      - name: Ensure the Issue label exists
+        if: ${{ inputs.dry-run != true }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh label create quiet-pipelines --color FBCA04 --description "Opened by the watchdog (quiet-pipelines)" --force --repo "$GITHUB_REPOSITORY"
+
+      # Vendored copy (quiet-pipelines is not published yet).
+      # To switch: replace this line with `OWNER/quiet-pipelines@<tag>` and
+      # delete .github/actions/quiet-pipelines/ (see VENDORED.md there).
+      - uses: ./.github/actions/quiet-pipelines
+        env:
+          YT_TOKEN_FACTS: ${{ secrets.YT_TOKEN_FACTS }}
+          YT_TOKEN_OBSCURA: ${{ secrets.YT_TOKEN_OBSCURA }}
+        with:
+          config: config/quiet-pipelines.yml
+          github-token: ${{ github.token }}
+          anthropic-api-key: ${{ env.QP_ANTHROPIC_API_KEY }}
+          dry-run: ${{ inputs.dry-run == true }}
