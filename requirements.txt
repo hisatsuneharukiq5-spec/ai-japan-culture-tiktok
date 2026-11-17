@@ -15,3 +15,4 @@ openai-whisper>=1.0.0
 ffmpeg-python>=0.2.0
 pexels_api>=1.0.0
 pytrends>=4.9.0
+Pillow>=10.0.0

@@ -9,16 +9,24 @@ logger = setup_logger("thumbnail_generator")
 THUMBNAIL_DIR = PROJECT_ROOT / "output" / "thumbnails"
 W, H = 1280, 720
 
+# Tried in order. Windows fonts first (local runs), then common Linux paths
+# (GitHub Actions ubuntu runners). If none exists, _get_font falls back to
+# Pillow's built-in font at the requested size.
 FONT_PATHS = [
     "C:/Windows/Fonts/impact.ttf",
     "C:/Windows/Fonts/arialbd.ttf",
     "C:/Windows/Fonts/verdanab.ttf",
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+    "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+    "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf",
 ]
 KANJI_FONT_PATHS = [
     "C:/Windows/Fonts/NotoSansJP-VF.ttf",
     "C:/Windows/Fonts/meiryo.ttc",
     "C:/Windows/Fonts/YuGothB.ttc",
     "C:/Windows/Fonts/msgothic.ttc",
+    "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
+    "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
 ]
 
 # ---------------------------------------------------------------------------
@@ -85,7 +93,13 @@ def _get_font(size: int) -> ImageFont.FreeTypeFont:
             return ImageFont.truetype(path, size)
         except (IOError, OSError):
             continue
-    return ImageFont.load_default()
+    # No font file found (e.g. a Linux runner without these fonts).
+    # Pillow >= 10.1 can scale its built-in font; plain load_default() is a
+    # fixed ~10px font, which makes the thumbnail text unreadable.
+    try:
+        return ImageFont.load_default(size=size)
+    except TypeError:  # Pillow < 10.1
+        return ImageFont.load_default()
 
 
 def _get_kanji_font(size: int):
