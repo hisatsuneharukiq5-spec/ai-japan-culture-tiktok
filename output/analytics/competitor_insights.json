@@ -1,11 +1,12 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 50,
+  "videos_analyzed": 45,
   "pattern_counts": {
-    "statement": 30,
-    "number-lead": 8,
+    "statement": 26,
+    "science-discovery": 1,
+    "number-lead": 7,
     "wh-question": 4,
-    "statistic": 5,
+    "statistic": 4,
     "did-you-know": 3
   },
   "top_hooks": [
@@ -15,7 +16,6 @@
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "Did You Know That In",
-    "Did You Understand",
     "How wound stitches really work",
     "Did You Know This Fact",
     "Did You Know: Titanic Fun"
@@ -24,55 +24,53 @@
     "science",
     "experiment",
     "physics",
-    "amazing",
     "ashusir",
-    "could",
+    "human",
     "scienceandfun",
     "sciencefacts",
-    "human",
+    "amazing",
+    "unbelievable",
     "never",
-    "fastest",
-    "unbelievable"
+    "fastest"
   ],
   "top_hashtags": [
     "#shorts",
     "#facts",
-    "#science",
     "#viral",
+    "#science",
     "#trending",
     "#knowledge",
-    "#new",
-    "#latest",
     "#youtubeshorts",
+    "#funny",
     "#education",
-    "#factsmine",
-    "#top",
     "#experiment",
-    "#science experiments",
-    "#fact",
-    "#didyouknow"
+    "#didyouknow",
+    "#animation",
+    "#youtube shorts",
+    "#physics",
+    "#new"
   ],
   "top_topics": [
     "science",
     "experiment",
     "physics",
-    "didn",
     "ashusir",
-    "could",
+    "didn",
     "scienceandfun",
     "sciencefacts",
-    "save",
-    "life",
-    "amazing",
+    "human",
     "cool",
+    "gravity",
     "gifts",
-    "funny",
     "ocean",
     "journey",
     "earth",
-    "half",
     "chemistry",
-    "ytshorts"
+    "ytshorts",
+    "amazing",
+    "want",
+    "tricks",
+    "kids"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -85,7 +83,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.2,
+  "avg_duration_secs": 43.0,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -93,8 +91,8 @@
     "This can help make Artificial",
     "How Deep Do Humans Have",
     "Did You Know That In",
-    "Did You Understand",
-    "How wound stitches really work"
+    "How wound stitches really work",
+    "Did You Know This Fact"
   ],
-  "timestamp": "2026-11-16T23:49:20"
+  "timestamp": "2026-11-17T23:05:14"
 }
