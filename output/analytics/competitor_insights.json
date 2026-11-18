@@ -1,11 +1,11 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 45,
+  "videos_analyzed": 46,
   "pattern_counts": {
-    "statement": 26,
+    "statement": 25,
     "science-discovery": 1,
     "number-lead": 7,
-    "wh-question": 4,
+    "wh-question": 6,
     "statistic": 4,
     "did-you-know": 3
   },
@@ -15,6 +15,7 @@
     "Never Do This | Science",
     "This can help make Artificial",
     "How Deep Do Humans Have",
+    "How gullible are you",
     "Did You Know That In",
     "How wound stitches really work",
     "Did You Know This Fact",
@@ -40,22 +41,22 @@
     "#science",
     "#trending",
     "#knowledge",
-    "#youtubeshorts",
-    "#funny",
     "#education",
     "#experiment",
-    "#didyouknow",
-    "#animation",
     "#youtube shorts",
+    "#funny",
     "#physics",
-    "#new"
+    "#amazing",
+    "#viralshorts",
+    "#didyouknow",
+    "#memes"
   ],
   "top_topics": [
     "science",
     "experiment",
     "physics",
-    "ashusir",
     "didn",
+    "ashusir",
     "scienceandfun",
     "sciencefacts",
     "human",
@@ -83,16 +84,16 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.0,
+  "avg_duration_secs": 42.5,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
     "Never Do This | Science",
     "This can help make Artificial",
     "How Deep Do Humans Have",
+    "How gullible are you",
     "Did You Know That In",
-    "How wound stitches really work",
-    "Did You Know This Fact"
+    "How wound stitches really work"
   ],
-  "timestamp": "2026-11-17T23:05:14"
+  "timestamp": "2026-11-18T22:41:34"
 }
