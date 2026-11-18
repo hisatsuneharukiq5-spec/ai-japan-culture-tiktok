@@ -278,19 +278,21 @@ ledger:
 
     - id: model_claude_sonnet_4_5
       kind: model
-      name: claude-sonnet-4-5 (Facts script model, first in config_facts.ANTHROPIC_MODELS)
-      used_by: [config_facts.py, facts_scheduler.py]
-      workflows: [facts_daily]
+      name: claude-sonnet-4-5 (was the Facts script model; replaced by claude-sonnet-5-5)
+      used_by: []
+      workflows: []
       expires: 2026-11-30   # provider retirement date
-      status: active
-      last_verified: 2026-11-17
+      status: unused
+      last_verified: 2026-11-18
       check: Anthropic docs "Model deprecations" page; GET /v1/models.
       note: >
-        Replacement is ready on branch model-migration (claude-sonnet-5-5, plus
-        max_tokens 4000 and reading the text block, because Sonnet 5.5 thinks by
-        default). Swapping only the name makes Facts silently fall back to the
-        template script. Unknown: whether DOTENV_CONTENTS sets FACTS_ANTHROPIC_MODEL
-        (that would override the code default). After merging, set status: unused.
+        Replaced on 2026-11-18 by claude-sonnet-5-5 in config_facts.ANTHROPIC_MODELS,
+        with max_tokens 4000 and reading the first text block (Sonnet 5.5 thinks by
+        default; swapping only the name made Facts silently fall back to the template
+        script). No tracked file references claude-sonnet-4-5 any more. The local .env
+        has no FACTS_ANTHROPIC_MODEL; whether DOTENV_CONTENTS (CI) sets it is still
+        unverified: if it named claude-sonnet-4-5, Facts would fall through to the next
+        model in the list after the retirement date.
 
     - id: model_claude_sonnet_4_6
       kind: model
