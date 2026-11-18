@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "0 16 * * *"   # 01:00 JST — long-form + short, runs once/day
   workflow_dispatch:
+    inputs:
+      skip_upload:
+        description: "Test run: build both videos, stop right before any YouTube upload (no commit, no secret rotation, no retry)"
+        type: boolean
+        default: false
 
 concurrency:
   group: obscura-post
@@ -13,6 +18,13 @@ jobs:
   post-obscura:
     runs-on: ubuntu-latest
     timeout-minutes: 90      # long-form video generation takes up to 60 min
+    # Test runs (skip_upload) end "success" even if a step fails, so the self-healing
+    # health check (triggered on failure, runs from main) does not react to a test.
+    # The steps' own results still show what failed. Scheduled runs: unchanged (false).
+    continue-on-error: ${{ inputs.skip_upload == true }}
+    env:
+      # Empty on schedule and on normal manual runs -> uploads as usual.
+      OBSCURA_SKIP_UPLOAD: ${{ inputs.skip_upload == true && '1' || '' }}
 
     steps:
       - uses: actions/checkout@v4
@@ -43,26 +55,30 @@ jobs:
           printf '%s' "$YT_CLIENT_SECRETS" > config/youtube_client_secrets.json
           printf '%s' "$DOTENV_CONTENTS"   > .env
 
+      # Under a memory ceiling: an out-of-memory kill stops the pipeline, not the runner,
+      # so the log and the steps below survive. Memory is printed every minute + the peak.
       - name: Run Obscura pipeline (long-form + short)
         id: obscura_run
-        run: python main.py obscura-run
+        run: bash .github/scripts/run_with_memory_cap.sh python main.py obscura-run
         env:
           PYTHONIOENCODING: utf-8
           PYTHONUNBUFFERED: "1"
+          MEMORY_MAX: 12G
 
-      # Retry once on failure with a fresh attempt
+      # Retry once on failure with a fresh attempt (not in test runs)
       - name: Retry Obscura pipeline on failure
-        if: failure() && steps.obscura_run.outcome == 'failure'
+        if: failure() && steps.obscura_run.outcome == 'failure' && inputs.skip_upload != true
         run: |
           echo "First attempt failed — retrying after 30s..."
           sleep 30
-          python main.py obscura-run
+          bash .github/scripts/run_with_memory_cap.sh python main.py obscura-run
         env:
           PYTHONIOENCODING: utf-8
           PYTHONUNBUFFERED: "1"
+          MEMORY_MAX: 12G
 
       - name: Commit registry update
-        if: always()
+        if: always() && inputs.skip_upload != true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -73,7 +89,7 @@ jobs:
 
       # Always rotate the token — even if upload failed, token may have refreshed
       - name: Rotate Obscura token secret
-        if: always()
+        if: always() && inputs.skip_upload != true
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
