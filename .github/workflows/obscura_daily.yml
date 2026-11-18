@@ -17,7 +17,7 @@ concurrency:
 jobs:
   post-obscura:
     runs-on: ubuntu-latest
-    timeout-minutes: 90      # long-form video generation takes up to 60 min
+    timeout-minutes: 150     # #218: the long-form alone took 63 min, and the Short runs after it
     # Test runs (skip_upload) end "success" even if a step fails, so the self-healing
     # health check (triggered on failure, runs from main) does not react to a test.
     # The steps' own results still show what failed. Scheduled runs: unchanged (false).
@@ -44,16 +44,32 @@ jobs:
       - name: Install Python deps
         run: pip install -r requirements.txt pytrends
 
+      # Test runs (skip_upload) get NO YouTube credentials: even if the skip check failed,
+      # the uploaders would find no token and no OAuth client and could not post anything.
       - name: Restore credentials
         env:
-          YT_TOKEN_OBSCURA:  ${{ secrets.YT_TOKEN_OBSCURA }}
-          YT_CLIENT_SECRETS: ${{ secrets.YT_CLIENT_SECRETS }}
+          YT_TOKEN_OBSCURA:  ${{ inputs.skip_upload != true && secrets.YT_TOKEN_OBSCURA || '' }}
+          YT_CLIENT_SECRETS: ${{ inputs.skip_upload != true && secrets.YT_CLIENT_SECRETS || '' }}
           DOTENV_CONTENTS:   ${{ secrets.DOTENV_CONTENTS }}
         run: |
           mkdir -p config
-          printf '%s' "$YT_TOKEN_OBSCURA"  > config/youtube_token_obscura.json
-          printf '%s' "$YT_CLIENT_SECRETS" > config/youtube_client_secrets.json
+          if [ "$OBSCURA_SKIP_UPLOAD" = "1" ]; then
+            echo "skip_upload: YouTube token and OAuth client were NOT restored"
+          else
+            printf '%s' "$YT_TOKEN_OBSCURA"  > config/youtube_token_obscura.json
+            printf '%s' "$YT_CLIENT_SECRETS" > config/youtube_client_secrets.json
+          fi
           printf '%s' "$DOTENV_CONTENTS"   > .env
+
+      - name: "skip_upload: confirm no YouTube credentials are present"
+        if: inputs.skip_upload == true
+        run: |
+          found=0
+          for f in config/youtube_token*.json config/youtube_client_secrets*.json; do
+            if [ -e "$f" ]; then echo "::error::credential file present in a test run: $f"; found=1; fi
+          done
+          if [ "$found" = 0 ]; then echo "OK: no YouTube token or OAuth client file in config/"; fi
+          exit "$found"
 
       # Under a memory ceiling: an out-of-memory kill stops the pipeline, not the runner,
       # so the log and the steps below survive. Memory is printed every minute + the peak.

@@ -11,13 +11,37 @@
 # Prints the scope's memory every MEM_SAMPLE_SECONDS (default 60) and, at the end, the
 # peak (memory.peak) and memory.events (oom_kill count). Exits with the command's status.
 # Env: MEMORY_MAX (default 12G), MEM_SAMPLE_SECONDS (default 60).
+#
+# Environment: sudo / systemd-run do not reliably pass the caller's environment through
+# (run #218 lost OBSCURA_SKIP_UPLOAD), so the outside sends it to the inside on stdin:
+# line 1 = the variable NAMES, then `export -p`. Inside, the environment is restored and
+# the names (never the values) are compared and logged. Nothing is written to disk and no
+# value appears on a command line.
 set -uo pipefail
 
 LIMIT="${MEMORY_MAX:-12G}"
 SAMPLE="${MEM_SAMPLE_SECONDS:-60}"
 
 if [ "${_MEMCAP_INSIDE:-}" = "1" ]; then
-  # ---- inside the scope: watch memory, run the command, report ----
+  # ---- inside the scope: restore the environment, watch memory, run the command, report ----
+  if [ "${_MEMCAP_ENV_ON_STDIN:-}" = "1" ]; then
+    IFS= read -r outer_names
+    ignore='^(_MEMCAP_INSIDE|_MEMCAP_ENV_ON_STDIN|MEM_SAMPLE_SECONDS|SUDO_[A-Z_]*|OLDPWD|_)$'
+    before_restore=$(compgen -e | LC_ALL=C sort -u)
+    # Top level (not a function), so every `declare -x` stays global. Read-only names
+    # (e.g. SHELLOPTS) cannot be re-declared; their errors are dropped.
+    # shellcheck disable=SC1091
+    source /dev/stdin 2>/dev/null
+    exec </dev/null     # the command itself gets no stdin, as before
+    unset _MEMCAP_ENV_ON_STDIN
+    outer_sorted=$(tr ' ' '\n' <<< "$outer_names" | grep -v '^$' | grep -Ev "$ignore" | LC_ALL=C sort -u)
+    inner_sorted=$(compgen -e | grep -Ev "$ignore" | LC_ALL=C sort -u)
+    lost=$(LC_ALL=C comm -23 <(echo "$outer_sorted") <(echo "$before_restore") | tr '\n' ' ')
+    missing=$(LC_ALL=C comm -23 <(echo "$outer_sorted") <(echo "$inner_sorted") | tr '\n' ' ')
+    echo "[memcap] env outside: $(grep -c . <<< "$outer_sorted") names | inside: $(grep -c . <<< "$inner_sorted") names | missing inside: $(wc -w <<< "$missing")${missing:+ ($missing)}"
+    echo "[memcap] env names inside (values not shown): $(tr '\n' ' ' <<< "$inner_sorted")"
+    echo "[memcap] dropped by sudo/systemd-run before the restore (names only): $(wc -w <<< "$lost")${lost:+ ($lost)}"
+  fi
   cg="/sys/fs/cgroup$(awk -F: '$1 == "0" { print $3 }' /proc/self/cgroup)"
   mib() { awk '{ printf "%.0f MiB", $1 / 1048576 }' "$1" 2>/dev/null || echo "n/a"; }
   echo "[memcap] cgroup ${cg#/sys/fs/cgroup} | MemoryMax=$(cat "$cg/memory.max" 2>/dev/null || echo n/a) bytes"
@@ -35,14 +59,16 @@ if [ "${_MEMCAP_INSIDE:-}" = "1" ]; then
   exit "$rc"
 fi
 
-# ---- outside: start the scope (sudo strips PATH / LD_* so they are passed explicitly) ----
+# ---- outside: start the scope and send the whole environment through on stdin ----
 if sudo -n systemd-run --scope --quiet --collect -p MemoryMax=64M --uid="$(id -u)" --gid="$(id -g)" /bin/true 2>/dev/null; then
   echo "[memcap] running under a systemd scope with MemoryMax=$LIMIT (swap disabled for the scope)"
-  exec sudo -n --preserve-env systemd-run --scope --quiet --collect \
-    -p MemoryMax="$LIMIT" -p MemorySwapMax=0 \
-    --uid="$(id -u)" --gid="$(id -g)" \
-    /usr/bin/env PATH="$PATH" LD_LIBRARY_PATH="${LD_LIBRARY_PATH:-}" HOME="$HOME" _MEMCAP_INSIDE=1 \
-    MEM_SAMPLE_SECONDS="$SAMPLE" bash "$0" "$@"
+  { compgen -e | tr '\n' ' '; echo; export -p; } |
+    sudo -n systemd-run --scope --quiet --collect \
+      -p MemoryMax="$LIMIT" -p MemorySwapMax=0 \
+      --uid="$(id -u)" --gid="$(id -g)" \
+      /usr/bin/env PATH="$PATH" HOME="$HOME" _MEMCAP_INSIDE=1 _MEMCAP_ENV_ON_STDIN=1 \
+      MEM_SAMPLE_SECONDS="$SAMPLE" bash "$0" "$@"
+  exit "${PIPESTATUS[1]}"
 else
   echo "[memcap] WARNING: systemd-run scope not available here; running WITHOUT a memory cap (still reporting usage)"
   _MEMCAP_INSIDE=1 exec bash "$0" "$@"
