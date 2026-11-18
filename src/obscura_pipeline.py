@@ -745,7 +745,44 @@ def _prepare_clip_segment(in_path: Path, out_path: Path, start_sec: float, lengt
     subprocess.run(cmd, check=True)
 
 
+CROSSFADE_CHUNK_SIZE = 10
+
+
 def _build_crossfade_video(clips: list[Path], clip_lengths: list[float], out_path: Path, fade_duration: float = 0.5):
+    """Crossfade all clips into one video, in chunks to bound memory.
+
+    Opening ~110 inputs in a single ffmpeg filter graph exhausted RAM, so clips
+    are crossfaded CROSSFADE_CHUNK_SIZE at a time, then the chunk videos are
+    crossfaded together with the same fade. Every clip boundary (inside and
+    between chunks) still gets the same `fade_duration` xfade, so the visual
+    result and total length match the single-pass version.
+    """
+    if len(clips) <= CROSSFADE_CHUNK_SIZE:
+        _crossfade_single_pass(clips, clip_lengths, out_path, fade_duration, crf=20)
+        return
+
+    chunk_paths: list[Path] = []
+    chunk_lengths: list[float] = []
+    for n, start in enumerate(range(0, len(clips), CROSSFADE_CHUNK_SIZE)):
+        part = out_path.with_name(f"{out_path.stem}_chunk{n:02d}.mp4")
+        _crossfade_single_pass(
+            clips[start:start + CROSSFADE_CHUNK_SIZE],
+            clip_lengths[start:start + CROSSFADE_CHUNK_SIZE],
+            part,
+            fade_duration,
+            crf=16,  # near-lossless intermediate; re-encoded once more below
+        )
+        chunk_paths.append(part)
+        chunk_lengths.append(_audio_duration(part))
+        logger.info(f"Crossfade chunk {n + 1}: {part.name} ({chunk_lengths[-1]:.1f}s)")
+
+    # Recurse in case there are more chunks than CROSSFADE_CHUNK_SIZE.
+    _build_crossfade_video(chunk_paths, chunk_lengths, out_path, fade_duration)
+
+
+def _crossfade_single_pass(
+    clips: list[Path], clip_lengths: list[float], out_path: Path, fade_duration: float, crf: int = 20
+):
     if len(clips) == 1:
         shutil.copy(str(clips[0]), str(out_path))
         return
@@ -775,7 +812,7 @@ def _build_crossfade_video(clips: list[Path], clip_lengths: list[float], out_pat
         "-r", "30",
         "-c:v", "libx264",
         "-preset", "medium",
-        "-crf", "20",
+        "-crf", str(crf),
         str(out_path),
     ])
     subprocess.run(cmd, check=True)
@@ -1389,6 +1426,18 @@ class ObscuraVideoGenerator:
                 pass
 
 
+def skip_upload_requested() -> bool:
+    """True when OBSCURA_SKIP_UPLOAD is set (manual test runs): build everything, upload nothing."""
+    return os.getenv("OBSCURA_SKIP_UPLOAD", "").strip().lower() in ("1", "true", "yes")
+
+
+def _describe_video(path: Path) -> str:
+    try:
+        return f"{path.stat().st_size / 1e6:.1f} MB, {_audio_duration(path):.1f}s"
+    except Exception as exc:  # describing the file must never break the run
+        return f"size/duration unavailable ({type(exc).__name__})"
+
+
 def run_obscura_pipeline(topic: str | None = None) -> dict:
     lock_path = _acquire_obscura_run_lock()
     if lock_path is None:
@@ -1438,6 +1487,18 @@ def run_obscura_pipeline(topic: str | None = None) -> dict:
 
         video_gen = ObscuraVideoGenerator()
         video_path = video_gen.generate(script_data)
+
+        if skip_upload_requested():
+            logger.info("SKIP_UPLOAD: long-form video is ready and was NOT uploaded: %s (%s)",
+                        video_path, _describe_video(Path(video_path)))
+            return {
+                "video_id": None,
+                "video_path": str(video_path),
+                "title": script_data.get("title", ""),
+                "topic": script_data.get("topic", topic or ""),
+                "skipped": True,
+                "reason": "skip_upload",
+            }
 
         uploader = ObscuraYouTubeUploader()
         video_id = uploader.upload(video_path, script_data)

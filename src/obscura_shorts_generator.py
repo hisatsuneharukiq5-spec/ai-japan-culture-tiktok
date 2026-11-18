@@ -1326,7 +1326,12 @@ def run_obscura_shorts_pipeline(topic: str | None = None, long_form_video_id: st
         if resolved_longform_id:
             logger.info("Found existing long-form for topic '%s': %s", chosen_topic, resolved_longform_id)
 
-    if not resolved_longform_id and chosen_topic:
+    from src.obscura_pipeline import skip_upload_requested
+
+    if not resolved_longform_id and chosen_topic and skip_upload_requested():
+        # In a no-upload test run the long-form was built but has no video id; do not build it again.
+        logger.info("SKIP_UPLOAD: not generating a long-form video for the Short (no upload in this run)")
+    elif not resolved_longform_id and chosen_topic:
         logger.info("No long-form found for '%s'. Generating long-form video first...", chosen_topic)
         try:
             from src.obscura_pipeline import run_obscura_pipeline
@@ -1380,7 +1385,22 @@ def run_obscura_shorts_pipeline(topic: str | None = None, long_form_video_id: st
             "Failed to generate Obscura Shorts video within duration limit"
         )
 
-    # Step 4: Upload to YouTube.
+    # Step 4: Upload to YouTube (skipped in no-upload test runs).
+    if skip_upload_requested():
+        from src.obscura_pipeline import _describe_video
+        logger.info("SKIP_UPLOAD: Short is ready and was NOT uploaded: %s (%s)",
+                    video_path, _describe_video(Path(video_path)))
+        return {
+            "video_id": None,
+            "video_url": None,
+            "title": script_data["title"],
+            "topic": chosen_topic,
+            "video_path": str(video_path),
+            "long_form_url": long_form_url,
+            "skipped": True,
+            "reason": "skip_upload",
+        }
+
     uploader = ObscuraShortsUploader()
     video_id = uploader.upload(video_path, script_data)
 
