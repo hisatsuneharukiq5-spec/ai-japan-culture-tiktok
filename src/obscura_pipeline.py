@@ -748,7 +748,9 @@ def _prepare_clip_segment(in_path: Path, out_path: Path, start_sec: float, lengt
 CROSSFADE_CHUNK_SIZE = 10
 
 
-def _build_crossfade_video(clips: list[Path], clip_lengths: list[float], out_path: Path, fade_duration: float = 0.5):
+def _build_crossfade_video(
+    clips: list[Path], clip_lengths: list[float], out_path: Path, fade_duration: float = 0.5, _level: int = 1
+):
     """Crossfade all clips into one video, in chunks to bound memory.
 
     Opening ~110 inputs in a single ffmpeg filter graph exhausted RAM, so clips
@@ -756,6 +758,10 @@ def _build_crossfade_video(clips: list[Path], clip_lengths: list[float], out_pat
     crossfaded together with the same fade. Every clip boundary (inside and
     between chunks) still gets the same `fade_duration` xfade, so the visual
     result and total length match the single-pass version.
+
+    With more than CROSSFADE_CHUNK_SIZE chunks this recurses; each level names its
+    chunk files with the level number (`_L1_`, `_L2_`, ...) so a level never writes
+    over a file it is reading (run #217 failed exactly like that with 106 clips).
     """
     if len(clips) <= CROSSFADE_CHUNK_SIZE:
         _crossfade_single_pass(clips, clip_lengths, out_path, fade_duration, crf=20)
@@ -764,7 +770,7 @@ def _build_crossfade_video(clips: list[Path], clip_lengths: list[float], out_pat
     chunk_paths: list[Path] = []
     chunk_lengths: list[float] = []
     for n, start in enumerate(range(0, len(clips), CROSSFADE_CHUNK_SIZE)):
-        part = out_path.with_name(f"{out_path.stem}_chunk{n:02d}.mp4")
+        part = out_path.with_name(f"{out_path.stem}_L{_level}_chunk{n:02d}.mp4")
         _crossfade_single_pass(
             clips[start:start + CROSSFADE_CHUNK_SIZE],
             clip_lengths[start:start + CROSSFADE_CHUNK_SIZE],
@@ -774,10 +780,10 @@ def _build_crossfade_video(clips: list[Path], clip_lengths: list[float], out_pat
         )
         chunk_paths.append(part)
         chunk_lengths.append(_audio_duration(part))
-        logger.info(f"Crossfade chunk {n + 1}: {part.name} ({chunk_lengths[-1]:.1f}s)")
+        logger.info(f"Crossfade chunk L{_level}-{n + 1}: {part.name} ({chunk_lengths[-1]:.1f}s)")
 
     # Recurse in case there are more chunks than CROSSFADE_CHUNK_SIZE.
-    _build_crossfade_video(chunk_paths, chunk_lengths, out_path, fade_duration)
+    _build_crossfade_video(chunk_paths, chunk_lengths, out_path, fade_duration, _level=_level + 1)
 
 
 def _crossfade_single_pass(
