@@ -583,6 +583,21 @@
       "file_sha256": "ceb9eebb422040eb648fdae3eb35e528e6701cb6d50ecaf2d366189011a89ab9",
       "script_sha256": "8c68070b56d42ed23596d80b9b1488180c8ce98d6174b8fb8185155b42959805",
       "status": "uploaded"
+    },
+    {
+      "uploaded_at": "2026-11-18T23:36:41.002657+00:00",
+      "channel_id": "UCoKDxOC6OdqsqWpFrSJn3JQ",
+      "channel_title": "The Obscura Files",
+      "video_id": "T8DfDLGJmqg",
+      "video_url": "https://www.youtube.com/shorts/T8DfDLGJmqg",
+      "title": "Who Killed Lisbon Had a Ripper No One Ca #Shorts #DarkHistory #Mystery",
+      "topic": "The Lisbon Ripper Unsolved Case",
+      "title_pattern_type": "question",
+      "video_path": "/home/runner/work/ai-japan-culture-tiktok/ai-japan-culture-tiktok/output/videos/obscura_short_20261118_233524.mp4",
+      "thumbnail_path": "/home/runner/work/ai-japan-culture-tiktok/ai-japan-culture-tiktok/output/thumbnails/obscura_T8DfDLGJmqg_Who_Killed_Lisbon_Had_a_Ripper_No_One_Ca_Shorts_DarkHistory_.jpg",
+      "file_sha256": "a72c91919513dd5e819a49100ff60f95e5c4af864e654456252bcba3c21b9696",
+      "script_sha256": "6eae99d0670eef121bbf468382cc97bc256f951ab0160a256a674b3424498e05",
+      "status": "uploaded"
     }
   ]
 }
