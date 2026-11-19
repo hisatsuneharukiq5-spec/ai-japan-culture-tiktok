@@ -598,6 +598,21 @@
       "file_sha256": "a72c91919513dd5e819a49100ff60f95e5c4af864e654456252bcba3c21b9696",
       "script_sha256": "6eae99d0670eef121bbf468382cc97bc256f951ab0160a256a674b3424498e05",
       "status": "uploaded"
+    },
+    {
+      "uploaded_at": "2026-11-19T23:55:52.625617+00:00",
+      "channel_id": "UCoKDxOC6OdqsqWpFrSJn3JQ",
+      "channel_title": "The Obscura Files",
+      "video_id": "XC31ay0c1hc",
+      "video_url": "https://www.youtube.com/shorts/XC31ay0c1hc",
+      "title": "What Happened to It Rained Jelly Over a #Shorts #DarkHistory #Mystery",
+      "topic": "The Oakville Blobs Mystery",
+      "title_pattern_type": "question",
+      "video_path": "/home/runner/work/ai-japan-culture-tiktok/ai-japan-culture-tiktok/output/videos/obscura_short_20261119_235446.mp4",
+      "thumbnail_path": "/home/runner/work/ai-japan-culture-tiktok/ai-japan-culture-tiktok/output/thumbnails/obscura_XC31ay0c1hc_What_Happened_to_It_Rained_Jelly_Over_a_Shorts_DarkHistory_M.jpg",
+      "file_sha256": "79d1b40c7e882dac1e449dea6857827f726d43decc676634c27c09b91f0ddaff",
+      "script_sha256": "1c004f0c1cea4173156385977a90ba66c6f7d3a79af7f8eb8467d922a6bec8e7",
+      "status": "uploaded"
     }
   ]
 }
