@@ -1090,6 +1090,13 @@ class ObscuraShortsUploader:
         status = body.setdefault("status", {})
         status["containsSyntheticMedia"] = True
         status["selfDeclaredAsModifiedContent"] = True
+        from src.obscura_pipeline import apply_publish_schedule
+        apply_publish_schedule(
+            status,
+            config_shorts.UPLOAD_PRIVACY,
+            getattr(config_shorts, "PUBLISH_AT_UTC", None),
+            float(getattr(config_shorts, "PUBLISH_MIN_LEAD_HOURS", 2)),
+        )
         
         media = MediaFileUpload(str(video_path), chunksize=-1, resumable=True, mimetype="video/mp4")
         

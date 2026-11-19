@@ -116,6 +116,12 @@ LOGS_DIR = "logs"
 
 # Upload Growth Settings
 UPLOAD_PRIVACY = "private"
+# Scheduled publish (publishAt). Uploads stay private and YouTube makes them public at the
+# next PUBLISH_AT_UTC that is at least PUBLISH_MIN_LEAD_HOURS away, which leaves a window to
+# check or cancel the video in YouTube Studio. In March-April 2026 most videos went public at
+# about 15:00 UTC (00:00 JST). Set PUBLISH_AT_UTC = None to keep uploads private.
+PUBLISH_AT_UTC = "15:00"
+PUBLISH_MIN_LEAD_HOURS = 2
 SUBSCRIBE_CTA = "Subscribe to The Obscura Files for weekly unsolved mysteries, dark history, and true crime documentaries."
 DEFAULT_HASHTAGS = [
     "#UnsolvedMysteries",

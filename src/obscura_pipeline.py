@@ -9,7 +9,7 @@ import re
 import shutil
 import subprocess
 import tempfile
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import anthropic
@@ -1170,6 +1170,12 @@ class ObscuraYouTubeUploader:
         status = body.setdefault("status", {})
         status["containsSyntheticMedia"] = True
         status["selfDeclaredAsModifiedContent"] = True
+        apply_publish_schedule(
+            status,
+            getattr(config_obscura, "UPLOAD_PRIVACY", "public"),
+            getattr(config_obscura, "PUBLISH_AT_UTC", None),
+            float(getattr(config_obscura, "PUBLISH_MIN_LEAD_HOURS", 2)),
+        )
 
         media = MediaFileUpload(str(video_path), mimetype="video/mp4", resumable=True, chunksize=2 * 1024 * 1024)
         request = self.youtube.videos().insert(
@@ -1430,6 +1436,30 @@ class ObscuraVideoGenerator:
                 shutil.rmtree(tmpdir)
             except Exception:
                 pass
+
+
+def next_publish_at(hhmm_utc: str | None, min_lead_hours: float = 2.0, now: datetime | None = None) -> str | None:
+    """Next HH:MM (UTC) that is at least min_lead_hours from now, as YouTube publishAt; None if unset."""
+    if not hhmm_utc:
+        return None
+    now = now or datetime.now(timezone.utc)
+    hour, minute = (int(x) for x in str(hhmm_utc).split(":"))
+    at = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    while at - now < timedelta(hours=min_lead_hours):
+        at += timedelta(days=1)
+    return at.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def apply_publish_schedule(status: dict, privacy: str, publish_at_utc: str | None, min_lead_hours: float) -> str | None:
+    """Set privacyStatus and, for private uploads with a configured slot, publishAt. Returns publishAt."""
+    status["privacyStatus"] = privacy
+    publish_at = next_publish_at(publish_at_utc, min_lead_hours) if privacy == "private" else None
+    if publish_at:
+        status["publishAt"] = publish_at   # YouTube accepts publishAt only on private videos
+        logger.info("Scheduled publish: private now, public at %s (UTC)", publish_at)
+    else:
+        logger.info("Upload privacy: %s (no scheduled publish)", privacy)
+    return publish_at
 
 
 def skip_upload_requested() -> bool:

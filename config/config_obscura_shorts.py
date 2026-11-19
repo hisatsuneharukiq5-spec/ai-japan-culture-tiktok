@@ -57,6 +57,13 @@ BGM_FADE_DURATION = 0.5  # seconds
 
 # Upload Settings
 UPLOAD_PRIVACY = "private"
+# Scheduled publish (publishAt). Uploads stay private and YouTube makes them public at the
+# next PUBLISH_AT_UTC that is at least PUBLISH_MIN_LEAD_HOURS away, which leaves a window to
+# check or cancel the video in YouTube Studio. In March-April 2026 most videos went public at
+# about 15:00 UTC (00:00 JST). Set PUBLISH_AT_UTC = None to keep uploads private.
+# Same slot as the long-form, so the Short never goes public before the long-form it links to.
+PUBLISH_AT_UTC = "15:00"
+PUBLISH_MIN_LEAD_HOURS = 2
 UPLOAD_CATEGORY_ID = "27"  # Education
 YOUTUBE_OBSCURA_CLIENT_SECRETS_FILE = "config/youtube_client_secrets.json"
 YOUTUBE_OBSCURA_TOKEN_FILE = "config/youtube_token_obscura.json"
