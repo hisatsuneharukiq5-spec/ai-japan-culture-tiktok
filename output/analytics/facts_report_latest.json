@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-18T22:41:34",
+  "timestamp": "2026-11-19T22:45:32",
   "internal": {
     "top5_patterns": [
       {
@@ -30,7 +30,7 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 46,
+    "videos_analyzed": 47,
     "popular_topics": [
       "science",
       "experiment",
@@ -39,7 +39,7 @@
       "ashusir",
       "scienceandfun",
       "sciencefacts",
-      "human"
+      "amazing"
     ],
     "hashtags": [
       "#shorts",
@@ -50,13 +50,14 @@
       "#knowledge",
       "#education",
       "#experiment",
+      "#youtubeshorts",
       "#youtube shorts",
       "#funny",
       "#physics",
-      "#amazing",
-      "#viralshorts",
-      "#didyouknow",
-      "#memes"
+      "#factsmine",
+      "#new",
+      "#latest",
+      "#didyouknow"
     ],
     "hook_phrases": [
       "This is SO cool",
@@ -64,9 +65,9 @@
       "Never Do This | Science",
       "This can help make Artificial",
       "How Deep Do Humans Have",
-      "How gullible are you",
       "Did You Know That In",
-      "How wound stitches really work"
+      "How wound stitches really work",
+      "Did You Know This Fact"
     ],
     "title_templates": [
       "Did you know that {fact}? #Shorts",
@@ -85,18 +86,18 @@
       "physics",
       "ashusir",
       "human",
+      "amazing",
       "scienceandfun",
       "sciencefacts",
-      "amazing",
       "unbelievable",
       "never",
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 25,
+      "statement": 26,
       "science-discovery": 1,
-      "number-lead": 7,
-      "wh-question": 6,
+      "number-lead": 8,
+      "wh-question": 5,
       "statistic": 4,
       "did-you-know": 3
     },
@@ -110,23 +111,25 @@
       "status": "ok",
       "topics": [
         "dow jones industrial average",
-        "dadeschools",
-        "coritiba vs santos",
-        "anheuser-busch",
-        "jason michael",
-        "pokebeach",
-        "mike wise",
-        "can you game share gta 6",
-        "nz vs ind",
-        "florida basketball"
+        "cisa",
+        "texans schedule",
+        "notre dame basketball",
+        "vasco da gama x internacional",
+        "toyota",
+        "vasco vs internacional",
+        "cameron fens",
+        "kylie kelce",
+        "liv hewson"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
         "World Most Dangerous Jobs #shortvideo",
+        "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
+        "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
@@ -134,11 +137,9 @@
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
         "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
-        "Sharpest Knife In The World",
         "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
         "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
-        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
-        "How Rare Are You 😱"
+        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts"
       ]
     },
     "pytrends": {
@@ -167,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 222,
+    "total_tests": 223,
     "latest_status": "pending"
   },
   "channel_desc_updated": false,

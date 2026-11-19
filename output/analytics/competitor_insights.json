@@ -1,11 +1,11 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 46,
+  "videos_analyzed": 47,
   "pattern_counts": {
-    "statement": 25,
+    "statement": 26,
     "science-discovery": 1,
-    "number-lead": 7,
-    "wh-question": 6,
+    "number-lead": 8,
+    "wh-question": 5,
     "statistic": 4,
     "did-you-know": 3
   },
@@ -15,7 +15,6 @@
     "Never Do This | Science",
     "This can help make Artificial",
     "How Deep Do Humans Have",
-    "How gullible are you",
     "Did You Know That In",
     "How wound stitches really work",
     "Did You Know This Fact",
@@ -27,9 +26,9 @@
     "physics",
     "ashusir",
     "human",
+    "amazing",
     "scienceandfun",
     "sciencefacts",
-    "amazing",
     "unbelievable",
     "never",
     "fastest"
@@ -43,13 +42,14 @@
     "#knowledge",
     "#education",
     "#experiment",
+    "#youtubeshorts",
     "#youtube shorts",
     "#funny",
     "#physics",
-    "#amazing",
-    "#viralshorts",
-    "#didyouknow",
-    "#memes"
+    "#factsmine",
+    "#new",
+    "#latest",
+    "#didyouknow"
   ],
   "top_topics": [
     "science",
@@ -59,6 +59,7 @@
     "ashusir",
     "scienceandfun",
     "sciencefacts",
+    "amazing",
     "human",
     "cool",
     "gravity",
@@ -68,9 +69,8 @@
     "earth",
     "chemistry",
     "ytshorts",
-    "amazing",
+    "without",
     "want",
-    "tricks",
     "kids"
   ],
   "title_templates": [
@@ -91,9 +91,9 @@
     "Never Do This | Science",
     "This can help make Artificial",
     "How Deep Do Humans Have",
-    "How gullible are you",
     "Did You Know That In",
-    "How wound stitches really work"
+    "How wound stitches really work",
+    "Did You Know This Fact"
   ],
-  "timestamp": "2026-11-18T22:41:34"
+  "timestamp": "2026-11-19T22:45:32"
 }

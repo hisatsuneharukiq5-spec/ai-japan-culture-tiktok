@@ -2632,7 +2632,12 @@
     "title_a": "Did you know that butterflies taste with their feet? #Shorts (3 Facts)",
     "title_b": "Only 1% of people know this about Hummingbirds #Shorts",
     "compare_after_hours": 48,
-    "status": "pending"
+    "status": "learned",
+    "winner": "title_a",
+    "loser": "title_b",
+    "views_a": 4574,
+    "views_b": 1452,
+    "reason": "Compared 48h view counts from facts upload registry"
   },
   {
     "created_at": "2026-11-17T23:05:15",
@@ -2645,6 +2650,13 @@
     "created_at": "2026-11-18T22:41:35",
     "title_a": "Did you know that glass is actually a liquid? #Shorts (3 Facts)",
     "title_b": "5 volcano facts that will blow your mind #Shorts",
+    "compare_after_hours": 48,
+    "status": "pending"
+  },
+  {
+    "created_at": "2026-11-19T22:45:33",
+    "title_a": "Did you know that octopuses have three hearts and blue blood? (3 Facts) #Shorts",
+    "title_b": "Only 0.01% of people know this about human DNA #Shorts",
     "compare_after_hours": 48,
     "status": "pending"
   }
