@@ -613,6 +613,21 @@
       "file_sha256": "79d1b40c7e882dac1e449dea6857827f726d43decc676634c27c09b91f0ddaff",
       "script_sha256": "1c004f0c1cea4173156385977a90ba66c6f7d3a79af7f8eb8467d922a6bec8e7",
       "status": "uploaded"
+    },
+    {
+      "uploaded_at": "2026-11-20T23:30:00.020599+00:00",
+      "channel_id": "UCoKDxOC6OdqsqWpFrSJn3JQ",
+      "channel_title": "The Obscura Files",
+      "video_id": "AbXkmFvve0w",
+      "video_url": "https://www.youtube.com/shorts/AbXkmFvve0w",
+      "title": "Why Are 800 Skeletons in This Lake? — No #Shorts #DarkHistory #Mystery",
+      "topic": "The Skeleton Lake of Roopkund",
+      "title_pattern_type": "number_hook",
+      "video_path": "/home/runner/work/ai-japan-culture-tiktok/ai-japan-culture-tiktok/output/videos/obscura_short_20261120_232841.mp4",
+      "thumbnail_path": "/home/runner/work/ai-japan-culture-tiktok/ai-japan-culture-tiktok/output/thumbnails/obscura_AbXkmFvve0w_Why_Are_800_Skeletons_in_This_Lake_No_Shorts_DarkHistory_Mys.jpg",
+      "file_sha256": "9ceba5a9e73804b70125653e5c3d18a673ef50250c1da827cf5be2a8d9d21899",
+      "script_sha256": "31f4ac527f05c0642c3e0d489d4fa6a7cef9a3a189049519f80ba03bd8ac21e6",
+      "status": "uploaded"
     }
   ]
 }
