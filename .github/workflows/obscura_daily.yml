@@ -73,17 +73,25 @@ jobs:
 
       # Under a memory ceiling: an out-of-memory kill stops the pipeline, not the runner,
       # so the log and the steps below survive. Memory is printed every minute + the peak.
+      # Exit code: 0 uploaded, 1 failed or long-form skipped (e.g. duplicate), 3 no unused topic left.
       - name: Run Obscura pipeline (long-form + short)
         id: obscura_run
-        run: bash .github/scripts/run_with_memory_cap.sh python main.py obscura-run
+        run: |
+          set +e
+          bash .github/scripts/run_with_memory_cap.sh python main.py obscura-run
+          rc=$?
+          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
+          exit "$rc"
         env:
           PYTHONIOENCODING: utf-8
           PYTHONUNBUFFERED: "1"
           MEMORY_MAX: 12G
 
-      # Retry once on failure with a fresh attempt (not in test runs)
+      # Retry once on failure with a fresh attempt (not in test runs). A retry picks a new random
+      # topic, so it also recovers from a duplicate skip. Not for exit 3: no unused topic is left,
+      # retrying cannot help (add topics to OBSCURA_TOPICS).
       - name: Retry Obscura pipeline on failure
-        if: failure() && steps.obscura_run.outcome == 'failure' && inputs.skip_upload != true
+        if: failure() && steps.obscura_run.outcome == 'failure' && steps.obscura_run.outputs.exit_code != '3' && inputs.skip_upload != true
         run: |
           echo "First attempt failed — retrying after 30s..."
           sleep 30

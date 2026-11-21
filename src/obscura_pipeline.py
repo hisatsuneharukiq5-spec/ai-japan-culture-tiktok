@@ -313,16 +313,24 @@ def _history_matches_topic(topic: str, history_text: str) -> bool:
 
     # Check main topic tokens (all must match)
     main_tokens = _tokens(topic)
-    if main_tokens and all(t in normalized_history for t in main_tokens):
+    if main_tokens and all(_contains_word(t, normalized_history) for t in main_tokens):
         return True
 
     # Check each alias independently (all tokens within an alias must match)
     for alias in OBSCURA_TOPIC_ALIASES.get(topic, []):
         alias_tokens = _tokens(alias)
-        if alias_tokens and all(t in normalized_history for t in alias_tokens):
+        if alias_tokens and all(_contains_word(t, normalized_history) for t in alias_tokens):
             return True
 
     return False
+
+
+def _contains_word(token: str, normalized_text: str) -> bool:
+    """Whole-word match on normalized text, allowing a plural ending (skeleton -> skeletons).
+
+    Plain substring matching made "delphi" match "philadelphia".
+    """
+    return re.search(rf"(?<![a-z0-9]){re.escape(token)}(?:s|es)?(?![a-z0-9])", normalized_text) is not None
 
 
 def _recent_registry_topics(limit: int | None = None) -> list[str]:
@@ -395,6 +403,14 @@ def _find_obscura_registry_duplicate(topic: str) -> str | None:
 # channel's own uploads list — private and unlisted included — is the source of truth.
 
 OBSCURA_SHORT_MAX_SECONDS = 180  # YouTube Shorts are at most 3 minutes; anything longer is long-form
+# Process exit codes for `main.py obscura-run` / `obscura` when the long-form is skipped.
+# obscura_daily.yml retries on failure, except for EXIT_NO_UNUSED_TOPIC (a retry cannot help).
+OBSCURA_EXIT_SKIPPED = 1
+OBSCURA_EXIT_NO_UNUSED_TOPIC = 3
+
+
+def obscura_skip_exit_code(result: dict) -> int:
+    return OBSCURA_EXIT_NO_UNUSED_TOPIC if result.get("reason") == "no_unused_topic" else OBSCURA_EXIT_SKIPPED
 
 
 class ObscuraNoUnusedTopic(RuntimeError):
@@ -451,9 +467,22 @@ def fetch_obscura_channel_videos(youtube) -> list[dict]:
     return videos
 
 
+def _split_camel(word: str) -> str:
+    """'YubaCountyFive' -> 'Yuba County Five', 'Cicada3301' -> 'Cicada 3301', 'TVShow' -> 'TV Show'."""
+    return re.sub(r"(?<=[a-z])(?=[A-Z0-9])|(?<=[0-9])(?=[A-Za-z])|(?<=[A-Z])(?=[A-Z][a-z])", " ", word)
+
+
 def _channel_video_text(video: dict) -> str:
+    """Title + description + tags, plus tags/hashtags split at CamelCase boundaries.
+
+    Tags are often joined words ("MaxHeadroom", "#TamamShud"); whole-word matching needs them
+    split. The original text is kept as well, so splitting can only add matches.
+    """
     snippet = video.get("snippet", {})
-    return " ".join([snippet.get("title", ""), snippet.get("description", ""), " ".join(snippet.get("tags", []))])
+    tags = snippet.get("tags", [])
+    title, description = snippet.get("title", ""), snippet.get("description", "")
+    joined = tags + re.findall(r"#(\w+)", f"{title} {description}")
+    return " ".join([title, description, " ".join(tags), " ".join(_split_camel(w) for w in joined)])
 
 
 def _channel_used_topics(videos: list[dict]) -> dict[str, list[str]]:

@@ -123,9 +123,26 @@ def _optimize_obscura_shorts_title(title: str, topic: str = "") -> tuple[str, st
     return result[:40].strip(), pattern_type
 
 
+def _is_shorts_boilerplate(paragraph: str) -> bool:
+    """True for a paragraph that _build_obscura_shorts_description itself appends."""
+    text = paragraph.strip()
+    if not text:
+        return False
+    cta = getattr(config_shorts, "SUBSCRIBE_CTA", "Subscribe to The Obscura Files for more dark history and unsolved mystery Shorts.")
+    return (
+        text == cta.strip()
+        or text == "Want the full investigation? Comment FULL CASE below."
+        or text.startswith("🔍 Full investigation:")
+        or all(word.startswith("#") for word in text.split())  # hashtag-only line
+    )
+
+
 def _build_obscura_shorts_description(description: str, topic: str = "", long_form_url: str | None = None) -> str:
+    """Idempotent: boilerplate already present (from an earlier call, or an existing video's
+    description) is removed before it is appended once — it used to be appended twice."""
     parts: list[str] = []
-    base = _clean_shorts_text(description)
+    paragraphs = re.split(r"\n\s*\n", _clean_shorts_text(description))
+    base = _clean_shorts_text("\n\n".join(p for p in paragraphs if not _is_shorts_boilerplate(p)))
     if base:
         parts.append(base)
     if long_form_url:

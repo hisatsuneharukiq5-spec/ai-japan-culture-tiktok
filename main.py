@@ -397,8 +397,10 @@ def cmd_obscura(topic: str | None):
     result = run_obscura_pipeline(topic=topic)
     if not result or not result.get('video_id'):
         if result and result.get('skipped'):
+            from src.obscura_pipeline import obscura_skip_exit_code
             print("\nObscura upload skipped.")
             print(f"Reason: {result.get('reason', 'unknown')}")
+            sys.exit(obscura_skip_exit_code(result))
         else:
             print("\nObscura upload failed. Check logs/ for details.")
         sys.exit(1)
@@ -419,15 +421,19 @@ def cmd_obscura_run():
         # Duplicate / no unused topic / another run holds the lock: nothing new was uploaded.
         # Do not build a Short for the same topic: it would duplicate too, or link to a video
         # viewers cannot open. The ::warning:: annotation was already emitted by the pipeline.
-        from src.obscura_pipeline import gha_warning
+        # Exit non-zero so the step fails visibly; the workflow retries (with a new random topic)
+        # unless the code is OBSCURA_EXIT_NO_UNUSED_TOPIC.
+        from src.obscura_pipeline import gha_warning, obscura_skip_exit_code
+        code = obscura_skip_exit_code(result)
         print("\nObscura long-form skipped — nothing uploaded.")
         print(f"Reason: {result.get('reason', 'unknown')}")
         print(f"Topic:  {result.get('topic', '')}")
         if result.get('existing_video_id'):
             print(f"Existing: https://www.youtube.com/watch?v={result['existing_video_id']}")
         gha_warning("Obscura Short not generated",
-                    f"Long-form skipped ({result.get('reason', 'unknown')}); no Short for the same topic this run.")
-        return
+                    f"Long-form skipped ({result.get('reason', 'unknown')}); no Short for the same topic this run. "
+                    f"Exit {code}.")
+        sys.exit(code)
 
     print("\nObscura automated run complete!")
     print(f"Title: {result.get('title', '')}")

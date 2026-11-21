@@ -418,3 +418,24 @@ ledger:
       status: active
       last_verified: 2026-11-16
       check: GitHub > Settings > Billing > Actions usage (private repos have a monthly free allowance).
+
+    # ── Content ─────────────────────────────────────────────────────────────
+    - id: obscura_topics_left
+      kind: content_pool
+      name: Obscura のテーマの残り (OBSCURA_TOPICS in src/obscura_pipeline.py — fixed list, 48 topics)
+      used_by: [src/obscura_pipeline.py]
+      workflows: [obscura_daily]
+      expires: 2026-12-11   # first daily run with no unused topic (19 left on 2026-11-21, 1 per day from 2026-11-22)
+      status: active
+      last_verified: 2026-11-21
+      check: >
+        obscura_daily log line "N unused topics left" (printed every run), or the run fails with
+        exit 3 / reason no_unused_topic ("All 48 Obscura topics are already used"). Exit 3 is not retried.
+        A topic counts as used when it is in output/analytics/obscura_upload_registry.jsonl OR on the
+        channel itself (any upload incl. private; title + description + tags, whole-word match).
+      note: >
+        Topics are NOT generated: a hand-written list (last extended 2026-04-17). Shorts in obscura-run
+        follow the long-form topic; config/config_obscura_shorts.py has its own 27-topic list, used only
+        by standalone obscura-short. The date is conservative: a day with no upload consumes no topic
+        and moves it later. To renew: append new cases to OBSCURA_TOPICS, recount, and set `expires`
+        to (next run date + topics left).
