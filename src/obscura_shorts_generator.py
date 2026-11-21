@@ -1215,6 +1215,10 @@ def _find_longform_video_id(topic: str) -> str | None:
             continue
         item_topic = str(item.get("topic") or item.get("title") or "").strip()
         if item_topic and _normalize_obscura_topic(item_topic) == normalized:
+            # Rows backfilled from the channel record privacy; never link a Short to a video
+            # viewers cannot open. Older rows have no privacy field (uploaded by this pipeline).
+            if item.get("privacy") not in (None, "", "public"):
+                continue
             return item.get("video_id")
     return None
 

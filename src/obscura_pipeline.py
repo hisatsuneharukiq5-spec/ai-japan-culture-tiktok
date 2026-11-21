@@ -390,6 +390,140 @@ def _find_obscura_registry_duplicate(topic: str) -> str | None:
     return None
 
 
+# ── Channel-based duplicate guard ────────────────────────────────────────────
+# The registry can miss videos (e.g. uploaded from a local PC and never committed), so the
+# channel's own uploads list — private and unlisted included — is the source of truth.
+
+OBSCURA_SHORT_MAX_SECONDS = 180  # YouTube Shorts are at most 3 minutes; anything longer is long-form
+
+
+class ObscuraNoUnusedTopic(RuntimeError):
+    """Every topic in OBSCURA_TOPICS is already on the channel or in the registry."""
+
+
+def gha_warning(title: str, message: str) -> None:
+    """Log a warning and emit a GitHub Actions ::warning:: annotation (plain text when run locally)."""
+    logger.warning("%s: %s", title, message)
+
+    def esc(value: str) -> str:
+        return str(value).replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+
+    print(f"::warning title={esc(title).replace(':', '%3A').replace(',', '%2C')}::{esc(message)}", flush=True)
+
+
+def _iso_duration_seconds(value: str) -> int:
+    m = re.fullmatch(r"P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?)?", value or "")
+    if not m:
+        return 0
+    days, hours, minutes, seconds = (int(x or 0) for x in m.groups())
+    return days * 86400 + hours * 3600 + minutes * 60 + seconds
+
+
+def fetch_obscura_channel_videos(youtube) -> list[dict]:
+    """Every upload on the authenticated channel (public, unlisted, private, scheduled).
+
+    Uses the uploads playlist (1 unit/page) + videos.list (1 unit/50 videos), not search.list.
+    Raises on API errors so the caller can decide how to degrade.
+    """
+    channel = youtube.channels().list(part="contentDetails", mine=True).execute()
+    items = channel.get("items", [])
+    if not items:
+        raise RuntimeError("channels.list(mine=True) returned no channel")
+    uploads_playlist = items[0]["contentDetails"]["relatedPlaylists"]["uploads"]
+
+    video_ids: list[str] = []
+    page_token = None
+    while True:
+        resp = youtube.playlistItems().list(
+            part="contentDetails", playlistId=uploads_playlist, maxResults=50, pageToken=page_token,
+        ).execute()
+        video_ids += [i["contentDetails"]["videoId"] for i in resp.get("items", [])]
+        page_token = resp.get("nextPageToken")
+        if not page_token:
+            break
+
+    videos: list[dict] = []
+    for start in range(0, len(video_ids), 50):
+        resp = youtube.videos().list(
+            part="snippet,status,contentDetails", id=",".join(video_ids[start:start + 50]),
+        ).execute()
+        videos += resp.get("items", [])
+    return videos
+
+
+def _channel_video_text(video: dict) -> str:
+    snippet = video.get("snippet", {})
+    return " ".join([snippet.get("title", ""), snippet.get("description", ""), " ".join(snippet.get("tags", []))])
+
+
+def _channel_used_topics(videos: list[dict]) -> dict[str, list[str]]:
+    """topic -> ids of channel videos (long-form or Short) that cover it.
+
+    Matches against title + description + tags: titles alone often do not name the case
+    (e.g. the Roopkund video's title never says "Roopkund"). Over-matching only removes a
+    topic from the pool, which errs on the safe side.
+    """
+    used: dict[str, list[str]] = {}
+    for video in videos:
+        text = _channel_video_text(video)
+        for topic in OBSCURA_TOPICS:
+            if _history_matches_topic(topic, text):
+                used.setdefault(topic, []).append(video["id"])
+    return used
+
+
+def _backfill_registry_from_channel(videos: list[dict], registry_path: Path | None = None) -> list[str]:
+    """Append long-form channel videos that are missing from the registry. Returns the added ids.
+
+    Backfilled rows have no file hash; `privacy` is recorded so a Short never links to a
+    video that viewers cannot open.
+    """
+    registry_path = registry_path or (PROJECT_ROOT / "output" / "analytics" / "obscura_upload_registry.jsonl")
+    known: set[str] = set()
+    if registry_path.exists():
+        for line in registry_path.read_text(encoding="utf-8", errors="replace").splitlines():
+            try:
+                vid = json.loads(line).get("video_id")
+            except Exception:
+                continue
+            if vid:
+                known.add(str(vid))
+
+    added: list[str] = []
+    rows: list[str] = []
+    now = datetime.now(timezone.utc).isoformat()
+    for video in sorted(videos, key=lambda v: v.get("snippet", {}).get("publishedAt", "")):
+        vid = video.get("id")
+        if not vid or vid in known:
+            continue
+        if _iso_duration_seconds(video.get("contentDetails", {}).get("duration", "")) <= OBSCURA_SHORT_MAX_SECONDS:
+            continue  # Shorts have their own registry
+        snippet, status = video.get("snippet", {}), video.get("status", {})
+        text = _channel_video_text(video)
+        topic = next((t for t in OBSCURA_TOPICS if _history_matches_topic(t, text)), "")
+        rows.append(json.dumps({
+            "video_id": vid,
+            "title": snippet.get("title", ""),
+            "topic": topic,
+            "file_path": "",
+            "file_size": None,
+            "sha256": "",
+            "privacy": status.get("privacyStatus", ""),
+            "published_at": snippet.get("publishedAt", ""),
+            "source": "channel_backfill",
+            "backfilled_at": now,
+        }, ensure_ascii=False))
+        added.append(vid)
+
+    if rows:
+        registry_path.parent.mkdir(parents=True, exist_ok=True)
+        existing = registry_path.read_text(encoding="utf-8", errors="replace") if registry_path.exists() else ""
+        prefix = "" if not existing or existing.endswith("\n") else "\n"
+        with open(registry_path, "a", encoding="utf-8") as f:
+            f.write(prefix + "\n".join(rows) + "\n")
+    return added
+
+
 def _safe_filename(text: str, limit: int = 60) -> str:
     value = re.sub(r"[^\w\- ]+", "_", text).strip().replace(" ", "_")
     return value[:limit] or "obscura_video"
@@ -999,17 +1133,32 @@ Constraints:
         data["topic"] = topic
         return data
 
-    def generate_random(self) -> dict:
+    def generate_random(self, channel_videos: list[dict] | None = None) -> dict:
+        """Pick a topic not yet in the registry nor on the channel (when channel_videos is given)."""
         used_topics = {_normalize_topic_text(topic) for topic in _recent_registry_topics(limit=None)}
+        if channel_videos is not None:
+            channel_used = _channel_used_topics(channel_videos)
+            only_on_channel = sorted(
+                t for t in channel_used if _normalize_topic_text(t) not in used_topics
+            )
+            used_topics |= {_normalize_topic_text(t) for t in channel_used}
+            logger.info(
+                "Channel check: %d uploads, %d topics already covered (%d of them missing from the registry: %s)",
+                len(channel_videos), len(channel_used), len(only_on_channel), ", ".join(only_on_channel) or "none",
+            )
         available_topics = [
             topic for topic in OBSCURA_TOPICS
             if _normalize_topic_text(topic) not in used_topics
         ]
-        topic_pool = available_topics or OBSCURA_TOPICS
-        topic = random.choice(topic_pool)
         if used_topics:
             logger.info("Avoiding previously used Obscura topics: %s", ", ".join(sorted(used_topics)))
-        return self.generate(topic)
+        if not available_topics:
+            # Never fall back to a used topic: that is exactly how a duplicate gets built.
+            raise ObscuraNoUnusedTopic(
+                f"All {len(OBSCURA_TOPICS)} Obscura topics are already used; add new topics to OBSCURA_TOPICS"
+            )
+        logger.info("%d unused topics left", len(available_topics))
+        return self.generate(random.choice(available_topics))
 
 
 class ObscuraYouTubeUploader:
@@ -1145,6 +1294,8 @@ class ObscuraYouTubeUploader:
 
         file_hash = self._sha256(video_path)
         duplicate_video_id = self._find_duplicate(video_path, title, file_hash, str(metadata.get("topic", "")))
+        # Callers must check this: on a duplicate, upload() returns the EXISTING id and uploads nothing.
+        self.duplicate_of = duplicate_video_id
         if duplicate_video_id:
             logger.warning("Duplicate Obscura upload detected. Skipping upload.")
             logger.warning(f"Existing video: https://www.youtube.com/watch?v={duplicate_video_id}")
@@ -1474,6 +1625,32 @@ def _describe_video(path: Path) -> str:
         return f"size/duration unavailable ({type(exc).__name__})"
 
 
+def _find_channel_duplicate(topic: str, channel_videos: list[dict] | None) -> str | None:
+    for video in channel_videos or []:
+        if _history_matches_topic(topic, _channel_video_text(video)):
+            return video.get("id")
+    return None
+
+
+def _duplicate_skip(topic: str, title: str, existing_id: str, reason: str, stage: str, video_path: str = "") -> dict:
+    """Result for a long-form skipped as a duplicate. video_id is None on purpose: the existing
+    video may be private, and nothing must treat it as tonight's upload (e.g. link a Short to it)."""
+    gha_warning(
+        "Obscura long-form skipped (duplicate)",
+        f"Skipped {stage}: topic '{topic}' is already on the channel as "
+        f"https://www.youtube.com/watch?v={existing_id}. Nothing was uploaded.",
+    )
+    return {
+        "video_id": None,
+        "existing_video_id": existing_id,
+        "video_path": video_path,
+        "title": title,
+        "topic": topic,
+        "skipped": True,
+        "reason": reason,
+    }
+
+
 def run_obscura_pipeline(topic: str | None = None) -> dict:
     lock_path = _acquire_obscura_run_lock()
     if lock_path is None:
@@ -1489,8 +1666,46 @@ def run_obscura_pipeline(topic: str | None = None) -> dict:
     logger.info(f"🎬 Starting Obscura Files Pipeline (Config: {'config_obscura' if config_obscura else 'environment'})")
 
     try:
+        # Channel check first: the registry alone missed a May upload and a whole long-form was
+        # built for a topic already on the channel (2026-11-20). Test runs have no credentials.
+        uploader = None
+        channel_videos = None
+        if skip_upload_requested():
+            logger.info("SKIP_UPLOAD: channel duplicate check skipped (no YouTube credentials); registry only")
+        else:
+            uploader = ObscuraYouTubeUploader()
+            try:
+                channel_videos = fetch_obscura_channel_videos(uploader.youtube)
+                added = _backfill_registry_from_channel(channel_videos)
+                if added:
+                    logger.info("Registry backfilled from the channel (%d): %s", len(added), ", ".join(added))
+            except Exception as exc:
+                channel_videos = None
+                gha_warning(
+                    "Obscura channel check unavailable",
+                    f"Could not list channel uploads ({type(exc).__name__}: {exc}). "
+                    "Choosing the topic from the registry only.",
+                )
+
         generator = ObscuraScriptGenerator()
-        script_data = generator.generate(topic) if topic else generator.generate_random()
+        if topic:
+            existing_id = _find_obscura_registry_duplicate(topic) or _find_channel_duplicate(topic, channel_videos)
+            if existing_id:
+                return _duplicate_skip(topic, "", existing_id, "duplicate_topic", "before script generation")
+            script_data = generator.generate(topic)
+        else:
+            try:
+                script_data = generator.generate_random(channel_videos)
+            except ObscuraNoUnusedTopic as exc:
+                gha_warning("Obscura long-form skipped", str(exc))
+                return {
+                    "video_id": None,
+                    "video_path": "",
+                    "title": "",
+                    "topic": "",
+                    "skipped": True,
+                    "reason": "no_unused_topic",
+                }
 
         # Persist latest metadata/script for inspection
         scripts_dir = PROJECT_ROOT / "output" / "scripts"
@@ -1506,20 +1721,8 @@ def run_obscura_pipeline(topic: str | None = None) -> dict:
         if chosen_topic:
             existing_id = _find_obscura_registry_duplicate(chosen_topic)
             if existing_id:
-                logger.warning(
-                    "Topic '%s' already uploaded. Skipping video generation. "
-                    "Existing: https://www.youtube.com/watch?v=%s",
-                    chosen_topic,
-                    existing_id,
-                )
-                return {
-                    "video_id": existing_id,
-                    "video_path": "",
-                    "title": script_data.get("title", ""),
-                    "topic": chosen_topic,
-                    "skipped": True,
-                    "reason": "duplicate_topic",
-                }
+                return _duplicate_skip(chosen_topic, script_data.get("title", ""), existing_id,
+                                       "duplicate_topic", "before video generation")
 
         video_gen = ObscuraVideoGenerator()
         video_path = video_gen.generate(script_data)
@@ -1536,8 +1739,13 @@ def run_obscura_pipeline(topic: str | None = None) -> dict:
                 "reason": "skip_upload",
             }
 
-        uploader = ObscuraYouTubeUploader()
+        if uploader is None:
+            uploader = ObscuraYouTubeUploader()
         video_id = uploader.upload(video_path, script_data)
+        if getattr(uploader, "duplicate_of", None):
+            return _duplicate_skip(str(script_data.get("topic", topic or "")), script_data.get("title", ""),
+                                   uploader.duplicate_of, "duplicate_upload",
+                                   "after video generation, at upload", video_path=str(video_path))
 
         return {
             "video_id": video_id,

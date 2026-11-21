@@ -415,12 +415,26 @@ def cmd_obscura_run():
     
     # Generate long-form video
     result = run_obscura_pipeline(topic=None)
+    if result.get('skipped') and result.get('reason') != 'skip_upload':
+        # Duplicate / no unused topic / another run holds the lock: nothing new was uploaded.
+        # Do not build a Short for the same topic: it would duplicate too, or link to a video
+        # viewers cannot open. The ::warning:: annotation was already emitted by the pipeline.
+        from src.obscura_pipeline import gha_warning
+        print("\nObscura long-form skipped — nothing uploaded.")
+        print(f"Reason: {result.get('reason', 'unknown')}")
+        print(f"Topic:  {result.get('topic', '')}")
+        if result.get('existing_video_id'):
+            print(f"Existing: https://www.youtube.com/watch?v={result['existing_video_id']}")
+        gha_warning("Obscura Short not generated",
+                    f"Long-form skipped ({result.get('reason', 'unknown')}); no Short for the same topic this run.")
+        return
+
     print("\nObscura automated run complete!")
     print(f"Title: {result.get('title', '')}")
     print(f"Topic: {result.get('topic', '')}")
     print(f"Video: {result.get('video_path', '')}")
     print(f"URL:   https://www.youtube.com/watch?v={result.get('video_id', '')}")
-    
+
     # Generate YouTube Shorts from same topic
     print("\n=" * 60)
     print("Starting Obscura Shorts generation...")
