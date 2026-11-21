@@ -628,6 +628,21 @@
       "file_sha256": "9ceba5a9e73804b70125653e5c3d18a673ef50250c1da827cf5be2a8d9d21899",
       "script_sha256": "31f4ac527f05c0642c3e0d489d4fa6a7cef9a3a189049519f80ba03bd8ac21e6",
       "status": "uploaded"
+    },
+    {
+      "uploaded_at": "2026-11-21T22:41:50.166556+00:00",
+      "channel_id": "UCoKDxOC6OdqsqWpFrSJn3JQ",
+      "channel_title": "The Obscura Files",
+      "video_id": "xVN7oVDGrbw",
+      "video_url": "https://www.youtube.com/shorts/xVN7oVDGrbw",
+      "title": "How Did This City Swallows People Whole #Shorts #DarkHistory #Mystery",
+      "topic": "The Eko Atlantic Mysterious Disappearances",
+      "title_pattern_type": "question",
+      "video_path": "/home/runner/work/ai-japan-culture-tiktok/ai-japan-culture-tiktok/output/videos/obscura_short_20261121_224054.mp4",
+      "thumbnail_path": "/home/runner/work/ai-japan-culture-tiktok/ai-japan-culture-tiktok/output/thumbnails/obscura_xVN7oVDGrbw_How_Did_This_City_Swallows_People_Whole_Shorts_DarkHistory_M.jpg",
+      "file_sha256": "765833db0567f14b4c0912b08293f0720388ca69366082dae2b5423ba544713a",
+      "script_sha256": "6543d74d728149b3411f6195ae86c44b36e6c14b576264bb7c72f4e04f07ef9e",
+      "status": "uploaded"
     }
   ]
 }
