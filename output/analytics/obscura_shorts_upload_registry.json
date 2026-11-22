@@ -643,6 +643,21 @@
       "file_sha256": "765833db0567f14b4c0912b08293f0720388ca69366082dae2b5423ba544713a",
       "script_sha256": "6543d74d728149b3411f6195ae86c44b36e6c14b576264bb7c72f4e04f07ef9e",
       "status": "uploaded"
+    },
+    {
+      "uploaded_at": "2026-11-22T22:46:08.812534+00:00",
+      "channel_id": "UCoKDxOC6OdqsqWpFrSJn3JQ",
+      "channel_title": "The Obscura Files",
+      "video_id": "qzelXV4okck",
+      "video_url": "https://www.youtube.com/shorts/qzelXV4okck",
+      "title": "Cold Case: A Room Worth More Than Gold #Shorts #DarkHistory #Mystery",
+      "topic": "The Amber Room Disappearance",
+      "title_pattern_type": "prefix_label",
+      "video_path": "/home/runner/work/ai-japan-culture-tiktok/ai-japan-culture-tiktok/output/videos/obscura_short_20261122_224510.mp4",
+      "thumbnail_path": "/home/runner/work/ai-japan-culture-tiktok/ai-japan-culture-tiktok/output/thumbnails/obscura_qzelXV4okck_Cold_Case_A_Room_Worth_More_Than_Gold_Shorts_DarkHistory_Mys.jpg",
+      "file_sha256": "27c606098ac7a34a6bdc3f58d6c5ca050003014db2b5f4f0114c92866e38e4f9",
+      "script_sha256": "6974e5f806775132fc4a829d71d3b9a13c537adca51ac9f4fc601c0d5277b958",
+      "status": "uploaded"
     }
   ]
 }
