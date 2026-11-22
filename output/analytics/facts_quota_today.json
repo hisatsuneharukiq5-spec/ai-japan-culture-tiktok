@@ -1,6 +1,6 @@
 {
   "date": "2026-11-22",
-  "used": 1814,
+  "used": 3576,
   "log": [
     {
       "op": "channels.list",
@@ -96,6 +96,86 @@
       "op": "channels.list",
       "units": 1,
       "ts": "2026-11-22T14:54:46"
+    },
+    {
+      "op": "channels.list",
+      "units": 1,
+      "ts": "2026-11-22T17:47:39"
+    },
+    {
+      "op": "channels.list",
+      "units": 1,
+      "ts": "2026-11-22T17:47:50"
+    },
+    {
+      "op": "playlistItems.list",
+      "units": 1,
+      "ts": "2026-11-22T17:47:50"
+    },
+    {
+      "op": "playlistItems.list",
+      "units": 1,
+      "ts": "2026-11-22T17:47:50"
+    },
+    {
+      "op": "playlistItems.list",
+      "units": 1,
+      "ts": "2026-11-22T17:47:51"
+    },
+    {
+      "op": "playlistItems.list",
+      "units": 1,
+      "ts": "2026-11-22T17:47:51"
+    },
+    {
+      "op": "channels.list",
+      "units": 1,
+      "ts": "2026-11-22T17:50:59"
+    },
+    {
+      "op": "playlistItems.list",
+      "units": 1,
+      "ts": "2026-11-22T17:51:00"
+    },
+    {
+      "op": "playlistItems.list",
+      "units": 1,
+      "ts": "2026-11-22T17:51:00"
+    },
+    {
+      "op": "playlistItems.list",
+      "units": 1,
+      "ts": "2026-11-22T17:51:00"
+    },
+    {
+      "op": "playlistItems.list",
+      "units": 1,
+      "ts": "2026-11-22T17:51:00"
+    },
+    {
+      "op": "videos.insert",
+      "units": 1600,
+      "ts": "2026-11-22T17:51:04"
+    },
+    {
+      "op": "thumbnails.set",
+      "units": 50,
+      "ts": "2026-11-22T17:51:06"
+    },
+    {
+      "op": "playlistItems.insert",
+      "units": 50,
+      "ts": "2026-11-22T17:51:15"
+    },
+    {
+      "op": "videos.list",
+      "units": 1,
+      "ts": "2026-11-22T17:51:34"
+    },
+    {
+      "op": "videos.update",
+      "units": 50,
+      "ts": "2026-11-22T17:51:34"
     }
   ]
 }
