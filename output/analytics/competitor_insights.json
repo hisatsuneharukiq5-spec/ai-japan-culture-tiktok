@@ -1,8 +1,8 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 46,
+  "videos_analyzed": 45,
   "pattern_counts": {
-    "statement": 26,
+    "statement": 25,
     "science-discovery": 1,
     "number-lead": 7,
     "wh-question": 5,
@@ -71,7 +71,7 @@
     "ytshorts",
     "without",
     "want",
-    "kids"
+    "could"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -84,7 +84,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.6,
+  "avg_duration_secs": 43.1,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -95,5 +95,5 @@
     "How wound stitches really work",
     "Did You Know This Fact"
   ],
-  "timestamp": "2026-11-21T21:01:21"
+  "timestamp": "2026-11-22T21:10:59"
 }

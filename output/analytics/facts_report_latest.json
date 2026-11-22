@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-21T21:01:22",
+  "timestamp": "2026-11-22T21:11:00",
   "internal": {
     "top5_patterns": [
       {
@@ -30,7 +30,7 @@
   },
   "competitor": {
     "status": "youtube_api",
-    "videos_analyzed": 46,
+    "videos_analyzed": 45,
     "popular_topics": [
       "science",
       "experiment",
@@ -94,7 +94,7 @@
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 26,
+      "statement": 25,
       "science-discovery": 1,
       "number-lead": 7,
       "wh-question": 5,
@@ -110,36 +110,36 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "osu game today",
-        "ryan day",
-        "joe biden",
-        "illinois state football",
-        "navy football",
-        "early black friday sales",
-        "chicago fire season 15",
-        "carlos ulberg",
-        "nebraska football coach",
-        "nebraska football game"
+        "chiefs game today",
+        "salvon ahmed",
+        "tony pollard",
+        "jordyn tyson",
+        "cincinnati vs nashville",
+        "jaylen warren",
+        "jalen hurts",
+        "ryan flournoy",
+        "justin barron",
+        "jake elliott"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
-        "World Most Dangerous Jobs #shortvideo",
-        "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
-        "Why We Have Crooked Teeth 😱",
-        "The Lobster 😱",
-        "How Rare Are You 😱",
-        "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
+        "This Video Can Save Your Life 😱",
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
+        "Indonesia village Beauty 😍😲 #nature #travel #java #villagelife #rain #mountain #facts #shorts",
         "Strongest Glass in The World",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
-        "How Many Hours Do You Sleep 😱",
-        "Fun Facts That Are Not Funny"
+        "Fun Facts That Are Not Funny",
+        "Why We Have Crooked Teeth 😱",
+        "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
+        "Animal Fact Time! 🐡 #learn #kids #shorts #dardar",
+        "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
+        "The Lobster 😱"
       ]
     },
     "pytrends": {
@@ -168,9 +168,18 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 225,
+    "total_tests": 226,
     "latest_status": "pending"
   },
   "channel_desc_updated": false,
-  "description_refreshed": 3
+  "playlist_sync": {
+    "Amazing Facts #Shorts": 55,
+    "Animal Facts #Shorts": 5,
+    "Human Body Facts #Shorts": 25,
+    "Space Facts #Shorts": 10,
+    "Earth Science Facts #Shorts": 11,
+    "Ocean Facts #Shorts": 4,
+    "History Facts #Shorts": 3
+  },
+  "description_refreshed": 0
 }

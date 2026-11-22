@@ -98,5 +98,5 @@ LEARNED_HASHTAGS = [
   "#latest",
   "#didyouknow"
 ]
-PREFERRED_POST_HOURS = [3, 4, 10, 13, 16]
+PREFERRED_POST_HOURS = [3, 4, 10, 16, 17]
 # FACTS_BRAIN_MANAGED_END
