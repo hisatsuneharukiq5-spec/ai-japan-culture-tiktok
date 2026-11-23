@@ -55,10 +55,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: gh label create quiet-pipelines --color FBCA04 --description "Opened by the watchdog (quiet-pipelines)" --force --repo "$GITHUB_REPOSITORY"
 
-      # Vendored copy (quiet-pipelines is not published yet).
-      # To switch: replace this line with `OWNER/quiet-pipelines@<tag>` and
-      # delete .github/actions/quiet-pipelines/ (see VENDORED.md there).
-      - uses: ./.github/actions/quiet-pipelines
+      # Published action (public repo hisatsuneharukiq5-spec/quiet-pipelines), pinned to
+      # the v0.1.1 tag. Replaces the vendored copy that lived in .github/actions/.
+      # To upgrade: bump the tag here; inputs and config/quiet-pipelines.yml stay the same.
+      - uses: hisatsuneharukiq5-spec/quiet-pipelines@v0.1.1
         env:
           YT_TOKEN_FACTS: ${{ secrets.YT_TOKEN_FACTS }}
           YT_TOKEN_OBSCURA: ${{ secrets.YT_TOKEN_OBSCURA }}
