@@ -4,6 +4,7 @@ Test upload for posting limit detection.
 Creates 8-minute dummy video and uploads to YouTube without external links.
 """
 
+import os
 import sys
 from pathlib import Path
 
@@ -20,7 +21,13 @@ logger = setup_logger("test_upload_posting_limit")
 
 def main():
     """Create and upload 8-minute test video."""
-    
+
+    # This uploads a REAL video. Do nothing unless explicitly confirmed.
+    if os.environ.get("CONFIRM_REAL_UPLOAD") != "yes":
+        print("This script uploads a REAL video to YouTube. Nothing was done.")
+        print("To run it on purpose: CONFIRM_REAL_UPLOAD=yes python scripts/test_upload_posting_limit.py")
+        return
+
     logger.info("=" * 80)
     logger.info("YouTube POSTING LIMIT TEST")
     logger.info("=" * 80)
