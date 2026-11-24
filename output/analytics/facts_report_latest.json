@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-22T21:11:00",
+  "timestamp": "2026-11-24T02:30:55",
   "internal": {
     "top5_patterns": [
       {
@@ -48,16 +48,15 @@
       "#science",
       "#trending",
       "#knowledge",
+      "#funny",
+      "#new",
       "#education",
       "#experiment",
+      "#didyouknow",
+      "#animation",
       "#youtubeshorts",
       "#youtube shorts",
-      "#funny",
-      "#physics",
-      "#factsmine",
-      "#new",
-      "#latest",
-      "#didyouknow"
+      "#physics"
     ],
     "hook_phrases": [
       "This is SO cool",
@@ -94,10 +93,10 @@
       "fastest"
     ],
     "pattern_counts": {
-      "statement": 25,
+      "statement": 24,
       "science-discovery": 1,
-      "number-lead": 7,
       "wh-question": 5,
+      "number-lead": 8,
       "statistic": 4,
       "did-you-know": 3
     },
@@ -110,36 +109,36 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "chiefs game today",
-        "salvon ahmed",
-        "tony pollard",
-        "jordyn tyson",
-        "cincinnati vs nashville",
-        "jaylen warren",
-        "jalen hurts",
-        "ryan flournoy",
-        "justin barron",
-        "jake elliott"
+        "wild vs sharks",
+        "swayze bozeman",
+        "jrue holiday",
+        "where is the super bowl 2027",
+        "jaden mcdaniels",
+        "mark rutte",
+        "providence basketball",
+        "chase young",
+        "trey hendrickson",
+        "spurs vs kings"
       ]
     },
     "youtube_trending": {
       "status": "ok",
       "topics": [
+        "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
-        "This Video Can Save Your Life 😱",
+        "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
         "Inside A Camel Hump 😱",
-        "Indonesia village Beauty 😍😲 #nature #travel #java #villagelife #rain #mountain #facts #shorts",
         "Strongest Glass in The World",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
+        "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
         "Why We Have Crooked Teeth 😱",
         "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
-        "Animal Fact Time! 🐡 #learn #kids #shorts #dardar",
         "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
-        "The Lobster 😱"
+        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts"
       ]
     },
     "pytrends": {
@@ -168,18 +167,9 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 226,
+    "total_tests": 227,
     "latest_status": "pending"
   },
   "channel_desc_updated": false,
-  "playlist_sync": {
-    "Amazing Facts #Shorts": 55,
-    "Animal Facts #Shorts": 5,
-    "Human Body Facts #Shorts": 25,
-    "Space Facts #Shorts": 10,
-    "Earth Science Facts #Shorts": 11,
-    "Ocean Facts #Shorts": 4,
-    "History Facts #Shorts": 3
-  },
-  "description_refreshed": 0
+  "description_refreshed": 3
 }

@@ -87,16 +87,15 @@ LEARNED_HASHTAGS = [
   "#science",
   "#trending",
   "#knowledge",
+  "#funny",
+  "#new",
   "#education",
   "#experiment",
+  "#didyouknow",
+  "#animation",
   "#youtubeshorts",
   "#youtube shorts",
-  "#funny",
-  "#physics",
-  "#factsmine",
-  "#new",
-  "#latest",
-  "#didyouknow"
+  "#physics"
 ]
 PREFERRED_POST_HOURS = [3, 4, 10, 16, 17]
 # FACTS_BRAIN_MANAGED_END

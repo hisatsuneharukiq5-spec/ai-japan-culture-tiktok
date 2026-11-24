@@ -2,10 +2,10 @@
   "source": "youtube_api",
   "videos_analyzed": 45,
   "pattern_counts": {
-    "statement": 25,
+    "statement": 24,
     "science-discovery": 1,
-    "number-lead": 7,
     "wh-question": 5,
+    "number-lead": 8,
     "statistic": 4,
     "did-you-know": 3
   },
@@ -40,16 +40,15 @@
     "#science",
     "#trending",
     "#knowledge",
+    "#funny",
+    "#new",
     "#education",
     "#experiment",
+    "#didyouknow",
+    "#animation",
     "#youtubeshorts",
     "#youtube shorts",
-    "#funny",
-    "#physics",
-    "#factsmine",
-    "#new",
-    "#latest",
-    "#didyouknow"
+    "#physics"
   ],
   "top_topics": [
     "science",
@@ -65,13 +64,13 @@
     "gravity",
     "gifts",
     "ocean",
-    "journey",
     "earth",
     "chemistry",
     "ytshorts",
     "without",
     "want",
-    "could"
+    "could",
+    "experiments"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -84,7 +83,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.1,
+  "avg_duration_secs": 42.9,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -95,5 +94,5 @@
     "How wound stitches really work",
     "Did You Know This Fact"
   ],
-  "timestamp": "2026-11-22T21:10:59"
+  "timestamp": "2026-11-24T02:30:55"
 }
