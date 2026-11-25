@@ -658,6 +658,21 @@
       "file_sha256": "27c606098ac7a34a6bdc3f58d6c5ca050003014db2b5f4f0114c92866e38e4f9",
       "script_sha256": "6974e5f806775132fc4a829d71d3b9a13c537adca51ac9f4fc601c0d5277b958",
       "status": "uploaded"
+    },
+    {
+      "uploaded_at": "2026-11-25T02:13:48.988508+00:00",
+      "channel_id": "UCoKDxOC6OdqsqWpFrSJn3JQ",
+      "channel_title": "The Obscura Files",
+      "video_id": "V8zQPtKrlgE",
+      "video_url": "https://www.youtube.com/shorts/V8zQPtKrlgE",
+      "title": "Two Girls. One Bridge. No Witnesses. — Z #Shorts #DarkHistory #Mystery",
+      "topic": "The Delphi Murders Mystery",
+      "title_pattern_type": "number_hook",
+      "video_path": "/home/runner/work/ai-japan-culture-tiktok/ai-japan-culture-tiktok/output/videos/obscura_short_20261125_021230.mp4",
+      "thumbnail_path": "/home/runner/work/ai-japan-culture-tiktok/ai-japan-culture-tiktok/output/thumbnails/obscura_V8zQPtKrlgE_Two_Girls_One_Bridge_No_Witnesses_Z_Shorts_DarkHistory_Myste.jpg",
+      "file_sha256": "d527f47ad41cbb8655bf993e5552925c1becb8029d6e9fb385c0aabaf8b639c0",
+      "script_sha256": "4d7ec2e93982d38d9185ad8db78c55261bbe758392699e27c51a724e019811d7",
+      "status": "uploaded"
     }
   ]
 }
