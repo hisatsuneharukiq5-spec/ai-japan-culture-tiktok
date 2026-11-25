@@ -1,11 +1,11 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 45,
+  "videos_analyzed": 44,
   "pattern_counts": {
     "statement": 24,
     "science-discovery": 1,
+    "number-lead": 7,
     "wh-question": 5,
-    "number-lead": 8,
     "statistic": 4,
     "did-you-know": 3
   },
@@ -24,13 +24,13 @@
     "science",
     "experiment",
     "physics",
-    "ashusir",
     "human",
-    "amazing",
+    "ashusir",
     "scienceandfun",
     "sciencefacts",
-    "unbelievable",
+    "amazing",
     "never",
+    "unbelievable",
     "fastest"
   ],
   "top_hashtags": [
@@ -38,28 +38,28 @@
     "#facts",
     "#viral",
     "#science",
-    "#trending",
     "#knowledge",
-    "#funny",
-    "#new",
+    "#trending",
     "#education",
+    "#funny",
+    "#factsmine",
+    "#new",
     "#experiment",
-    "#didyouknow",
     "#animation",
     "#youtubeshorts",
-    "#youtube shorts",
-    "#physics"
+    "#physics",
+    "#latest",
+    "#didyouknow"
   ],
   "top_topics": [
     "science",
     "experiment",
     "physics",
     "ashusir",
-    "didn",
+    "human",
     "scienceandfun",
     "sciencefacts",
-    "amazing",
-    "human",
+    "didn",
     "cool",
     "gravity",
     "gifts",
@@ -68,8 +68,9 @@
     "chemistry",
     "ytshorts",
     "without",
+    "never",
+    "amazing",
     "want",
-    "could",
     "experiments"
   ],
   "title_templates": [
@@ -83,7 +84,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.9,
+  "avg_duration_secs": 42.7,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -94,5 +95,5 @@
     "How wound stitches really work",
     "Did You Know This Fact"
   ],
-  "timestamp": "2026-11-25T00:02:51"
+  "timestamp": "2026-11-25T23:45:32"
 }
