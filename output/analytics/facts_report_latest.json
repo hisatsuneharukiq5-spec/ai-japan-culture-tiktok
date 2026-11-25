@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-24T02:30:55",
+  "timestamp": "2026-11-25T00:02:52",
   "internal": {
     "top5_patterns": [
       {
@@ -109,16 +109,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "wild vs sharks",
-        "swayze bozeman",
-        "jrue holiday",
-        "where is the super bowl 2027",
-        "jaden mcdaniels",
-        "mark rutte",
-        "providence basketball",
-        "chase young",
-        "trey hendrickson",
-        "spurs vs kings"
+        "ohio state basketball",
+        "cooper flagg stats",
+        "david muir",
+        "treasury",
+        "pistons injury report",
+        "nebraska volleyball",
+        "is cade cunningham playing tonight",
+        "tyrese haliburton",
+        "josé eduardo derbez",
+        "diana gutiérrez"
       ]
     },
     "youtube_trending": {
@@ -167,7 +167,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 227,
+    "total_tests": 228,
     "latest_status": "pending"
   },
   "channel_desc_updated": false,
