@@ -1,11 +1,11 @@
 {
   "source": "youtube_api",
-  "videos_analyzed": 44,
+  "videos_analyzed": 45,
   "pattern_counts": {
-    "statement": 24,
+    "statement": 23,
     "science-discovery": 1,
     "number-lead": 7,
-    "wh-question": 5,
+    "wh-question": 7,
     "statistic": 4,
     "did-you-know": 3
   },
@@ -17,6 +17,7 @@
     "How Deep Do Humans Have",
     "Did You Know That In",
     "How wound stitches really work",
+    "How to Remove Ear Wax",
     "Did You Know This Fact",
     "Did You Know: Titanic Fun"
   ],
@@ -24,13 +25,14 @@
     "science",
     "experiment",
     "physics",
-    "human",
     "ashusir",
+    "human",
     "scienceandfun",
     "sciencefacts",
+    "earth",
+    "unbelievable",
     "amazing",
     "never",
-    "unbelievable",
     "fastest"
   ],
   "top_hashtags": [
@@ -40,38 +42,38 @@
     "#science",
     "#knowledge",
     "#trending",
-    "#education",
-    "#funny",
-    "#factsmine",
     "#new",
+    "#funny",
+    "#physics",
+    "#education",
+    "#amazing",
     "#experiment",
     "#animation",
     "#youtubeshorts",
-    "#physics",
-    "#latest",
+    "#factsmine",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "experiment",
-    "physics",
     "ashusir",
-    "human",
     "scienceandfun",
+    "physics",
     "sciencefacts",
+    "earth",
+    "human",
     "didn",
     "cool",
     "gravity",
     "gifts",
     "ocean",
-    "earth",
     "chemistry",
     "ytshorts",
     "without",
-    "never",
-    "amazing",
     "want",
-    "experiments"
+    "experiments",
+    "frozen",
+    "creativelearning"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -84,7 +86,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 42.7,
+  "avg_duration_secs": 43.0,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -93,7 +95,7 @@
     "How Deep Do Humans Have",
     "Did You Know That In",
     "How wound stitches really work",
-    "Did You Know This Fact"
+    "How to Remove Ear Wax"
   ],
-  "timestamp": "2026-11-25T23:45:32"
+  "timestamp": "2026-11-26T23:59:03"
 }
