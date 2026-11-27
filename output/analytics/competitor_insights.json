@@ -4,8 +4,8 @@
   "pattern_counts": {
     "statement": 23,
     "science-discovery": 1,
-    "number-lead": 7,
     "wh-question": 7,
+    "number-lead": 7,
     "statistic": 4,
     "did-you-know": 3
   },
@@ -29,7 +29,6 @@
     "human",
     "scienceandfun",
     "sciencefacts",
-    "earth",
     "unbelievable",
     "amazing",
     "never",
@@ -42,38 +41,38 @@
     "#science",
     "#knowledge",
     "#trending",
-    "#new",
+    "#education",
+    "#experiment",
+    "#youtubeshorts",
     "#funny",
     "#physics",
-    "#education",
-    "#amazing",
-    "#experiment",
-    "#animation",
-    "#youtubeshorts",
     "#factsmine",
+    "#new",
+    "#latest",
+    "#amazing",
     "#didyouknow"
   ],
   "top_topics": [
     "science",
     "experiment",
     "ashusir",
+    "didn",
     "scienceandfun",
     "physics",
     "sciencefacts",
-    "earth",
     "human",
-    "didn",
     "cool",
     "gravity",
     "gifts",
     "ocean",
+    "earth",
     "chemistry",
     "ytshorts",
+    "could",
     "without",
     "want",
     "experiments",
-    "frozen",
-    "creativelearning"
+    "frozen"
   ],
   "title_templates": [
     "Did you know that {fact}? #Shorts",
@@ -86,7 +85,7 @@
     "{topic} is SO cool #Shorts",
     "{topic}'s the fastest way to empty a bottle #Shorts"
   ],
-  "avg_duration_secs": 43.0,
+  "avg_duration_secs": 43.1,
   "hook_phrases": [
     "This is SO cool",
     "What Is The Real Shape",
@@ -97,5 +96,5 @@
     "How wound stitches really work",
     "How to Remove Ear Wax"
   ],
-  "timestamp": "2026-11-26T23:59:03"
+  "timestamp": "2026-11-27T23:40:30"
 }

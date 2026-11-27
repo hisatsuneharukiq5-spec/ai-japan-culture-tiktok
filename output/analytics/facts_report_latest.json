@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-26T23:59:03",
+  "timestamp": "2026-11-27T23:40:31",
   "internal": {
     "top5_patterns": [
       {
@@ -35,10 +35,10 @@
       "science",
       "experiment",
       "ashusir",
+      "didn",
       "scienceandfun",
       "physics",
       "sciencefacts",
-      "earth",
       "human"
     ],
     "hashtags": [
@@ -48,15 +48,15 @@
       "#science",
       "#knowledge",
       "#trending",
-      "#new",
+      "#education",
+      "#experiment",
+      "#youtubeshorts",
       "#funny",
       "#physics",
-      "#education",
-      "#amazing",
-      "#experiment",
-      "#animation",
-      "#youtubeshorts",
       "#factsmine",
+      "#new",
+      "#latest",
+      "#amazing",
       "#didyouknow"
     ],
     "hook_phrases": [
@@ -88,7 +88,6 @@
       "human",
       "scienceandfun",
       "sciencefacts",
-      "earth",
       "unbelievable",
       "amazing",
       "never",
@@ -97,8 +96,8 @@
     "pattern_counts": {
       "statement": 23,
       "science-discovery": 1,
-      "number-lead": 7,
       "wh-question": 7,
+      "number-lead": 7,
       "statistic": 4,
       "did-you-know": 3
     },
@@ -111,16 +110,16 @@
     "google_trends": {
       "status": "ok",
       "topics": [
-        "beyonce",
-        "jensen huang foundation stock value jump",
-        "dallas cowboys cheerleaders",
-        "brendan mcloughlin",
-        "the mayflower",
-        "macaulay culkin",
-        "jessica simpson",
-        "tcu vs texas tech",
-        "black friday deals on thanksgiving day",
-        "tcu basketball"
+        "channing tatum",
+        "big ten football championship game",
+        "drummer",
+        "chicago blackhawks",
+        "mike norvell",
+        "bowling green vs indiana",
+        "strait of hormuz",
+        "heat vs knicks",
+        "cody schrader",
+        "deportivo cali - bucaramanga"
       ]
     },
     "youtube_trending": {
@@ -129,18 +128,18 @@
         "China&#39;s Futuristic School 😱",
         "How Much Is Too Much 😱",
         "Walking On Water Trick Revealed! #facts #shorts",
-        "10 Facts You Didn’t Know That Could Save Your Life #Shorts",
+        "This Video Can Save Your Life 😱",
         "क्या आपको BLACK रंग पसंद है? | Top 3 AMAZING facts | Vanta Black | #shorts #factsmine",
         "Slicing A Bullet In Half?  #3danimationfact #facts #science",
-        "Inside A Camel Hump 😱",
+        "He Forgot His Rolls Royce For 25 Years #shorts",
+        "Indonesia village Beauty 😍😲 #nature #travel #java #villagelife #rain #mountain #facts #shorts",
         "Strongest Glass in The World",
         "IPL Shocking Facts that will blow your mind 🤯🏏 | Kuldeep Singhaniaa #shorts #ipl",
-        "How Many Hours Do You Sleep 😱",
         "Fun Facts That Are Not Funny",
         "गज़ब के Desi Jugaad 🤣 | Hilarious Desi Jugaad | The Fact | #shorts #trending #viralshorts",
+        "Animal Fact Time! 🐡 #learn #kids #shorts #dardar",
         "सबसे सुरक्षित Bike 🏍️ | Safest Bike In The World | The Fact | #shorts #ytshorts",
-        "यह गलती कभी मत करना ❌ | Never Make This Mistake | The Fact | #shorts #ytshorts",
-        "The Lobster 😱"
+        "How Rare Are You 😱"
       ]
     },
     "pytrends": {
@@ -155,7 +154,7 @@
   },
   "video_quality": {
     "status": "ok",
-    "avg_real_clips": 28.8,
+    "avg_real_clips": 28.7,
     "avg_lavfi_clips": 0,
     "avg_static_skipped": 0,
     "lavfi_rate_pct": 0.0,
@@ -169,7 +168,7 @@
     "complaints": []
   },
   "ab_test": {
-    "total_tests": 230,
+    "total_tests": 231,
     "latest_status": "pending"
   },
   "channel_desc_updated": false,
